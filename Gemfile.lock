@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eac_tools (0.0.0)
+    eac_tools (0.1.0)
       eac_ruby_utils (~> 0.95, >= 0.95.1)
 
 PATH
