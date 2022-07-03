@@ -2,6 +2,7 @@
 
 require 'eac_ruby_utils/core_ext'
 require 'eac_ruby_utils/envs'
+require 'avm/eac_ruby_base1/rubygems/version_file'
 require 'rubygems'
 
 module EacRubyGemsUtils
@@ -87,7 +88,7 @@ module EacRubyGemsUtils
     end
 
     def version_file_uncached
-      ::EacRubyGemsUtils::Gem::VersionFile.new(version_file_path)
+      ::Avm::EacRubyBase1::Rubygems::VersionFile.new(version_file_path)
     end
 
     def version_file_path_uncached
