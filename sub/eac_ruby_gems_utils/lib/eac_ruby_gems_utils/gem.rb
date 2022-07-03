@@ -3,11 +3,11 @@
 require 'eac_ruby_utils/core_ext'
 require 'eac_ruby_utils/envs'
 require 'avm/eac_ruby_base1/rubygems/version_file'
+require 'avm/eac_ruby_base1/sources/base'
 require 'rubygems'
 
 module EacRubyGemsUtils
   class Gem
-    require_sub __FILE__
     enable_simple_cache
 
     GEMSPEC_EXTNAME = '.gemspec'
@@ -21,8 +21,9 @@ module EacRubyGemsUtils
       name
     end
 
+    # @return [Avm::EacRailsBase1::Sources::Base::BundleCommand]
     def bundle(*args)
-      ::EacRubyGemsUtils::Gem::Command.new(self, %w[bundle] + args).envvar_gemfile
+      ::Avm::EacRailsBase1::Sources::Base.new(root).bundle(*args)
     end
 
     # @return A [Pathname] array with relative paths from root listed in gemspec's .file directive.
