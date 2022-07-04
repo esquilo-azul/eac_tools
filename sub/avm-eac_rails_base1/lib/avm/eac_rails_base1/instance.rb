@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
+require 'avm/eac_ruby_base1/sources/base'
 require 'avm/eac_webapp_base0/instance'
-require 'eac_ruby_gems_utils/gem'
 
 module Avm
   module EacRailsBase1
@@ -17,7 +17,8 @@ module Avm
       end
 
       def the_gem
-        @the_gem ||= ::EacRubyGemsUtils::Gem.new(::File.join(read_entry('fs_path')), host_env)
+        @the_gem ||= ::Avm::EacRubyBase1::Sources::Base.new(::File.join(read_entry('fs_path')))
+                       .env_set(host_env)
       end
     end
   end
