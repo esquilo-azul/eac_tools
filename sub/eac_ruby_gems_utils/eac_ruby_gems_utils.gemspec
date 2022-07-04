@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib}/**/*', 'Gemfile']
   s.test_files = Dir['{spec}/**/*', '.rspec']
 
-  s.add_dependency 'eac_fs', '~> 0.8'
   s.add_dependency 'eac_ruby_utils', '~> 0.81'
 
   # Tests
