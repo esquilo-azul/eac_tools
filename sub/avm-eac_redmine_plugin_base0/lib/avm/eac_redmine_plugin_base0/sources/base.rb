@@ -7,7 +7,7 @@ module Avm
   module EacRedminePluginBase0
     module Sources
       class Base < ::Avm::EacRailsBase1::Sources::Base
-        DEFAULT_GEMFILE_PATH = 'PluginGemfile'
+        DEFAULT_GEMFILE_PATH = 'SelfGemfile'
         INIT_SUBPATH = 'init.rb'
 
         # @return [String]
