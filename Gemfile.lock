@@ -52,12 +52,6 @@ PATH
       eac_fs (~> 0.10)
       eac_ruby_utils (~> 0.95, >= 0.95.1)
 
-PATH
-  remote: sub/eac_ruby_gems_utils
-  specs:
-    eac_ruby_gems_utils (0.10.0)
-      eac_ruby_utils (~> 0.81)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -274,7 +268,6 @@ DEPENDENCIES
   avm-tools!
   eac_ruby_base0!
   eac_ruby_gem_support (~> 0.5.1)
-  eac_ruby_gems_utils!
   eac_tools!
 
 BUNDLED WITH
