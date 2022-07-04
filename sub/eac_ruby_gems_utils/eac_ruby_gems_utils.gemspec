@@ -10,10 +10,11 @@ Gem::Specification.new do |s|
   s.name        = 'eac_ruby_gems_utils'
   s.version     = ::EacRubyGemsUtils::VERSION
   s.authors     = ['Esquilo Azul Company']
-  s.summary     = 'Utilities for Ruby gems development.'
+  s.summary     = 'Utilities for Ruby gems development (Deprecated).'
   s.license     = 'MIT'
   s.homepage    = 'https://github.com/esquilo-azul/eac_ruby_gems_utils'
   s.metadata    = { 'source_code_uri' => s.homepage }
+  s.description = 'Deprecated: use gem "avm-eac_ruby_base1" instead.'
 
   s.extra_rdoc_files = ['README.rdoc']
   s.rdoc_options = ['--charset=UTF-8']
