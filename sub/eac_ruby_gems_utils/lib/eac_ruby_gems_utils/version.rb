@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module EacRubyGemsUtils
-  VERSION = '0.9.10'
+  VERSION = '0.10.0'
 end
