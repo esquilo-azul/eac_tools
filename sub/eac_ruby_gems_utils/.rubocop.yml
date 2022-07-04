@@ -20,10 +20,6 @@ Layout/MultilineMethodCallIndentation:
 Rails/DynamicFindBy:
   Enabled: false
 
-Rails/RakeEnvironment:
-  Exclude:
-    - spec/support/mygem/Rakefile
-
 Rails/Output:
   Enabled: false
 
