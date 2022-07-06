@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/eac_redmine_base0/core_update'
+require 'avm/sources/base/configuration'
 require 'avm/sync'
 require 'eac_fs/cached_download'
 require 'eac_ruby_utils/core_ext'
@@ -15,7 +16,8 @@ module Avm
       GITIGNORE_ADD = %w[/public/assets/**/* /config/install.sh /config/secrets_key.txt
                          /log/**/*].freeze
       GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /public/themes/*].freeze
-      TARGET_KEEP = %w[/Gemfile.lock].freeze
+      TARGET_KEEP = ::Avm::Sources::Base::Configuration::CONFIGURATION_FILENAMES
+                      .map { |b| "/#{b}" } + %w[/Gemfile.lock].freeze
 
       def run
         ::EacRubyUtils::Fs::Temp.on_directory do |dir|
