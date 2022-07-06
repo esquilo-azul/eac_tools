@@ -71,7 +71,7 @@ module Avm
       end
 
       def git_commit_message
-        "Core: update to #{version}."
+        i18n_translate(__method__, version: version, __locale: source.locale)
       end
 
       def git_repo_uncached
