@@ -12,7 +12,8 @@ module Avm
       enable_simple_cache
       common_constructor :source, :version, :url
 
-      GITIGNORE_ADD = %w[/public/assets/**/* /config/install.sh /log/**/*].freeze
+      GITIGNORE_ADD = %w[/public/assets/**/* /config/install.sh /config/secrets_key.txt
+                         /log/**/*].freeze
       GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /public/themes/*].freeze
       TARGET_KEEP = %w[/Gemfile.lock].freeze
 
