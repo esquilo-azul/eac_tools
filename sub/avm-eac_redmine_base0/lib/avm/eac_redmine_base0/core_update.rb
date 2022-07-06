@@ -10,7 +10,7 @@ module Avm
     class CoreUpdate
       enable_speaker
       enable_simple_cache
-      common_constructor :instance, :version, :url
+      common_constructor :source, :version, :url
 
       GITIGNORE_ADD = %w[/public/assets/**/* /config/install.sh /log/**/*].freeze
       GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /public/themes/*].freeze
@@ -37,7 +37,7 @@ module Avm
       end
 
       def fs_object_id
-        [instance.id, version].join('_').variableize
+        [source.path, version].join('_').variableize
       end
 
       private
@@ -108,7 +108,7 @@ module Avm
       end
 
       def target_path_uncached
-        instance.read_entry('fs_path').to_pathname
+        source.path
       end
     end
   end

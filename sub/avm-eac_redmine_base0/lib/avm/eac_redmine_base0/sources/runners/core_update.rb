@@ -31,7 +31,7 @@ module Avm
           end
 
           def update
-            ::Avm::EacRedmineBase0::CoreUpdate.new(runner_context.call(:instance), version, url).run
+            ::Avm::EacRedmineBase0::CoreUpdate.new(runner_context.call(:subject), version, url).run
           end
 
           def url
