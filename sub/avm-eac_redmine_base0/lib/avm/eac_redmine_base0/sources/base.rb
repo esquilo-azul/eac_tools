@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/eac_rails_base1/sources/base'
+require 'avm/eac_redmine_base0/sources/runners'
 require 'eac_ruby_utils/core_ext'
 
 module Avm
