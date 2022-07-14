@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eac_tools (0.2.1)
+    eac_tools (0.2.2)
       avm-eac_generic_base0 (~> 0.2, >= 0.2.2)
       avm-eac_rails_base1 (~> 0.3, >= 0.3.1)
       avm-eac_redmine_base0 (~> 0.7)
