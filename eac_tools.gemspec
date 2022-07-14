@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Put here the authors']
   s.summary     = 'Put here de description.'
 
-  s.files = Dir['{lib}/**/*']
+  s.files = Dir['{lib,sub}/**/*', 'Gemfile', 'Gemfile.lock']
 
   s.add_dependency 'avm-eac_generic_base0', '~> 0.2', '>= 0.2.2'
   s.add_dependency 'avm-eac_rails_base1', '~> 0.3', '>= 0.3.1'
