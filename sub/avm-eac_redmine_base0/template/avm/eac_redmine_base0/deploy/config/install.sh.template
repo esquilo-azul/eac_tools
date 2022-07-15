@@ -12,7 +12,11 @@ else
 fi
 export address_host='%%WEB.AUTHORITY%%'
 export address_path='%%WEB.PATH%%'
+
+# Git
 export git_repositories_hierarchical_organisation=false
+export gitolite_user='%%GIT.USERNAME%%'
+export gitolite_user_home="/var/lib/${gitolite_user}"
 
 # Mail settings
 export smtp_server='%%MAILER.SMTP.ADDRESS%%'
