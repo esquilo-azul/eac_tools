@@ -108,6 +108,15 @@ PATH
       eac_fs (~> 0.10)
       eac_ruby_utils (~> 0.95, >= 0.95.1)
 
+PATH
+  remote: sub/eac_ruby_utils
+  specs:
+    eac_ruby_utils (0.95.1)
+      activesupport (>= 4, < 7)
+      addressable (~> 2.6)
+      filesize
+      net-ssh (~> 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -185,11 +194,6 @@ GEM
       rubocop (~> 0.80.1)
       rubocop-rails (~> 2.4.2)
       rubocop-rspec (~> 1.38.1)
-    eac_ruby_utils (0.95.1)
-      activesupport (>= 4, < 7)
-      addressable (~> 2.6)
-      filesize
-      net-ssh (~> 4.2)
     eac_templates (0.3.1)
       eac_config (~> 0.5)
       eac_ruby_utils (~> 0.64)
@@ -300,6 +304,7 @@ DEPENDENCIES
   eac_fs!
   eac_ruby_base0!
   eac_ruby_gem_support (~> 0.5.1)
+  eac_ruby_utils!
   eac_tools!
 
 BUNDLED WITH
