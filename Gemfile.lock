@@ -114,6 +114,7 @@ PATH
     eac_ruby_utils (0.95.1)
       activesupport (>= 4, < 7)
       addressable (~> 2.6)
+      bundler
       filesize
       net-ssh (~> 4.2)
 
