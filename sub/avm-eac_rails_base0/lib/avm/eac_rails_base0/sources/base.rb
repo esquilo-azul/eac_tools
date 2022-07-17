@@ -8,6 +8,7 @@ module Avm
     module Sources
       class Base < ::Avm::EacRailsBase1::Sources::Base
         CONFIG_RU_SUBPATH = 'config.ru'
+        EAC_RAILS_BASE0_GEMNAME = 'eac_rails_base0'
         EAC_RAILS_BASE0_TEST_NAME = 'eac_rails_base0'
         EAC_RAILS_BASE0_TEST_RAKE_TASK_NAME = 'eac_rails_base0:test'
         SUBS_INCLUDE_PATHS_DEFAULT = ['sub/*/*'].freeze
@@ -31,7 +32,7 @@ module Avm
         end
 
         def valid?
-          super && config_ru_path.exist?
+          super && gemfile_lock_gem_version(EAC_RAILS_BASE0_GEMNAME).present?
         end
       end
     end
