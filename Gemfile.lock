@@ -3,6 +3,7 @@ PATH
   specs:
     eac_tools (0.4.0)
       avm-eac_generic_base0 (~> 0.3)
+      avm-eac_rails_base0 (~> 0.5)
       avm-eac_rails_base1 (~> 0.4)
       avm-eac_redmine_base0 (~> 0.8)
       avm-eac_redmine_plugin_base0 (~> 0.1, >= 0.1.1)
