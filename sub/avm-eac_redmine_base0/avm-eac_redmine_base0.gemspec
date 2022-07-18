@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'curb', '~> 0.9.11'
   s.add_dependency 'eac_fs', '~> 0.12', '>= 0.12.2'
   s.add_dependency 'eac_rest', '~> 0.6', '>= 0.6.1'
-  s.add_dependency 'eac_ruby_utils', '~> 0.68'
+  s.add_dependency 'eac_ruby_utils', '~> 0.95', '>= 0.95.2'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.5.1'
 end
