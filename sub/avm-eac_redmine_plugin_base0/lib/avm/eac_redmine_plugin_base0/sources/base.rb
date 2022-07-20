@@ -20,9 +20,8 @@ module Avm
 
         # @return [Hash<String, EacRubyUtils::Envs::Command>]
         def default_test_commands
-          r = {
-            PARENT_RAKE_TASK_TEST_NAME => parent_rake_test_command
-          }
+          r = {}
+          r[PARENT_RAKE_TASK_TEST_NAME] = parent_rake_test_command if parent_rake_test_command?
           r[RUBOCOP_TEST_NAME] = rubocop_test_command if rubocop_test_command?
           r
         end
@@ -35,6 +34,11 @@ module Avm
         # @return [String]
         def parent_rake_test_task_name
           [gem_name, 'test'].map(&:variableize).join(':')
+        end
+
+        # @return [Boolean]
+        def parent_rake_test_command?
+          ruby_parent.rake_task?(parent_rake_test_task_name)
         end
 
         # @return [EacRubyUtils::Envs::Command]
