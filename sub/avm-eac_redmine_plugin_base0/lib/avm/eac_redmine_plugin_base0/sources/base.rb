@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/sources/base'
+require 'avm/eac_ruby_base1/sources/base'
 require 'eac_ruby_utils/core_ext'
 
 module Avm
   module EacRedminePluginBase0
     module Sources
-      class Base < ::Avm::EacRailsBase1::Sources::Base
+      class Base < ::Avm::EacRubyBase1::Sources::Base
         DEFAULT_GEMFILE_PATH = 'SelfGemfile'
         INIT_SUBPATH = 'init.rb'
 
