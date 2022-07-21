@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = f7340c4df2da93a46c3fc149b626ac43af545a21
+  commit = 14c25a67b41ca54ff63e907dabeaea26b821f36e
   method = merge
-  parent = a6079af271d632963be745f6345054c3c72ca887
+  parent = 26fa9e80d69eebc0b07b1c7bcfc75cd18dee825b
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_rails_base1.git
