@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
-require 'avm/docker/runner'
+require 'avm/eac_generic_base0/sources/docker/runner'
+require 'avm/eac_ubuntu_base0/docker_image'
 
 module Avm
   module EacRedmineBase0
     module Sources
       module Runners
-        class Docker < ::Avm::Docker::Runner
+        class Docker < ::Avm::EacGenericBase0::Sources::Docker::Runner
+          # @return [Avm::EacUbuntuBase0::DockerImage]
           def docker_image
-            ::Avm::EacUbuntuBase0::DockerImage
+            ::Avm::EacUbuntuBase0::DockerImage.new
           end
         end
       end
