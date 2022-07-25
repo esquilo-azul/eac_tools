@@ -34,7 +34,7 @@ module EacDocker
       end
     end
 
-    def volume(left_part, right_part = null)
+    def volume(left_part, right_part = nil)
       immutable_volume(right_part.if_present(left_part) { |v| "#{left_part}:#{v}" })
     end
 
