@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = 38a143a230b15c85445ce26e17c98f1a0e861c4d
+  commit = b2ff0fec22976bbfe857afdb64b73d7f0351afab
   method = merge
-  parent = c5ec42e198fee95520f736876fc68a68b5c982e2
+  parent = 269e4c3720a62869618742e072bcc0564c4095b8
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_redmine_base0.git
