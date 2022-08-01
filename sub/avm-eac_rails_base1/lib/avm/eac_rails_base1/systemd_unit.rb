@@ -38,7 +38,7 @@ module Avm
       end
 
       def user
-        instance.ssh_username
+        instance.install_username
       end
 
       private
