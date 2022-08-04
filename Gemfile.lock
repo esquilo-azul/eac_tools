@@ -85,6 +85,12 @@ PATH
       eac_ruby_utils (~> 0.68)
 
 PATH
+  remote: sub/avm-eac_wordpress_base0
+  specs:
+    avm-eac_wordpress_base0 (0.0.0)
+      eac_ruby_utils (~> 0.97)
+
+PATH
   remote: sub/avm-tools
   specs:
     avm-tools (0.128.0)
@@ -327,6 +333,7 @@ DEPENDENCIES
   avm-eac_redmine_plugin_base0!
   avm-eac_ruby_base1!
   avm-eac_webapp_base0!
+  avm-eac_wordpress_base0!
   avm-tools!
   eac_cli!
   eac_config!
