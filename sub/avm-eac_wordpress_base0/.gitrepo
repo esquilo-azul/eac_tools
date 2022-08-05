@@ -2,6 +2,6 @@
   cmdver = 0.4.1
   commit = 951a440c053a2ea2201411b401193ad66cd05fb8
   method = merge
-  parent = 0f8690289d3aa6156e6a5ded7ce2a70698944d69
+  parent = e9d862b62f07bdaf6dc08c1a086f2fb6457c0886
   branch = master
-  remote = https://github.com/eduardobogoni/avm-eac_wordpress_base0.git
+  remote = https://github.com/esquilo-azul/avm-eac_wordpress_base0.git
