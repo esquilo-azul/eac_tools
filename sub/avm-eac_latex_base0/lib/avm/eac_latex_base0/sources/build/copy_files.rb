@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
+require 'avm/eac_latex_base0/sources/build/commons'
 require 'avm/eac_latex_base0/sources/build/file'
-require 'avm/eac_writings_base0/commons'
 
 module Avm
   module EacLatexBase0
@@ -36,7 +36,7 @@ module Avm
           def copy_commons_files
             target_dir = source_temp_dir.join('commons')
             target_dir.mkpath
-            ::Avm::EacWritingsBase0::Commons.instance.template.apply(self, target_dir)
+            ::Avm::EacLatexBase0::Sources::Build::Commons.instance.template.apply(self, target_dir)
           end
         end
       end
