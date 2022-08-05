@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
+require 'avm/eac_latex_base0/sources/build/file'
 require 'avm/eac_writings_base0/commons'
-require 'avm/eac_writings_base0/file_build'
 
 module Avm
   module EacLatexBase0
@@ -23,7 +23,8 @@ module Avm
           end
 
           def copy_project_file(subpath)
-            ::Avm::EacWritingsBase0::FileBuild.new(project, subpath).build_to_dir(source_temp_dir)
+            ::Avm::EacLatexBase0::Sources::Build::File.new(project, subpath)
+                                                      .build_to_dir(source_temp_dir)
           end
 
           def copy_project_dir(subpath)
