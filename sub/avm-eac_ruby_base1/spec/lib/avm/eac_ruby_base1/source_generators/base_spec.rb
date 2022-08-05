@@ -2,8 +2,8 @@
 
 require 'avm/tools/runner'
 
-RSpec.describe ::Avm::Tools::Runner::Ruby::Gems::Generate do
-  let(:targets_root) { ::Pathname.new('generate_spec_files').expand_path(__dir__) }
+RSpec.describe ::Avm::EacRubyBase1::SourceGenerators::Base do
+  let(:targets_root) { ::Pathname.new('base_spec_files').expand_path(__dir__) }
 
   %w[mygem dashed-mygem].each do |gem_name|
     context "when runner is executed for #{gem_name}" do
