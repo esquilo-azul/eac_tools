@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'avm/instances/entry_keys'
 require 'avm/eac_wordpress_base0/instances/apache_host'
 require 'avm/eac_wordpress_base0/instances/base'
 
@@ -12,9 +13,9 @@ RSpec.describe ::Avm::EacWordpressBase0::Instances::ApacheHost do
     end
 
     before do
-      instance.entry('fs_path').write('/path/to/stub-app_0')
-      instance.entry('web.url').write('http://stubapp.net')
-      instance.entry('install.username').write('myuser')
+      instance.entry(::Avm::Instances::EntryKeys::FS_PATH).write('/path/to/stub-app_0')
+      instance.entry(::Avm::Instances::EntryKeys::WEB_URL).write('http://stubapp.net')
+      instance.entry(::Avm::Instances::EntryKeys::INSTALL_USERNAME).write('myuser')
     end
 
     it do
