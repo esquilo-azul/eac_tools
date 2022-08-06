@@ -122,7 +122,7 @@ PATH
 PATH
   remote: sub/avm
   specs:
-    avm (0.34.0)
+    avm (0.35.0)
       eac_cli (~> 0.27, >= 0.27.6)
       eac_config (~> 0.10)
       eac_docker (~> 0.3)
