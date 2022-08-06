@@ -14,7 +14,7 @@ RSpec.describe ::Avm::EacWordpressBase0::Instances::ApacheHost do
     before do
       instance.entry('fs_path').write('/path/to/stub-app_0')
       instance.entry('web.url').write('http://stubapp.net')
-      instance.entry('system.username').write('myuser')
+      instance.entry('install.username').write('myuser')
     end
 
     it do

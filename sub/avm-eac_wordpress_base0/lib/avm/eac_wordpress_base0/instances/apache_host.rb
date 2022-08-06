@@ -15,11 +15,11 @@ module Avm
         end
 
         def system_user
-          instance.read_entry('system.username')
+          instance.install_username
         end
 
         def system_group
-          instance.read_entry('system.groupname')
+          instance.install_groupname
         end
       end
     end
