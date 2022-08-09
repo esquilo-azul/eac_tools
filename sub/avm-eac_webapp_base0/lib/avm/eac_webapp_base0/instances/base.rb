@@ -17,16 +17,12 @@ module Avm
 
         FILES_UNITS = [].freeze
 
-        def stereotype_name
-          self.class.name.desconstantize.demodulize
-        end
-
         def data_dump(argv = [])
-          run_subcommand(::Avm::Tools::Runner::EacWordpressBase0::Data::Dump, argv)
+          run_subcommand(data_dump_runner_class, argv)
         end
 
         def data_dump_runner_class
-          "::Avm::Tools::Runner::#{stereotype_name}::Data::Dump".constantize
+          "#{stereotype_namespace_module}::Runner::Data::Dump".constantize
         end
 
         def run_subcommand(subcommand_class, argv)
