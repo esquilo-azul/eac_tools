@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/instance'
+require 'avm/eac_rails_base1/instances/base'
 require 'avm/eac_rails_base1/runner_with/rails_environment'
 require 'eac_cli/runner'
 

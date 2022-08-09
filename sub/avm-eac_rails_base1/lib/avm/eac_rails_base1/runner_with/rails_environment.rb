@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/instance'
+require 'avm/eac_rails_base1/instances/base'
 require 'eac_cli/runner'
 
 module Avm
@@ -22,7 +22,7 @@ module Avm
           def default_rails_environment
             const_get(DEFAULT_RAILS_ENVIRONMENT_CONSTANT)
           rescue ::NameError
-            ::Avm::EacRailsBase1::Instance::DEFAULT_RAILS_ENVIRONMENT
+            ::Avm::EacRailsBase1::Instances::Base::DEFAULT_RAILS_ENVIRONMENT
           end
         end
 
