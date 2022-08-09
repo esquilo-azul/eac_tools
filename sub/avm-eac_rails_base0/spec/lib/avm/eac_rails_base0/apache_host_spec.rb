@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'avm/eac_rails_base0/apache_host'
-require 'avm/eac_rails_base0/instance'
+require 'avm/eac_rails_base0/instances/base'
 
 RSpec.describe ::Avm::EacRailsBase0::ApacheHost do
   describe '#no_ssl_site_content' do
-    let(:instance) { ::Avm::EacRailsBase0::Instance.by_id('stub-app_0') }
+    let(:instance) { ::Avm::EacRailsBase0::Instances::Base.by_id('stub-app_0') }
     let(:apache_host) { described_class.new(instance) }
     let(:fixtures_dir) { ::Pathname.new('apache_host_spec_files').expand_path(__dir__) }
     let(:expected_content) { fixtures_dir.join('apache_host_spec_no_ssl_content.conf').read }
