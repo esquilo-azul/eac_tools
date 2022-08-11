@@ -4,13 +4,12 @@ require 'addressable/uri'
 require 'avm/eac_redmine_base0/data_unit'
 require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/rest_api'
-require 'avm/eac_webapp_base0/instance'
-require 'avm/eac_rails_base1/instance'
+require 'avm/eac_rails_base1/instances/base'
 
 module Avm
   module EacRedmineBase0
     module Instances
-      class Base < ::Avm::EacRailsBase1::Instance
+      class Base < ::Avm::EacRailsBase1::Instances::Base
         enable_simple_cache
 
         FILES_UNITS = { files: 'files' }.freeze
