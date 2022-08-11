@@ -112,7 +112,7 @@ PATH
       avm-eac_ruby_base1 (~> 0.19)
       avm-eac_ubuntu_base0 (~> 0.3)
       avm-files (~> 0.3, >= 0.3.2)
-      avm-git (~> 0.3, >= 0.3.1)
+      avm-git (~> 0.4)
       clipboard (~> 1.3, >= 1.3.3)
       curb (~> 0.9.10)
       eac_git (~> 0.12, >= 0.12.1)
