@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'avm/eac_ruby_base1/sources/base'
-require 'avm/eac_webapp_base0/instance'
+require 'avm/eac_webapp_base0/instances/base'
 
 module Avm
   module EacRailsBase1
     module Instances
-      class Base < ::Avm::EacWebappBase0::Instance
+      class Base < ::Avm::EacWebappBase0::Instances::Base
         DEFAULT_RAILS_ENVIRONMENT = 'production'
 
         def bundle(*args)
