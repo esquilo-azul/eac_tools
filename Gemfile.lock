@@ -22,7 +22,7 @@ PATH
     avm-eac_asciidoctor_base0 (0.4.0)
       asciidoctor (~> 2.0, >= 2.0.17)
       avm-eac_webapp_base0 (~> 0.4)
-      eac_ruby_utils (~> 0.63)
+      eac_ruby_utils (~> 0.98)
       os
       rouge (~> 3.26)
 
