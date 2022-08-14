@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib,sub}/**/*', 'Gemfile', 'Gemfile.lock']
 
-  s.add_dependency 'avm', '~> 0.35', '>= 0.35.1'
+  s.add_dependency 'avm', '~> 0.37'
   s.add_dependency 'avm-eac_asciidoctor_base0', '~> 0.5'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.5'
   s.add_dependency 'avm-eac_latex_base0', '~> 0.1', '>= 0.1.2'
