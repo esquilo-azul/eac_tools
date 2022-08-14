@@ -29,8 +29,16 @@ module EacRubyUtils
         @values.values.map(&:value)
       end
 
+      def values_with_blank
+        [blank_value.value] + values
+      end
+
       def options
-        @values.values.map { |v| [v.label, v.value] }
+        @values.values.map(&:to_option)
+      end
+
+      def options_with_blank
+        [blank_value.to_option] + options
       end
 
       def method_missing(name, *args, &block)
