@@ -23,7 +23,7 @@ module Avm
         end
 
         def source_path
-          ::File.join(instance.read_entry(:data_fs_path), data_key.to_s)
+          ::File.join(instance.install_data_path, data_key.to_s)
         end
 
         def target_path
