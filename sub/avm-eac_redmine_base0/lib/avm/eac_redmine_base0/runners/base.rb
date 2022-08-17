@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/eac_redmine_base0/instances/base'
-require 'avm/eac_redmine_base0/deploy'
+require 'avm/eac_redmine_base0/instances/deploy'
 require 'avm/eac_redmine_base0/apache_host'
 require 'avm/eac_rails_base1/runner'
 require 'eac_ruby_utils/core_ext'
