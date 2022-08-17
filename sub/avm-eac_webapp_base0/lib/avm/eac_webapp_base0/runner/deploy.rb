@@ -16,6 +16,8 @@ module Avm
         end
 
         def deploy_class
+          runner_context.call(:stereotype_module).const_get('Instances').const_get('Deploy')
+        rescue ::NameError
           runner_context.call(:stereotype_module).const_get('Deploy')
         end
 
