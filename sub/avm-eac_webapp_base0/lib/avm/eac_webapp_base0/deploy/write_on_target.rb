@@ -9,7 +9,7 @@ module Avm
         def write_on_target
           ::Avm::Files::Deploy.new(
             instance.host_env,
-            instance.read_entry(::Avm::Instances::EntryKeys::FS_PATH)
+            instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)
           ).append_plain_directory(build_dir).run
         end
       end

@@ -38,7 +38,7 @@ module Avm
         end
 
         def git_repository_path
-          instance.source_instance.read_entry(::Avm::Instances::EntryKeys::FS_PATH)
+          instance.source_instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)
         end
 
         def git_uncached

@@ -27,7 +27,7 @@ module Avm
         end
 
         def target_path
-          ::File.join(instance.read_entry(::Avm::Instances::EntryKeys::FS_PATH),
+          ::File.join(instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH),
                       fs_path_subpath.to_s)
         end
 

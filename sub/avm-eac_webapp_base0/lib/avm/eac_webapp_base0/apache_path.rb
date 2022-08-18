@@ -15,7 +15,7 @@ module Avm
       end
 
       def document_root
-        instance.read_entry(::Avm::Instances::EntryKeys::FS_PATH)
+        instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)
       end
 
       def extra_content
