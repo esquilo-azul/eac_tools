@@ -18,8 +18,9 @@ module Avm
         end
 
         def the_gem
-          @the_gem ||= ::Avm::EacRubyBase1::Sources::Base.new(::File.join(read_entry('fs_path')))
-                         .env_set(host_env)
+          @the_gem ||= ::Avm::EacRubyBase1::Sources::Base.new(
+            ::File.join(read_entry('install.path'))
+          ).env_set(host_env)
         end
       end
     end

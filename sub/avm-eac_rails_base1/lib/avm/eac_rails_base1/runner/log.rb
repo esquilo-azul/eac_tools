@@ -20,7 +20,7 @@ module Avm
         private
 
         def log_path
-          ::File.join(rails_instance.read_entry('fs_path'), 'log', "#{rails_environment}.log")
+          ::File.join(rails_instance.read_entry('install.path'), 'log', "#{rails_environment}.log")
         end
 
         def start_banner
