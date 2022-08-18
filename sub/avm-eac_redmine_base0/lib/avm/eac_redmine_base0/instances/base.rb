@@ -21,7 +21,7 @@ module Avm
         def docker_run_arguments
           [
             '--volume',
-            "#{read_entry(::Avm::Instances::EntryKeys::FS_PATH)}:/home/myuser/eac_redmine_base0",
+            "#{install_path}:/home/myuser/eac_redmine_base0",
             '--publish', "#{read_entry(:ssh_port)}:22",
             '--publish', "#{read_entry(:http_port)}:80",
             '--publish', "#{read_entry(:https_port)}:443"

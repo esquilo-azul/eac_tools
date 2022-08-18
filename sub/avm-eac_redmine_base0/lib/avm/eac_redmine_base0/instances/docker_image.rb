@@ -77,7 +77,7 @@ module Avm
         end
 
         def git_repo_uncached
-          ::EacGit::Local.new(instance.source_instance.fs_path)
+          ::EacGit::Local.new(instance.source_instance.install_path)
         end
 
         def redmine_source_git_id

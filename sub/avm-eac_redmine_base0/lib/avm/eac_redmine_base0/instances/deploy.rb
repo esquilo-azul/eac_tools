@@ -21,7 +21,7 @@ module Avm
         end
 
         def installer_path
-          ::File.join(instance.fs_path, 'plugins', 'redmine_installer', 'installer', 'run.sh')
+          ::File.join(instance.install_path, 'plugins', 'redmine_installer', 'installer', 'run.sh')
         end
 
         def install_task
