@@ -21,12 +21,11 @@ module Avm
         end
 
         def installer_path
-          ::File.join(instance.read_entry(::Avm::Instances::EntryKeys::FS_PATH), 'plugins',
-                      'redmine_installer', 'installer', 'run.sh')
+          ::File.join(instance.fs_path, 'plugins', 'redmine_installer', 'installer', 'run.sh')
         end
 
         def install_task
-          if instance.read_entry_optional('web.path').present?
+          if instance.web_path_optional.present?
             'redmine_as_apache_path'
           else
             'redmine_as_apache_base'
