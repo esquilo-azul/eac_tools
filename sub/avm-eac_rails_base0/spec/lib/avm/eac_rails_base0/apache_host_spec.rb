@@ -11,7 +11,7 @@ RSpec.describe ::Avm::EacRailsBase0::ApacheHost do
     let(:expected_content) { fixtures_dir.join('apache_host_spec_no_ssl_content.conf').read }
 
     before do
-      instance.entry('fs_path').write('/path/to/stub-app_0')
+      instance.entry('install.path').write('/path/to/stub-app_0')
       instance.entry('web.url').write('http://stubapp.net')
     end
 
