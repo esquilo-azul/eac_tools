@@ -89,7 +89,7 @@ PATH
   remote: sub/avm-eac_webapp_base0
   specs:
     avm-eac_webapp_base0 (0.4.1)
-      avm (~> 0.39)
+      avm (~> 0.39, >= 0.39.1)
       avm-eac_generic_base0 (~> 0.5)
       avm-eac_postgresql_base0 (~> 0.2)
       avm-eac_ubuntu_base0 (~> 0.3)
@@ -361,4 +361,4 @@ DEPENDENCIES
   eac_tools!
 
 BUNDLED WITH
-   2.3.18
+   2.3.20
