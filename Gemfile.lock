@@ -8,7 +8,7 @@ PATH
       avm-eac_latex_base0 (~> 0.2)
       avm-eac_rails_base0 (~> 0.8)
       avm-eac_rails_base1 (~> 0.6)
-      avm-eac_redmine_base0 (~> 0.13)
+      avm-eac_redmine_base0 (~> 0.14)
       avm-eac_redmine_plugin_base0 (~> 0.3)
       avm-eac_ruby_base1 (~> 0.20)
       avm-eac_webapp_base0 (~> 0.5)
