@@ -23,7 +23,7 @@ module Avm
         end
 
         def data_dump_runner_class
-          "#{stereotype_namespace_module}::Runner::Data::Dump".constantize
+          ::Avm::EacWebappBase0::Instances::Runners::Data::Dump
         end
 
         def run_subcommand(subcommand_class, argv)
