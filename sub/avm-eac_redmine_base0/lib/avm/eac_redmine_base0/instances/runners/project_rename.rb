@@ -8,7 +8,7 @@ module Avm
     module Instances
       module Runners
         class ProjectRename
-          runner_with ::Avm::EacRailsBase1::RunnerWith::Bundle do
+          runner_with :help, ::Avm::EacRailsBase1::RunnerWith::Bundle do
             pos_arg :from
             pos_arg :to
           end
