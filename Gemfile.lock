@@ -127,7 +127,7 @@ PATH
       curb (~> 0.9, >= 0.9.11)
       eac_git (~> 0.12, >= 0.12.2)
       eac_ruby_base0 (~> 0.17)
-      eac_templates (~> 0.3, >= 0.3.1)
+      eac_templates (~> 0.3, >= 0.3.2)
       git (~> 1.12)
       ruby-progressbar (~> 1.11)
 
