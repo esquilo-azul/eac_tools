@@ -61,7 +61,7 @@ module Avm
         instance.host_env.command(
           'sudo', 'certbot', '--apache', '--domain', instance.read_entry('web.hostname'),
           '--redirect', '--non-interactive', '--agree-tos',
-          '--email', instance.read_entry('admin.email')
+          '--email', instance.install_email
         ).system!
       end
 
