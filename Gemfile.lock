@@ -89,7 +89,7 @@ PATH
   remote: sub/avm-eac_webapp_base0
   specs:
     avm-eac_webapp_base0 (0.7.0)
-      avm (~> 0.41, >= 0.41.1)
+      avm (~> 0.42)
       avm-eac_generic_base0 (~> 0.5)
       avm-eac_postgresql_base0 (~> 0.2)
       avm-eac_ubuntu_base0 (~> 0.3)
