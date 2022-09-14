@@ -3,6 +3,7 @@
 require 'addressable/uri'
 require 'avm/eac_redmine_base0/data_unit'
 require 'avm/eac_redmine_base0/instances/docker_image'
+require 'avm/eac_redmine_base0/instances/runners'
 require 'avm/eac_redmine_base0/rest_api'
 require 'avm/eac_rails_base1/instances/base'
 
