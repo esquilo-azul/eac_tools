@@ -8,9 +8,14 @@ require 'eac_templates/core_ext'
 module Avm
   module EacWebappBase0
     class ApacheHost
+      APACHE_DIRECTORY_EXTRA_CONFIG_KEY = 'install.apache_directory_extra_config'
       JOBS = %w[write_available_no_ssl_site enable_no_ssl_site remove_ssl_site reload_apache
                 run_certbot enable_ssl_site reload_apache].freeze
       include ::Avm::Jobs::Base
+
+      def directory_extra_config
+        instance.entry(APACHE_DIRECTORY_EXTRA_CONFIG_KEY).value.if_present { |v| "  #{v}\n" }
+      end
 
       def no_ssl_site_content
         ::Avm::EacWebappBase0::ApacheHost
