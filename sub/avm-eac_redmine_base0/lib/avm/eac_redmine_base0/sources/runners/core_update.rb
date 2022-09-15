@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/eac_rails_base1/sources/base'
-require 'avm/eac_redmine_base0/core_update'
+require 'avm/eac_redmine_base0/sources/core_update'
 require 'eac_cli/core_ext'
 
 module Avm
@@ -29,7 +29,8 @@ module Avm
           end
 
           def update
-            ::Avm::EacRedmineBase0::CoreUpdate.new(runner_context.call(:subject), version, url).run
+            ::Avm::EacRedmineBase0::Sources::CoreUpdate
+              .new(runner_context.call(:subject), version, url).run
           end
 
           def url
