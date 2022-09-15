@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'addressable/uri'
-require 'avm/eac_redmine_base0/data_unit'
+require 'avm/eac_redmine_base0/instances/data_unit'
 require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/instances/runners'
 require 'avm/eac_redmine_base0/rest_api'
@@ -33,7 +33,7 @@ module Avm
           @data_package ||= ::Avm::Data::Instance::Package.new(
             self,
             units: {
-              all: ::Avm::EacRedmineBase0::DataUnit.new(self)
+              all: ::Avm::EacRedmineBase0::Instances::DataUnit.new(self)
             }
           )
         end
