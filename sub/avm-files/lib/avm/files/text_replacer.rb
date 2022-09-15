@@ -25,7 +25,7 @@ module Avm
       end
 
       def gsub(from, to)
-        replacement(::Avm::TextReplacer::Gsub.new(from, to))
+        replacement(::Avm::Files::TextReplacer::Gsub.new(from, to))
       end
     end
   end
