@@ -4,7 +4,7 @@ require 'addressable/uri'
 require 'avm/eac_redmine_base0/instances/data_unit'
 require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/instances/runners'
-require 'avm/eac_redmine_base0/rest_api'
+require 'avm/eac_redmine_base0/instances/rest_api'
 require 'avm/eac_rails_base1/instances/base'
 
 module Avm
@@ -47,11 +47,11 @@ module Avm
 
         private
 
-        # @return [Avm::EacRedmineBase0::RestApi]
+        # @return [Avm::EacRedmineBase0::Instances::RestApi]
         def rest_api_uncached
           url = root_url
           url.query_values = { key: read_entry('api.key') }
-          ::Avm::EacRedmineBase0::RestApi.new(url)
+          ::Avm::EacRedmineBase0::Instances::RestApi.new(url)
         end
       end
     end
