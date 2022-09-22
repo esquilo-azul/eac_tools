@@ -135,7 +135,7 @@ PATH
   remote: sub/avm
   specs:
     avm (0.43.0)
-      eac_cli (~> 0.27, >= 0.27.8)
+      eac_cli (~> 0.28)
       eac_config (~> 0.11, >= 0.11.1)
       eac_docker (~> 0.4, >= 0.4.2)
       eac_git (~> 0.12, >= 0.12.2)
