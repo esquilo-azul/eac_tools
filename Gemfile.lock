@@ -180,7 +180,7 @@ PATH
   specs:
     eac_git (0.12.2)
       eac_ruby_utils (~> 0.103)
-      parseconfig (~> 1.0, >= 1.0.8)
+      parseconfig (~> 1.1, >= 1.1.2)
 
 PATH
   remote: sub/eac_ruby_base0
