@@ -11,6 +11,7 @@ module Avm
   module EacRedmineBase0
     module Instances
       class Base < ::Avm::EacRailsBase1::Instances::Base
+        require_sub __FILE__, include_modules: true
         enable_simple_cache
 
         FILES_UNITS = { files: 'files' }.freeze
