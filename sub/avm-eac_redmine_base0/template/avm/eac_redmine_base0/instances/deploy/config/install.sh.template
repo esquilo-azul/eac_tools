@@ -2,6 +2,9 @@
 export rvm_ruby='ruby-%%RUBY.VERSION%%'
 
 # Database
+export postgresql_internal='%%DATABASE_INTERNAL%%'
+export postgresql_host='%%DATABASE.HOSTNAME%%'
+export postgresql_port='%%DATABASE.PORT%%'
 export postgresql_database='%%DATABASE.NAME%%'
 export postgresql_user='%%DATABASE.USERNAME%%'
 export postgresql_password='%%DATABASE.PASSWORD%%'
