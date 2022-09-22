@@ -1,10 +1,14 @@
+# Ruby
+export rvm_ruby='ruby-%%RUBY.VERSION%%'
+
+# Database
 export postgresql_database='%%DATABASE.NAME%%'
 export postgresql_database_test='%%DATABASE.NAME%%_test'
 export postgresql_user='%%DATABASE.USERNAME%%'
 export postgresql_password='%%DATABASE.PASSWORD%%'
 export postgresql_version='%%POSTGRESQL.VERSION%%'
-export rvm_ruby='ruby-%%RUBY.VERSION%%'
-export redmine_git_hosting_ssh_key_name=redmine_git_hosting_id
+
+# Web
 if [ '%%WEB.SCHEME%%' == 'https' ]; then
   export address_https='true'
 else
@@ -17,6 +21,7 @@ export address_path='%%WEB.PATH%%'
 export git_repositories_hierarchical_organisation=false
 export gitolite_user='%%GIT.USERNAME%%'
 export gitolite_user_home="/var/lib/${gitolite_user}"
+export redmine_git_hosting_ssh_key_name=redmine_git_hosting_id
 
 # Mail settings
 export smtp_server='%%MAILER.SMTP.ADDRESS%%'
