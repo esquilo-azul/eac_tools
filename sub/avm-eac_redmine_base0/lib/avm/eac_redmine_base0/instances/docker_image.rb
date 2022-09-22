@@ -14,8 +14,9 @@ module Avm
         BASE_IMAGE = 'ubuntu:20.04'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_BLANK = 'redmine_as_apache_base'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_PRESENT = 'redmine_as_apache_path'
-        DATABASE_INTERNAL_HOSTNAME = 'localhost'
         REDMINE_SOURCE_HOST_SUBPATH = 'redmine_source'
+
+        delegate :database_internal, to: :instance
 
         def avm_fs_cache_object_id
           instance.id
@@ -29,11 +30,6 @@ module Avm
 
         def base_image
           eac_ubuntu_base0_instance.docker_image.provide.id
-        end
-
-        def database_internal
-          instance.entry(::Avm::Instances::EntryKeys::DATABASE_HOSTNAME).value ==
-            DATABASE_INTERNAL_HOSTNAME
         end
 
         def installer_target_task
