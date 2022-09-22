@@ -179,7 +179,7 @@ PATH
   remote: sub/eac_git
   specs:
     eac_git (0.12.2)
-      eac_ruby_utils (~> 0.83)
+      eac_ruby_utils (~> 0.103)
       parseconfig (~> 1.0, >= 1.0.8)
 
 PATH
