@@ -120,7 +120,8 @@ module EacGit
     private
 
     def merge_base_pair(commit1, commit2)
-      command('merge-base', commit1, commit2).execute!(exit_outputs: { 256 => nil }).strip
+      command('merge-base', commit1, commit2).execute!(exit_outputs: { 256 => nil })
+        .if_present(nil, &:strip)
     end
   end
 end
