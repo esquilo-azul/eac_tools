@@ -6,6 +6,7 @@ export postgresql_database='%%DATABASE.NAME%%'
 export postgresql_user='%%DATABASE.USERNAME%%'
 export postgresql_password='%%DATABASE.PASSWORD%%'
 export postgresql_version='%%POSTGRESQL.VERSION%%'
+export postgresql_extra_settings='%%DATABASE.EXTRA%%'
 
 # Web
 if [ '%%WEB.SCHEME%%' == 'https' ]; then
