@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/jobs/base'
+require 'avm/entries/jobs/base'
 require 'avm/eac_ubuntu_base0/apache'
 require 'eac_ruby_utils/core_ext'
 
@@ -10,7 +10,7 @@ module Avm
       JOBS = %w[write_tasks_scheduler_command write_service link_service verify_service
                 reload_systemd enable_service start_service].freeze
 
-      include ::Avm::Jobs::Base
+      include ::Avm::Entries::Jobs::Base
       require_sub __FILE__, include_modules: true
       delegate :platform_instance, to: :instance
 
