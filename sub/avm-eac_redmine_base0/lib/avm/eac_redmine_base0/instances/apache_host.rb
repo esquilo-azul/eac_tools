@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/apache_host'
+require 'avm/eac_rails_base1/instances/apache_host'
 
 module Avm
   module EacRedmineBase0
     module Instances
-      class ApacheHost < ::Avm::EacRailsBase1::ApacheHost
+      class ApacheHost < ::Avm::EacRailsBase1::Instances::ApacheHost
       end
     end
   end
