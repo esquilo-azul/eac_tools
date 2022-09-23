@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'eac_templates/core_ext'
-require 'avm/eac_webapp_base0/deploy'
+require 'avm/eac_webapp_base0/instances/deploy'
 require 'avm/instances/entry_keys'
 
 module Avm
   module EacRailsBase0
-    class Deploy < ::Avm::EacWebappBase0::Deploy
+    class Deploy < ::Avm::EacWebappBase0::Instances::Deploy
       set_callback :assert_instance_branch, :after do
         bundle_install
         assert_database
