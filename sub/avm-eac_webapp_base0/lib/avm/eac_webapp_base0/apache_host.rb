@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
-require 'avm/jobs/base'
+require 'avm/entries/jobs/base'
 require 'avm/eac_ubuntu_base0/apache'
 require 'eac_templates/core_ext'
 
@@ -11,7 +11,7 @@ module Avm
       APACHE_DIRECTORY_EXTRA_CONFIG_KEY = 'install.apache_directory_extra_config'
       JOBS = %w[write_available_no_ssl_site enable_no_ssl_site remove_ssl_site reload_apache
                 run_certbot enable_ssl_site reload_apache].freeze
-      include ::Avm::Jobs::Base
+      include ::Avm::Entries::Jobs::Base
 
       def directory_extra_config
         instance.entry(APACHE_DIRECTORY_EXTRA_CONFIG_KEY).value.if_present { |v| "  #{v}\n" }

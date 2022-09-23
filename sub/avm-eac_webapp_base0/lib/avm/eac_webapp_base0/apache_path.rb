@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/jobs/base'
+require 'avm/entries/jobs/base'
 require 'avm/eac_ubuntu_base0/apache'
 require 'eac_ruby_utils/core_ext'
 
@@ -8,7 +8,7 @@ module Avm
   module EacWebappBase0
     class ApachePath
       JOBS = %w[write_available_conf enable_conf reload_apache].freeze
-      include ::Avm::Jobs::Base
+      include ::Avm::Entries::Jobs::Base
 
       def content
         ::Avm::EacWebappBase0::ApachePath.template.child('default.conf').apply(variables_source)
