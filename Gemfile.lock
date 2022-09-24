@@ -101,7 +101,7 @@ PATH
     avm-eac_wordpress_base0 (0.2.0)
       avm (~> 0.45)
       avm-eac_webapp_base0 (~> 0.9)
-      eac_ruby_utils (~> 0.102)
+      eac_ruby_utils (~> 0.104)
 
 PATH
   remote: sub/avm-files
