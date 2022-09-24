@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/systemd_unit'
+require 'avm/eac_rails_base1/instances/systemd_unit'
 require 'eac_ruby_utils/core_ext'
 
 module Avm
@@ -31,9 +31,9 @@ module Avm
           private
 
           def systemd_unit_uncached
-            ::Avm::EacRailsBase1::SystemdUnit.new(runner_context.call(:instance),
-                                                  restart: parsed.restart,
-                                                  exec_run: parsed.exec_run?)
+            ::Avm::EacRailsBase1::Instances::SystemdUnit.new(runner_context.call(:instance),
+                                                             restart: parsed.restart,
+                                                             exec_run: parsed.exec_run?)
           end
 
           def result_uncached
