@@ -13,7 +13,7 @@ PATH
       avm-eac_ruby_base1 (~> 0.21)
       avm-eac_webapp_base0 (~> 0.9)
       avm-eac_wordpress_base0 (~> 0.2, >= 0.2.1)
-      avm-tools (~> 0.136, >= 0.136.2)
+      avm-tools (~> 0.137)
       eac_ruby_utils (~> 0.104)
 
 PATH
