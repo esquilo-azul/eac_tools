@@ -172,7 +172,7 @@ PATH
   remote: sub/eac_docker
   specs:
     eac_docker (0.4.2)
-      eac_ruby_utils (~> 0.96)
+      eac_ruby_utils (~> 0.104)
       eac_templates (~> 0.3, >= 0.3.1)
 
 PATH
