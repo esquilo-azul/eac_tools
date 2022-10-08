@@ -114,6 +114,14 @@ PATH
       eac_templates (~> 0.3, >= 0.3.2)
 
 PATH
+  remote: sub/avm-git
+  specs:
+    avm-git (0.4.0)
+      avm-files (~> 0.1)
+      eac_git (~> 0.11)
+      eac_ruby_utils (~> 0.76)
+
+PATH
   remote: sub/avm-tools
   specs:
     avm-tools (0.138.0)
@@ -230,10 +238,6 @@ GEM
       avm (~> 0.7)
       eac_ruby_utils (~> 0.77, >= 0.77.1)
       eac_templates (~> 0.3)
-    avm-git (0.4.0)
-      avm-files (~> 0.1)
-      eac_git (~> 0.11)
-      eac_ruby_utils (~> 0.76)
     clipboard (1.3.6)
     colorize (0.8.1)
     concurrent-ruby (1.1.10)
@@ -361,6 +365,7 @@ DEPENDENCIES
   avm-eac_webapp_base0!
   avm-eac_wordpress_base0!
   avm-files!
+  avm-git!
   avm-tools!
   eac_cli!
   eac_config!
