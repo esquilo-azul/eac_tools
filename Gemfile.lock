@@ -42,6 +42,12 @@ PATH
       eac_ruby_utils (~> 0.104)
 
 PATH
+  remote: sub/avm-eac_php_base0
+  specs:
+    avm-eac_php_base0 (0.0.0)
+      eac_ruby_utils (~> 0.104)
+
+PATH
   remote: sub/avm-eac_rails_base0
   specs:
     avm-eac_rails_base0 (0.8.1)
@@ -358,6 +364,7 @@ DEPENDENCIES
   avm-eac_asciidoctor_base0!
   avm-eac_generic_base0!
   avm-eac_latex_base0!
+  avm-eac_php_base0!
   avm-eac_rails_base0!
   avm-eac_rails_base1!
   avm-eac_redmine_base0!
