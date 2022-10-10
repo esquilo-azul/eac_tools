@@ -42,8 +42,9 @@ module Avm
             instance.source_instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)
           end
 
+          # @return [EacGit::Local]
           def git_uncached
-            ::Avm::Launcher::Git::Base.new(git_repository_path)
+            instance.application.local_source.scm.git_repo
           end
 
           def instance_branch
