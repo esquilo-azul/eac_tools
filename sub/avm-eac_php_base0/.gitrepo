@@ -1,0 +1,7 @@
+[subrepo]
+  cmdver = 0.4.1
+  commit = f44df9e739d6ba43c9c2f7c57f4796b600975e0b
+  method = merge
+  parent = 2a479d899e2007b1b96abf828e3c889e210fc178
+  branch = master
+  remote = https://github.com/esquilo-azul/avm-eac_php_base0.git
