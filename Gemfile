@@ -9,3 +9,6 @@ gemspec
 
   gem ::File.basename(dir), path: dir, require: false
 end
+
+local_gemfile = ::File.join(::File.dirname(__FILE__), 'Gemfile.local')
+eval_gemfile local_gemfile if ::File.exist?(local_gemfile)
