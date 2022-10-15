@@ -15,7 +15,7 @@ module Avm
 
           def git_fetch_uncached
             infom "Fetching remote \"#{git_remote_name}\" from \"#{git_repository_path}\"..."
-            git.fetch(git_remote_name)
+            git.remote(git_remote_name).fetch
           end
 
           def git_reference
