@@ -126,7 +126,7 @@ PATH
     avm-git (0.7.0)
       avm (~> 0.50)
       avm-files (~> 0.4, >= 0.4.1)
-      eac_git (~> 0.12, >= 0.12.3)
+      eac_git (~> 0.13)
       eac_ruby_utils (~> 0.104)
       git (~> 1.12)
 
