@@ -31,7 +31,7 @@ module Avm
           end
 
           def git_remote_hashs_uncached
-            git.remote_hashs(git_remote_name)
+            git.remote(git_remote_name).ls.hashes
           end
 
           def git_remote_name
