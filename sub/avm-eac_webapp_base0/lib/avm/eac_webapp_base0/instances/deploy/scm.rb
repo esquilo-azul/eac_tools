@@ -44,7 +44,7 @@ module Avm
 
           # @return [EacGit::Local]
           def git_uncached
-            instance.application.local_source.scm.git_repo
+            scm.git_repo
           end
 
           def instance_branch
@@ -57,6 +57,11 @@ module Avm
 
           def master_branch
             remote_branch('master')
+          end
+
+          # @return [Avm::Scms::Base]
+          def scm
+            instance.application.local_source.scm
           end
         end
       end
