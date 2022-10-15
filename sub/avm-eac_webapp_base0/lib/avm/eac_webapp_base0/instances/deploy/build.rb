@@ -38,7 +38,7 @@ module Avm
 
           def build_content
             infom 'Writing Git source code...'
-            ::Avm::Git::Commit.new(git, commit_reference).deploy_to_env_path(
+            scm.commit(commit_reference).deploy_to_env_path(
               build_dir_env,
               build_dir
             ).variables_source_set(variables_source).run
