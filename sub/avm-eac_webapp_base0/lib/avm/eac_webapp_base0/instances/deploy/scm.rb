@@ -4,7 +4,7 @@ module Avm
   module EacWebappBase0
     module Instances
       class Deploy
-        module GitInfo
+        module Scm
           def commit_sha1_uncached
             git_fetch
             r = git.rev_parse(git_reference_found)
