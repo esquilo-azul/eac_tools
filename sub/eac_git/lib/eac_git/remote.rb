@@ -7,7 +7,6 @@ require 'eac_ruby_utils/core_ext'
 module EacGit
   # A Git remote repository referenced by URI.
   class Remote
-    require_sub __FILE__
     include ::EacGit::RemoteLike
 
     common_constructor :uri

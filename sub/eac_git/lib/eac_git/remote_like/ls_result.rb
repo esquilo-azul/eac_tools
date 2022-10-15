@@ -3,7 +3,7 @@
 require 'eac_ruby_utils/core_ext'
 
 module EacGit
-  class Remote
+  module RemoteLike
     class LsResult
       class << self
         def by_ls_remote_command_output(output)
