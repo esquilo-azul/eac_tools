@@ -5,7 +5,7 @@ module Avm
     module Instances
       class Deploy
         module Scm
-          def commit_sha1_uncached
+          def commit_reference_uncached
             git_fetch
             r = git.rev_parse(git_reference_found)
             return r if r

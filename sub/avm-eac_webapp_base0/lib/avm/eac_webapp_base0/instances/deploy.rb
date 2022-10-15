@@ -38,7 +38,7 @@ module Avm
           infov 'Git reference (User)', git_reference.if_present('- BLANK -')
           infov 'Git remote name', git_remote_name
           infov 'Git reference (Found)', git_reference_found
-          infov 'Git commit SHA1', commit_sha1
+          infov 'Git commit SHA1', commit_reference
           infov 'Appended directories', appended_directories
         end
 
@@ -50,8 +50,8 @@ module Avm
 
         def assert_instance_branch
           infom 'Setting instance branch...'
-          git.command('push', git_remote_name, "#{commit_sha1}:refs/heads/#{instance.id}", '-f')
-             .execute!
+          git.command('push', git_remote_name, "#{commit_reference}:refs/heads/#{instance.id}",
+                      '-f').execute!
         end
 
         def request_test

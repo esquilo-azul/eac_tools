@@ -8,11 +8,11 @@ module Avm
           VERSION_TARGET_PATH = 'VERSION'
 
           def version
-            ([::Time.now, commit_sha1] + version_git_refs).join('|')
+            ([::Time.now, commit_reference] + version_git_refs).join('|')
           end
 
           def version_git_refs
-            git_remote_hashs.select { |_name, sha1| sha1 == commit_sha1 }.keys
+            git_remote_hashs.select { |_name, sha1| sha1 == commit_reference }.keys
                             .map { |ref| ref.gsub(%r{\Arefs/}, '') }.reject { |ref| ref == 'HEAD' }
           end
 
