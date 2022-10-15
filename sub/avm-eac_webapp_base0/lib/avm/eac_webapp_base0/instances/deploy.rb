@@ -50,7 +50,8 @@ module Avm
 
         def assert_instance_branch
           infom 'Setting instance branch...'
-          git.execute!('push', git_remote_name, "#{commit_sha1}:refs/heads/#{instance.id}", '-f')
+          git.command('push', git_remote_name, "#{commit_sha1}:refs/heads/#{instance.id}", '-f')
+             .execute!
         end
 
         def request_test
