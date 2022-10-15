@@ -7,6 +7,11 @@ module EacGit
     require_sub __FILE__
     enable_abstract_methods
 
+    # @return [String] The output of command "git fetch".
+    def fetch
+      local.command('fetch', name).execute!
+    end
+
     # @return [EacRubyUtils::Envs::Command
     def git_command(*_args)
       raise_abstract_method __method__
