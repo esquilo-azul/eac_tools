@@ -17,8 +17,6 @@ module Avm
         options.assert_valid_keys(self.class.lists.option.values)
       end
 
-      FORMATS = %w[].freeze
-
       def run
         clear
         search_files
@@ -60,13 +58,7 @@ module Avm
       end
 
       def formats_uncached
-        formats_from_constant + formats_from_registry
-      end
-
-      def formats_from_constant
-        FORMATS.map do |identifier|
-          "avm/files/formatter/formats/#{identifier}".camelize.constantize.new
-        end
+        formats_from_registry
       end
 
       def formats_from_registry
