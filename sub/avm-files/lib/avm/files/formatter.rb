@@ -17,7 +17,7 @@ module Avm
         options.assert_valid_keys(self.class.lists.option.values)
       end
 
-      FORMATS = %w[ruby php html python xml javascript].freeze
+      FORMATS = %w[ruby php python xml javascript].freeze
 
       def run
         clear
