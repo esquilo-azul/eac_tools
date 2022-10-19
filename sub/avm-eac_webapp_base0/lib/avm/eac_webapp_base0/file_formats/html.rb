@@ -8,7 +8,7 @@ module Avm
     module FileFormats
       class Html < ::Avm::EacGenericBase0::FileFormats::Base
         VALID_BASENAMES = %w[*.html *.html.erb].freeze
-        VALID_TYPES = ['html'].freeze
+        VALID_TYPES = [].freeze
 
         def file_apply(path)
           input = ::File.read(path)
