@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require 'avm/executables'
-require 'avm/files/formatter/formats/generic_plain'
+require 'avm/eac_generic_base0/file_formats/base'
 
 module Avm
   module Files
     class Formatter
       module Formats
-        class Php < ::Avm::Files::Formatter::Formats::GenericPlain
+        class Php < ::Avm::EacGenericBase0::FileFormats::Base
           VALID_BASENAMES = %w[*.php].freeze
           VALID_TYPES = ['x-php'].freeze
 

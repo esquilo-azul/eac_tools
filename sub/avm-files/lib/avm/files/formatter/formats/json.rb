@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'avm/files/formatter/formats/generic_plain'
+require 'avm/eac_generic_base0/file_formats/base'
 
 module Avm
   module Files
     class Formatter
       module Formats
-        class Json < ::Avm::Files::Formatter::Formats::GenericPlain
+        class Json < ::Avm::EacGenericBase0::FileFormats::Base
           VALID_BASENAMES = %w[*.json].freeze
           VALID_TYPES = [].freeze
 

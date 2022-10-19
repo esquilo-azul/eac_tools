@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'avm/files/formatter/formats/generic_plain'
+require 'avm/eac_generic_base0/file_formats/base'
 require 'htmlbeautifier'
 
 module Avm
   module Files
     class Formatter
       module Formats
-        class Html < ::Avm::Files::Formatter::Formats::GenericPlain
+        class Html < ::Avm::EacGenericBase0::FileFormats::Base
           VALID_BASENAMES = %w[*.html *.html.erb].freeze
           VALID_TYPES = ['html'].freeze
 
