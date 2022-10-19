@@ -45,7 +45,7 @@ PATH
 PATH
   remote: sub/avm-eac_php_base0
   specs:
-    avm-eac_php_base0 (0.1.0)
+    avm-eac_php_base0 (0.2.0)
       avm-eac_generic_base0 (~> 0.6)
       eac_ruby_utils (~> 0.105)
 
