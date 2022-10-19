@@ -59,6 +59,10 @@ module Avm
       end
 
       def formats_uncached
+        formats_from_constant
+      end
+
+      def formats_from_constant
         FORMATS.map do |identifier|
           "avm/files/formatter/formats/#{identifier}".camelize.constantize.new
         end
