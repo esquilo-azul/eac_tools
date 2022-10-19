@@ -2,13 +2,14 @@
 
 require 'avm/eac_webapp_base0/file_formats/html'
 require 'avm/eac_webapp_base0/file_formats/json'
+require 'avm/eac_webapp_base0/file_formats/xml'
 require 'eac_ruby_utils/core_ext'
 
 module Avm
   module EacWebappBase0
     module FileFormats
       class Provider
-        ALL_NAMES = %w[html json].freeze
+        ALL_NAMES = %w[html json xml].freeze
 
         def all
           @all ||= ALL_NAMES.map do |name|
