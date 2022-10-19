@@ -6,7 +6,7 @@ PATH
       avm-eac_asciidoctor_base0 (~> 0.7, >= 0.7.1)
       avm-eac_generic_base0 (~> 0.6)
       avm-eac_latex_base0 (~> 0.2, >= 0.2.1)
-      avm-eac_php_base0 (~> 0.1)
+      avm-eac_php_base0 (~> 0.2)
       avm-eac_rails_base0 (~> 0.8, >= 0.8.1)
       avm-eac_rails_base1 (~> 0.7)
       avm-eac_redmine_base0 (~> 0.16)
