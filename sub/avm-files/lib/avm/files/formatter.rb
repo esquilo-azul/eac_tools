@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'avm/registry'
 require 'eac_ruby_utils/core_ext'
 require 'eac_fs/traversable'
 
@@ -59,13 +60,17 @@ module Avm
       end
 
       def formats_uncached
-        formats_from_constant
+        formats_from_constant + formats_from_registry
       end
 
       def formats_from_constant
         FORMATS.map do |identifier|
           "avm/files/formatter/formats/#{identifier}".camelize.constantize.new
         end
+      end
+
+      def formats_from_registry
+        ::Avm::Registry.file_formats.available.reverse.map(&:new)
       end
 
       def search_files
