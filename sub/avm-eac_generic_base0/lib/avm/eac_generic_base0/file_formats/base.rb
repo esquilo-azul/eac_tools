@@ -6,7 +6,7 @@ module Avm
   module EacGenericBase0
     class FileFormats
       class Base < ::Avm::FileFormats::Base
-        VALID_BASENAMES = %w[*.asm *.bat *.css.coffee *.java *.js *.rb *.s *.scss *.sql *.tex
+        VALID_BASENAMES = %w[*.asm *.bat *.css *.coffee *.java *.js *.rb *.s *.scss *.sql *.tex
                              *.url *.yml *.yaml].freeze
 
         VALID_TYPES = %w[plain x-shellscript].freeze
