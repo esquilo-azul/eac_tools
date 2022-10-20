@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'avm/eac_webapp_base0/file_formats/css'
 require 'avm/eac_webapp_base0/file_formats/html'
 require 'avm/eac_webapp_base0/file_formats/javascript'
 require 'avm/eac_webapp_base0/file_formats/json'
@@ -10,7 +11,7 @@ module Avm
   module EacWebappBase0
     module FileFormats
       class Provider
-        ALL_NAMES = %w[html javascript json xml].freeze
+        ALL_NAMES = %w[css html javascript json xml].freeze
 
         def all
           @all ||= ALL_NAMES.map do |name|
