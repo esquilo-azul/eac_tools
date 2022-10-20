@@ -15,7 +15,7 @@ module Avm
 
         private
 
-        %w[js-beautify tidy].each do |program|
+        %w[cssbeautify-cli js-beautify tidy].each do |program|
           define_method(program.underscore + '_uncached') do
             env.executable(program, '--version')
           end
