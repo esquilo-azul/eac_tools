@@ -15,7 +15,7 @@ module Avm
 
         private
 
-        %w[].each do |program|
+        %w[js-beautify].each do |program|
           define_method(program.underscore + '_uncached') do
             env.executable(program, '--version')
           end
