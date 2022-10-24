@@ -173,6 +173,7 @@ PATH
   remote: sub/avm
   specs:
     avm (0.51.0)
+      aranha-parsers (~> 0.14, >= 0.14.4)
       eac_cli (~> 0.28)
       eac_config (~> 0.11, >= 0.11.1)
       eac_docker (~> 0.5)
