@@ -11,7 +11,7 @@ module Avm
 
         private
 
-        %w[].each do |program|
+        %w[yapf].each do |program|
           define_method(program.underscore + '_uncached') do
             ::EacRubyUtils::Envs.local.executable(program, '--version')
           end
