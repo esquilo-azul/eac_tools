@@ -15,7 +15,7 @@ PATH
       avm-eac_webapp_base0 (~> 0.12)
       avm-eac_wordpress_base0 (~> 0.2, >= 0.2.1)
       avm-tools (~> 0.142, >= 0.142.3)
-      eac_ruby_utils (~> 0.105)
+      eac_ruby_utils (~> 0.106)
 
 PATH
   remote: sub/aranha-parsers
