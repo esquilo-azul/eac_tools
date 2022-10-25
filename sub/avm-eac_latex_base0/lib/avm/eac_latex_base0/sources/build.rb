@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/executables'
+require 'avm/eac_latex_base0/executables'
 require 'eac_ruby_utils/core_ext'
 require 'eac_ruby_utils/fs/temp'
 require 'eac_ruby_utils/fs/clearable_directory'
@@ -62,7 +63,8 @@ module Avm
         end
 
         def compile_command
-          ::Avm::Executables.latex.command(*compile_command_args).chdir(source_temp_dir)
+          ::Avm::EacLatexBase0::Executables.latex.command(*compile_command_args)
+                                           .chdir(source_temp_dir)
         end
 
         def compile_command_args
