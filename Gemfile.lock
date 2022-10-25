@@ -20,7 +20,7 @@ PATH
 PATH
   remote: sub/aranha-parsers
   specs:
-    aranha-parsers (0.14.3)
+    aranha-parsers (0.14.4)
       activesupport (>= 4.0.0)
       addressable (~> 2.8, >= 2.8.1)
       curb (~> 0.9, >= 0.9.11)
