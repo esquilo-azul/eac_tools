@@ -18,6 +18,19 @@ PATH
       eac_ruby_utils (~> 0.105)
 
 PATH
+  remote: sub/aranha-parsers
+  specs:
+    aranha-parsers (0.14.3)
+      activesupport (>= 4.0.0)
+      addressable (~> 2.8, >= 2.8.1)
+      curb (~> 0.9, >= 0.9.11)
+      eac_ruby_utils (~> 0.102, >= 0.102.1)
+      faraday-gzip (~> 0.1)
+      faraday_middleware (~> 1.2)
+      nokogiri (~> 1.13, >= 1.13.8)
+      ofx-parser (~> 1.1)
+
+PATH
   remote: sub/avm-eac_asciidoctor_base0
   specs:
     avm-eac_asciidoctor_base0 (0.7.1)
@@ -237,15 +250,6 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    aranha-parsers (0.14.3)
-      activesupport (>= 4.0.0)
-      addressable (~> 2.8, >= 2.8.1)
-      curb (~> 0.9, >= 0.9.11)
-      eac_ruby_utils (~> 0.102, >= 0.102.1)
-      faraday-gzip (~> 0.1)
-      faraday_middleware (~> 1.2)
-      nokogiri (~> 1.13, >= 1.13.8)
-      ofx-parser (~> 1.1)
     asciidoctor (2.0.18)
     ast (2.4.2)
     avm-eac_postgresql_base0 (0.2.0)
@@ -370,6 +374,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  aranha-parsers!
   avm!
   avm-eac_asciidoctor_base0!
   avm-eac_generic_base0!
