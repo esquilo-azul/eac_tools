@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/executables'
+require 'avm/eac_php_base0/executables'
 require 'avm/eac_generic_base0/file_formats/base'
 
 module Avm
@@ -11,7 +11,7 @@ module Avm
         VALID_TYPES = ['x-php'].freeze
 
         def file_apply(file)
-          ::Avm::Executables.php_cs_fixer.command.append(['fix', file]).system!
+          ::Avm::EacPhpBase0::Executables.php_cs_fixer.command.append(['fix', file]).system!
           super(file)
         end
       end
