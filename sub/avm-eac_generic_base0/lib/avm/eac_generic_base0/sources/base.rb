@@ -10,6 +10,10 @@ module Avm
         require_sub __FILE__, include_modules: true
         enable_abstract_methods
 
+        def update
+          # Do nothing
+        end
+
         def valid?
           ::Avm::Registry.scms.detect_optional(path).present?
         end
