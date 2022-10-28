@@ -154,7 +154,7 @@ PATH
 PATH
   remote: sub/avm-tools
   specs:
-    avm-tools (0.142.3)
+    avm-tools (0.142.4)
       aranha-parsers (~> 0.14, >= 0.14.4)
       avm (~> 0.53)
       avm-eac_ruby_base1 (~> 0.26, >= 0.26.1)
