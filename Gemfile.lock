@@ -148,7 +148,7 @@ PATH
       avm (~> 0.53)
       avm-files (~> 0.6)
       eac_git (~> 0.13)
-      eac_ruby_utils (~> 0.105)
+      eac_ruby_utils (~> 0.106, >= 0.106.1)
       git (~> 1.12)
 
 PATH
