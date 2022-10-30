@@ -39,14 +39,16 @@ module EacFs
       # @param file [Pathname]
       # @return [Hash]
       def build_file(file)
-        return TRUNCATE_FILE_CONTENT if truncate_files.include?(file.basename.to_path)
-
-        file.read
+        truncate_file?(file) ? TRUNCATE_FILE_CONTENT : file.read
       end
 
       # @return [String]
       def fs_object_basename(obj)
         rename_files.inject(obj.basename.to_path) { |a, e| e.apply(a) }
+      end
+
+      def truncate_file?(file)
+        truncate_files.include?(file.basename.to_path)
       end
     end
   end
