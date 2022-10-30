@@ -48,7 +48,9 @@ module EacFs
       end
 
       def truncate_file?(file)
-        truncate_files.include?(file.basename.to_path)
+        truncate_files.any? do |pattern|
+          file.basename.fnmatch?(pattern)
+        end
       end
     end
   end
