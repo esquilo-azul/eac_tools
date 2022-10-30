@@ -5,6 +5,8 @@ module Avm
     module Instances
       class Deploy
         module Scm
+          DEFAULT_REMOTE_NAME = 'origin'
+
           def commit_reference_uncached
             git_fetch
             r = git.rev_parse(git_reference_found)
@@ -35,7 +37,7 @@ module Avm
           end
 
           def git_remote_name
-            ::Avm::Git::DEFAULT_REMOTE_NAME
+            DEFAULT_REMOTE_NAME
           end
 
           def git_repository_path
