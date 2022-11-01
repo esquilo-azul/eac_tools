@@ -199,7 +199,7 @@ PATH
   specs:
     eac_config (0.11.1)
       addressable (~> 2.8, >= 2.8.1)
-      eac_ruby_utils (~> 0.102)
+      eac_ruby_utils (~> 0.107)
 
 PATH
   remote: sub/eac_docker
