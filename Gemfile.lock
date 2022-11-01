@@ -109,7 +109,7 @@ PATH
   remote: sub/avm-eac_ruby_base1
   specs:
     avm-eac_ruby_base1 (0.26.2)
-      avm (~> 0.54)
+      avm (~> 0.55)
       avm-eac_generic_base0 (~> 0.8)
       eac_ruby_utils (~> 0.106, >= 0.106.1)
 
@@ -370,7 +370,7 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.6.1)
-    zeitwerk (2.6.3)
+    zeitwerk (2.6.4)
     zlib (2.1.1)
 
 PLATFORMS
