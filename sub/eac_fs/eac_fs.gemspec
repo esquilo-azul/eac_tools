@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib}/**/*']
 
   s.add_dependency 'content-type', '~> 0.0', '>= 0.0.2'
-  s.add_dependency 'eac_ruby_utils', '~> 0.106', '>= 0.106.1'
+  s.add_dependency 'eac_ruby_utils', '~> 0.107', '>= 0.107.1'
   s.add_dependency 'ruby-filemagic', '~> 0.7', '>= 0.7.3'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.5.1'
