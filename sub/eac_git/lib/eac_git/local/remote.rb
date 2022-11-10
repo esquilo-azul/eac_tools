@@ -33,6 +33,11 @@ module EacGit
           .execute!(exit_outputs: { NO_SUCH_REMOTE_CODE => nil })
           .if_present(nil, &:strip)
       end
+
+      # @return [String]
+      def url=(new_url)
+        local.command('remote', 'set-url', name, new_url).execute!
+      end
     end
   end
 end
