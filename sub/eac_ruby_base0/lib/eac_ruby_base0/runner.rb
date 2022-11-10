@@ -2,6 +2,7 @@
 
 require 'eac_cli/core_ext'
 require 'eac_cli/speaker'
+require 'eac_cli/speaker/input_blocked'
 require 'eac_config/node'
 require 'eac_fs/contexts'
 require 'eac_ruby_utils/speaker'
@@ -51,16 +52,6 @@ module EacRubyBase0
       out("#{application_version}\n")
     end
 
-    class FailIfRequestInput
-      enable_speaker
-
-      %w[gets noecho].each do |method|
-        define_method(method) do
-          raise "Input method requested (\"#{method}\") and option --no-input is set"
-        end
-      end
-    end
-
     private
 
     # @return [Array<EacRubyUtils::Struct>]
@@ -78,7 +69,7 @@ module EacRubyBase0
     def build_speaker
       options = {}
       options[:err_out] = ::StringIO.new if parsed.quiet?
-      options[:in_in] = FailIfRequestInput.new if parsed.no_input?
+      options[:in_in] = ::EacCli::Speaker::InputBlocked.new if parsed.no_input?
       ::EacCli::Speaker.new(options)
     end
 
