@@ -229,7 +229,7 @@ PATH
     eac_ruby_base0 (0.17.0)
       avm-eac_ruby_base1 (~> 0.27, >= 0.27.1)
       eac_cli (~> 0.30)
-      eac_fs (~> 0.12, >= 0.12.3)
+      eac_fs (~> 0.15)
       eac_ruby_utils (~> 0.103)
 
 PATH
