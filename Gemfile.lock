@@ -96,7 +96,7 @@ PATH
       curb (~> 0.9, >= 0.9.11)
       eac_fs (~> 0.15)
       eac_rest (~> 0.6, >= 0.6.1)
-      eac_ruby_utils (~> 0.104)
+      eac_ruby_utils (~> 0.107, >= 0.107.1)
 
 PATH
   remote: sub/avm-eac_redmine_plugin_base0
