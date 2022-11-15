@@ -10,8 +10,6 @@ module Avm
         require_sub __FILE__, include_modules: true
 
         DEFAULT_GEMFILE_PATH = 'SelfGemfile'
-        RUBOCOP_GEM_NAME = 'rubocop'
-        RUBOCOP_TEST_NAME = 'rubocop'
 
         # @return [String]
         def default_gemfile_path
@@ -24,18 +22,6 @@ module Avm
           r[PARENT_RAKE_TASK_TEST_NAME] = parent_rake_test_command if parent_rake_test_command?
           r[RUBOCOP_TEST_NAME] = rubocop_test_command if rubocop_test_command?
           r
-        end
-
-        # @return [EacRubyUtils::Envs::Command]
-        def rubocop_test_command
-          bundle('exec', 'rubocop', '--ignore-parent-exclusion')
-            .envvar('RAILS_ENV', 'test')
-            .chdir_root
-        end
-
-        # @return [Boolean]
-        def rubocop_test_command?
-          gemfile_path.exist? && gemfile_lock_gem_version(RUBOCOP_GEM_NAME).present?
         end
 
         # @return [Boolean]
