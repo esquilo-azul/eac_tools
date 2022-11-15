@@ -63,6 +63,13 @@ PATH
       eac_ruby_utils (~> 0.106)
 
 PATH
+  remote: sub/avm-eac_postgresql_base0
+  specs:
+    avm-eac_postgresql_base0 (0.2.0)
+      avm (~> 0.12, >= 0.12.1)
+      eac_ruby_utils (~> 0.82)
+
+PATH
   remote: sub/avm-eac_python_base0
   specs:
     avm-eac_python_base0 (0.2.0)
@@ -255,9 +262,6 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     asciidoctor (2.0.18)
     ast (2.4.2)
-    avm-eac_postgresql_base0 (0.2.0)
-      avm (~> 0.12, >= 0.12.1)
-      eac_ruby_utils (~> 0.82)
     avm-eac_ubuntu_base0 (0.3.0)
       avm (~> 0.7)
       eac_ruby_utils (~> 0.77, >= 0.77.1)
@@ -383,6 +387,7 @@ DEPENDENCIES
   avm-eac_generic_base0!
   avm-eac_latex_base0!
   avm-eac_php_base0!
+  avm-eac_postgresql_base0!
   avm-eac_python_base0!
   avm-eac_rails_base0!
   avm-eac_rails_base1!
