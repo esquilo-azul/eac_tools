@@ -22,8 +22,8 @@ export address_path='%%WEB.PATH%%'
 
 # Git
 export git_repositories_hierarchical_organisation=false
-export gitolite_user='%%GIT.USERNAME%%'
-export gitolite_user_home="/var/lib/${gitolite_user}"
+export gitolite_user='%%GITOLITE.USERNAME%%'
+export gitolite_user_home='%%GITOLITE.PATH%%'
 export redmine_git_hosting_ssh_key_name=redmine_git_hosting_id
 
 # Mail settings
