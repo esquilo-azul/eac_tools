@@ -2,8 +2,8 @@
 
 require 'avm/instances/base'
 require 'avm/eac_postgresql_base0/instance_with'
-require 'avm/data/instance/files_unit'
-require 'avm/data/instance/package'
+require 'avm/instances/data/files_unit'
+require 'avm/instances/data/package'
 require 'avm/eac_webapp_base0/instances/deploy/file_unit'
 require 'avm/eac_webapp_base0/instances/runners'
 require 'avm/eac_ubuntu_base0/instances/base'
@@ -34,7 +34,7 @@ module Avm
         end
 
         def data_package
-          @data_package ||= ::Avm::Data::Instance::Package.new(
+          @data_package ||= ::Avm::Instances::Data::Package.new(
             self, units: { database: database_unit }.merge(files_units)
           )
         end
@@ -52,7 +52,7 @@ module Avm
 
         def files_units
           self.class.const_get('FILES_UNITS').transform_values do |fs_path_subpath|
-            ::Avm::Data::Instance::FilesUnit.new(self, fs_path_subpath)
+            ::Avm::Instances::Data::FilesUnit.new(self, fs_path_subpath)
           end
         end
       end
