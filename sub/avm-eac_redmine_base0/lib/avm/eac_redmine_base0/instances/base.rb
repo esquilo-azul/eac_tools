@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'addressable/uri'
-require 'avm/eac_redmine_base0/instances/data_unit'
+require 'avm/eac_redmine_base0/instances/data_package'
 require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/instances/runners'
 require 'avm/eac_redmine_base0/instances/rest_api'
@@ -13,8 +13,6 @@ module Avm
       class Base < ::Avm::EacRailsBase1::Instances::Base
         require_sub __FILE__, include_modules: true
         enable_simple_cache
-
-        FILES_UNITS = { files: 'files' }.freeze
 
         def docker_image_class
           ::Avm::EacRedmineBase0::Instances::DockerImage
@@ -30,13 +28,9 @@ module Avm
           ]
         end
 
+        # @return [Avm::EacRedmineBase0::Instances::DataPackage]
         def data_package
-          @data_package ||= ::Avm::Instances::Data::Package.new(
-            self,
-            units: {
-              all: ::Avm::EacRedmineBase0::Instances::DataUnit.new(self)
-            }
-          )
+          @data_package ||= ::Avm::EacRedmineBase0::Instances::DataPackage.new(self)
         end
 
         # @return [Addressable::URI]
