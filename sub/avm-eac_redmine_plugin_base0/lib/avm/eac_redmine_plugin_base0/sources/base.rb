@@ -7,11 +7,12 @@ module Avm
   module EacRedminePluginBase0
     module Sources
       class Base < ::Avm::EacRubyBase1::Sources::Base
+        require_sub __FILE__, include_modules: true
+
         DEFAULT_GEMFILE_PATH = 'SelfGemfile'
         RUBOCOP_GEM_NAME = 'rubocop'
         RUBOCOP_TEST_NAME = 'rubocop'
         PARENT_RAKE_TASK_TEST_NAME = 'parent_rake_task'
-        INIT_SUBPATH = 'init.rb'
 
         # @return [String]
         def default_gemfile_path
@@ -24,11 +25,6 @@ module Avm
           r[PARENT_RAKE_TASK_TEST_NAME] = parent_rake_test_command if parent_rake_test_command?
           r[RUBOCOP_TEST_NAME] = rubocop_test_command if rubocop_test_command?
           r
-        end
-
-        # @return [String]
-        def init_path
-          path.join(INIT_SUBPATH)
         end
 
         # @return [String]
