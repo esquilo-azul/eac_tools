@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'avm/data/instance/unit'
+require 'avm/instances/data/unit'
 
 module Avm
   module EacPostgresqlBase0
     class Instance
-      class DataUnit < ::Avm::Data::Instance::Unit
+      class DataUnit < ::Avm::Instances::Data::Unit
         EXTENSION = '.pgdump.gz'
 
         before_load :clear_database
