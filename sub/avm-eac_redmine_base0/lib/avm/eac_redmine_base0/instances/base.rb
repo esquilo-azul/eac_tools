@@ -31,7 +31,7 @@ module Avm
         end
 
         def data_package
-          @data_package ||= ::Avm::Data::Instance::Package.new(
+          @data_package ||= ::Avm::Instances::Data::Package.new(
             self,
             units: {
               all: ::Avm::EacRedmineBase0::Instances::DataUnit.new(self)

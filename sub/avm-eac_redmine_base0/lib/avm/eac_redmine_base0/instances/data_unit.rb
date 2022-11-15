@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'avm/data/instance/unit'
+require 'avm/instances/data/unit'
 require 'eac_ruby_utils/core_ext'
 require 'curb'
 require 'open-uri'
@@ -8,7 +8,7 @@ require 'open-uri'
 module Avm
   module EacRedmineBase0
     module Instances
-      class DataUnit < ::Avm::Data::Instance::Unit
+      class DataUnit < ::Avm::Instances::Data::Unit
         common_constructor :instance
 
         EXPORT_PATH = '/backup/export'
