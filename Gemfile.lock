@@ -67,7 +67,7 @@ PATH
   specs:
     avm-eac_postgresql_base0 (0.2.0)
       avm (~> 0.56, >= 0.56.1)
-      eac_ruby_utils (~> 0.82)
+      eac_ruby_utils (~> 0.107, >= 0.107.1)
 
 PATH
   remote: sub/avm-eac_python_base0
