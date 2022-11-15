@@ -12,7 +12,6 @@ module Avm
         DEFAULT_GEMFILE_PATH = 'SelfGemfile'
         RUBOCOP_GEM_NAME = 'rubocop'
         RUBOCOP_TEST_NAME = 'rubocop'
-        PARENT_RAKE_TASK_TEST_NAME = 'parent_rake_task'
 
         # @return [String]
         def default_gemfile_path
@@ -25,21 +24,6 @@ module Avm
           r[PARENT_RAKE_TASK_TEST_NAME] = parent_rake_test_command if parent_rake_test_command?
           r[RUBOCOP_TEST_NAME] = rubocop_test_command if rubocop_test_command?
           r
-        end
-
-        # @return [String]
-        def parent_rake_test_task_name
-          [gem_name, 'test'].map(&:variableize).join(':')
-        end
-
-        # @return [Boolean]
-        def parent_rake_test_command?
-          ruby_parent.rake_task?(parent_rake_test_task_name)
-        end
-
-        # @return [EacRubyUtils::Envs::Command]
-        def parent_rake_test_command
-          ruby_parent.rake(parent_rake_test_task_name).chdir_root.envvar('RAILS_ENV', 'test')
         end
 
         # @return [EacRubyUtils::Envs::Command]
