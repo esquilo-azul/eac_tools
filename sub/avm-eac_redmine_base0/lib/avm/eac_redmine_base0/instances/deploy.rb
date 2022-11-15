@@ -11,25 +11,7 @@ module Avm
 
         def run_installer
           infom 'Running installer'
-          ::EacRubyUtils::Ruby.on_clean_environment do
-            installer_command.system!
-          end
-        end
-
-        def installer_command
-          instance.host_env.command(installer_path, install_task)
-        end
-
-        def installer_path
-          ::File.join(instance.install_path, 'plugins', 'redmine_installer', 'installer', 'run.sh')
-        end
-
-        def install_task
-          if instance.web_path_optional.present?
-            'redmine_as_apache_path'
-          else
-            'redmine_as_apache_base'
-          end
+          instance.run_installer
         end
       end
     end

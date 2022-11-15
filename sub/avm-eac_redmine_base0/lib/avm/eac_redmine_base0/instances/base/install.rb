@@ -1,0 +1,37 @@
+# frozen_string_literal: true
+
+require 'avm/eac_rails_base1/instances/base'
+require 'eac_ruby_utils/core_ext'
+
+module Avm
+  module EacRedmineBase0
+    module Instances
+      class Base < ::Avm::EacRailsBase1::Instances::Base
+        module Install
+          def run_installer
+            ::EacRubyUtils::Ruby.on_clean_environment do
+              installer_command.system!
+            end
+          end
+
+          def installer_command
+            host_env.command(installer_path, install_task)
+          end
+
+          def installer_path
+            ::File.join(install_path, 'plugins', 'redmine_installer', 'installer',
+                        'run.sh')
+          end
+
+          def install_task
+            if web_path_optional.present?
+              'redmine_as_apache_path'
+            else
+              'redmine_as_apache_base'
+            end
+          end
+        end
+      end
+    end
+  end
+end
