@@ -96,7 +96,7 @@ PATH
   remote: sub/avm-eac_redmine_base0
   specs:
     avm-eac_redmine_base0 (0.16.1)
-      avm (~> 0.56, >= 0.56.1)
+      avm (~> 0.57)
       avm-eac_generic_base0 (~> 0.8)
       avm-eac_rails_base1 (~> 0.7)
       avm-eac_ubuntu_base0 (~> 0.3)
