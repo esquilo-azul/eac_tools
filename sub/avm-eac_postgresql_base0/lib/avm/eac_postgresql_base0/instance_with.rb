@@ -8,9 +8,9 @@ module Avm
     module InstanceWith
       def pg
         @pg ||= ::Avm::EacPostgresqlBase0::Instance.new(
-          host_env, user: read_entry(::Avm::Instances::EntryKeys::DATABASE_USERNAME),
-                    password: read_entry(::Avm::Instances::EntryKeys::DATABASE_PASSWORD),
-                    name: read_entry(::Avm::Instances::EntryKeys::DATABASE_NAME)
+          host_env, user: database_username,
+                    password: database_password,
+                    name: database_name
         )
       end
     end
