@@ -27,8 +27,9 @@ module Avm
            .envvar('PGPASSWORD', password)
       end
 
+      # @return [EacRubyUtils::Envs::Command]
       def dump_gzip_command
-        dump_command.append(['@ESC_|', 'gzip', '-9', '-c'])
+        dump_command.pipe(env.command('gzip', '-9', '-c'))
       end
 
       def psql_command(database = true)
