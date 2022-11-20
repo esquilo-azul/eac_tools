@@ -32,8 +32,13 @@ module Avm
         dump_command.pipe(env.command('gzip', '-9', '-c'))
       end
 
+      # @return [String]
+      def password_command_argument
+        "@ESC_PGPASSWORD=#{password}"
+      end
+
       def psql_command(database = true)
-        env.command("@ESC_PGPASSWORD=#{password}", 'psql', *common_command_args(database))
+        env.command(password_command_argument, 'psql', *common_command_args(database))
       end
 
       def psql_command_command(sql, database = true)
