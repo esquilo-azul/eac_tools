@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
+require 'eac_ruby_utils/yaml'
 require 'fileutils'
 
 module EacFs
@@ -33,10 +34,28 @@ module EacFs
       read
     end
 
+    # @return [Object]
+    def read_or_store_yaml(use_cache = true)
+      write_yaml(yield) unless stored? && use_cache
+
+      read_yaml
+    end
+
+    # @return [Object, nil]
+    def read_yaml
+      r = read
+      r.nil? ? nil : ::EacRubyUtils::Yaml.load(r)
+    end
+
     def write(value)
       assert_directory_on_path
       ::File.write(content_path, value)
       value
+    end
+
+    def write_yaml(object)
+      write(::EacRubyUtils::Yaml.dump(object))
+      object
     end
 
     def child(*child_path_parts)
