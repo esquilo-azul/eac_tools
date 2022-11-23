@@ -1,12 +1,7 @@
-; DO NOT EDIT (unless you know what you are doing)
-;
-; This subdirectory is a git "subrepo", and this file is maintained by the
-; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
-;
 [subrepo]
-	remote = https://github.com/esquilo-azul/avm-eac_postgresql_base0.git
-	branch = master
-	commit = f838df01ded8bbd6c40722bc43d205722d98d3a9
-	parent = 1af2e0e39e67193630f61d4aaa0ca49b05a32e44
-	method = merge
-	cmdver = 0.4.1
+  cmdver = 0.4.1
+  commit = 98ff51c225a219763eaac9585c4fe52554a5713a
+  method = merge
+  parent = 44e5e5d12f11cc3c5dd5772b860f99c62800a29e
+  branch = master
+  remote = https://github.com/esquilo-azul/avm-eac_postgresql_base0.git
