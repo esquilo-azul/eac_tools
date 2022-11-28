@@ -16,7 +16,7 @@ module Avm
         end
 
         def load_command
-          instance.gzip_decompress_command.pipe(instance.psql_command.prepend)
+          instance.load_gzip_command
         end
 
         private

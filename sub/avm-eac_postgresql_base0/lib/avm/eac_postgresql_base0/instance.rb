@@ -42,6 +42,11 @@ module Avm
         env.command('gzip', '-d')
       end
 
+      # @return [EacRubyUtils::Envs::Command]
+      def load_gzip_command
+        gzip_decompress_command.pipe(psql_command)
+      end
+
       # @return [String]
       def password_command_argument
         "@ESC_PGPASSWORD=#{password}"
