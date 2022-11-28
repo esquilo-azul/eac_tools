@@ -7,6 +7,7 @@ module Avm
     class Instance
       class DataUnit < ::Avm::Instances::Data::Unit
         EXTENSION = '.pgdump.gz'
+        TABLES_SQL = 'select tablename from pg_tables where schemaname = \'public\''
 
         before_load :clear_database
 
@@ -22,16 +23,21 @@ module Avm
 
         def clear_database
           info 'Clearing database (Dropping all tables)...'
-          run_sql(drop_all_tables_sql).if_present { |v| run_sql(v) }
-        end
-
-        def drop_all_tables_sql
-          "select 'drop table \"' || tablename || '\" cascade;' from pg_tables " \
-            "where schemaname = 'public';"
+          ts = tables
+          if ts.empty?
+            info 'Database has no tables'
+          else
+            info "Removing #{ts.count} table(s)..."
+            run_sql('drop table ' + ts.map { |t| "\"#{t}\"" }.join(', ') + ' cascade')
+          end
         end
 
         def run_sql(sql)
           instance.psql_command_command(sql).execute!
+        end
+
+        def tables
+          run_sql(TABLES_SQL).each_line.map(&:strip).reject(&:blank?)
         end
       end
     end
