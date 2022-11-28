@@ -29,7 +29,12 @@ module Avm
 
       # @return [EacRubyUtils::Envs::Command]
       def dump_gzip_command
-        dump_command.pipe(env.command('gzip', '-9', '-c'))
+        dump_command.pipe(gzip_compress_command)
+      end
+
+      # @return [EacRubyUtils::Envs::Command]
+      def gzip_compress_command
+        env.command('gzip', '-9', '-c')
       end
 
       # @return [String]
