@@ -8,7 +8,7 @@ module Avm
     module FileFormats
       class Base < ::Avm::EacGenericBase0::FileFormats::Base
         VALID_BASENAMES = %w[*.py].freeze
-        VALID_TYPES = ['x-python'].freeze
+        VALID_TYPES = ['x-python', 'x-script.python'].freeze
 
         def internal_apply(files)
           ::Avm::EacPythonBase0::Executables.yapf.command.append(['--in-place', *files]).system!
