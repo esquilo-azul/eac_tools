@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_cli/core_ext'
-require 'avm/eac_rails_base1/runner/code_runner'
+require 'avm/eac_rails_base1/instances/runners/code_runner'
 
 module Avm
   module EacRedmineBase0
