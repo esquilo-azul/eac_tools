@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'avm/eac_rails_base1/instances/runners'
 require 'avm/eac_ruby_base1/sources/base'
 require 'avm/eac_webapp_base0/instances/base'
 
