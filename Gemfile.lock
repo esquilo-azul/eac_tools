@@ -137,7 +137,7 @@ PATH
 PATH
   remote: sub/avm-eac_wordpress_base0
   specs:
-    avm-eac_wordpress_base0 (0.2.1)
+    avm-eac_wordpress_base0 (0.3.0)
       avm (~> 0.57)
       avm-eac_webapp_base0 (~> 0.13)
       eac_ruby_utils (~> 0.109)
