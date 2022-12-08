@@ -104,7 +104,7 @@ PATH
       avm-eac_rails_base1 (~> 0.8)
       avm-eac_ubuntu_base0 (~> 0.3)
       curb (~> 0.9, >= 0.9.11)
-      eac_fs (~> 0.15)
+      eac_fs (~> 0.16)
       eac_rest (~> 0.6, >= 0.6.1)
       eac_ruby_utils (~> 0.107, >= 0.107.1)
 
