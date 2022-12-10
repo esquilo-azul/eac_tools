@@ -63,7 +63,7 @@ PATH
     avm-eac_php_base0 (0.4.0)
       avm-eac_generic_base0 (~> 0.8)
       avm-eac_webapp_base0 (~> 0.13)
-      eac_ruby_utils (~> 0.108)
+      eac_ruby_utils (~> 0.109)
 
 PATH
   remote: sub/avm-eac_postgresql_base0
