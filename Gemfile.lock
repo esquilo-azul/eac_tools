@@ -127,7 +127,7 @@ PATH
   remote: sub/avm-eac_ubuntu_base0
   specs:
     avm-eac_ubuntu_base0 (0.3.0)
-      avm (~> 0.7)
+      avm (~> 0.57)
       eac_ruby_utils (~> 0.77, >= 0.77.1)
       eac_templates (~> 0.3)
 
