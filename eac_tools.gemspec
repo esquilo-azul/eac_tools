@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_redmine_base0', '~> 0.18'
   s.add_dependency 'avm-eac_redmine_plugin_base0', '~> 0.4'
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.28', '>= 0.28.1'
-  s.add_dependency 'avm-eac_webapp_base0', '~> 0.13'
+  s.add_dependency 'avm-eac_webapp_base0', '~> 0.13', '>= 0.13.1'
   s.add_dependency 'avm-eac_wordpress_base0', '~> 0.3'
   s.add_dependency 'avm-tools', '~> 0.143'
   s.add_dependency 'eac_ruby_utils', '~> 0.110', '>= 0.110.1'
