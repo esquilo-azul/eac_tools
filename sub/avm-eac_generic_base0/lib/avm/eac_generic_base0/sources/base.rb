@@ -11,7 +11,7 @@ module Avm
         enable_abstract_methods
 
         def valid?
-          ::Avm::Registry.scms.detect_optional(path).present?
+          configuration_paths.any?(&:exist?)
         end
       end
     end
