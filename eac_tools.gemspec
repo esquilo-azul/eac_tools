@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'avm', '~> 0.61'
   s.add_dependency 'avm-eac_asciidoctor_base0', '~> 0.15'
-  s.add_dependency 'avm-eac_generic_base0', '~> 0.9'
+  s.add_dependency 'avm-eac_generic_base0', '~> 0.10'
   s.add_dependency 'avm-eac_latex_base0', '~> 0.3'
   s.add_dependency 'avm-eac_php_base0', '~> 0.4', '>= 0.4.1'
   s.add_dependency 'avm-eac_postgresql_base0', '~> 0.2', '>= 0.2.3'
