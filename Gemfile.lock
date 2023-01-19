@@ -120,7 +120,7 @@ PATH
   specs:
     avm-eac_ruby_base1 (0.28.1)
       avm (~> 0.61)
-      avm-eac_generic_base0 (~> 0.9)
+      avm-eac_generic_base0 (~> 0.10)
       eac_ruby_utils (~> 0.110, >= 0.110.1)
 
 PATH
