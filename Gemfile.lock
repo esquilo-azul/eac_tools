@@ -185,7 +185,7 @@ PATH
       eac_git (~> 0.14)
       eac_ruby_base0 (~> 0.17, >= 0.17.1)
       eac_templates (~> 0.3, >= 0.3.2)
-      git (~> 1.13)
+      git (~> 1.13, >= 1.13.1)
       ruby-progressbar (~> 1.11)
 
 PATH
