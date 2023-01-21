@@ -11,13 +11,15 @@ module EacRubyBase0
   module Runner
     module Prepend
       def run
-        on_context do
-          if parsed.version?
-            show_version
-          else
-            run_with_subcommand
-          end
+        if parsed.version?
+          show_version
+        else
+          run_with_subcommand
         end
+      end
+
+      def run_run
+        on_context { super }
       end
     end
   end
