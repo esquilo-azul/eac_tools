@@ -9,26 +9,18 @@ require 'eac_ruby_utils/speaker'
 
 module EacRubyBase0
   module Runner
+    require_sub __FILE__
     enable_speaker
     common_concern do
       include ::EacCli::RunnerWith::Help
       include ::EacCli::RunnerWith::Subcommands
+      prepend ::EacRubyBase0::Runner::Prepend
       runner_definition do
         bool_opt '-q', '--quiet', 'Quiet mode.'
         bool_opt '-I', '--no-input', 'Fail if a input is requested.'
         subcommands
         alt do
           bool_opt '-V', '--version', 'Show version.', usage: true, required: true
-        end
-      end
-    end
-
-    def run
-      on_context do
-        if parsed.version?
-          show_version
-        else
-          run_with_subcommand
         end
       end
     end
