@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.29'
   s.add_dependency 'eac_cli', '~> 0.30'
   s.add_dependency 'eac_fs', '~> 0.16'
-  s.add_dependency 'eac_ruby_utils', '~> 0.107', '>= 0.107.1'
+  s.add_dependency 'eac_ruby_utils', '~> 0.111'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.5.1'
 end
