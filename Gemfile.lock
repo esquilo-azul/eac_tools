@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eac_tools (0.55.0)
+    eac_tools (0.55.1)
       avm (~> 0.62)
       avm-eac_asciidoctor_base0 (~> 0.15)
       avm-eac_generic_base0 (~> 0.10)
