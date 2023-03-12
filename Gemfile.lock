@@ -29,7 +29,7 @@ PATH
       faraday (~> 2.7, >= 2.7.4)
       faraday-follow_redirects (~> 0.3)
       faraday-gzip (~> 0.1)
-      nokogiri (~> 1.14)
+      nokogiri (~> 1.14, >= 1.14.2)
       ofx-parser (~> 1.1)
 
 PATH
