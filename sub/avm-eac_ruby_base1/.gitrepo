@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = 6807c540db62bf040d9cbbeffcb12ee43b43c4ce
+  commit = 8065fc421e5802b255f90c1d297d5b6e53c0b878
   method = merge
-  parent = 7dbf14d4a7fe2203b7de9dc42b4b0d5a3399a675
+  parent = 19d596be521b4a265b8b43b38bffaf4bbf4875cd
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_ruby_base1.git
