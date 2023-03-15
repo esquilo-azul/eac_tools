@@ -6,7 +6,7 @@ require 'eac_ruby_utils/core_ext'
 module EacGit
   class Local
     class Remote
-      NO_SUCH_REMOTE_CODE = 128
+      NO_SUCH_REMOTE_CODE = 512
 
       enable_simple_cache
       include ::EacGit::RemoteLike
