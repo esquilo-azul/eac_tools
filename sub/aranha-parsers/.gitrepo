@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = f330c4579e30e763a7d51bdcb70063ceeb389e95
+  commit = 05ed7056463073e22fbe280a0659b60c3c6c6125
   method = merge
-  parent = 7dbf14d4a7fe2203b7de9dc42b4b0d5a3399a675
+  parent = 2b61b731350c708c187efb460cdcd7351b68b1be
   branch = master
   remote = https://github.com/esquilo-azul/aranha-parsers.git

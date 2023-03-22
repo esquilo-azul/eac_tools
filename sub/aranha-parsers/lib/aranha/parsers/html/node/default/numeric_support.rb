@@ -9,6 +9,34 @@ module Aranha
       module Node
         class Default < ::Aranha::Parsers::Html::Node::Base
           module NumericSupport
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @return [Float]
+            def decimal_comma_value(node, xpath)
+              parse_decimal_comma(node, xpath, true)
+            end
+
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @return [Float, nil]
+            def decimal_comma_optional_value(node, xpath)
+              parse_decimal_comma(node, xpath, false)
+            end
+
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @return [Float]
+            def decimal_dot_value(node, xpath)
+              parse_decimal_dot(node, xpath, true)
+            end
+
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @return [Float, nil]
+            def decimal_dot_optional_value(node, xpath)
+              parse_decimal_dot(node, xpath, false)
+            end
+
             def integer_value(node, xpath)
               r = string_value(node, xpath)
               return nil if r.blank?
@@ -33,12 +61,20 @@ module Aranha
               parse_float(node, xpath, false)
             end
 
+            # @deprecated Use {#decimal_dot_value} instead.
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @return [Float]
             def us_decimal_value(node, xpath)
-              parse_us_decimal(node, xpath, true)
+              decimal_dot_value(node, xpath)
             end
 
+            # @deprecated Use {#decimal_dot_optional_value} instead.
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @return [Float, nil]
             def us_decimal_optional_value(node, xpath)
-              parse_us_decimal(node, xpath, false)
+              decimal_dot_optional_value(node, xpath)
             end
 
             private
@@ -53,14 +89,37 @@ module Aranha
               end
             end
 
-            def parse_us_decimal(node, xpath, required)
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @param required [Boolean]
+            # @param separator [String]
+            # @param delimiter [String]
+            # @return [Float, nil]
+            def parse_decimal(node, xpath, required, separator, delimiter)
               s = string_value(node, xpath)
-              m = /\d+(?:[\.\,](\d+))?/.match(s)
+              m = /\d+(?:[#{::Regexp.quote(separator + delimiter)}](\d+))?/.match(s)
               if m
-                m[0].delete(',').to_f
+                m[0].delete(delimiter).to_f
               elsif required
-                raise "US decimal value not found in \"#{s}\""
+                raise "decimal [Separator=\"#{separator}, Delimiter=\"#{delimiter}\"] value not " \
+                  "found in \"#{s}\""
               end
+            end
+
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @param required [Boolean]
+            # @return [Float, nil]
+            def parse_decimal_dot(node, xpath, required)
+              parse_decimal(node, xpath, required, '.', ',')
+            end
+
+            # @param node [Nokogiri::XML::Element]
+            # @param xpath [String]
+            # @param required [Boolean]
+            # @return [Float, nil]
+            def parse_decimal_comma(node, xpath, required)
+              parse_decimal(node, xpath, required, ',', '.')
             end
           end
         end
