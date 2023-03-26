@@ -1,9 +1,7 @@
 FROM '%%base_image%%'
 USER root
 RUN apt-get update -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y sudo tzdata git apt-utils
-RUN ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-RUN dpkg-reconfigure --frontend noninteractive tzdata
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git apt-utils
 
 # Redmine / Código-fonte
 RUN echo '%%redmine_source_git_id%%' '%%redmine_user_home%%/redmine_source_git_id'
