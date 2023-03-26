@@ -11,7 +11,6 @@ module Avm
       class DockerImage < ::Avm::Instances::DockerImage
         enable_simple_cache
 
-        BASE_IMAGE = 'ubuntu:20.04'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_BLANK = 'redmine_as_apache_base'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_PRESENT = 'redmine_as_apache_path'
         REDMINE_SOURCE_HOST_SUBPATH = 'redmine_source'
