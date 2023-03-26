@@ -35,8 +35,12 @@ module EacDocker
 
       protected
 
+      def variables_source
+        self
+      end
+
       def write_in_provide_dir
-        template.apply(self, provide_dir)
+        template.apply(variables_source, provide_dir)
       end
 
       private
