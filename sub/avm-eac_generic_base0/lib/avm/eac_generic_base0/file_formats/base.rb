@@ -18,6 +18,12 @@ module Avm
           files.each { |file| file_apply(file) }
         end
 
+        # @param file [Pathname]
+        # @return [Boolean]
+        def match?(file)
+          super(file) || !file.exist?
+        end
+
         def file_apply(file)
           file.write(string_apply(file.read))
         end
