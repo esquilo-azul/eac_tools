@@ -131,7 +131,7 @@ PATH
   specs:
     avm-eac_ubuntu_base0 (0.4.0)
       avm (~> 0.64)
-      eac_ruby_utils (~> 0.109)
+      eac_ruby_utils (~> 0.112)
       eac_templates (~> 0.3, >= 0.3.2)
 
 PATH
