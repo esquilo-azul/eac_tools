@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/eac_rails_base1/instances/runners'
+require 'avm/eac_ruby_base1/instances/mixin'
 require 'avm/eac_ruby_base1/sources/base'
 require 'avm/eac_webapp_base0/instances/base'
 
@@ -8,6 +9,8 @@ module Avm
   module EacRailsBase1
     module Instances
       class Base < ::Avm::EacWebappBase0::Instances::Base
+        include ::Avm::EacRubyBase1::Instances::Mixin
+
         DEFAULT_RAILS_ENVIRONMENT = 'production'
 
         def bundle(*args)
