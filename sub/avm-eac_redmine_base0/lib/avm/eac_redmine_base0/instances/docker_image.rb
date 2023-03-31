@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
+require 'avm/eac_redmine_base0/instances/deploy'
 require 'avm/eac_ubuntu_base0/instances/base'
 require 'avm/instances/docker_image'
 require 'eac_templates/core_ext'
@@ -61,6 +62,14 @@ module Avm
 
         def web_path_present?
           ::Addressable::URI.parse(instance.web_url).path.present?
+        end
+
+        def write_in_provide_dir
+          super
+
+          ::Avm::EacRedmineBase0::Instances::Deploy.template.child('config')
+            .child('install.sh.template')
+            .apply_to_file(variables_source, provide_dir.join('install_settings.sh'))
         end
 
         private
