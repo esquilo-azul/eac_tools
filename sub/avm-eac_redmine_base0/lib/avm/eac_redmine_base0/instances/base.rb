@@ -6,6 +6,7 @@ require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/instances/runners'
 require 'avm/eac_redmine_base0/instances/rest_api'
 require 'avm/eac_rails_base1/instances/base'
+require 'avm/eac_ruby_base1/instances/mixin'
 
 module Avm
   module EacRedmineBase0
@@ -13,6 +14,8 @@ module Avm
       class Base < ::Avm::EacRailsBase1::Instances::Base
         require_sub __FILE__, include_modules: true, require_dependency: true
         enable_simple_cache
+
+        include ::Avm::EacRubyBase1::Instances::Mixin
 
         def docker_image_class
           ::Avm::EacRedmineBase0::Instances::DockerImage
