@@ -95,7 +95,7 @@ PATH
       avm (~> 0.65)
       avm-eac_ruby_base1 (~> 0.30)
       avm-eac_webapp_base0 (~> 0.13, >= 0.13.1)
-      eac_ruby_utils (~> 0.109)
+      eac_ruby_utils (~> 0.112)
 
 PATH
   remote: sub/avm-eac_redmine_base0
