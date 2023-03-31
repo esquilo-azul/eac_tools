@@ -9,7 +9,7 @@ module Avm
       class Base < ::Avm::EacRailsBase1::Instances::Base
         module Database
           DATABASE_INTERNAL_HOSTNAME = ::Avm::Instances::Base::AutoValues::Database::LOCAL_ADDRESS
-          DEFAULT_POSTGRESQL_VERSION = '12'
+          DEFAULT_POSTGRESQL_VERSION = ''
 
           common_concern do
             uri_components_entries_values 'postgresql', %w[version]
