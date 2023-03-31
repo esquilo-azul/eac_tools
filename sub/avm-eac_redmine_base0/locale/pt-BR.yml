@@ -1,5 +1,6 @@
 pt-BR:
   avm:
     eac_redmine_base0:
-      core_update:
-        git_commit_message: "Core: atualiza para '%{version}'."
+      sources:
+        core_update:
+          git_commit_message: "Core: atualiza para '%{version}'."
