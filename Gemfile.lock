@@ -143,7 +143,7 @@ PATH
       avm-eac_postgresql_base0 (~> 0.2, >= 0.2.3)
       avm-eac_ubuntu_base0 (~> 0.4, >= 0.4.1)
       avm-files (~> 0.6)
-      eac_ruby_utils (~> 0.110, >= 0.110.1)
+      eac_ruby_utils (~> 0.112)
 
 PATH
   remote: sub/avm-eac_wordpress_base0
