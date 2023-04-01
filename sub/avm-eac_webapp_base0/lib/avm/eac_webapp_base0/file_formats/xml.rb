@@ -7,8 +7,8 @@ module Avm
   module EacWebappBase0
     module FileFormats
       class Xml < ::Avm::EacGenericBase0::FileFormats::Base
-        VALID_BASENAMES = %w[*.xml].freeze
-        VALID_TYPES = ['xml'].freeze
+        VALID_BASENAMES = %w[*.svg *.xml].freeze
+        VALID_TYPES = ['image/svg+xml', 'xml'].freeze
 
         def internal_apply(files)
           format_command(files).system!
