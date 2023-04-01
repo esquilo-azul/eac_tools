@@ -9,6 +9,8 @@ module Avm
     class FileFormats
       class Base < ::Avm::FileFormats::Base
         class Match
+          DEFAULT_TYPE = 'text'
+
           common_constructor :file_format, :file
 
           # @return [Boolean]
@@ -45,7 +47,7 @@ module Avm
           # @return [Boolean]
           def result_by_type?
             info = ::EacFs::FileInfo.new(file)
-            return unless info.content_type.type == 'text'
+            return unless info.content_type.type == DEFAULT_TYPE
 
             valid_types.include?(info.content_type.subtype)
           end
