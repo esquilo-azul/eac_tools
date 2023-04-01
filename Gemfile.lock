@@ -141,7 +141,7 @@ PATH
       avm (~> 0.66)
       avm-eac_generic_base0 (~> 0.12)
       avm-eac_postgresql_base0 (~> 0.2, >= 0.2.3)
-      avm-eac_ubuntu_base0 (~> 0.4)
+      avm-eac_ubuntu_base0 (~> 0.4, >= 0.4.1)
       avm-files (~> 0.6)
       eac_ruby_utils (~> 0.110, >= 0.110.1)
 
