@@ -21,7 +21,7 @@ module Avm
         # @param file [Pathname]
         # @return [Boolean]
         def match?(file)
-          super(file) || !file.exist?
+          ::Avm::EacGenericBase0::FileFormats::Base::Match.new(self, file).result || !file.exist?
         end
 
         def file_apply(file)
