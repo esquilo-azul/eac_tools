@@ -1,5 +1,5 @@
 # Ruby
-export rvm_ruby='ruby-%%RUBY.VERSION%%'
+export ruby_version='%%INSTALL.RUBY.VERSION%%'
 
 # Database
 export postgresql_internal='%%DATABASE_INTERNAL%%'
