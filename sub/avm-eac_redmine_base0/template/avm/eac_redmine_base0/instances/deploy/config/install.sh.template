@@ -1,6 +1,9 @@
 # Ruby
 export ruby_version='%%INSTALL.RUBY.VERSION%%'
 
+# NodeJs
+export nodejs_version='%%INSTALL.NODEJS.VERSION%%'
+
 # Database
 export postgresql_internal='%%DATABASE_INTERNAL%%'
 export postgresql_host='%%DATABASE.HOSTNAME%%'
