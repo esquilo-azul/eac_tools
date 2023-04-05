@@ -92,7 +92,7 @@ PATH
   remote: sub/avm-eac_rails_base1
   specs:
     avm-eac_rails_base1 (0.8.1)
-      avm (~> 0.65)
+      avm (~> 0.66, >= 0.66.1)
       avm-eac_ruby_base1 (~> 0.30)
       avm-eac_webapp_base0 (~> 0.13, >= 0.13.1)
       eac_ruby_utils (~> 0.112)
