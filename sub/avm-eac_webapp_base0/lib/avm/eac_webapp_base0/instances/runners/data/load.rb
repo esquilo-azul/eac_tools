@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'active_support/core_ext/numeric/time'
+require 'avm/result'
 require 'eac_cli/speaker'
 require 'eac_ruby_utils/simple_cache'
 
@@ -17,7 +18,7 @@ module Avm
             end
 
             def run
-              return ::Dev::Result.error("Dump \"#{dump_path}\" does not exist") unless
+              return fatal_error("Dump \"#{dump_path}\" does not exist") unless
               ::File.exist?(dump_path)
 
               load_dump
