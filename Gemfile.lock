@@ -23,14 +23,11 @@ PATH
 PATH
   remote: sub/aranha-parsers
   specs:
-    aranha-parsers (0.17.0)
+    aranha-parsers (0.17.1)
       activesupport (>= 4.0.0)
-      addressable (~> 2.8, >= 2.8.1)
+      addressable (~> 2.8, >= 2.8.3)
+      eac_envs-http (~> 0.3)
       eac_ruby_utils (~> 0.112)
-      faraday (~> 2.7, >= 2.7.4)
-      faraday-follow_redirects (~> 0.3)
-      faraday-gzip (~> 0.1)
-      faraday-retry (~> 2.1)
       nokogiri (~> 1.14, >= 1.14.2)
       ofx-parser (~> 1.1)
 
