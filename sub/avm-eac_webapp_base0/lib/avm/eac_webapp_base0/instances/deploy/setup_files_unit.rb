@@ -5,6 +5,7 @@ module Avm
     module Instances
       class Deploy
         class SetupFilesUnit < ::SimpleDelegator
+          enable_method_class
           attr_reader :data_key, :fs_path_subpath
 
           def initialize(deploy, data_key, fs_path_subpath)
@@ -13,7 +14,7 @@ module Avm
             @fs_path_subpath = fs_path_subpath
           end
 
-          def run
+          def result
             assert_source_directory
             link_source_target
           end

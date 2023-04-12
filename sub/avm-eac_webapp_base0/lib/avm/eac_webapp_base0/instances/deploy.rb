@@ -10,7 +10,7 @@ module Avm
   module EacWebappBase0
     module Instances
       class Deploy
-        require_sub __FILE__, include_modules: true
+        require_sub __FILE__, include_modules: true, require_dependency: true
 
         DEFAULT_REFERENCE = 'HEAD'
 
@@ -43,8 +43,7 @@ module Avm
 
         def setup_files_units
           instance.class.const_get('FILES_UNITS').each do |data_key, fs_path_subpath|
-            ::Avm::EacWebappBase0::Instances::Deploy::SetupFilesUnit
-              .new(self, data_key, fs_path_subpath).run
+            setup_files_unit(data_key, fs_path_subpath)
           end
         end
 
