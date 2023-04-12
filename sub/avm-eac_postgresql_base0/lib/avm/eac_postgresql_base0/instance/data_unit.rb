@@ -28,7 +28,7 @@ module Avm
             info 'Database has no tables'
           else
             info "Removing #{ts.count} table(s)..."
-            run_sql('drop table ' + ts.map { |t| "\"#{t}\"" }.join(', ') + ' cascade')
+            run_sql('drop table if exists ' + ts.map { |t| "\"#{t}\"" }.join(', ') + ' cascade')
           end
         end
 
