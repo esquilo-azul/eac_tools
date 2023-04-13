@@ -53,7 +53,7 @@ PATH
   specs:
     avm-eac_latex_base0 (0.3.0)
       avm (~> 0.67)
-      avm-eac_webapp_base0 (~> 0.12)
+      avm-eac_webapp_base0 (~> 0.15)
       eac_ruby_utils (~> 0.106)
 
 PATH
