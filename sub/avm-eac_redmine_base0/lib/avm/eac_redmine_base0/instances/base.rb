@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'addressable/uri'
-require 'avm/eac_redmine_base0/instances/data_package'
 require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/instances/runners'
 require 'avm/eac_redmine_base0/instances/rest_api'
@@ -31,9 +30,11 @@ module Avm
           ]
         end
 
-        # @return [Avm::EacRedmineBase0::Instances::DataPackage]
-        def data_package
-          @data_package ||= ::Avm::EacRedmineBase0::Instances::DataPackage.new(self)
+        # @return [Avm::Instances::Data::Package]
+        def data_package_create
+          r = super.add_unit('files', files_data_unit).add_unit('gitolite', gitolite_data_unit)
+          r.after_load { instance.run_installer }
+          r
         end
 
         # @return [Addressable::URI]
