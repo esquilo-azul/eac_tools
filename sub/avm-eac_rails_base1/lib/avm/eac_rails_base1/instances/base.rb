@@ -17,6 +17,11 @@ module Avm
           the_gem.bundle(*args).chdir_root.envvar('RAILS_ENV', DEFAULT_RAILS_ENVIRONMENT)
         end
 
+        # @return [Avm::Instances::Data::Package]
+        def data_package_create
+          super.add_unit('database', database_unit)
+        end
+
         def rake(*args)
           bundle('exec', 'rake', *args)
         end
