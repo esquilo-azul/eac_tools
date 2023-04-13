@@ -39,9 +39,7 @@ module Avm
 
         # @return [Avm::Instances::Data::Package]
         def data_package_create
-          ::Avm::Instances::Data::Package.new(
-            self, units: { database: database_unit }.merge(files_units)
-          )
+          ::Avm::Instances::Data::Package.new(self)
         end
 
         def database_unit
