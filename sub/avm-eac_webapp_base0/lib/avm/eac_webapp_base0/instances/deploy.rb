@@ -43,7 +43,8 @@ module Avm
 
         def setup_files_units
           instance.class.const_get('FILES_UNITS').each do |data_key, fs_path_subpath|
-            FileUnit.new(self, data_key, fs_path_subpath).run
+            ::Avm::EacWebappBase0::Instances::Deploy::SetupFilesUnit
+              .new(self, data_key, fs_path_subpath).run
           end
         end
 
