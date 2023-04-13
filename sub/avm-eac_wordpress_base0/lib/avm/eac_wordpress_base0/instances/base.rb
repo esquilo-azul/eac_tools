@@ -7,7 +7,8 @@ module Avm
   module EacWordpressBase0
     module Instances
       class Base < ::Avm::EacWebappBase0::Instances::Base
-        FILES_UNITS = { uploads: 'wp-content/uploads', themes: 'wp-content/themes' }.freeze
+        THEMES_UNIT_SUBPATH = 'wp-content/themes'
+        FILES_UNITS = { uploads: 'wp-content/uploads', themes: THEMES_UNIT_SUBPATH }.freeze
 
         def database_unit
           web_url = read_entry(::Avm::Instances::EntryKeys::WEB_URL)
@@ -19,6 +20,11 @@ module Avm
               where option_name in ('siteurl', 'home')
             SQL
           end
+        end
+
+        # @return [Avm::Instances::Data::FilesUnit]
+        def themes_unit
+          ::Avm::Instances::Data::FilesUnit.new(self, THEMES_UNIT_SUBPATH)
         end
       end
     end
