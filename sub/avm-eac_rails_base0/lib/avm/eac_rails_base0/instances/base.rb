@@ -8,7 +8,11 @@ module Avm
     module Instances
       class Base < ::Avm::EacRailsBase1::Instances::Base
         UPLOADS_UNIT_SUBPATH = 'public/uploads'
-        FILES_UNITS = { uploads: UPLOADS_UNIT_SUBPATH }.freeze
+
+        # @return [Avm::Instances::Data::Package]
+        def data_package_create
+          super.add_unit('uploads', uploads_unit)
+        end
 
         # @return [Avm::Instances::Data::FilesUnit]
         def uploads_unit
