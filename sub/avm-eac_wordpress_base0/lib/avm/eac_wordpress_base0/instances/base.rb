@@ -8,7 +8,8 @@ module Avm
     module Instances
       class Base < ::Avm::EacWebappBase0::Instances::Base
         THEMES_UNIT_SUBPATH = 'wp-content/themes'
-        FILES_UNITS = { uploads: 'wp-content/uploads', themes: THEMES_UNIT_SUBPATH }.freeze
+        UPLOADS_UNIT_SUBPATH = 'wp-content/uploads'
+        FILES_UNITS = { uploads: UPLOADS_UNIT_SUBPATH, themes: THEMES_UNIT_SUBPATH }.freeze
 
         def database_unit
           web_url = read_entry(::Avm::Instances::EntryKeys::WEB_URL)
@@ -25,6 +26,11 @@ module Avm
         # @return [Avm::Instances::Data::FilesUnit]
         def themes_unit
           ::Avm::Instances::Data::FilesUnit.new(self, THEMES_UNIT_SUBPATH)
+        end
+
+        # @return [Avm::Instances::Data::FilesUnit]
+        def uploads_unit
+          ::Avm::Instances::Data::FilesUnit.new(self, UPLOADS_UNIT_SUBPATH)
         end
       end
     end
