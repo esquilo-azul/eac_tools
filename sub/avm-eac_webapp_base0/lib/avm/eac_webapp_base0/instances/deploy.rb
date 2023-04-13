@@ -42,9 +42,8 @@ module Avm
         end
 
         def setup_files_units
-          instance.class.const_get('FILES_UNITS').each do |data_key, fs_path_subpath|
-            setup_files_unit(data_key, fs_path_subpath)
-          end
+          instance.data_package.units.values.map(&:installation_files_data).select(&:present?)
+                  .each { |unit_install| setup_files_unit(unit_install.key, unit_install.subpath) }
         end
 
         def assert_instance_branch
