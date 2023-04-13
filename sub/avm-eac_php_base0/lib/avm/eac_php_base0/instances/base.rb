@@ -7,7 +7,6 @@ module Avm
   module EacPhpBase0
     module Instances
       class Base < ::Avm::EacWebappBase0::Instances::Base
-        FILES_UNITS = {}.freeze
       end
     end
   end
