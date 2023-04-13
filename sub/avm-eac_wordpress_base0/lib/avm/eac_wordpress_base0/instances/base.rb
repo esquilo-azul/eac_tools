@@ -9,7 +9,13 @@ module Avm
       class Base < ::Avm::EacWebappBase0::Instances::Base
         THEMES_UNIT_SUBPATH = 'wp-content/themes'
         UPLOADS_UNIT_SUBPATH = 'wp-content/uploads'
-        FILES_UNITS = { uploads: UPLOADS_UNIT_SUBPATH, themes: THEMES_UNIT_SUBPATH }.freeze
+
+        # @return [Avm::Instances::Data::Package]
+        def data_package_create
+          %w[database themes uploads].inject(super) do |a, e|
+            a.add_unit(e, send("#{e}_unit"))
+          end
+        end
 
         def database_unit
           web_url = read_entry(::Avm::Instances::EntryKeys::WEB_URL)
