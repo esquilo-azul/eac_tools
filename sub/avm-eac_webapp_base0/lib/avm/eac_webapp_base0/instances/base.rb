@@ -15,8 +15,6 @@ module Avm
         include ::Avm::EacPostgresqlBase0::InstanceWith
         enable_simple_cache
 
-        FILES_UNITS = [].freeze
-
         def data_dump(argv = [])
           run_subcommand(data_dump_runner_class, argv)
         end
@@ -51,12 +49,6 @@ module Avm
         # @return [Avm::EacUbuntuBase0::Instances::Base]
         def platform_instance_uncached
           ::Avm::EacUbuntuBase0::Instances::Base.by_id(id)
-        end
-
-        def files_units
-          self.class.const_get('FILES_UNITS').transform_values do |fs_path_subpath|
-            ::Avm::Instances::Data::FilesUnit.new(self, fs_path_subpath)
-          end
         end
       end
     end
