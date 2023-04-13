@@ -4,7 +4,6 @@ require 'avm/instances/base'
 require 'avm/eac_postgresql_base0/instance_with'
 require 'avm/instances/data/files_unit'
 require 'avm/instances/data/package'
-require 'avm/eac_webapp_base0/instances/deploy/file_unit'
 require 'avm/eac_webapp_base0/instances/runners'
 require 'avm/eac_ubuntu_base0/instances/base'
 
