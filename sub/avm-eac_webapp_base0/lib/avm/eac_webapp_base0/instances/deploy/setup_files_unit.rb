@@ -35,8 +35,16 @@ module Avm
 
           def link_source_target
             infom "Linking \"#{data_key}\" directory..."
-            instance.host_env.command('rm', '-rf', target_path).execute!
+            return unless remove_target
+
             instance.host_env.command('ln', '-s', source_path, target_path).execute!
+          end
+
+          private
+
+          # @return [Boolean]
+          def remove_target
+            instance.host_env.command('rm', '-rf', target_path).execute.fetch(:exit_code).zero?
           end
         end
       end
