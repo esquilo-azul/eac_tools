@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = 5431ba12fee2c4818c7ff9edcc0230ff1eb967f1
+  commit = c65bf9865a81ae16f3c819e2596c37d61c480fb0
   method = merge
-  parent = 9dfcd58b7b42f5cfce55f7a718b73adcbf9ff330
+  parent = 24856e140076ce5b8dd4ef8a1f9b520475c29676
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_latex_base0.git
