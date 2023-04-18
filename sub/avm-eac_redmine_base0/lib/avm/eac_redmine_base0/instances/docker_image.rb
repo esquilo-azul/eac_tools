@@ -13,6 +13,7 @@ module Avm
         enable_simple_cache
 
         APACHE_HOST_DOCKERFILE_SUBPATH = 'apache_host_dockerfile'
+        APACHE_PATH_DOCKERFILE_SUBPATH = 'apache_path_dockerfile'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_BLANK = 'redmine_as_apache_base'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_PRESENT = 'redmine_as_apache_path'
         REDMINE_SOURCE_HOST_SUBPATH = 'redmine_source'
@@ -24,9 +25,12 @@ module Avm
         end
 
         def apache_setup
-          return '' if web_path_present?
+          template.child(apache_setup_dockerfile).apply(self)
+        end
 
-          template.child(APACHE_HOST_DOCKERFILE_SUBPATH).apply(self)
+        # @return [String]
+        def apache_setup_dockerfile
+          web_path_present? ? APACHE_PATH_DOCKERFILE_SUBPATH : APACHE_HOST_DOCKERFILE_SUBPATH
         end
 
         def base_image
