@@ -38,7 +38,8 @@ module Avm
         end
 
         def psql_command(database = true)
-          env.command(password_command_argument, 'psql', *common_command_args(database))
+          env.command(password_command_argument, 'psql', '--variable', 'ON_ERROR_STOP=t',
+                      *common_command_args(database))
         end
 
         def psql_command_command(sql, database = true)
