@@ -6,7 +6,7 @@ require 'eac_ruby_utils/core_ext'
 module Avm
   module EacPostgresqlBase0
     class Instance
-      require_sub __FILE__
+      require_sub __FILE__, include_modules: true
 
       DEFAULT_HOSTNAME = '127.0.0.1'
       DEFAULT_PORT = 5432
@@ -23,55 +23,6 @@ module Avm
 
       def data_unit
         ::Avm::EacPostgresqlBase0::Instance::DataUnit.new(self)
-      end
-
-      def dump_command
-        env.command('pg_dump', '--no-privileges', '--clean', '--no-owner', *common_command_args)
-           .envvar('PGPASSWORD', password)
-      end
-
-      # @return [EacRubyUtils::Envs::Command]
-      def dump_gzip_command
-        dump_command.pipe(gzip_compress_command)
-      end
-
-      # @return [EacRubyUtils::Envs::Command]
-      def gzip_compress_command
-        env.command('gzip', '-9', '-c')
-      end
-
-      # @return [EacRubyUtils::Envs::Command]
-      def gzip_decompress_command
-        env.command('gzip', '-d')
-      end
-
-      # @return [EacRubyUtils::Envs::Command]
-      def load_gzip_command
-        gzip_decompress_command.pipe(psql_command)
-      end
-
-      # @return [String]
-      def password_command_argument
-        "@ESC_PGPASSWORD=#{password}"
-      end
-
-      def psql_command(database = true)
-        env.command(password_command_argument, 'psql', *common_command_args(database))
-      end
-
-      def psql_command_command(sql, database = true)
-        psql_command(database).append(['--quiet', '--tuples-only', '--command', sql])
-      end
-
-      def root_psql_command(sql = nil)
-        args = ['sudo', '-u', 'postgres', 'psql']
-        args += ['--quiet', '--tuples-only', '--command', sql] if sql.present?
-        env.command(*args)
-      end
-
-      def common_command_args(database = true)
-        ['--host', host, '--username', user, '--port', port,
-         (database ? name : MAINTENANCE_DATABASE)]
       end
 
       def host
