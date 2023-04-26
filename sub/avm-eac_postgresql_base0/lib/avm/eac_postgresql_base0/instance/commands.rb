@@ -8,7 +8,7 @@ module Avm
     class Instance
       module Commands
         def dump_command
-          env.command('pg_dump', '--no-privileges', '--clean', '--no-owner', *common_command_args)
+          env.command('pg_dump', '--no-privileges', '--no-owner', *common_command_args)
              .envvar('PGPASSWORD', password)
         end
 
