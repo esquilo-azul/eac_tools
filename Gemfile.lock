@@ -154,7 +154,7 @@ PATH
   remote: sub/avm-files
   specs:
     avm-files (0.6.0)
-      avm (~> 0.52)
+      avm (~> 0.67, >= 0.67.1)
       eac_cli (~> 0.28)
       eac_fs (~> 0.12, >= 0.12.3)
       eac_ruby_utils (~> 0.106)
