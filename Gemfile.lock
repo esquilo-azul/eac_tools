@@ -263,7 +263,7 @@ PATH
 PATH
   remote: sub/eac_templates
   specs:
-    eac_templates (0.3.2)
+    eac_templates (0.4.0)
       eac_config (~> 0.12)
       eac_ruby_utils (~> 0.112)
 
@@ -380,7 +380,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.6.1)
-    zeitwerk (2.6.7)
+    zeitwerk (2.6.8)
     zlib (2.1.1)
 
 PLATFORMS
