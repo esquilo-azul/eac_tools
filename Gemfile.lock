@@ -158,7 +158,7 @@ PATH
       eac_cli (~> 0.30, >= 0.30.1)
       eac_fs (~> 0.16)
       eac_ruby_utils (~> 0.112)
-      eac_templates (~> 0.4)
+      eac_templates (~> 0.5)
 
 PATH
   remote: sub/avm-git
