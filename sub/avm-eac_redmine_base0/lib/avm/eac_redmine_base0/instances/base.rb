@@ -49,7 +49,7 @@ module Avm
         # @return [Avm::EacRedmineBase0::Instances::RestApi]
         def rest_api_uncached
           url = root_url
-          url.query_values = { key: read_entry('api.key') }
+          url.query_values = { key: admin_api_key }
           ::Avm::EacRedmineBase0::Instances::RestApi.new(url)
         end
       end
