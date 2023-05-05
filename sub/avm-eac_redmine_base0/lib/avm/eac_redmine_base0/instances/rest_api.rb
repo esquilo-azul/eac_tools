@@ -7,6 +7,7 @@ module Avm
   module EacRedmineBase0
     module Instances
       class RestApi < ::EacRest::Api
+        require_sub __FILE__
       end
     end
   end
