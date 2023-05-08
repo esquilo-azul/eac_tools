@@ -9,6 +9,7 @@ module Avm
       require_sub __FILE__
 
       DEFAULT_HOSTNAME = '127.0.0.1'
+      DEFAULT_PORT = 5432
       MAINTENANCE_DATABASE = 'postgres'
 
       common_constructor :env, :connection_params do
@@ -77,7 +78,7 @@ module Avm
       end
 
       def port
-        connection_params[:port] || '5432'
+        connection_params[:port] || DEFAULT_PORT
       end
 
       def user
