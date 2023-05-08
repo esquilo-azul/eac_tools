@@ -8,7 +8,9 @@ module Avm
       class DataUnit < ::Avm::Instances::Data::Unit
         EXTENSION = '.pgdump.gz'
         SCHEMA_VAR = '%%SCHEMA%%'
-        TABLES_SQL = "select tablename from pg_tables where schemaname = '#{SCHEMA_VAR}'"
+        TABLE_PARTS_SEPARATOR = '/'
+        TABLES_SQL = "select schemaname || '#{TABLE_PARTS_SEPARATOR}' || tablename from " \
+          "pg_tables where schemaname = '#{SCHEMA_VAR}'"
 
         before_load :clear_database
 
@@ -25,7 +27,7 @@ module Avm
         # @param table_list [Array<String>]
         # @return [String]
         def drop_tables_sql(table_list)
-          'drop table if exists ' + table_list.map { |t| "\"#{t}\"" }.join(', ') + ' cascade'
+          'drop table ' + table_list.map(&:to_s).join(', ') + ' cascade'
         end
 
         def clear_database
@@ -39,6 +41,13 @@ module Avm
           end
         end
 
+        # @param parts [Array<String>, Strings]
+        # @return [String]
+        def join_table_parts(parts)
+          parts = parts.to_s.split(TABLE_PARTS_SEPARATOR) unless parts.is_a?(::Enumerable)
+          parts.map { |p| "\"#{p}\"" }.join('.')
+        end
+
         def run_sql(sql)
           instance.psql_command_command(sql).execute!
         end
@@ -46,6 +55,7 @@ module Avm
         # @return [Array<String>]
         def tables
           run_sql(tables_sql).each_line.map(&:strip).reject(&:blank?)
+                             .map { |line| join_table_parts(line) }
         end
 
         # @return [String]
