@@ -22,6 +22,12 @@ module Avm
 
         private
 
+        # @param table_list [Array<String>]
+        # @return [String]
+        def drop_tables_sql(table_list)
+          'drop table if exists ' + table_list.map { |t| "\"#{t}\"" }.join(', ') + ' cascade'
+        end
+
         def clear_database
           info 'Clearing database (Dropping all tables)...'
           ts = tables
@@ -29,7 +35,7 @@ module Avm
             info 'Database has no tables'
           else
             info "Removing #{ts.count} table(s)..."
-            run_sql('drop table if exists ' + ts.map { |t| "\"#{t}\"" }.join(', ') + ' cascade')
+            run_sql(drop_tables_sql(ts))
           end
         end
 
