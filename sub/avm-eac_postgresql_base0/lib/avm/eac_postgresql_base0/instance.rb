@@ -10,6 +10,7 @@ module Avm
 
       DEFAULT_HOSTNAME = '127.0.0.1'
       DEFAULT_PORT = 5432
+      DEFAULT_SCHEMA = 'public'
       MAINTENANCE_DATABASE = 'postgres'
 
       common_constructor :env, :connection_params do
@@ -91,6 +92,10 @@ module Avm
 
       def name
         connection_params.fetch(:name)
+      end
+
+      def schema
+        connection_params[:schema] || DEFAULT_SCHEMA
       end
     end
   end
