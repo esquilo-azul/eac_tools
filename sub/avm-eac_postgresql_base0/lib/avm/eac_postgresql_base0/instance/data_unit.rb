@@ -7,7 +7,8 @@ module Avm
     class Instance
       class DataUnit < ::Avm::Instances::Data::Unit
         EXTENSION = '.pgdump.gz'
-        TABLES_SQL = 'select tablename from pg_tables where schemaname = \'public\''
+        SCHEMA_VAR = '%%SCHEMA%%'
+        TABLES_SQL = "select tablename from pg_tables where schemaname = '#{SCHEMA_VAR}'"
 
         before_load :clear_database
 
@@ -43,7 +44,7 @@ module Avm
 
         # @return [String]
         def tables_sql
-          TABLES_SQL
+          TABLES_SQL.gsub(SCHEMA_VAR, instance.schema)
         end
       end
     end
