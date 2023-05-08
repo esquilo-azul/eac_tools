@@ -8,6 +8,7 @@ module Avm
     class Instance
       require_sub __FILE__
 
+      DEFAULT_HOSTNAME = '127.0.0.1'
       MAINTENANCE_DATABASE = 'postgres'
 
       common_constructor :env, :connection_params do
@@ -72,7 +73,7 @@ module Avm
       end
 
       def host
-        connection_params[:host] || '127.0.0.1'
+        connection_params[:host] || DEFAULT_HOSTNAME
       end
 
       def port
