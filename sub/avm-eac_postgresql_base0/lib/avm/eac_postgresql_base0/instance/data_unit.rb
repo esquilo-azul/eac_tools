@@ -36,8 +36,14 @@ module Avm
           instance.psql_command_command(sql).execute!
         end
 
+        # @return [Array<String>]
         def tables
-          run_sql(TABLES_SQL).each_line.map(&:strip).reject(&:blank?)
+          run_sql(tables_sql).each_line.map(&:strip).reject(&:blank?)
+        end
+
+        # @return [String]
+        def tables_sql
+          TABLES_SQL
         end
       end
     end
