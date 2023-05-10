@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_postgresql_base0', '~> 0.4'
   s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.4', '>= 0.4.2'
   s.add_dependency 'avm-files', '~> 0.6', '>= 0.6.2'
-  s.add_dependency 'eac_ruby_utils', '~> 0.112'
+  s.add_dependency 'eac_ruby_utils', '~> 0.113'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.2'
 end
