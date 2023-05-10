@@ -15,14 +15,6 @@ module Avm
         include ::Avm::EacPostgresqlBase0::InstanceWith
         enable_simple_cache
 
-        def data_dump(argv = [])
-          run_subcommand(data_dump_runner_class, argv)
-        end
-
-        def data_dump_runner_class
-          ::Avm::EacWebappBase0::Instances::Runners::Data::Dump
-        end
-
         def run_subcommand(subcommand_class, argv)
           subcommand_class.create(
             argv: argv,

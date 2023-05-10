@@ -33,7 +33,9 @@ module Avm
             end
 
             def source_instance_dump_path
-              runner_context.call(:instance).class.by_id(parsed.source_instance).data_dump
+              runner_context.call(:instance).class.by_id(parsed.source_instance).run_subcommand(
+                ::Avm::EacWebappBase0::Instances::Runners::Data::Dump, []
+              )
             end
 
             def load_dump
