@@ -26,7 +26,7 @@ module Avm
         def run_subcommand(subcommand_class, argv)
           subcommand_class.create(
             argv: argv,
-            parent: ::Avm::EacWebappBase0::Instances::Base::SubcommandParent.new(self)
+            parent: ::Avm::Instances::Base::SubcommandParent.new(self)
           ).run
         end
 
