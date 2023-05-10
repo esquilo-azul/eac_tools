@@ -14,6 +14,17 @@ module Avm
 
         before_load :clear
 
+        def clear
+          info 'Clearing database (Dropping all tables)...'
+          ts = tables
+          if ts.empty?
+            info 'Database has no tables'
+          else
+            info "Removing #{ts.count} table(s)..."
+            run_sql(drop_tables_sql(ts))
+          end
+        end
+
         def dump_command
           instance.dump_gzip_command
         end
@@ -28,17 +39,6 @@ module Avm
         # @return [String]
         def drop_tables_sql(table_list)
           'drop table ' + table_list.map(&:to_s).join(', ') + ' cascade'
-        end
-
-        def clear
-          info 'Clearing database (Dropping all tables)...'
-          ts = tables
-          if ts.empty?
-            info 'Database has no tables'
-          else
-            info "Removing #{ts.count} table(s)..."
-            run_sql(drop_tables_sql(ts))
-          end
         end
 
         # @param parts [Array<String>, Strings]
