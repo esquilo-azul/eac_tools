@@ -12,7 +12,7 @@ module Avm
         TABLES_SQL = "select schemaname || '#{TABLE_PARTS_SEPARATOR}' || tablename from " \
           "pg_tables where schemaname = '#{SCHEMA_VAR}'"
 
-        before_load :clear_database
+        before_load :clear
 
         def dump_command
           instance.dump_gzip_command
@@ -30,7 +30,7 @@ module Avm
           'drop table ' + table_list.map(&:to_s).join(', ') + ' cascade'
         end
 
-        def clear_database
+        def clear
           info 'Clearing database (Dropping all tables)...'
           ts = tables
           if ts.empty?
