@@ -193,7 +193,7 @@ PATH
   specs:
     avm (0.68.0)
       aranha-parsers (~> 0.17, >= 0.17.1)
-      eac_cli (~> 0.31)
+      eac_cli (~> 0.32)
       eac_config (~> 0.12)
       eac_docker (~> 0.7)
       eac_fs (~> 0.16)
