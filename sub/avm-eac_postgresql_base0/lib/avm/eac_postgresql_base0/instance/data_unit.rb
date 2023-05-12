@@ -26,11 +26,11 @@ module Avm
         end
 
         def dump_command
-          instance.dump_gzip_command
+          instance.pg.dump_gzip_command
         end
 
         def load_command
-          instance.load_gzip_command
+          instance.pg.load_gzip_command
         end
 
         private
@@ -49,7 +49,7 @@ module Avm
         end
 
         def run_sql(sql)
-          instance.psql_command_command(sql).execute!
+          instance.pg.psql_command_command(sql).execute!
         end
 
         # @return [Array<String>]
@@ -60,7 +60,7 @@ module Avm
 
         # @return [String]
         def tables_sql
-          TABLES_SQL.gsub(SCHEMA_VAR, instance.schema)
+          TABLES_SQL.gsub(SCHEMA_VAR, instance.pg.schema)
         end
       end
     end

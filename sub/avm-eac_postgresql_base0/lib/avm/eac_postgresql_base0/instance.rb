@@ -21,10 +21,6 @@ module Avm
         ::Avm::EacPostgresqlBase0::Instance::Assert.new(self).perform
       end
 
-      def data_unit
-        ::Avm::EacPostgresqlBase0::Instance::DataUnit.new(self)
-      end
-
       def host
         connection_params[:host] || DEFAULT_HOSTNAME
       end

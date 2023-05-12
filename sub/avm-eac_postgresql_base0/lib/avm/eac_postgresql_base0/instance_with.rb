@@ -15,6 +15,11 @@ module Avm
                     name: database_name
         )
       end
+
+      # @return [Avm::EacPostgresqlBase0::Instance::DataUnit]
+      def pg_data_unit
+        ::Avm::EacPostgresqlBase0::Instance::DataUnit.new(self)
+      end
     end
   end
 end
