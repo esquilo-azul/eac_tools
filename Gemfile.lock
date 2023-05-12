@@ -186,7 +186,7 @@ PATH
       eac_ruby_base0 (~> 0.18)
       eac_templates (~> 0.5)
       git (~> 1.18)
-      ruby-progressbar (~> 1.11)
+      ruby-progressbar (~> 1.13)
 
 PATH
   remote: sub/avm
