@@ -12,10 +12,7 @@ module Avm
         TABLES_SQL = "select schemaname || '#{TABLE_PARTS_SEPARATOR}' || tablename from " \
           "pg_tables where schemaname = '#{SCHEMA_VAR}'"
 
-        before_load :clear
-
-        def clear
-          info 'Clearing database (Dropping all tables)...'
+        def do_clear
           ts = tables
           if ts.empty?
             info 'Database has no tables'
