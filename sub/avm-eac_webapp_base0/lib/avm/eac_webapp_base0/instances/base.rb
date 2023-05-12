@@ -41,7 +41,7 @@ module Avm
         end
 
         def database_unit
-          pg.data_unit
+          pg_data_unit
         end
 
         private
