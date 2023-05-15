@@ -121,7 +121,7 @@ PATH
       aranha-parsers (~> 0.18)
       avm (~> 0.71)
       avm-eac_generic_base0 (~> 0.12)
-      eac_ruby_utils (~> 0.112)
+      eac_ruby_utils (~> 0.116)
 
 PATH
   remote: sub/avm-eac_ubuntu_base0
