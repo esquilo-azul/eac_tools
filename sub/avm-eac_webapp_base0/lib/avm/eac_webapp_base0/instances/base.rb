@@ -22,16 +22,6 @@ module Avm
           ).run
         end
 
-        # @return [Avm::Instances::Data::Package]
-        def data_package
-          @data_package ||= data_package_create
-        end
-
-        # @return [Avm::Instances::Data::Package]
-        def data_package_create
-          ::Avm::Instances::Data::Package.new(self)
-        end
-
         def database_unit
           pg_data_unit
         end
