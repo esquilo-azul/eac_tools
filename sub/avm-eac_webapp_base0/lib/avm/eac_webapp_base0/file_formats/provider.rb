@@ -15,8 +15,8 @@ module Avm
 
         def all
           @all ||= ALL_NAMES.map do |name|
-            ::Avm::EacWebappBase0::FileFormats.const_get(name.camelize).freeze
-          end
+            ::Avm::EacWebappBase0::FileFormats.const_get(name.camelize)
+          end.freeze
         end
       end
     end
