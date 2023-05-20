@@ -17,6 +17,8 @@ module Avm
           subcommands
         end
 
+        for_context :instance
+
         private
 
         def instance_uncached
