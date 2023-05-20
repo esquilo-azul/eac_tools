@@ -130,7 +130,7 @@ PATH
     avm-eac_ubuntu_base0 (0.4.2)
       avm (~> 0.73)
       eac_ruby_utils (~> 0.117)
-      eac_templates (~> 0.3, >= 0.3.2)
+      eac_templates (~> 0.5)
 
 PATH
   remote: sub/avm-eac_webapp_base0
