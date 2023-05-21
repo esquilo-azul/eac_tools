@@ -1,7 +1,7 @@
 [subrepo]
 	cmdver = 0.4.1
-	commit = 9a4e6978545ec5eaf2a5c0e77dff1d552d1b3e64
+	commit = 95d7f2e6f0d45faad60c69ca2613d525749d57ee
 	method = merge
-	parent = be93cbb30f1da46ce71e6deb0013ce80db87a8db
+	parent = 242edadae45dc9430c19467c1629498b5d6f54bd
   branch = master
   remote = https://github.com/esquilo-azul/avm.git
