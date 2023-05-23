@@ -335,7 +335,7 @@ GEM
     htmlbeautifier (1.4.2)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
-    jaro_winkler (1.5.4)
+    jaro_winkler (1.5.5)
     minitar (0.9)
     minitest (5.18.0)
     multipart-post (2.3.0)
