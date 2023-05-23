@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_webapp_base0', '~> 0.17', '>= 0.17.2'
   s.add_dependency 'avm-eac_wordpress_base0', '~> 0.3', '>= 0.3.1'
   s.add_dependency 'avm-git', '~> 0.13', '>= 0.13.3'
-  s.add_dependency 'avm-tools', '~> 0.150'
+  s.add_dependency 'avm-tools', '~> 0.151'
   s.add_dependency 'eac_ruby_utils', '~> 0.117'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.5.1'
