@@ -20,8 +20,8 @@ module EacCli
       end
 
       # Call a method in the runner or in one of it ancestors.
-      def call(method_name, *args)
-        context_call_responder(method_name).call(*args)
+      def call(method_name, *args, &block)
+        context_call_responder(method_name).call(*args, &block)
       end
 
       # @return [EacCli::Runner::ContextResponders]
@@ -46,8 +46,9 @@ module EacCli
         end
       end
 
-      def parent_call(method_name, *args)
-        return parent.runner_context.call(method_name, *args) if parent.respond_to?(:runner_context)
+      def parent_call(method_name, *args, &block)
+        return parent.runner_context.call(method_name, *args, &block) if
+          parent.respond_to?(:runner_context)
 
         raise "Parent #{parent} do not respond to .context or .runner_context (Runner: #{runner})"
       end
