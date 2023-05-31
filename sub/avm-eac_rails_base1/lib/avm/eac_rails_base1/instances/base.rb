@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'avm/eac_rails_base1/instances/processes/tasks_scheduler'
 require 'avm/eac_rails_base1/instances/runners'
 require 'avm/eac_ruby_base1/instances/mixin'
 require 'avm/eac_ruby_base1/sources/base'
@@ -20,6 +21,11 @@ module Avm
         # @return [Avm::Instances::Data::Package]
         def data_package_create
           super.add_unit('database', database_unit)
+        end
+
+        # @return [Array<Avm::Instances::Process>]
+        def processes
+          super + [::Avm::EacRailsBase1::Instances::Processes::TasksScheduler.new(self)]
         end
 
         def rake(*args)
