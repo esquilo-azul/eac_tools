@@ -4,6 +4,7 @@ require 'avm/instances/base'
 require 'avm/eac_postgresql_base0/instance_with'
 require 'avm/instances/data/files_unit'
 require 'avm/instances/data/package'
+require 'avm/eac_webapp_base0/instances/processes/web_server'
 require 'avm/eac_webapp_base0/instances/runners'
 require 'avm/eac_ubuntu_base0/instances/base'
 
@@ -15,12 +16,12 @@ module Avm
         include ::Avm::EacPostgresqlBase0::InstanceWith
         enable_simple_cache
 
-        # @return [Avm::EacUbuntuBase0::Apache::Resource]
+        # @return [Avm::EacUbuntuBase0::Apache::Resource, nil]
         def apache_resource
           %i[conf site]
             .lazy
             .map { |type| platform_instance.apache.send(type, install_apache_resource_name) }
-            .find(&:available?) || raise("No Apache resource found for \"#{id}\"")
+            .find(&:available?)
         end
 
         def run_subcommand(subcommand_class, argv)
@@ -32,6 +33,11 @@ module Avm
 
         def database_unit
           pg_data_unit
+        end
+
+        # @return [Array<Avm::Instances::Process>]
+        def processes
+          super + [::Avm::EacWebappBase0::Instances::Processes::WebServer.new(self)]
         end
 
         private
