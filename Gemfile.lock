@@ -79,7 +79,7 @@ PATH
   specs:
     avm-eac_rails_base1 (0.8.4)
       avm (~> 0.77)
-      avm-eac_ruby_base1 (~> 0.30, >= 0.30.2)
+      avm-eac_ruby_base1 (~> 0.30, >= 0.30.3)
       avm-eac_webapp_base0 (~> 0.15, >= 0.15.1)
       eac_ruby_utils (~> 0.112)
 
