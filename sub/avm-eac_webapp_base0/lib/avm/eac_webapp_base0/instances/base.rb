@@ -11,7 +11,7 @@ module Avm
   module EacWebappBase0
     module Instances
       class Base < ::Avm::Instances::Base
-        require_sub __FILE__
+        require_sub __FILE__, include_modules: true
         include ::Avm::EacPostgresqlBase0::InstanceWith
         enable_simple_cache
 
