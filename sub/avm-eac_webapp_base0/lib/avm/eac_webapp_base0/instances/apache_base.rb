@@ -20,7 +20,7 @@ module Avm
 
         # @return [Avm::EacUbuntuBase0::Apache]
         def apache_uncached
-          ::Avm::EacUbuntuBase0::Apache.new(instance.host_env)
+          instance.platform_instance.apache
         end
       end
     end
