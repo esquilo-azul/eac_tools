@@ -3,12 +3,13 @@
 require 'eac_ruby_utils/core_ext'
 require 'avm/entries/jobs/base'
 require 'avm/eac_ubuntu_base0/apache'
+require 'avm/eac_webapp_base0/instances/apache_base'
 require 'eac_templates/core_ext'
 
 module Avm
   module EacWebappBase0
     module Instances
-      class ApacheHost
+      class ApacheHost < ::Avm::EacWebappBase0::Instances::ApacheBase
         APACHE_DIRECTORY_EXTRA_CONFIG_KEY = 'install.apache_directory_extra_config'
         JOBS = %w[write_available_no_ssl_site enable_no_ssl_site remove_ssl_site reload_apache
                   run_certbot enable_ssl_site reload_apache].freeze
@@ -31,10 +32,6 @@ module Avm
 
         private
 
-        def apache_uncached
-          ::Avm::EacUbuntuBase0::Apache.new(instance.host_env)
-        end
-
         def enable_no_ssl_site
           infom 'Enabling no SSL site...'
           no_ssl_site.enable
@@ -49,11 +46,6 @@ module Avm
 
         def no_ssl_site_uncached
           apache.site(instance.id)
-        end
-
-        def reload_apache
-          infom 'Reloading Apache...'
-          apache.service('reload')
         end
 
         def remove_ssl_site

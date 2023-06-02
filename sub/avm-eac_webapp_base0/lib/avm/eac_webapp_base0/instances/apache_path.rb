@@ -2,12 +2,13 @@
 
 require 'avm/entries/jobs/base'
 require 'avm/eac_ubuntu_base0/apache'
+require 'avm/eac_webapp_base0/instances/apache_base'
 require 'eac_ruby_utils/core_ext'
 
 module Avm
   module EacWebappBase0
     module Instances
-      class ApachePath
+      class ApachePath < ::Avm::EacWebappBase0::Instances::ApacheBase
         JOBS = %w[write_available_conf enable_conf reload_apache].freeze
         include ::Avm::Entries::Jobs::Base
 
@@ -26,18 +27,9 @@ module Avm
 
         private
 
-        def apache_uncached
-          ::Avm::EacUbuntuBase0::Apache.new(instance.host_env)
-        end
-
         def enable_conf
           infom 'Enabling configuration...'
           conf.enable
-        end
-
-        def reload_apache
-          infom 'Reloading Apache...'
-          apache.service('reload')
         end
 
         def conf_uncached
