@@ -16,6 +16,10 @@ module Avm
             apache_resource_change(__method__)
           end
 
+          def enabled?
+            instance.apache_resource.enabled?
+          end
+
           def disable
             apache_resource_change(__method__)
           end
