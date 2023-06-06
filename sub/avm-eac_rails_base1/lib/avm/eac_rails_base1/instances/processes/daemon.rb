@@ -23,6 +23,10 @@ module Avm
             daemon_command(:start).system!
           end
 
+          def enabled?
+            daemon_command(:status).execute.fetch(:exit_code).zero?
+          end
+
           private
 
           def daemon_command(action)
