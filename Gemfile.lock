@@ -125,7 +125,7 @@ PATH
   remote: sub/avm-eac_webapp_base0
   specs:
     avm-eac_webapp_base0 (0.18.0)
-      avm (~> 0.77)
+      avm (~> 0.78)
       avm-eac_generic_base0 (~> 0.12)
       avm-eac_postgresql_base0 (~> 0.5, >= 0.5.1)
       avm-eac_ubuntu_base0 (~> 0.5)
@@ -343,11 +343,12 @@ GEM
     os (1.1.4)
     parallel (1.23.0)
     parseconfig (1.1.2)
-    parser (3.2.2.1)
+    parser (3.2.2.3)
       ast (~> 2.4.1)
+      racc
     parslet (2.0.0)
     public_suffix (5.0.1)
-    racc (1.6.2)
+    racc (1.7.0)
     rack (3.0.7)
     rainbow (3.1.1)
     rchardet (1.8.0)
