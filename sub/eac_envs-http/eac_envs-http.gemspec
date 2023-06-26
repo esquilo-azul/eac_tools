@@ -13,12 +13,12 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib}/**/*']
 
   s.add_dependency 'eac_fs', '~> 0.16'
-  s.add_dependency 'eac_ruby_utils', '~> 0.116'
-  s.add_dependency 'faraday', '~> 2.7', '>= 2.7.4'
+  s.add_dependency 'eac_ruby_utils', '~> 0.117', '>= 0.117.1'
+  s.add_dependency 'faraday', '~> 2.7', '>= 2.7.6'
   s.add_dependency 'faraday-follow_redirects', '~> 0.3'
   s.add_dependency 'faraday-gzip', '~> 0.1'
   s.add_dependency 'faraday-multipart', '~> 1.0', '>= 1.0.4'
-  s.add_dependency 'faraday-retry', '~> 2.1'
+  s.add_dependency 'faraday-retry', '~> 2.2'
 
   s.add_development_dependency 'aranha-parsers', '~> 0.17'
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.5', '>= 0.5.1'

@@ -219,14 +219,14 @@ PATH
 PATH
   remote: sub/eac_envs-http
   specs:
-    eac_envs-http (0.3.2)
+    eac_envs-http (0.4.0)
       eac_fs (~> 0.16)
-      eac_ruby_utils (~> 0.116)
-      faraday (~> 2.7, >= 2.7.4)
+      eac_ruby_utils (~> 0.117, >= 0.117.1)
+      faraday (~> 2.7, >= 2.7.6)
       faraday-follow_redirects (~> 0.3)
       faraday-gzip (~> 0.1)
       faraday-multipart (~> 1.0, >= 1.0.4)
-      faraday-retry (~> 2.1)
+      faraday-retry (~> 2.2)
 
 PATH
   remote: sub/eac_fs
@@ -288,10 +288,10 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
-    aranha-parsers (0.20.0)
+    aranha-parsers (0.21.0)
       activesupport (>= 4.0.0)
       addressable (~> 2.8, >= 2.8.4)
-      eac_envs-http (~> 0.3, >= 0.3.2)
+      eac_envs-http (~> 0.4)
       eac_ruby_utils (~> 0.117, >= 0.117.1)
       nokogiri (~> 1.15, >= 1.15.2)
       ofx-parser (~> 1.1)
