@@ -165,7 +165,7 @@ PATH
   specs:
     avm-tools (0.151.1)
       aranha-parsers (~> 0.21)
-      avm (~> 0.76)
+      avm (~> 0.78)
       avm-eac_ruby_base1 (~> 0.30, >= 0.30.3)
       avm-eac_ubuntu_base0 (~> 0.4, >= 0.4.3)
       avm-files (~> 0.6, >= 0.6.2)
