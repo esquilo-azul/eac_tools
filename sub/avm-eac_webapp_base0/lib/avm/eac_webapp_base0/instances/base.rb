@@ -16,14 +16,6 @@ module Avm
         include ::Avm::EacPostgresqlBase0::InstanceWith
         enable_simple_cache
 
-        # @return [Avm::EacUbuntuBase0::Apache::Resource, nil]
-        def apache_resource
-          %i[conf site]
-            .lazy
-            .map { |type| platform_instance.apache.send(type, install_apache_resource_name) }
-            .find(&:available?)
-        end
-
         def run_subcommand(subcommand_class, argv)
           subcommand_class.create(
             argv: argv,

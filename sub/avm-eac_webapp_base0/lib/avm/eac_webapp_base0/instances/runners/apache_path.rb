@@ -30,7 +30,7 @@ module Avm
           end
 
           def stereotype_apache_path_class
-            "#{runner_context.call(:instance).class.name.deconstantize}::ApachePath".constantize
+            runner_context.call(:instance).apache_path_class
           end
         end
       end
