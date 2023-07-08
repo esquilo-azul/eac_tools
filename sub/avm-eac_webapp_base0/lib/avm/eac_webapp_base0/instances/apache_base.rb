@@ -9,6 +9,11 @@ module Avm
   module EacWebappBase0
     module Instances
       class ApacheBase
+        # @return [String]
+        def document_root
+          instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)
+        end
+
         protected
 
         def reload_apache

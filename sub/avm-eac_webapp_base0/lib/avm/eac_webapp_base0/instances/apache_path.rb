@@ -17,10 +17,6 @@ module Avm
                                                       .apply(variables_source)
         end
 
-        def document_root
-          instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)
-        end
-
         def extra_content
           ''
         end
