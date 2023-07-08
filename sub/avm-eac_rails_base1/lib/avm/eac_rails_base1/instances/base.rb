@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'avm/eac_rails_base1/instances/apache_host'
+require 'avm/eac_rails_base1/instances/apache_path'
 require 'avm/eac_rails_base1/instances/processes/tasks_scheduler'
 require 'avm/eac_rails_base1/instances/runners'
 require 'avm/eac_ruby_base1/instances/mixin'
