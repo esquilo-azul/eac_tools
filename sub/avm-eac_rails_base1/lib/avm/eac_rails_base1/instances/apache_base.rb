@@ -6,8 +6,9 @@ module Avm
   module EacRailsBase1
     module Instances
       module ApacheBase
+        # @return [String]
         def document_root
-          "#{instance.read_entry(::Avm::Instances::EntryKeys::INSTALL_PATH)}/public"
+          ::File.join(super, 'public')
         end
       end
     end
