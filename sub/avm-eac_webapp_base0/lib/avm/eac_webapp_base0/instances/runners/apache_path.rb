@@ -12,6 +12,7 @@ module Avm
           end
 
           def run
+            infov 'ApachePath class', stereotype_apache_path_class
             if result.error?
               fatal_error result.to_s
             else
