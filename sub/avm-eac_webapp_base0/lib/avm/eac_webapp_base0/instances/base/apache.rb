@@ -10,7 +10,18 @@ module Avm
           class_methods do
             # @return [Class]
             def apache_path_class
-              "#{name.deconstantize}::ApachePath".constantize
+              ancestors.lazy.map { |ancestor| apache_path_class_by_ancestor(ancestor) }
+                       .find(&:present?) || raise("No apache patch class found for \"#{self}\"")
+            end
+
+            private
+
+            # @param ancestor [Module]
+            # @return [Class]
+            def apache_path_class_by_ancestor(ancestor)
+              "#{ancestor.name.deconstantize}::ApachePath".constantize
+            rescue ::NameError
+              nil
             end
           end
 
