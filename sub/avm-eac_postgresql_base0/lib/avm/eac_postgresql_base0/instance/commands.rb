@@ -7,11 +7,12 @@ module Avm
   module EacPostgresqlBase0
     class Instance
       module Commands
-        DUMP_EXCLUDE_PATTERN = '(CREATE|COMMENT ON) EXTENSION'
+        DUMP_EXCLUDE_PATTERNS = ['(CREATE|COMMENT ON) EXTENSION'].freeze
 
         # @return [EacRubyUtils::Envs::Command]
         def dump_command
-          pg_dump_command.pipe(remove_extensions_ddl)
+          DUMP_EXCLUDE_PATTERNS
+            .inject(pg_dump_command) { |a, e| a.pipe(exclude_pattern_command(e)) }
         end
 
         # @return [EacRubyUtils::Envs::Command]
@@ -70,11 +71,6 @@ module Avm
         def pg_dump_command
           env.command('pg_dump', '--no-privileges', '--no-owner', *common_command_args)
              .envvar('PGPASSWORD', password)
-        end
-
-        # @return [EacRubyUtils::Envs::Command]
-        def remove_extensions_ddl
-          exclude_pattern_command(DUMP_EXCLUDE_PATTERN)
         end
       end
     end
