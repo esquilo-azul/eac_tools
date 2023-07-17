@@ -64,8 +64,13 @@ module Avm
         private
 
         # @return [EacRubyUtils::Envs::Command]
+        def exclude_pattern_command(pattern)
+          env.command('grep', '--invert-match', '--extended-regexp', pattern)
+        end
+
+        # @return [EacRubyUtils::Envs::Command]
         def remove_extensions_ddl
-          env.command('grep', '--invert-match', '--extended-regexp', DUMP_EXCLUDE_PATTERN)
+          exclude_pattern_command(DUMP_EXCLUDE_PATTERN)
         end
       end
     end
