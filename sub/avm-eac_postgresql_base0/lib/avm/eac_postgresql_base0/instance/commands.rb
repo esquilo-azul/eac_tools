@@ -7,7 +7,7 @@ module Avm
   module EacPostgresqlBase0
     class Instance
       module Commands
-        DUMP_EXCLUDE_PATTERN = '^(CREATE|COMMENT ON) EXTENSION.*$'
+        DUMP_EXCLUDE_PATTERN = '(CREATE|COMMENT ON) EXTENSION'
 
         # @return [EacRubyUtils::Envs::Command]
         def dump_command
@@ -65,7 +65,7 @@ module Avm
 
         # @return [EacRubyUtils::Envs::Command]
         def exclude_pattern_command(pattern)
-          env.command('sed', '--regexp-extended', "s/#{pattern}//g")
+          env.command('sed', '--regexp-extended', "s/(^|\\n)#{pattern}[^;]*;//gm")
         end
 
         # @return [EacRubyUtils::Envs::Command]
