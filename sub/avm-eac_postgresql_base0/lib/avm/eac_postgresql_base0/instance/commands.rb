@@ -11,9 +11,7 @@ module Avm
 
         # @return [EacRubyUtils::Envs::Command]
         def dump_command
-          env.command('pg_dump', '--no-privileges', '--no-owner', *common_command_args)
-             .envvar('PGPASSWORD', password)
-             .pipe(remove_extensions_ddl)
+          pg_dump_command.pipe(remove_extensions_ddl)
         end
 
         # @return [EacRubyUtils::Envs::Command]
@@ -66,6 +64,12 @@ module Avm
         # @return [EacRubyUtils::Envs::Command]
         def exclude_pattern_command(pattern)
           env.command('sed', '--regexp-extended', "s/(^|\\n)#{pattern}[^;]*;//gm")
+        end
+
+        # @return [EacRubyUtils::Envs::Command]
+        def pg_dump_command
+          env.command('pg_dump', '--no-privileges', '--no-owner', *common_command_args)
+             .envvar('PGPASSWORD', password)
         end
 
         # @return [EacRubyUtils::Envs::Command]
