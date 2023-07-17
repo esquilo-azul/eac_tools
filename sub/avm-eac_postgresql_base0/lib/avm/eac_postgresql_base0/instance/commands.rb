@@ -7,7 +7,8 @@ module Avm
   module EacPostgresqlBase0
     class Instance
       module Commands
-        DUMP_EXCLUDE_PATTERNS = ['(CREATE|COMMENT ON) EXTENSION'].freeze
+        DUMP_EXCLUDE_PATTERNS = ['(CREATE|COMMENT ON) EXTENSION',
+                                 'SET default_table_access_method'].freeze
 
         # @return [EacRubyUtils::Envs::Command]
         def dump_command
