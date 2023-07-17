@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,template}/**/*']
 
   s.add_dependency 'avm', '~> 0.79'
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.30', '>= 0.30.3'
+  s.add_dependency 'avm-eac_ruby_base1', '~> 0.31', '>= 0.31.1'
   s.add_dependency 'avm-eac_webapp_base0', '~> 0.18', '>= 0.18.2'
   s.add_dependency 'eac_ruby_utils', '~> 0.119', '>= 0.119.1'
 
