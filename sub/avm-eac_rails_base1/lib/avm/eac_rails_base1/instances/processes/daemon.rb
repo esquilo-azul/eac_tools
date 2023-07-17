@@ -12,7 +12,7 @@ module Avm
 
           # @return [Boolean]
           def available?
-            instance.the_gem.gemfile_lock_gem_version(gem_name).present?
+            instance.application.local_source.gemfile_lock_gem_version(gem_name).present?
           end
 
           def disable
