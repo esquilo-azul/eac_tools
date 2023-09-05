@@ -219,10 +219,10 @@ PATH
 PATH
   remote: sub/eac_envs-http
   specs:
-    eac_envs-http (0.4.0)
+    eac_envs-http (0.4.1)
       eac_fs (~> 0.16)
-      eac_ruby_utils (~> 0.117, >= 0.117.1)
-      faraday (~> 2.7, >= 2.7.6)
+      eac_ruby_utils (~> 0.119, >= 0.119.1)
+      faraday (~> 2.7, >= 2.7.10)
       faraday-follow_redirects (~> 0.3)
       faraday-gzip (~> 0.1)
       faraday-multipart (~> 1.0, >= 1.0.4)
