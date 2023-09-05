@@ -11,13 +11,14 @@ Gem::Specification.new do |s|
   s.summary     = 'Put here de description.'
 
   s.files = Dir['{lib,locale}/**/*']
+  s.required_ruby_version = '>= 2.7'
 
-  s.add_dependency 'avm', '~> 0.73', '>= 0.73.1'
+  s.add_dependency 'avm', '~> 0.79'
   s.add_dependency 'avm-files', '~> 0.6', '>= 0.6.2'
   s.add_dependency 'eac_git', '~> 0.14', '>= 0.14.1'
-  s.add_dependency 'eac_ruby_utils', '~> 0.117'
+  s.add_dependency 'eac_ruby_utils', '~> 0.119', '>= 0.119.1'
   s.add_dependency 'git', '~> 1.18'
 
   s.add_development_dependency 'aranha-parsers', '~> 0.8', '>= 0.8.5'
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.4'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.7.0'
 end
