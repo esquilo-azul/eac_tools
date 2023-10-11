@@ -8,6 +8,15 @@ module Avm
     module Instances
       class Base < ::Avm::EacRailsBase1::Instances::Base
         module Install
+          INSTALL_EXTRA_KEY = 'install.extra'
+          DEFAULT_INSTALL_EXTRA = ''
+
+          # @return [String]
+          def auto_install_extra
+            inherited_entry_value(::Avm::Instances::EntryKeys::INSTALL_ID, INSTALL_EXTRA_KEY) ||
+              DEFAULT_INSTALL_EXTRA
+          end
+
           def run_installer
             ::EacRubyUtils::Ruby.on_clean_environment do
               installer_command.system!

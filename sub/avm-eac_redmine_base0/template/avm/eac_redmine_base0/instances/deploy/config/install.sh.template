@@ -40,3 +40,6 @@ export smtp_authentication='%%MAILER.SMTP.AUTHENTICATION%%'
 export smtp_username='%%MAILER.SMTP.USERNAME%%'
 export smtp_password='%%MAILER.SMTP.PASSWORD%%'
 export mail_from='%%MAILER.FROM%%'
+
+# Extra
+%%INSTALL.EXTRA%%
