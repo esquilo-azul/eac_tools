@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm', '~> 0.79'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.12'
   s.add_dependency 'avm-eac_rails_base1', '~> 0.9', '>= 0.9.3'
-  s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.4', '>= 0.4.2'
+  s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.5'
   s.add_dependency 'curb', '~> 0.9', '>= 0.9.11'
   s.add_dependency 'eac_fs', '~> 0.16'
   s.add_dependency 'eac_rest', '~> 0.9'

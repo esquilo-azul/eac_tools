@@ -90,7 +90,7 @@ PATH
       avm (~> 0.79)
       avm-eac_generic_base0 (~> 0.12)
       avm-eac_rails_base1 (~> 0.9, >= 0.9.3)
-      avm-eac_ubuntu_base0 (~> 0.4, >= 0.4.2)
+      avm-eac_ubuntu_base0 (~> 0.5)
       curb (~> 0.9, >= 0.9.11)
       eac_fs (~> 0.16)
       eac_rest (~> 0.9)
