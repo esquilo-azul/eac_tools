@@ -5,10 +5,6 @@ Gemspec/DevelopmentDependencies:
   Exclude:
   - avm-eac_redmine_base0.gemspec
 
-RSpec/FilePath:
-  Exclude:
-  - spec/lib/avm/eac_redmine_base0/instances/base/gitolite_spec.rb
-
 RSpec/SpecFilePathFormat:
   Exclude:
   - spec/lib/avm/eac_redmine_base0/instances/base/gitolite_spec.rb
