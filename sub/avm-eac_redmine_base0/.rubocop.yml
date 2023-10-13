@@ -5,10 +5,6 @@ Gemspec/DevelopmentDependencies:
   Exclude:
   - avm-eac_redmine_base0.gemspec
 
-Gemspec/RequiredRubyVersion:
-  Exclude:
-  - avm-eac_redmine_base0.gemspec
-
 Layout/LineContinuationLeadingSpace:
   Exclude:
   - lib/avm/eac_redmine_base0/instances/rest_api/entity_base.rb
