@@ -9,10 +9,6 @@ Gemspec/DevelopmentDependencies:
   Exclude:
   - eac_tools.gemspec
 
-Gemspec/RequiredRubyVersion:
-  Exclude:
-  - eac_tools.gemspec
-
 Style/RedundantConstantBase:
   Exclude:
   - Gemfile

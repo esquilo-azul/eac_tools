@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib,sub}/**/*', 'Gemfile', 'Gemfile.lock']
 
+  s.required_ruby_version = '>= 2.7.0'
+
   s.add_dependency 'avm', '~> 0.79'
   s.add_dependency 'avm-eac_asciidoctor_base0', '~> 0.19'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.12'
