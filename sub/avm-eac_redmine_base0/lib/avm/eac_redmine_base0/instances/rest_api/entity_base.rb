@@ -21,8 +21,8 @@ module Avm
 
             response.body_data
           rescue ::JSON::ParserError
-            raise "\"#{response.url}\" returned invalid JSON: \"#{response.body_str}\"" \
-              " (Status: #{response.status})"
+            raise "\"#{response.url}\" returned invalid JSON: \"#{response.body_str}\" " \
+              "(Status: #{response.status})"
           end
 
           def fetch_data(url_suffix)
