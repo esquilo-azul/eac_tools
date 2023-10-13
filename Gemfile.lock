@@ -232,14 +232,6 @@ PATH
       parseconfig (~> 1.1, >= 1.1.2)
 
 PATH
-  remote: sub/eac_rest
-  specs:
-    eac_rest (0.10.0)
-      eac_envs-http (~> 0.4, >= 0.4.1)
-      eac_fs (~> 0.16)
-      eac_ruby_utils (~> 0.119, >= 0.119.1)
-
-PATH
   remote: sub/eac_ruby_base0
   specs:
     eac_ruby_base0 (0.19.0)
@@ -301,6 +293,10 @@ GEM
       faraday-gzip (~> 0.1)
       faraday-multipart (~> 1.0, >= 1.0.4)
       faraday-retry (~> 2.2)
+    eac_rest (0.10.0)
+      eac_envs-http (~> 0.4, >= 0.4.1)
+      eac_fs (~> 0.16)
+      eac_ruby_utils (~> 0.119, >= 0.119.1)
     eac_ruby_gem_support (0.8.0)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
       rspec (~> 3.12)
@@ -429,7 +425,6 @@ DEPENDENCIES
   eac_docker!
   eac_fs!
   eac_git!
-  eac_rest!
   eac_ruby_base0!
   eac_ruby_gem_support (~> 0.8.0)
   eac_ruby_utils!
