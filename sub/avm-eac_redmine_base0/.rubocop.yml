@@ -5,10 +5,6 @@ Gemspec/DevelopmentDependencies:
   Exclude:
   - avm-eac_redmine_base0.gemspec
 
-Layout/LineEndStringConcatenationIndentation:
-  Exclude:
-  - lib/avm/eac_redmine_base0/instances/rest_api/entity_base.rb
-
 RSpec/FilePath:
   Exclude:
   - spec/lib/avm/eac_redmine_base0/instances/base/gitolite_spec.rb
