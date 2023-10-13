@@ -250,13 +250,6 @@ PATH
       filesize (~> 0.2)
       net-ssh (~> 4.2)
 
-PATH
-  remote: sub/eac_templates
-  specs:
-    eac_templates (0.5.0)
-      eac_config (~> 0.12)
-      eac_ruby_utils (~> 0.112)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -303,6 +296,9 @@ GEM
       rubocop (~> 1.56.3)
       rubocop-rails
       rubocop-rspec
+    eac_templates (0.5.0)
+      eac_config (~> 0.12)
+      eac_ruby_utils (~> 0.112)
     faraday (2.7.11)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -428,7 +424,6 @@ DEPENDENCIES
   eac_ruby_base0!
   eac_ruby_gem_support (~> 0.8.0)
   eac_ruby_utils!
-  eac_templates!
   eac_tools!
 
 BUNDLED WITH
