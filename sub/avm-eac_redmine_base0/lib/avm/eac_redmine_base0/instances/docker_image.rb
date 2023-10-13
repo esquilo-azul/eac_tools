@@ -58,7 +58,7 @@ module Avm
         end
 
         def skip_database
-          ENV['SKIP_DATABASE']
+          ENV.fetch('SKIP_DATABASE', nil)
         end
 
         def start_path

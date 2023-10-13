@@ -5,10 +5,6 @@ Gemspec/DevelopmentDependencies:
   Exclude:
   - avm-eac_redmine_base0.gemspec
 
-Style/FetchEnvVar:
-  Exclude:
-  - lib/avm/eac_redmine_base0/instances/docker_image.rb
-
 Style/RedundantConstantBase:
   Exclude:
   - Gemfile
