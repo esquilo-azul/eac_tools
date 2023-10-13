@@ -96,7 +96,7 @@ module Avm
           if source_path.children.empty?
             infom 'No content left in source directory'
           else
-            fatal_error 'Found entries in source directory: ' +
+            fatal_error 'Found entries in source directory: ' + # rubocop:disable Style/StringConcatenation
                         source_path.children.map { |c| c.basename.to_path }.join(', ')
           end
         end

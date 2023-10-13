@@ -4,7 +4,3 @@ inherit_gem:
 Gemspec/DevelopmentDependencies:
   Exclude:
   - avm-eac_redmine_base0.gemspec
-
-Style/StringConcatenation:
-  Exclude:
-  - lib/avm/eac_redmine_base0/sources/core_update.rb
