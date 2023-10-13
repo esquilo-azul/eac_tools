@@ -8,9 +8,3 @@ AllCops:
 Gemspec/DevelopmentDependencies:
   Exclude:
   - eac_tools.gemspec
-
-Style/RedundantConstantBase:
-  Exclude:
-  - Gemfile
-  - spec/rubocop_spec.rb
-  - spec/spec_helper.rb
