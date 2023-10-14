@@ -216,15 +216,6 @@ PATH
       eac_ruby_utils (~> 0.112)
       parseconfig (~> 1.1, >= 1.1.2)
 
-PATH
-  remote: sub/eac_ruby_base0
-  specs:
-    eac_ruby_base0 (0.19.0)
-      avm-eac_ruby_base1 (~> 0.30, >= 0.30.3)
-      eac_cli (~> 0.35)
-      eac_fs (~> 0.16)
-      eac_ruby_utils (~> 0.117)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -272,6 +263,11 @@ GEM
       eac_envs-http (~> 0.4, >= 0.4.1)
       eac_fs (~> 0.16)
       eac_ruby_utils (~> 0.119, >= 0.119.1)
+    eac_ruby_base0 (0.19.0)
+      avm-eac_ruby_base1 (~> 0.30, >= 0.30.3)
+      eac_cli (~> 0.35)
+      eac_fs (~> 0.16)
+      eac_ruby_utils (~> 0.117)
     eac_ruby_gem_support (0.8.1)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
       rspec (~> 3.12)
@@ -407,7 +403,6 @@ DEPENDENCIES
   eac_cli!
   eac_config!
   eac_git!
-  eac_ruby_base0!
   eac_ruby_gem_support (~> 0.8.0)
   eac_tools!
 
