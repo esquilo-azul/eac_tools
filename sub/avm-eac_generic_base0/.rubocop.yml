@@ -1,45 +1,24 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
-AllCops:
-  TargetRailsVersion: 5.2
-  TargetRubyVersion: 2.7
-
-Metrics/BlockLength:
+inherit_gem:
+  eac_ruby_gem_support: .rubocop.yml
+Gemspec/RequiredRubyVersion:
   Exclude:
-    - '**/*.gemspec'
-    - 'spec/**/*_spec.rb'
-
-Layout/LineLength:
-  Max: 100
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented_relative_to_receiver
-
-Rails/DynamicFindBy:
-  Enabled: false
-
-Rails/Output:
-  Enabled: false
-
-Rails/SkipsModelValidations:
-  Enabled: false
-
-Rails/TimeZone:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+  - avm-eac_generic_base0.gemspec
+Rails/IndexWith:
+  Exclude:
+  - lib/avm/eac_generic_base0/file_formats/base/apply.rb
+Style/ExplicitBlockArgument:
+  Exclude:
+  - lib/avm/eac_generic_base0/file_formats/base/file_resource_name_helper.rb
+Style/HashConversion:
+  Exclude:
+  - lib/avm/eac_generic_base0/file_formats/base/apply.rb
+Style/RedundantConstantBase:
+  Exclude:
+  - Gemfile
+  - spec/lib/avm/eac_generic_base0/file_formats/base_spec.rb
+  - spec/lib/avm/eac_generic_base0/sources/base_spec.rb
+  - spec/rubocop_spec.rb
+  - spec/spec_helper.rb
+Style/RedundantRegexpArgument:
+  Exclude:
+  - lib/avm/eac_generic_base0/file_formats/base.rb
