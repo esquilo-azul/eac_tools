@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib,locale}/**/*']
 
-  s.add_dependency 'avm', '~> 0.66'
+  s.add_dependency 'avm', '~> 0.79'
   s.add_dependency 'eac_ruby_utils', '~> 0.112'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.5.1'
