@@ -33,7 +33,7 @@ module Avm
           string.each_line do |line|
             b += "#{line.rstrip}\n"
           end
-          "#{b.strip}\n".gsub(/\t/, '  ')
+          "#{b.strip}\n".gsub("\t", '  ')
         end
       end
     end
