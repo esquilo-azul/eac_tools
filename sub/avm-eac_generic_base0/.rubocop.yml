@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Rails/IndexWith:
-  Exclude:
-  - lib/avm/eac_generic_base0/file_formats/base/apply.rb
 Style/ExplicitBlockArgument:
   Exclude:
   - lib/avm/eac_generic_base0/file_formats/base/file_resource_name_helper.rb

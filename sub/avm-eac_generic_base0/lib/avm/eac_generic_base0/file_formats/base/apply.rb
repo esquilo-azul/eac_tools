@@ -15,7 +15,7 @@ module Avm
 
           # @return [Enumerable<Avm::FileFormats::FileResult>]
           def result
-            old_content = Hash[files.map { |f| [f, File.read(f)] }]
+            old_content = files.index_with { |f| File.read(f) }
             ::Avm::FileFormats::Utf8Assert.assert_files(files) { file_format.internal_apply(files) }
             files.map { |f| file_result(f, old_content[f]) }
           end
