@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib,locale}/**/*']
 
+  s.required_ruby_version = '>= 2.7.0'
+
   s.add_dependency 'avm', '~> 0.79'
   s.add_dependency 'eac_ruby_utils', '~> 0.119', '>= 0.119.2'
 
