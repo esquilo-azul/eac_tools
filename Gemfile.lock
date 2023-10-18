@@ -111,7 +111,7 @@ PATH
       avm (~> 0.79)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.1)
       eac_envs-http (~> 0.4, >= 0.4.1)
-      eac_ruby_utils (~> 0.119, >= 0.119.1)
+      eac_ruby_utils (~> 0.119, >= 0.119.2)
 
 PATH
   remote: sub/avm-eac_ubuntu_base0
