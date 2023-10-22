@@ -16,8 +16,8 @@ module Avm
           end
 
           def database_internal
-            entry(::Avm::Instances::EntryKeys::DATABASE_HOSTNAME).value ==
-              DATABASE_INTERNAL_HOSTNAME
+            ::Avm::Instances::Base::AutoValues::Database::LOCAL_ADDRESSES
+              .include?(entry(::Avm::Instances::EntryKeys::DATABASE_HOSTNAME).value)
           end
 
           def postgresql_version_default_value
