@@ -13,7 +13,7 @@ PATH
       avm-eac_rails_base1 (~> 0.9, >= 0.9.3)
       avm-eac_redmine_base0 (~> 0.21, >= 0.21.1)
       avm-eac_redmine_plugin_base0 (~> 0.4)
-      avm-eac_ruby_base1 (~> 0.32)
+      avm-eac_ruby_base1 (~> 0.32, >= 0.32.1)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.2)
       avm-eac_wordpress_base0 (~> 0.3, >= 0.3.1)
       avm-git (~> 0.13, >= 0.13.4)
