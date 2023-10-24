@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.7.0'
 
-  s.add_dependency 'avm', '~> 0.79'
+  s.add_dependency 'avm', '~> 0.80'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.12'
   s.add_dependency 'avm-eac_rails_base1', '~> 0.9', '>= 0.9.3'
   s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.5'
