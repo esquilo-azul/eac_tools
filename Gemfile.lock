@@ -17,7 +17,7 @@ PATH
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.2)
       avm-eac_wordpress_base0 (~> 0.3, >= 0.3.1)
       avm-git (~> 0.13, >= 0.13.4)
-      avm-tools (~> 0.156)
+      avm-tools (~> 0.157)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
 
 PATH
