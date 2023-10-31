@@ -25,6 +25,11 @@ module Avm
           super.add_unit('database', database_unit)
         end
 
+        # @return [Addressable::URI]
+        def gemfile_source
+          application.local_source.gemfile_source
+        end
+
         # @return [Array<Avm::Instances::Process>]
         def processes
           super + [::Avm::EacRailsBase1::Instances::Processes::TasksScheduler.new(self)]
