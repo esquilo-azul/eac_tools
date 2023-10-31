@@ -16,6 +16,7 @@ module Avm
 
           common_concern do
             uri_components_entries_values GITOLITE_ENTRY_KEYS_PREFIX
+            undef_method :gitolite_path_inherited_value_proc
           end
 
           # @return [Avm::Instances::Data::FilesUnit]
