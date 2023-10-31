@@ -28,8 +28,9 @@ module Avm
             DEFAULT_HOSTNAME
           end
 
+          # @return [String]
           def gitolite_path_default_value
-            read_entry_optional([GITOLITE_ENTRY_KEYS_PREFIX, 'username']).if_present do |v|
+            gitolite_username_optional.if_present do |v|
               ::File.join(DEFAULT_PATH_PARENT, v)
             end
           end
