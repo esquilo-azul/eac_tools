@@ -12,7 +12,7 @@ PATH
       avm-eac_python_base0 (~> 0.2, >= 0.2.1)
       avm-eac_rails_base0 (~> 0.11)
       avm-eac_rails_base1 (~> 0.10)
-      avm-eac_redmine_base0 (~> 0.21, >= 0.21.2)
+      avm-eac_redmine_base0 (~> 0.22)
       avm-eac_redmine_plugin_base0 (~> 0.4)
       avm-eac_ruby_base1 (~> 0.32, >= 0.32.1)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.2)
