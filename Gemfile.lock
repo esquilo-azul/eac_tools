@@ -98,7 +98,7 @@ PATH
     avm-eac_redmine_base0 (0.21.2)
       avm (~> 0.81)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.1)
-      avm-eac_rails_base1 (~> 0.9, >= 0.9.3)
+      avm-eac_rails_base1 (~> 0.10)
       avm-eac_ubuntu_base0 (~> 0.5)
       curb (~> 0.9, >= 0.9.11)
       eac_fs (~> 0.16)
