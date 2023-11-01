@@ -1,13 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Style/RedundantConstantBase:
-  Exclude:
-  - Gemfile
-  - spec/lib/avm/eac_rails_base0/instances/apache_host_spec.rb
-  - spec/lib/avm/eac_rails_base0/instances/apache_path_spec.rb
-  - spec/rubocop_spec.rb
-  - spec/spec_helper.rb
 Style/RedundantFetchBlock:
   Exclude:
   - template/avm/eac_rails_base0/source_generators/base/config/puma.rb
