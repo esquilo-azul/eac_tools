@@ -13,8 +13,8 @@ module Avm
           include ::EacCli::Runner
 
           runner_definition do
-            arg_opt '-e', '--environment', 'Specifies the environment for the runner to operate' \
-              ' (test/development/production). Default: "development".'
+            arg_opt '-e', '--environment', 'Specifies the environment for the runner to operate ' \
+              '(test/development/production). Default: "development".'
           end
         end
 
