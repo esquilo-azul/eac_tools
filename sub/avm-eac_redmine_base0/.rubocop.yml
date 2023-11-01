@@ -1,6 +1,2 @@
 inherit_gem:
   eac_ruby_gem_support: .rubocop.yml
-
-Gemspec/DevelopmentDependencies:
-  Exclude:
-  - avm-eac_redmine_base0.gemspec
