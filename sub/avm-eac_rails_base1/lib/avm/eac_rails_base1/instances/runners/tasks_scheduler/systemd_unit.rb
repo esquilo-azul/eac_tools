@@ -13,7 +13,7 @@ module Avm
 
             runner_with :help do
               desc 'Configure Systemd unit for instace\'s tasks scheduler daemon (Reference: ' \
-                'https://www.freedesktop.org/software/systemd/man/systemd.service.html).'
+                   'https://www.freedesktop.org/software/systemd/man/systemd.service.html).'
               bool_opt '-e', '--exec-run', 'Run daemon with "run" instead of "start"/"stop".'
               arg_opt '-r', '--restart', 'Value for systemd.service, Restart=.',
                       default: DEFAULT_RESTART
