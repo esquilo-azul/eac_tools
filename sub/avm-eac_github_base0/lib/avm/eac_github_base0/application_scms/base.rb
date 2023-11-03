@@ -7,6 +7,15 @@ module Avm
   module EacGithubBase0
     module ApplicationScms
       class Base < ::Avm::Git::ApplicationScms::Base
+        REPOSITORY_URL_SUFFIX = '.git'
+
+        # @return [Addressable::URI]
+        def git_https_url
+          r = web_url.dup
+          r.path = "#{r.path}#{REPOSITORY_URL_SUFFIX}"
+          r
+        end
+
         # @return [Addressable::URI]
         def web_url
           application.scm_url.to_uri + application.scm_repos_path.to_s

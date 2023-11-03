@@ -13,6 +13,14 @@ RSpec.describe Avm::EacGithubBase0::ApplicationScms::Base do
 
   include_examples 'in_avm_registry', 'application_scms'
 
+  describe '#git_https_url' do
+    it do
+      expect(instance.git_https_url).to(
+        eq(Addressable::URI.parse('https://github.com/esquilo-azul/eac_tools.git'))
+      )
+    end
+  end
+
   describe '#web_url' do
     it do
       expect(instance.web_url).to(
