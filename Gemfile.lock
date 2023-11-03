@@ -41,7 +41,7 @@ PATH
 PATH
   remote: sub/avm-eac_github_base0
   specs:
-    avm-eac_github_base0 (0.2.0)
+    avm-eac_github_base0 (0.3.0)
       avm (~> 0.82)
       avm-git (~> 0.14)
       eac_rest (~> 0.10)
