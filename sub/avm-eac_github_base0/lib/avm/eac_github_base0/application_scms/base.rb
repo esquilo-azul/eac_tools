@@ -26,6 +26,11 @@ module Avm
           )
         end
 
+        # @return [String]
+        def to_s_type_specific
+          web_url.to_s
+        end
+
         # @return [Addressable::URI]
         def web_url
           application.scm_url.to_uri + application.scm_repos_path.to_s
