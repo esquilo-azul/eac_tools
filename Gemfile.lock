@@ -47,6 +47,12 @@ PATH
       eac_ruby_utils (~> 0.119, >= 0.119.2)
 
 PATH
+  remote: sub/avm-eac_gitlab_base0
+  specs:
+    avm-eac_gitlab_base0 (0.3.0)
+      eac_ruby_utils (~> 0.119, >= 0.119.2)
+
+PATH
   remote: sub/avm-eac_latex_base0
   specs:
     avm-eac_latex_base0 (0.3.1)
@@ -394,6 +400,7 @@ DEPENDENCIES
   avm-eac_asciidoctor_base0!
   avm-eac_generic_base0!
   avm-eac_github_base0!
+  avm-eac_gitlab_base0!
   avm-eac_latex_base0!
   avm-eac_php_base0!
   avm-eac_postgresql_base0!
