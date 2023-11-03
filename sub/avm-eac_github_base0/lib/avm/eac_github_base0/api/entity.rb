@@ -13,7 +13,7 @@ module Avm
           while url_suffix.present?
             response = api.request_json(url_suffix).response
             r += response.body_data_or_raise
-                         .map { |child_data| child_entity(entity_class, child_data) }
+                   .map { |child_data| child_entity(entity_class, child_data) }
             url_suffix = response.link('next')
           end
           r
