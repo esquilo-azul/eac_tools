@@ -50,7 +50,7 @@ PATH
 PATH
   remote: sub/avm-eac_gitlab_base0
   specs:
-    avm-eac_gitlab_base0 (0.3.0)
+    avm-eac_gitlab_base0 (0.4.0)
       avm-eac_github_base0 (~> 0.3)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
 
