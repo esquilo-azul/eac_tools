@@ -6,7 +6,8 @@ RSpec.describe Avm::EacGithubBase0::ApplicationScms::Base do
   let(:stub_application) do
     {
       scm_url: 'https://github.com'.to_uri,
-      scm_repos_path: 'esquilo-azul/eac_tools'.to_pathname
+      scm_repos_path: 'esquilo-azul/eac_tools'.to_pathname,
+      scm_ssh_username: 'git'
     }.to_struct
   end
   let(:instance) { described_class.new(stub_application) }
@@ -17,6 +18,14 @@ RSpec.describe Avm::EacGithubBase0::ApplicationScms::Base do
     it do
       expect(instance.git_https_url).to(
         eq(Addressable::URI.parse('https://github.com/esquilo-azul/eac_tools.git'))
+      )
+    end
+  end
+
+  describe '#git_ssh_url' do
+    it do
+      expect(instance.git_ssh_url).to(
+        eq(Addressable::URI.parse('ssh://git@github.com/esquilo-azul/eac_tools.git'))
       )
     end
   end
