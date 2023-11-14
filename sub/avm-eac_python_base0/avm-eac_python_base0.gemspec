@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     =  'AVM stereotype for Python applications.'
 
   s.files = Dir['{lib,locale,template}/**/*']
+  s.required_ruby_version = '>= 2.7'
 
   s.add_dependency 'avm-eac_generic_base0', '~> 0.8'
   s.add_dependency 'eac_ruby_utils', '~> 0.109'
