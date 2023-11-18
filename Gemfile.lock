@@ -3,7 +3,7 @@ PATH
   specs:
     eac_tools (0.82.0)
       avm (~> 0.84)
-      avm-eac_asciidoctor_base0 (~> 0.19)
+      avm-eac_asciidoctor_base0 (~> 0.20)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.1)
       avm-eac_github_base0 (~> 0.3)
       avm-eac_latex_base0 (~> 0.3, >= 0.3.1)
