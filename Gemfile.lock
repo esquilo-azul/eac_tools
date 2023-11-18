@@ -212,13 +212,6 @@ PATH
       minitar (~> 0.9)
 
 PATH
-  remote: sub/eac_config
-  specs:
-    eac_config (0.14.1)
-      addressable (~> 2.8, >= 2.8.5)
-      eac_ruby_utils (~> 0.119, >= 0.119.2)
-
-PATH
   remote: sub/eac_git
   specs:
     eac_git (0.14.1)
@@ -258,6 +251,9 @@ GEM
       eac_config (~> 0.14, >= 0.14.1)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
       tty-table (~> 0.12)
+    eac_config (0.14.1)
+      addressable (~> 2.8, >= 2.8.5)
+      eac_ruby_utils (~> 0.119, >= 0.119.2)
     eac_docker (0.7.0)
       eac_ruby_utils (~> 0.112)
       eac_templates (~> 0.3, >= 0.3.2)
@@ -429,7 +425,6 @@ DEPENDENCIES
   avm-files!
   avm-git!
   avm-tools!
-  eac_config!
   eac_git!
   eac_ruby_gem_support (~> 0.8.0)
   eac_tools!
