@@ -18,7 +18,7 @@ class Ehb:
         self.__args = args
 
     def run(self):
-        print "It is a stub"
+        print("It is a stub")
 
 
 if __name__ == "__main__":
