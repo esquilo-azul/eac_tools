@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = d8b9de9af70fe0c81c9245494a42231ab1ee0cec
+  commit = afe504c3214432216be7e116b67c8cf2fb4753fd
   method = merge
-  parent = 124d720a1625206e4947ec7c8fd5576901a147f0
+  parent = f33c1c17a9d890ec21a07345097c2f3f13b74662
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_python_base0.git
