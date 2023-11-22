@@ -169,7 +169,7 @@ PATH
   remote: sub/avm
   specs:
     avm (0.84.0)
-      aranha-parsers (~> 0.21)
+      aranha-parsers (~> 0.22)
       eac_cli (~> 0.38, >= 0.38.1)
       eac_config (~> 0.14, >= 0.14.1)
       eac_docker (~> 0.7)
@@ -272,7 +272,7 @@ GEM
       rubocop (~> 1.57, >= 1.57.1)
       rubocop-rails (~> 2.21, >= 2.21.2)
       rubocop-rspec (~> 2.24, >= 2.24.1)
-    eac_ruby_utils (0.119.2)
+    eac_ruby_utils (0.120.0)
       activesupport (>= 4, < 7)
       addressable (~> 2.8, >= 2.8.5)
       bundler
@@ -281,7 +281,7 @@ GEM
     eac_templates (0.5.0)
       eac_config (~> 0.12)
       eac_ruby_utils (~> 0.112)
-    faraday (2.7.11)
+    faraday (2.7.12)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
