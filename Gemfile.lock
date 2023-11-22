@@ -175,7 +175,7 @@ PATH
       eac_docker (~> 0.7)
       eac_fs (~> 0.16)
       eac_git (~> 0.14, >= 0.14.1)
-      eac_ruby_utils (~> 0.119, >= 0.119.2)
+      eac_ruby_utils (~> 0.120)
       eac_templates (~> 0.5)
       filesize (~> 0.2)
       htmlbeautifier (~> 1.4, >= 1.4.2)
