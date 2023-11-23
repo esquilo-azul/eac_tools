@@ -65,7 +65,7 @@ module Avm
         end
 
         def ssl_site_uncached
-          apache.site(no_ssl_site.name + '-le-ssl')
+          apache.site("#{no_ssl_site.name}-le-ssl")
         end
 
         def write_available_no_ssl_site
