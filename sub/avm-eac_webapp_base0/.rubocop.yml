@@ -1,24 +1,29 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
-Layout/LineLength:
-  Max: 100
-  
-Rails/TimeZone:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+---
+inherit_gem:
+  eac_ruby_gem_support: ".rubocop.yml"
+Gemspec/RequiredRubyVersion:
+  Exclude:
+  - avm-eac_webapp_base0.gemspec
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+  - lib/avm/eac_webapp_base0/instances/apache_host.rb
+  - lib/avm/eac_webapp_base0/instances/apache_path.rb
+  - lib/avm/eac_webapp_base0/instances/base/apache.rb
+  - lib/avm/eac_webapp_base0/instances/deploy/version.rb
+  - lib/avm/eac_webapp_base0/instances/deploy.rb
+Style/RedundantConstantBase:
+  Exclude:
+  - Gemfile
+  - spec/lib/avm/eac_webapp_base0/file_formats/css_spec.rb
+  - spec/lib/avm/eac_webapp_base0/file_formats/html_spec.rb
+  - spec/lib/avm/eac_webapp_base0/file_formats/javascript_spec.rb
+  - spec/lib/avm/eac_webapp_base0/file_formats/json_spec.rb
+  - spec/lib/avm/eac_webapp_base0/file_formats/xml_spec.rb
+  - spec/lib/avm/eac_webapp_base0/instances/base_spec.rb
+  - spec/lib/avm/eac_webapp_base0/sources/base_spec.rb
+  - spec/rubocop_spec.rb
+  - spec/spec_helper.rb
+Style/StringConcatenation:
+  Exclude:
+  - lib/avm/eac_webapp_base0/executables.rb
+  - lib/avm/eac_webapp_base0/instances/apache_host.rb
