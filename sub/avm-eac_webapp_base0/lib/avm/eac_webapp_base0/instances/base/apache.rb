@@ -11,7 +11,7 @@ module Avm
             # @return [Class]
             def apache_path_class
               ancestors.lazy.map { |ancestor| apache_path_class_by_ancestor(ancestor) }
-                       .find(&:present?) || raise("No apache patch class found for \"#{self}\"")
+                .find(&:present?) || raise("No apache patch class found for \"#{self}\"")
             end
 
             private

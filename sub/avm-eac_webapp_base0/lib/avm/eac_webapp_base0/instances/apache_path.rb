@@ -14,7 +14,7 @@ module Avm
 
         def content
           ::Avm::EacWebappBase0::Instances::ApachePath.template.child('default.conf')
-                                                      .apply(variables_source)
+            .apply(variables_source)
         end
 
         def extra_content

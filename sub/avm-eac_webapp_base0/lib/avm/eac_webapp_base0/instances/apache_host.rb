@@ -17,7 +17,7 @@ module Avm
 
         def directory_extra_config
           instance.entry(APACHE_DIRECTORY_EXTRA_CONFIG_KEY).optional_value
-                  .if_present { |v| "  #{v}\n" }
+            .if_present { |v| "  #{v}\n" }
         end
 
         def no_ssl_site_content

@@ -1,13 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Layout/MultilineMethodCallIndentation:
-  Exclude:
-  - lib/avm/eac_webapp_base0/instances/apache_host.rb
-  - lib/avm/eac_webapp_base0/instances/apache_path.rb
-  - lib/avm/eac_webapp_base0/instances/base/apache.rb
-  - lib/avm/eac_webapp_base0/instances/deploy/version.rb
-  - lib/avm/eac_webapp_base0/instances/deploy.rb
 Style/RedundantConstantBase:
   Exclude:
   - Gemfile

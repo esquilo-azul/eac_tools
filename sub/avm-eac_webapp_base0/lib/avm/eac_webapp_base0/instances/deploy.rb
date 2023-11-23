@@ -43,7 +43,7 @@ module Avm
 
         def setup_files_units
           instance.data_package.units.values.map(&:installation_files_data).select(&:present?)
-                  .each { |unit_install| setup_files_unit(unit_install.key, unit_install.subpath) }
+            .each { |unit_install| setup_files_unit(unit_install.key, unit_install.subpath) }
         end
 
         def assert_instance_branch
