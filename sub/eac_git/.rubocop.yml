@@ -1,11 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-RSpec/MetadataStyle:
-  Exclude:
-  - spec/lib/eac_git/executables_spec.rb
-  - spec/lib/eac_git/local/commit/diff_tree_line_spec.rb
-  - spec/lib/eac_git/local/commit_spec.rb
 Rails/CompactBlank:
   Exclude:
   - lib/eac_git/local/remotes.rb

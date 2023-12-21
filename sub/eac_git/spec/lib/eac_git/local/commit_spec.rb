@@ -4,7 +4,7 @@ require 'eac_git/local'
 require 'eac_git/local/commit'
 require 'tmpdir'
 
-RSpec.describe ::EacGit::Local::Commit, git: true do
+RSpec.describe ::EacGit::Local::Commit, :git do
   let(:git) { stubbed_git_local_repo }
 
   let(:first_commit_sha1) do
