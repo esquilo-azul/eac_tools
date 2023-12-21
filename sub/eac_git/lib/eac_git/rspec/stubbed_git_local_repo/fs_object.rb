@@ -17,6 +17,7 @@ module EacGit
         #   @param subpath [Array<String>
         common_constructor :git, :subpath
 
+        # @return [Pathname]
         def path
           git.root_path.join(*subpath)
         end
