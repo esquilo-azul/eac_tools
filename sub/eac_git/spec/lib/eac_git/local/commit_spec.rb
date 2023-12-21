@@ -4,7 +4,7 @@ require 'eac_git/local'
 require 'eac_git/local/commit'
 require 'tmpdir'
 
-RSpec.describe ::EacGit::Local::Commit, :git do
+RSpec.describe EacGit::Local::Commit, :git do
   let(:git) { stubbed_git_local_repo }
 
   let(:first_commit_sha1) do
@@ -40,7 +40,7 @@ RSpec.describe ::EacGit::Local::Commit, :git do
         it "find file \"#{filename}\" in commit \"#{commit_name}\"" do
           commit = send(commit_name)
           file = commit.changed_files.find { |f| f.path == filename }
-          expect(file).to be_a(::EacGit::Local::Commit::ChangedFile)
+          expect(file).to be_a(EacGit::Local::Commit::ChangedFile)
         end
       end
     end

@@ -1,14 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Style/RedundantConstantBase:
-  Exclude:
-  - Gemfile
-  - spec/lib/eac_git/executables_spec.rb
-  - spec/lib/eac_git/local/commit/diff_tree_line_spec.rb
-  - spec/lib/eac_git/local/commit_spec.rb
-  - spec/rubocop_spec.rb
-  - spec/spec_helper.rb
 Style/StringConcatenation:
   Exclude:
   - lib/eac_git/local/subrepo/config.rb

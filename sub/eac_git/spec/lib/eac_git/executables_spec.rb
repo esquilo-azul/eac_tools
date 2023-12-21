@@ -2,7 +2,7 @@
 
 require 'eac_git/executables'
 
-RSpec.describe(::EacGit::Executables, :git) do
+RSpec.describe(EacGit::Executables, :git) do
   it 'output version' do
     expect(described_class.git.command('--version').execute!).to be_present
   end
