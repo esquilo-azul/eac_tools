@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Gemspec/RequiredRubyVersion:
-  Exclude:
-  - eac_git.gemspec
 Lint/SymbolConversion:
   Exclude:
   - lib/eac_git/remote_like/ls_result.rb
