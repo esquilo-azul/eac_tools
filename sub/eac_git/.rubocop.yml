@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Rails/Delegate:
-  Exclude:
-  - lib/eac_git/rspec/stubbed_git_local_repo.rb
 Rails/IndexWith:
   Exclude:
   - lib/eac_git/local/commit/diff_tree_line.rb

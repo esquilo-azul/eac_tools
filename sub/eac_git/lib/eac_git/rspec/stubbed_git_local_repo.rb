@@ -62,9 +62,7 @@ module EacGit
           path.unlink
         end
 
-        def write(content)
-          path.write(content)
-        end
+        delegate :write, to: :path
       end
     end
   end
