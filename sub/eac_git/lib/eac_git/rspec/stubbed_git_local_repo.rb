@@ -2,7 +2,6 @@
 
 require 'eac_git/local'
 require 'eac_ruby_utils/envs'
-require 'fileutils'
 require 'securerandom'
 require 'tmpdir'
 
@@ -28,7 +27,7 @@ module EacGit
 
       class StubbedGitRepository < ::EacGit::Local
         def file(*subpath)
-          StubbedGitRepositoryFile.new(self, subpath)
+          ::EacGit::Rspec::StubbedGitLocalRepo::File.new(self, subpath)
         end
 
         # @return [EacGit::Local::Commit
@@ -42,28 +41,7 @@ module EacGit
         end
       end
 
-      class StubbedGitRepositoryFile
-        attr_reader :git, :subpath
-
-        def initialize(git, subpath)
-          @git = git
-          @subpath = subpath
-        end
-
-        def path
-          git.root_path.join(*subpath)
-        end
-
-        def touch
-          ::FileUtils.touch(path.to_path)
-        end
-
-        def delete
-          path.unlink
-        end
-
-        delegate :write, to: :path
-      end
+      require_sub __FILE__
     end
   end
 end
