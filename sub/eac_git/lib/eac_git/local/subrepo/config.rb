@@ -24,7 +24,7 @@ module EacGit
           self.values = values.with_indifferent_access
         end
 
-        MAPPING.each do |method_name, _config_key|
+        MAPPING.each_key do |method_name|
           define_method(method_name) do
             values[MAPPING.fetch(method_name)]
           end
