@@ -14,7 +14,7 @@ module EacGit
       end
 
       common_constructor :hashes
-      delegate :fetch, :'[]', :count, :any?, :empty?, to: :hashes
+      delegate :fetch, :[], :count, :any?, :empty?, to: :hashes
     end
   end
 end
