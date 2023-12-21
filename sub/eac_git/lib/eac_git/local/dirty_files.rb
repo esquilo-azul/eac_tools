@@ -28,8 +28,8 @@ module EacGit
 
       def parse_status_line(line)
         STATUS_LINE_PATTERN.if_match(line) do |m|
-          ::OpenStruct.new(index: m[1], worktree: m[2], path: m[3].to_pathname,
-                           absolute_path: m[3].to_pathname.expand_path(root_path))
+          { index: m[1], worktree: m[2], path: m[3].to_pathname,
+            absolute_path: m[3].to_pathname.expand_path(root_path) }.to_struct
         end
       end
     end
