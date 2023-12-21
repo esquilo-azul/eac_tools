@@ -20,7 +20,7 @@ module EacGit
         end
 
         def fields
-          FIELDS.map { |field| [field, send(field)] }.to_h
+          FIELDS.index_with { |field| send(field) }
         end
 
         private
