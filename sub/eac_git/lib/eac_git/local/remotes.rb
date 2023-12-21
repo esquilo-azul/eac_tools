@@ -11,7 +11,7 @@ module EacGit
       end
 
       def remotes
-        command('remote').execute!.each_line.map(&:strip).reject(&:blank?).map do |name|
+        command('remote').execute!.each_line.map(&:strip).compact_blank.map do |name|
           remote(name)
         end
       end
