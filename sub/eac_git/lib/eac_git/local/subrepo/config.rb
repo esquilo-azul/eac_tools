@@ -35,7 +35,7 @@ module EacGit
         end
 
         def to_content
-          "[subrepo]\n" + MAPPING.map { |k, v| "  #{v} = #{send(k)}\n" }.join
+          "[subrepo]\n" + MAPPING.map { |k, v| "  #{v} = #{send(k)}\n" }.join # rubocop:disable Style/StringConcatenation
         end
       end
     end
