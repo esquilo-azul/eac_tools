@@ -1,10 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Style/MapToHash:
-  Exclude:
-  - lib/eac_git/local/commit/diff_tree_line.rb
-  - lib/eac_git/remote_like/ls_result.rb
 Style/OpenStructUse:
   Exclude:
   - lib/eac_git/local/dirty_files.rb

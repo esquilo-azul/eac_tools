@@ -8,7 +8,7 @@ module EacGit
       class << self
         def by_ls_remote_command_output(output)
           new(
-            output.each_line.map { |line| line.strip.split(/\s+/) }.map { |x| [x[1], x[0]] }.to_h
+            output.each_line.map { |line| line.strip.split(/\s+/) }.to_h { |x| [x[1], x[0]] } # rubocop:disable Style/MapToHash
           )
         end
       end
