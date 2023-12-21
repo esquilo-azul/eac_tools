@@ -9,7 +9,7 @@ require 'tmpdir'
 module EacGit
   module Rspec
     module StubbedGitLocalRepo
-      def stubbed_git_local_repo(bare = false)
+      def stubbed_git_local_repo(bare = false) # rubocop:disable Style/OptionalBooleanParameter
         path = ::Dir.mktmpdir
         ::EacRubyUtils::Envs.local.command(stubbed_git_local_repo_args(path, bare)).execute!
         repo = StubbedGitRepository.new(path)

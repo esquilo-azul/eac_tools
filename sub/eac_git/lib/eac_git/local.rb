@@ -38,7 +38,7 @@ module EacGit
       ::EacGit::Local::Branch.new(self, name)
     end
 
-    def commit(ref, required = false)
+    def commit(ref, required = false) # rubocop:disable Style/OptionalBooleanParameter
       rev_parse(ref, required).if_present { |v| ::EacGit::Local::Commit.new(self, v) }
     end
 
@@ -71,7 +71,7 @@ module EacGit
     end
 
     # @return [EacGit::Local::Commit
-    def head(required = true)
+    def head(required = true) # rubocop:disable Style/OptionalBooleanParameter
       commit(HEAD_REFERENCE, required)
     end
 
@@ -94,7 +94,7 @@ module EacGit
       raise "#{root_path}: #{message}"
     end
 
-    def rev_parse(ref, required = false)
+    def rev_parse(ref, required = false) # rubocop:disable Style/OptionalBooleanParameter
       r = command('rev-parse', ref).execute!(exit_outputs: { 128 => nil, 32_768 => nil })
       r.strip! if r.is_a?(String)
       return r if r.present?
