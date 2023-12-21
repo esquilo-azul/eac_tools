@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-RSpec/BeEq:
-  Exclude:
-  - spec/lib/eac_git/local/commit_spec.rb
 RSpec/MetadataStyle:
   Exclude:
   - spec/lib/eac_git/executables_spec.rb
