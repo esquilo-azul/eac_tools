@@ -6,6 +6,7 @@ require 'ostruct'
 module EacGit
   class Local
     module DirtyFiles
+      QUOTED_PATH_PATTERN = /\A"(.+)"\z/.freeze
       STATUS_LINE_PATTERN = /\A(.)(.)\s(.+)\z/.freeze
 
       def dirty?
@@ -26,11 +27,21 @@ module EacGit
 
       private
 
+      # @param line [String]
+      # @return [Struct]
       def parse_status_line(line)
         STATUS_LINE_PATTERN.if_match(line) do |m|
-          { index: m[1], worktree: m[2], path: m[3].to_pathname,
-            absolute_path: m[3].to_pathname.expand_path(root_path) }.to_struct
+          path = parse_status_line_path(m[3]).to_pathname
+          { index: m[1], worktree: m[2], path: path, absolute_path: path.expand_path(root_path) }
+            .to_struct
         end
+      end
+
+      # @param path [String]
+      # @return [String]
+      def parse_status_line_path(path)
+        m = QUOTED_PATH_PATTERN.match(path)
+        m ? m[1] : path
       end
     end
   end
