@@ -1,45 +1,54 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
-AllCops:
-  TargetRailsVersion: 5.2
-  TargetRubyVersion: 2.7
-
-Metrics/BlockLength:
+---
+inherit_gem:
+  eac_ruby_gem_support: ".rubocop.yml"
+Gemspec/RequiredRubyVersion:
   Exclude:
-    - '**/*.gemspec'
-    - 'spec/**/*_spec.rb'
-
-Layout/LineLength:
-  Max: 100
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented_relative_to_receiver
-
-Rails/DynamicFindBy:
-  Enabled: false
-
-Rails/Output:
-  Enabled: false
-
-Rails/SkipsModelValidations:
-  Enabled: false
-
-Rails/TimeZone:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
+  - eac_git.gemspec
+Lint/SymbolConversion:
+  Exclude:
+  - lib/eac_git/remote_like/ls_result.rb
+RSpec/BeEq:
+  Exclude:
+  - spec/lib/eac_git/local/commit_spec.rb
+RSpec/MetadataStyle:
+  Exclude:
+  - spec/lib/eac_git/executables_spec.rb
+  - spec/lib/eac_git/local/commit/diff_tree_line_spec.rb
+  - spec/lib/eac_git/local/commit_spec.rb
+Rails/CompactBlank:
+  Exclude:
+  - lib/eac_git/local/remotes.rb
+Rails/Delegate:
+  Exclude:
+  - lib/eac_git/rspec/stubbed_git_local_repo.rb
+Rails/IndexWith:
+  Exclude:
+  - lib/eac_git/local/commit/diff_tree_line.rb
+Style/ArgumentsForwarding:
+  Exclude:
+  - lib/eac_git/remote.rb
 Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+  Exclude:
+  - lib/eac_git/local/subrepo/config.rb
+Style/MapToHash:
+  Exclude:
+  - lib/eac_git/local/commit/diff_tree_line.rb
+  - lib/eac_git/remote_like/ls_result.rb
+Style/OpenStructUse:
+  Exclude:
+  - lib/eac_git/local/dirty_files.rb
+Style/OptionalBooleanParameter:
+  Exclude:
+  - lib/eac_git/local.rb
+  - lib/eac_git/rspec/stubbed_git_local_repo.rb
+Style/RedundantConstantBase:
+  Exclude:
+  - Gemfile
+  - spec/lib/eac_git/executables_spec.rb
+  - spec/lib/eac_git/local/commit/diff_tree_line_spec.rb
+  - spec/lib/eac_git/local/commit_spec.rb
+  - spec/rubocop_spec.rb
+  - spec/spec_helper.rb
+Style/StringConcatenation:
+  Exclude:
+  - lib/eac_git/local/subrepo/config.rb
