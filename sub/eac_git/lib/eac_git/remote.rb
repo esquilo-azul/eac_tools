@@ -12,8 +12,8 @@ module EacGit
     common_constructor :uri
 
     # @return [EacRubyUtils::Envs::Command
-    def git_command(*args, &block)
-      ::EacGit::Executables.git.command(*args, &block)
+    def git_command(...)
+      ::EacGit::Executables.git.command(...)
     end
 
     # @return [String]
