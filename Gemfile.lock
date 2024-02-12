@@ -125,22 +125,6 @@ PATH
       ruby-progressbar (~> 1.13)
 
 PATH
-  remote: sub/avm
-  specs:
-    avm (0.84.2)
-      aranha-parsers (~> 0.22)
-      eac_cli (~> 0.39)
-      eac_config (~> 0.14, >= 0.14.1)
-      eac_docker (~> 0.7)
-      eac_fs (~> 0.16)
-      eac_git (~> 0.14, >= 0.14.1)
-      eac_ruby_utils (~> 0.120)
-      eac_templates (~> 0.5)
-      filesize (~> 0.2)
-      htmlbeautifier (~> 1.4, >= 1.4.2)
-      minitar (~> 0.9)
-
-PATH
   remote: sub/eac_git
   specs:
     eac_git (0.15.0)
@@ -167,6 +151,18 @@ GEM
       ofx-parser (~> 1.1)
     asciidoctor (2.0.20)
     ast (2.4.2)
+    avm (0.84.2)
+      aranha-parsers (~> 0.22)
+      eac_cli (~> 0.39)
+      eac_config (~> 0.14, >= 0.14.1)
+      eac_docker (~> 0.7)
+      eac_fs (~> 0.16)
+      eac_git (~> 0.14, >= 0.14.1)
+      eac_ruby_utils (~> 0.120)
+      eac_templates (~> 0.5)
+      filesize (~> 0.2)
+      htmlbeautifier (~> 1.4, >= 1.4.2)
+      minitar (~> 0.9)
     avm-eac_github_base0 (0.3.0)
       avm (~> 0.82)
       avm-git (~> 0.14)
@@ -259,9 +255,9 @@ GEM
       bundler
       filesize (~> 0.2)
       net-ssh (~> 4.2)
-    eac_templates (0.5.0)
-      eac_config (~> 0.12)
-      eac_ruby_utils (~> 0.112)
+    eac_templates (0.5.1)
+      eac_config (~> 0.14, >= 0.14.1)
+      eac_ruby_utils (~> 0.121)
     faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -375,7 +371,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm!
   avm-eac_asciidoctor_base0!
   avm-eac_generic_base0!
   avm-eac_latex_base0!
@@ -392,4 +387,4 @@ DEPENDENCIES
   eac_tools!
 
 BUNDLED WITH
-   2.4.19
+   2.4.22
