@@ -85,7 +85,7 @@ PATH
       avm (~> 0.84, >= 0.84.2)
       eac_cli (~> 0.40)
       eac_fs (~> 0.17)
-      eac_ruby_utils (~> 0.112)
+      eac_ruby_utils (~> 0.121)
       eac_templates (~> 0.5)
 
 PATH
