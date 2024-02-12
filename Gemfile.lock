@@ -86,7 +86,7 @@ PATH
       eac_cli (~> 0.40)
       eac_fs (~> 0.17)
       eac_ruby_utils (~> 0.121)
-      eac_templates (~> 0.5)
+      eac_templates (~> 0.5, >= 0.5.1)
 
 PATH
   remote: sub/avm-tools
