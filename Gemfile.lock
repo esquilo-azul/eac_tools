@@ -100,7 +100,7 @@ PATH
       avm-git (~> 0.14)
       clipboard (~> 1.3, >= 1.3.6)
       curb (~> 0.9, >= 0.9.11)
-      eac_git (~> 0.14, >= 0.14.1)
+      eac_git (~> 0.15)
       eac_ruby_base0 (~> 0.19)
       eac_templates (~> 0.5)
       git (~> 1.18)
