@@ -106,7 +106,7 @@ module Avm
         end
 
         def output_file
-          (options[:output_file] || project.default_output_file)
+          options[:output_file] || project.default_output_file
         end
 
         def open_output
