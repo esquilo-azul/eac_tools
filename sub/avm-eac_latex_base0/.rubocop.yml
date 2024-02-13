@@ -1,11 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Style/RedundantConstantBase:
-  Exclude:
-  - Gemfile
-  - spec/rubocop_spec.rb
-  - spec/spec_helper.rb
 Style/RedundantParentheses:
   Exclude:
   - lib/avm/eac_latex_base0/sources/build.rb
