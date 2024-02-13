@@ -57,7 +57,7 @@ module Avm
           compile_command.execute!.each_line do |line|
             if line.include?('No file')
               raise 'Command returned without error, but there is at least one "No file" line in' \
-                "log: #{line}"
+                    "log: #{line}"
             end
           end
         end
