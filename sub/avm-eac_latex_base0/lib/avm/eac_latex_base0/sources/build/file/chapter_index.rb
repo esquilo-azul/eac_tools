@@ -15,7 +15,7 @@ module Avm
             private
 
             def target_subpath
-              ::Avm::EacLatexBase0::Sources::Build.chapter_filename(
+              ::Avm::EacLatexBase0::Sources::Build.chapter_filename( # rubocop:disable Style/StringConcatenation
                 File.basename(File.dirname(subpath))
               ) + '.tex'
             end
