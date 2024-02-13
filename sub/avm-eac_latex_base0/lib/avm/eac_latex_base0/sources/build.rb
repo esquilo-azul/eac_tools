@@ -64,7 +64,7 @@ module Avm
 
         def compile_command
           ::Avm::EacLatexBase0::Executables.latex.command(*compile_command_args)
-                                           .chdir(source_temp_dir)
+            .chdir(source_temp_dir)
         end
 
         def compile_command_args

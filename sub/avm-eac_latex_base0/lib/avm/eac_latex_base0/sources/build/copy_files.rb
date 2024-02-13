@@ -24,7 +24,7 @@ module Avm
 
           def copy_project_file(subpath)
             ::Avm::EacLatexBase0::Sources::Build::File.new(project, subpath)
-                                                      .build_to_dir(source_temp_dir)
+              .build_to_dir(source_temp_dir)
           end
 
           def copy_project_dir(subpath)
