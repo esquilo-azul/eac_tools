@@ -23,16 +23,6 @@ PATH
       eac_ruby_utils (~> 0.121)
 
 PATH
-  remote: sub/avm-eac_asciidoctor_base0
-  specs:
-    avm-eac_asciidoctor_base0 (0.22.0)
-      asciidoctor (~> 2.0, >= 2.0.20)
-      avm-eac_webapp_base0 (~> 0.18, >= 0.18.3)
-      eac_ruby_utils (~> 0.121)
-      os (~> 1.1, >= 1.1.4)
-      rouge (~> 3.30)
-
-PATH
   remote: sub/avm-eac_latex_base0
   specs:
     avm-eac_latex_base0 (0.3.1)
@@ -128,6 +118,12 @@ GEM
       filesize (~> 0.2)
       htmlbeautifier (~> 1.4, >= 1.4.2)
       minitar (~> 0.9)
+    avm-eac_asciidoctor_base0 (0.22.0)
+      asciidoctor (~> 2.0, >= 2.0.20)
+      avm-eac_webapp_base0 (~> 0.18, >= 0.18.3)
+      eac_ruby_utils (~> 0.121)
+      os (~> 1.1, >= 1.1.4)
+      rouge (~> 3.30)
     avm-eac_generic_base0 (0.12.2)
       avm (~> 0.84, >= 0.84.2)
       eac_ruby_utils (~> 0.120)
@@ -355,7 +351,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm-eac_asciidoctor_base0!
   avm-eac_latex_base0!
   avm-eac_php_base0!
   avm-eac_postgresql_base0!
