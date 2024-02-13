@@ -103,7 +103,7 @@ PATH
       eac_git (~> 0.15)
       eac_ruby_base0 (~> 0.19)
       eac_templates (~> 0.5, >= 0.5.1)
-      git (~> 1.18)
+      git (~> 1.19, >= 1.19.1)
       ruby-progressbar (~> 1.13)
 
 GEM
