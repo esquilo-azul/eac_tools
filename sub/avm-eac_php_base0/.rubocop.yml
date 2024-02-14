@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Gemspec/RequiredRubyVersion:
-  Exclude:
-  - avm-eac_php_base0.gemspec
 Style/RedundantConstantBase:
   Exclude:
   - Gemfile
