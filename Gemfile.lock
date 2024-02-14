@@ -23,14 +23,6 @@ PATH
       eac_ruby_utils (~> 0.121)
 
 PATH
-  remote: sub/avm-eac_latex_base0
-  specs:
-    avm-eac_latex_base0 (0.3.2)
-      avm (~> 0.84, >= 0.84.2)
-      avm-eac_webapp_base0 (~> 0.18, >= 0.18.3)
-      eac_ruby_utils (~> 0.121)
-
-PATH
   remote: sub/avm-eac_php_base0
   specs:
     avm-eac_php_base0 (0.4.2)
@@ -135,6 +127,10 @@ GEM
     avm-eac_gitlab_base0 (0.4.0)
       avm-eac_github_base0 (~> 0.3)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
+    avm-eac_latex_base0 (0.3.2)
+      avm (~> 0.84, >= 0.84.2)
+      avm-eac_webapp_base0 (~> 0.18, >= 0.18.3)
+      eac_ruby_utils (~> 0.121)
     avm-eac_python_base0 (0.2.2)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.1)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
@@ -351,7 +347,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm-eac_latex_base0!
   avm-eac_php_base0!
   avm-eac_postgresql_base0!
   avm-eac_redmine_plugin_base0!
