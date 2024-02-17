@@ -24,6 +24,11 @@ module EacGit
         "#{REFS_PREFIX}#{name}"
       end
 
+      # @return [EacGit::Local::Commit]
+      def head_commit
+        local.commit(head_commit_id, true)
+      end
+
       # @return [String]
       def head_commit_id
         local.rev_parse(full_ref_name, true)
