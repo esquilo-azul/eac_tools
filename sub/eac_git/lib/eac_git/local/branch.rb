@@ -10,8 +10,9 @@ module EacGit
       common_constructor :local, :name
 
       # @return [String]
+      # @deprecated Use {#head_commit_id} instead.
       def current_commit_id
-        local.rev_parse(full_ref_name, true)
+        head_commit_id
       end
 
       # @return [Boolean]
@@ -21,6 +22,11 @@ module EacGit
 
       def full_ref_name
         "#{REFS_PREFIX}#{name}"
+      end
+
+      # @return [String]
+      def head_commit_id
+        local.rev_parse(full_ref_name, true)
       end
     end
   end
