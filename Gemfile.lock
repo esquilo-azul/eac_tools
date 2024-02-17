@@ -99,7 +99,7 @@ PATH
   remote: sub/eac_git
   specs:
     eac_git (0.15.0)
-      eac_ruby_utils (~> 0.120)
+      eac_ruby_utils (~> 0.121)
       parseconfig (~> 1.1, >= 1.1.2)
 
 GEM
