@@ -1,35 +1,30 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
-Metrics/BlockLength:
+---
+inherit_gem:
+  eac_ruby_gem_support: ".rubocop.yml"
+Gemspec/RequiredRubyVersion:
   Exclude:
-    - '**/*.gemspec'
-    - spec/**/*_spec.rb
-
-Layout/LineLength:
-  Max: 100
-
-Rails/DynamicFindBy:
-  Enabled: false
-
-Rails/Output:
-  Enabled: false
-
-Rails/SkipsModelValidations:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+  - avm-eac_postgresql_base0.gemspec
+Layout/LineEndStringConcatenationIndentation:
+  Exclude:
+  - lib/avm/eac_postgresql_base0/instance/data_unit.rb
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+  - lib/avm/eac_postgresql_base0/instance/assert.rb
+  - lib/avm/eac_postgresql_base0/instance/commands.rb
+  - lib/avm/eac_postgresql_base0/instance/data_unit.rb
+Rails/CompactBlank:
+  Exclude:
+  - lib/avm/eac_postgresql_base0/instance/data_unit.rb
+Rails/SquishedSQLHeredocs:
+  Exclude:
+  - lib/avm/eac_postgresql_base0/instance/assert.rb
+Style/OptionalBooleanParameter:
+  Exclude:
+  - lib/avm/eac_postgresql_base0/instance/commands.rb
+Style/RedundantConstantBase:
+  Exclude:
+  - spec/rubocop_spec.rb
+  - spec/spec_helper.rb
+Style/StringConcatenation:
+  Exclude:
+  - lib/avm/eac_postgresql_base0/instance/data_unit.rb
