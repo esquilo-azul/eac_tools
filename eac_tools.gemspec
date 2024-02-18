@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.33', '>= 0.33.1'
   s.add_dependency 'avm-eac_webapp_base0', '~> 0.18', '>= 0.18.3'
   s.add_dependency 'avm-eac_wordpress_base0', '~> 0.3', '>= 0.3.1'
-  s.add_dependency 'avm-git', '~> 0.14'
+  s.add_dependency 'avm-git', '~> 0.15'
   s.add_dependency 'avm-tools', '~> 0.160'
   s.add_dependency 'eac_ruby_utils', '~> 0.121'
 
