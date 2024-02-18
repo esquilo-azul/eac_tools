@@ -1,7 +1,7 @@
 [subrepo]
-  cmdver = 0.4.1
-  commit = 88ac71f4cab0d8f5c6c5393871512f74c8ba5a3f
-  method = merge
-  parent = eb938d5d1b10868344e79de6b919307fe9e5394a
+	cmdver = 0.4.1
+	commit = 7559b1bccf165ae2f276602ebd14c2a76dc0d47b
+	method = merge
+	parent = 972c585b7a100694941f1bd08add5bc2b4dc432b
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_postgresql_base0.git
