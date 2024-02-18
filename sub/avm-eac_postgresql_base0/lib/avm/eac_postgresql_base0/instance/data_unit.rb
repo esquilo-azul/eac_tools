@@ -35,7 +35,7 @@ module Avm
         # @param table_list [Array<String>]
         # @return [String]
         def drop_tables_sql(table_list)
-          'drop table ' + table_list.map(&:to_s).join(', ') + ' cascade'
+          "drop table #{table_list.map(&:to_s).join(', ')} cascade"
         end
 
         # @param parts [Array<String>, Strings]
