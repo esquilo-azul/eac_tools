@@ -33,6 +33,15 @@ module EacGit
       def head_commit_id
         local.rev_parse(full_ref_name, true)
       end
+
+      # @param remote [EacGit::Local::Remote]
+      # @return [void]
+      def push(remote, options = {})
+        options[:refspec] = name
+        options.inject(remote.push) do |a, e|
+          a.send(*e)
+        end.perform
+      end
     end
   end
 end
