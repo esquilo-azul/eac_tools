@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Layout/LineEndStringConcatenationIndentation:
-  Exclude:
-  - lib/avm/eac_postgresql_base0/instance/data_unit.rb
 Layout/MultilineMethodCallIndentation:
   Exclude:
   - lib/avm/eac_postgresql_base0/instance/assert.rb

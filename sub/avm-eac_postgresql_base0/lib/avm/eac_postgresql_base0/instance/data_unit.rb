@@ -10,7 +10,7 @@ module Avm
         SCHEMA_VAR = '%%SCHEMA%%'
         TABLE_PARTS_SEPARATOR = '/'
         TABLES_SQL = "select schemaname || '#{TABLE_PARTS_SEPARATOR}' || tablename from " \
-          "pg_tables where schemaname = '#{SCHEMA_VAR}'"
+                     "pg_tables where schemaname = '#{SCHEMA_VAR}'"
 
         def do_clear
           ts = tables
