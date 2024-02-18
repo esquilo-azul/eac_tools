@@ -51,7 +51,7 @@ module Avm
 
         # @return [Array<String>]
         def tables
-          run_sql(tables_sql).each_line.map(&:strip).reject(&:blank?)
+          run_sql(tables_sql).each_line.map(&:strip).compact_blank
             .map { |line| join_table_parts(line) }
         end
 
