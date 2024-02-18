@@ -23,13 +23,6 @@ PATH
       eac_ruby_utils (~> 0.121)
 
 PATH
-  remote: sub/avm-eac_postgresql_base0
-  specs:
-    avm-eac_postgresql_base0 (0.5.3)
-      avm (~> 0.85)
-      eac_ruby_utils (~> 0.121)
-
-PATH
   remote: sub/avm-eac_redmine_plugin_base0
   specs:
     avm-eac_redmine_plugin_base0 (0.4.0)
@@ -146,6 +139,9 @@ GEM
     avm-eac_php_base0 (0.4.3)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.2)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.3)
+      eac_ruby_utils (~> 0.121)
+    avm-eac_postgresql_base0 (0.5.3)
+      avm (~> 0.85)
       eac_ruby_utils (~> 0.121)
     avm-eac_python_base0 (0.2.2)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.1)
@@ -355,7 +351,6 @@ PLATFORMS
 
 DEPENDENCIES
   avm!
-  avm-eac_postgresql_base0!
   avm-eac_redmine_plugin_base0!
   avm-eac_ubuntu_base0!
   avm-eac_wordpress_base0!
