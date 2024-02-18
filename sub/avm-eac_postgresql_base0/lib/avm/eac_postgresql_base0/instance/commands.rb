@@ -71,7 +71,7 @@ module Avm
         # @return [EacRubyUtils::Envs::Command]
         def pg_dump_command
           env.command('pg_dump', '--no-privileges', '--no-owner', *common_command_args)
-             .envvar('PGPASSWORD', password)
+            .envvar('PGPASSWORD', password)
         end
       end
     end

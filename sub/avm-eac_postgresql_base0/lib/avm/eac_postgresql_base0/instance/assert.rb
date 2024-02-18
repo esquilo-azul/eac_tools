@@ -43,7 +43,7 @@ module Avm
 
         def password_ok?
           instance.psql_command_command('SELECT 1', false)
-                  .execute!(exit_outputs: { 512 => 'login_failed' }).strip == '1'
+            .execute!(exit_outputs: { 512 => 'login_failed' }).strip == '1'
         end
 
         def user_exist?

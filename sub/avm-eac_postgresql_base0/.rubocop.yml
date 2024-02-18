@@ -1,11 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Layout/MultilineMethodCallIndentation:
-  Exclude:
-  - lib/avm/eac_postgresql_base0/instance/assert.rb
-  - lib/avm/eac_postgresql_base0/instance/commands.rb
-  - lib/avm/eac_postgresql_base0/instance/data_unit.rb
 Rails/CompactBlank:
   Exclude:
   - lib/avm/eac_postgresql_base0/instance/data_unit.rb
