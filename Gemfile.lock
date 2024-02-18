@@ -60,7 +60,7 @@ PATH
       avm-files (~> 0.7)
       eac_git (~> 0.16)
       eac_ruby_utils (~> 0.121)
-      git (~> 1.18)
+      git (~> 1.19, >= 1.19.1)
 
 PATH
   remote: sub/avm-tools
