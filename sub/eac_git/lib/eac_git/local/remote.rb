@@ -38,6 +38,8 @@ module EacGit
       def url=(new_url)
         local.command('remote', 'set-url', name, new_url).execute!
       end
+
+      require_sub __FILE__
     end
   end
 end
