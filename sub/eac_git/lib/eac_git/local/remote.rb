@@ -22,6 +22,11 @@ module EacGit
         local.command(*args)
       end
 
+      # @return [EacGit::Local::Remote::Push]
+      def push
+        ::EacGit::Local::Remote::Push.new(self)
+      end
+
       # @return [String]
       def remote_reference
         name
