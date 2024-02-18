@@ -27,7 +27,7 @@ PATH
   specs:
     avm-eac_postgresql_base0 (0.5.2)
       avm (~> 0.85)
-      eac_ruby_utils (~> 0.119, >= 0.119.1)
+      eac_ruby_utils (~> 0.121)
 
 PATH
   remote: sub/avm-eac_redmine_plugin_base0
