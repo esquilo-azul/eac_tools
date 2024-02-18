@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Style/OptionalBooleanParameter:
-  Exclude:
-  - lib/avm/eac_postgresql_base0/instance/commands.rb
 Style/RedundantConstantBase:
   Exclude:
   - spec/rubocop_spec.rb

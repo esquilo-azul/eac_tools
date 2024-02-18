@@ -41,12 +41,12 @@ module Avm
           "@ESC_PGPASSWORD=#{password}"
         end
 
-        def psql_command(database = true)
+        def psql_command(database = true) # rubocop:disable Style/OptionalBooleanParameter
           env.command(password_command_argument, 'psql', '--variable', 'ON_ERROR_STOP=t',
                       *common_command_args(database))
         end
 
-        def psql_command_command(sql, database = true)
+        def psql_command_command(sql, database = true) # rubocop:disable Style/OptionalBooleanParameter
           psql_command(database).append(['--quiet', '--tuples-only', '--command', sql])
         end
 
@@ -56,7 +56,7 @@ module Avm
           env.command(*args)
         end
 
-        def common_command_args(database = true)
+        def common_command_args(database = true) # rubocop:disable Style/OptionalBooleanParameter
           ['--host', host, '--username', user, '--port', port,
            (database ? name : MAINTENANCE_DATABASE)]
         end
