@@ -29,7 +29,7 @@ module Avm
         end
 
         def current_owner
-          root_query(<<~SQL
+          root_query(<<~SQL.squish
             SELECT pg_catalog.pg_get_userbyid(datdba)
             FROM pg_catalog.pg_database
             WHERE datname = '#{name}'
