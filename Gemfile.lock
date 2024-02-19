@@ -62,7 +62,6 @@ PATH
       avm (~> 0.86, >= 0.86.1)
       clipboard (~> 1.3, >= 1.3.6)
       eac_ruby_base0 (~> 0.19)
-      ruby-progressbar (~> 1.13)
 
 PATH
   remote: sub/avm
