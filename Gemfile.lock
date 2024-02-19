@@ -87,6 +87,7 @@ PATH
       filesize (~> 0.2)
       htmlbeautifier (~> 1.4, >= 1.4.3)
       minitar (~> 0.9)
+      ruby-progressbar (~> 1.13)
 
 PATH
   remote: sub/eac_git
