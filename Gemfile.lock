@@ -60,7 +60,6 @@ PATH
   specs:
     avm-tools (0.160.2)
       avm (~> 0.86, >= 0.86.1)
-      avm-eac_ruby_base1 (~> 0.33, >= 0.33.1)
       avm-eac_ubuntu_base0 (~> 0.5)
       avm-files (~> 0.7)
       avm-git (~> 0.17)
