@@ -27,7 +27,7 @@ PATH
   specs:
     avm-eac_redmine_plugin_base0 (0.4.0)
       avm-eac_ruby_base1 (~> 0.33, >= 0.33.1)
-      eac_ruby_utils (~> 0.107, >= 0.107.1)
+      eac_ruby_utils (~> 0.121)
 
 PATH
   remote: sub/avm-eac_ubuntu_base0
