@@ -1,9 +1,6 @@
 ---
 inherit_gem:
   eac_ruby_gem_support: ".rubocop.yml"
-Layout/MultilineMethodCallIndentation:
-  Exclude:
-  - lib/avm/eac_redmine_plugin_base0/sources/init_file.rb
 Style/RedundantConstantBase:
   Exclude:
   - Gemfile
