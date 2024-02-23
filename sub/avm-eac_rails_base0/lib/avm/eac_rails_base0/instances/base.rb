@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'avm/eac_rails_base1/instances/base'
+require 'avm/eac_rails_base0/instances/apache_host'
+require 'avm/eac_rails_base0/instances/apache_path'
 require 'avm/eac_rails_base0/instances/deploy'
 
 module Avm
