@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.5'
   s.add_dependency 'avm-files', '~> 0.7'
   s.add_dependency 'eac_ruby_utils', '~> 0.121'
+  s.add_dependency 'htmlbeautifier', '~> 1.4', '>= 1.4.3'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.10'
 end
