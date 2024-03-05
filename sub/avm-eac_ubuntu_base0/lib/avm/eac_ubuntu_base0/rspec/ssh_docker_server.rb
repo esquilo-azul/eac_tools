@@ -73,9 +73,9 @@ module Avm
           @identity_file = env_identity_file_good_permissions
           @env = ::EacRubyUtils::Envs::SshEnv.new(
             "ssh://root@#{container.hostname}" \
-              '?StrictHostKeyChecking=no' \
-              '&BatchMode=yes' \
-              "&IdentityFile=#{@identity_file}"
+            '?StrictHostKeyChecking=no' \
+            '&BatchMode=yes' \
+            "&IdentityFile=#{@identity_file}"
           )
         end
       end
