@@ -23,14 +23,6 @@ PATH
       eac_ruby_utils (~> 0.121)
 
 PATH
-  remote: sub/avm-eac_ubuntu_base0
-  specs:
-    avm-eac_ubuntu_base0 (0.5.1)
-      avm (~> 0.86, >= 0.86.2)
-      eac_ruby_utils (~> 0.121)
-      eac_templates (~> 0.5, >= 0.5.1)
-
-PATH
   remote: sub/avm-eac_wordpress_base0
   specs:
     avm-eac_wordpress_base0 (0.3.1)
@@ -124,6 +116,10 @@ GEM
       avm-eac_generic_base0 (~> 0.12, >= 0.12.1)
       eac_envs-http (~> 0.4, >= 0.4.1)
       eac_ruby_utils (~> 0.119, >= 0.119.2)
+    avm-eac_ubuntu_base0 (0.5.1)
+      avm (~> 0.86, >= 0.86.2)
+      eac_ruby_utils (~> 0.121)
+      eac_templates (~> 0.5, >= 0.5.1)
     avm-eac_webapp_base0 (0.18.4)
       avm (~> 0.86, >= 0.86.2)
       avm-eac_generic_base0 (~> 0.12, >= 0.12.2)
@@ -319,7 +315,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm-eac_ubuntu_base0!
   avm-eac_wordpress_base0!
   eac_ruby_gem_support (~> 0.10)
   eac_tools!
