@@ -21,7 +21,7 @@ module Avm
           web_url = read_entry(::Avm::Instances::EntryKeys::WEB_URL)
           super.after_load do
             info 'Fixing web addresses...'
-            run_sql(<<~SQL)
+            run_sql(<<~SQL.squish)
               update wp_options
               set option_value = '#{web_url}'
               where option_name in ('siteurl', 'home')
