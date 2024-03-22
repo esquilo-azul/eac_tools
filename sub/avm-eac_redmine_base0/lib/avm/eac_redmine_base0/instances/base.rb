@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'addressable/uri'
+require 'avm/eac_redmine_base0/instances/apache_host'
 require 'avm/eac_redmine_base0/instances/docker_image'
 require 'avm/eac_redmine_base0/instances/runners'
 require 'avm/eac_redmine_base0/instances/rest_api'
