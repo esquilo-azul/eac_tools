@@ -1,0 +1,10 @@
+---
+app_0: {}
+app_1:
+  gitolite:
+    username: git1
+    id: app_0
+app_2:
+  gitolite:
+    username: git2
+    path: /home/git2
