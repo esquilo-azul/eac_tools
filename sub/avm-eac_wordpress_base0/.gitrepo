@@ -1,7 +1,7 @@
 [subrepo]
   cmdver = 0.4.1
-  commit = e9363771f6e62c1efa8d543ab797e1687796e0e8
+  commit = 5504703cdc47f9d9487218c26b154a8807e26f4c
   method = merge
-  parent = 24856e140076ce5b8dd4ef8a1f9b520475c29676
+  parent = 37bfafbff47b14da2c2985672c02a75644b9e0b9
   branch = master
   remote = https://github.com/esquilo-azul/avm-eac_wordpress_base0.git
