@@ -105,10 +105,17 @@ module Avm
           ::Pathname.new(tempdir.to_path)
         end
 
+        # @return [Enumerable<String>]
         def target_files_to_remove
           git_repo.command('ls-files').execute!
             .each_line.map { |v| "/#{v.strip}" }
-            .without(*TARGET_KEEP)
+            .reject { |tpath| target_keep?(tpath) }
+        end
+
+        # @param tpath [String]
+        # @return [Boolean]
+        def target_keep?(tpath)
+          TARGET_KEEP.include?(tpath)
         end
 
         def target_path_uncached
