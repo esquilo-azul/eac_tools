@@ -18,7 +18,7 @@ module Avm
                            /log/**/*].freeze
         GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /public/themes/*].freeze
         TARGET_KEEP = ::Avm::Sources::Base::Configuration::CONFIGURATION_FILENAMES
-                        .map { |b| "/#{b}" } + %w[/Gemfile.lock].freeze
+                        .map { |b| "/#{b}" } + %w[/Gemfile.lock /plugins/*/**].freeze
 
         def run
           ::EacRubyUtils::Fs::Temp.on_directory do |dir|
@@ -115,7 +115,8 @@ module Avm
         # @param tpath [String]
         # @return [Boolean]
         def target_keep?(tpath)
-          TARGET_KEEP.include?(tpath)
+          tpath = tpath.to_pathname
+          TARGET_KEEP.any? { |target_keep| tpath.fnmatch?(target_keep) }
         end
 
         def target_path_uncached
