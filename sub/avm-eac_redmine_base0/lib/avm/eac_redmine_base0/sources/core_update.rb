@@ -20,6 +20,7 @@ module Avm
         TARGET_KEEP = ::Avm::Sources::Base::Configuration::CONFIGURATION_FILENAMES
                         .map { |b| "/#{b}" } + %w[/Gemfile.lock /plugins/*/**
                                                   /public/themes/*/**].freeze
+        TARGET_REMOVE = %w[alternate classic].map { |t| "/public/themes/#{t}/**" }
 
         def run
           ::EacRubyUtils::Fs::Temp.on_directory do |dir|
@@ -117,6 +118,7 @@ module Avm
         # @return [Boolean]
         def target_keep?(tpath)
           tpath = tpath.to_pathname
+          TARGET_REMOVE.none? { |target_remove| tpath.fnmatch?(target_remove) }
           TARGET_KEEP.any? { |target_keep| tpath.fnmatch?(target_keep) }
         end
 
