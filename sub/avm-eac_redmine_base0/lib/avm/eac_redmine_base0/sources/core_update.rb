@@ -18,7 +18,8 @@ module Avm
                            /log/**/*].freeze
         GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /public/themes/*].freeze
         TARGET_KEEP = ::Avm::Sources::Base::Configuration::CONFIGURATION_FILENAMES
-                        .map { |b| "/#{b}" } + %w[/Gemfile.lock /plugins/*/**].freeze
+                        .map { |b| "/#{b}" } + %w[/Gemfile.lock /plugins/*/**
+                                                  /public/themes/*/**].freeze
 
         def run
           ::EacRubyUtils::Fs::Temp.on_directory do |dir|
