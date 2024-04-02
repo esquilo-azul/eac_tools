@@ -21,8 +21,9 @@ module Avm
             )
           end
 
+          # @return [String]
           def version
-            ([::Time.now, commit_reference] + version_git_refs).join('|')
+            deploy_info.to_yaml
           end
 
           def version_git_refs
