@@ -16,6 +16,11 @@ module Avm
               .map { |ref| ref.gsub(%r{\Arefs/}, '') }.reject { |ref| ref == 'HEAD' }
           end
 
+          # @return [String, nil]
+          def version_number
+            instance.application.local_source.version.if_present(&:to_s)
+          end
+
           # @return [String]
           def version_target_path
             ::Avm::EacWebappBase0::Instances::Base::DeployInfo::DEPLOY_INFO_SUBPATH
