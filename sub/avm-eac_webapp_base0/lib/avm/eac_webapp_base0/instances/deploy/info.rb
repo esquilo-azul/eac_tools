@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'avm/eac_webapp_base0/instances/deploy_info'
 require 'avm/eac_webapp_base0/instances/base/deploy_info'
 
 module Avm
@@ -7,6 +8,19 @@ module Avm
     module Instances
       class Deploy
         module Info
+          # @return [Hash]
+          def deploy_info
+            ::Avm::EacWebappBase0::Instances::DeployInfo.from_hash(
+              {
+                instance_id: instance.id,
+                time: ::Time.now,
+                commit_id: commit_reference,
+                commit_refs: version_git_refs,
+                version: version_number
+              }
+            )
+          end
+
           def version
             ([::Time.now, commit_reference] + version_git_refs).join('|')
           end
