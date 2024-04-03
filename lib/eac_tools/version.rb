@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module EacTools
-  VERSION = '0.86.12'
+  VERSION = '0.86.13'
 end
