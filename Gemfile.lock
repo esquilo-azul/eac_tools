@@ -32,6 +32,19 @@ PATH
       os (~> 1.1, >= 1.1.4)
       rouge (~> 3.30)
 
+PATH
+  remote: sub/avm
+  specs:
+    avm (0.89.0)
+      eac_cli (~> 0.40, >= 0.40.1)
+      eac_config (~> 0.14, >= 0.14.2)
+      eac_docker (~> 0.7)
+      eac_fs (~> 0.17)
+      eac_ruby_utils (~> 0.121)
+      eac_templates (~> 0.5, >= 0.5.1)
+      minitar (~> 0.9)
+      ruby-progressbar (~> 1.13)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -52,15 +65,6 @@ GEM
       ofx-parser (~> 1.1)
     asciidoctor (2.0.22)
     ast (2.4.2)
-    avm (0.89.0)
-      eac_cli (~> 0.40, >= 0.40.1)
-      eac_config (~> 0.14, >= 0.14.2)
-      eac_docker (~> 0.7)
-      eac_fs (~> 0.17)
-      eac_ruby_utils (~> 0.121)
-      eac_templates (~> 0.5, >= 0.5.1)
-      minitar (~> 0.9)
-      ruby-progressbar (~> 1.13)
     avm-eac_generic_base0 (0.12.2)
       avm (~> 0.84, >= 0.84.2)
       eac_ruby_utils (~> 0.120)
@@ -318,6 +322,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  avm!
   avm-eac_asciidoctor_base0!
   eac_ruby_gem_support (~> 0.10)
   eac_tools!
