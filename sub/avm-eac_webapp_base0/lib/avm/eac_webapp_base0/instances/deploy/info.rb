@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
+require 'avm/eac_webapp_base0/instances/base/deploy_info'
+
 module Avm
   module EacWebappBase0
     module Instances
       class Deploy
         module Info
-          VERSION_TARGET_PATH = 'VERSION'
-
           def version
             ([::Time.now, commit_reference] + version_git_refs).join('|')
           end
@@ -16,8 +16,9 @@ module Avm
               .map { |ref| ref.gsub(%r{\Arefs/}, '') }.reject { |ref| ref == 'HEAD' }
           end
 
+          # @return [String]
           def version_target_path
-            VERSION_TARGET_PATH
+            ::Avm::EacWebappBase0::Instances::Base::DeployInfo::DEPLOY_INFO_SUBPATH
           end
         end
       end
