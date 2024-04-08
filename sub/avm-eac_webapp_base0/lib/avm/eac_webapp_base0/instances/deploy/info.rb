@@ -4,7 +4,7 @@ module Avm
   module EacWebappBase0
     module Instances
       class Deploy
-        module Version
+        module Info
           VERSION_TARGET_PATH = 'VERSION'
 
           def version
