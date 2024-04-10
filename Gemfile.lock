@@ -23,16 +23,6 @@ PATH
       eac_ruby_utils (~> 0.121)
 
 PATH
-  remote: sub/avm-eac_asciidoctor_base0
-  specs:
-    avm-eac_asciidoctor_base0 (0.22.1)
-      asciidoctor (~> 2.0, >= 2.0.22)
-      avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
-      eac_ruby_utils (~> 0.121)
-      os (~> 1.1, >= 1.1.4)
-      rouge (~> 3.30)
-
-PATH
   remote: sub/avm-eac_generic_base0
   specs:
     avm-eac_generic_base0 (0.13.0)
@@ -84,6 +74,12 @@ GEM
       ofx-parser (~> 1.1)
     asciidoctor (2.0.22)
     ast (2.4.2)
+    avm-eac_asciidoctor_base0 (0.22.1)
+      asciidoctor (~> 2.0, >= 2.0.22)
+      avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
+      eac_ruby_utils (~> 0.121)
+      os (~> 1.1, >= 1.1.4)
+      rouge (~> 3.30)
     avm-eac_github_base0 (0.3.0)
       avm (~> 0.82)
       avm-git (~> 0.14)
@@ -331,7 +327,6 @@ PLATFORMS
 
 DEPENDENCIES
   avm!
-  avm-eac_asciidoctor_base0!
   avm-eac_generic_base0!
   avm-eac_webapp_base0!
   eac_ruby_gem_support (~> 0.10)
