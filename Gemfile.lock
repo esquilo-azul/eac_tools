@@ -35,19 +35,6 @@ PATH
       eac_rest (~> 0.12)
       eac_ruby_utils (~> 0.121)
 
-PATH
-  remote: sub/avm
-  specs:
-    avm (0.90.1)
-      eac_cli (~> 0.40, >= 0.40.1)
-      eac_config (~> 0.14, >= 0.14.2)
-      eac_docker (~> 0.7)
-      eac_fs (~> 0.17)
-      eac_ruby_utils (~> 0.121)
-      eac_templates (~> 0.5, >= 0.5.1)
-      minitar (~> 0.9)
-      ruby-progressbar (~> 1.13)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +55,15 @@ GEM
       ofx-parser (~> 1.1)
     asciidoctor (2.0.22)
     ast (2.4.2)
+    avm (0.90.1)
+      eac_cli (~> 0.40, >= 0.40.1)
+      eac_config (~> 0.14, >= 0.14.2)
+      eac_docker (~> 0.7)
+      eac_fs (~> 0.17)
+      eac_ruby_utils (~> 0.121)
+      eac_templates (~> 0.5, >= 0.5.1)
+      minitar (~> 0.9)
+      ruby-progressbar (~> 1.13)
     avm-eac_asciidoctor_base0 (0.22.1)
       asciidoctor (~> 2.0, >= 2.0.22)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
@@ -322,7 +318,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm!
   avm-eac_redmine_base0!
   eac_ruby_gem_support (~> 0.10)
   eac_tools!
