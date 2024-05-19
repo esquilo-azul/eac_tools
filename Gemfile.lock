@@ -25,7 +25,7 @@ PATH
 PATH
   remote: sub/avm-eac_ruby_base1
   specs:
-    avm-eac_ruby_base1 (0.33.1)
+    avm-eac_ruby_base1 (0.33.2)
       avm (~> 0.91)
       avm-eac_generic_base0 (~> 0.13)
       eac_envs-http (~> 0.5, >= 0.5.1)
