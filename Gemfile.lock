@@ -29,7 +29,7 @@ PATH
       avm (~> 0.91)
       avm-eac_generic_base0 (~> 0.13)
       eac_envs-http (~> 0.5, >= 0.5.1)
-      eac_ruby_utils (~> 0.119, >= 0.119.2)
+      eac_ruby_utils (~> 0.122)
 
 GEM
   remote: https://rubygems.org/
