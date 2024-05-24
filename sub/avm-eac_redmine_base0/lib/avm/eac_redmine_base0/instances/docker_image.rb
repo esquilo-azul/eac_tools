@@ -73,7 +73,7 @@ module Avm
           super
 
           ::Avm::EacRedmineBase0::Instances::Deploy.template.child('config')
-            .child('install.sh.template')
+            .child('install.sh')
             .apply_to_file(variables_source, provide_dir.join('install_settings.sh'))
         end
 
