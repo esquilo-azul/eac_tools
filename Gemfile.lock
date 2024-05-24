@@ -36,6 +36,13 @@ PATH
       eac_ruby_utils (~> 0.122)
 
 PATH
+  remote: sub/avm-eac_ruby_base0
+  specs:
+    avm-eac_ruby_base0 (0.0.0)
+      avm-eac_ruby_base1 (~> 0.34)
+      eac_ruby_utils (~> 0.122)
+
+PATH
   remote: sub/avm-eac_ruby_base1
   specs:
     avm-eac_ruby_base1 (0.34.0)
@@ -321,6 +328,7 @@ PLATFORMS
 DEPENDENCIES
   avm!
   avm-eac_redmine_base0!
+  avm-eac_ruby_base0!
   avm-eac_ruby_base1!
   eac_ruby_gem_support (~> 0.10)
   eac_templates!
