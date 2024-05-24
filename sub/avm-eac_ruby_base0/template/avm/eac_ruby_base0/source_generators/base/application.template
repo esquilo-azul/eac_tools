@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+require 'eac_ruby_base0/application'
+
+%%ROOT_MODULE_OPEN%%
+%%ROOT_MODULE_INNER_IDENTATION%%class << self
+%%ROOT_MODULE_INNER_IDENTATION%%  def application
+%%ROOT_MODULE_INNER_IDENTATION%%    @application ||= ::EacRubyBase0::Application.new(::File.expand_path('%%APPLICATION_TO_ROOT_RELATIVE_PATH%%', __dir__))
+%%ROOT_MODULE_INNER_IDENTATION%%  end
+%%ROOT_MODULE_INNER_IDENTATION%%end
+%%ROOT_MODULE_CLOSE%%

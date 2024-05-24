@@ -2,18 +2,20 @@
 
 $LOAD_PATH.push File.expand_path('lib', __dir__)
 
-require 'avm/eac_ruby_base0/version'
+require 'mygem_underscore/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'avm-eac_ruby_base0'
-  s.version     = Avm::EacRubyBase0::VERSION
+  s.name        = 'mygem_underscore'
+  s.version     = MygemUnderscore::VERSION
   s.authors     = ['Put here the authors']
   s.summary     = 'Put here de description.'
 
-  s.files = Dir['{lib,template}/**/*']
+  s.files = Dir['{exe,lib}/**/*', 'Gemfile', 'Gemfile.lock']
   s.required_ruby_version = '>= 2.7'
+  s.bindir = 'exe'
+  s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.34'
+  s.add_dependency 'eac_ruby_base0', '~> 0.9'
   s.add_dependency 'eac_ruby_utils', '~> 0.122'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.10'
