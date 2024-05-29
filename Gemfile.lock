@@ -33,7 +33,7 @@ PATH
       curb (~> 0.9, >= 0.9.11)
       eac_fs (~> 0.17)
       eac_rest (~> 0.12)
-      eac_ruby_utils (~> 0.121)
+      eac_ruby_utils (~> 0.122)
 
 PATH
   remote: sub/avm-eac_ruby_base1
