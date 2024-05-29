@@ -1,7 +1,7 @@
 [subrepo]
-  cmdver = 0.4.1
-  commit = e85a56dba1df78c945ec172e33b91108e3aaf266
-  method = merge
-  parent = 6cb8cce102ac349776eee98992203d82311b368b
+	cmdver = 0.4.1
+	commit = 86c0fa0253ff02bbde16add23b9e3149b7b75d7a
+	method = merge
+	parent = 73194100ec66edb8ff5563e8608004963b15bffb
   branch = master
   remote = https://github.com/esquilo-azul/eac_templates.git
