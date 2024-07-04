@@ -23,15 +23,6 @@ PATH
       avm-tools (~> 0.161)
       eac_ruby_utils (~> 0.122)
 
-PATH
-  remote: sub/avm-eac_ruby_base1
-  specs:
-    avm-eac_ruby_base1 (0.34.1)
-      avm (~> 0.92)
-      avm-eac_generic_base0 (~> 0.13)
-      eac_envs-http (~> 0.5, >= 0.5.1)
-      eac_ruby_utils (~> 0.122)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -107,6 +98,11 @@ GEM
       eac_ruby_utils (~> 0.121)
     avm-eac_ruby_base0 (0.1.0)
       avm-eac_ruby_base1 (~> 0.34)
+      eac_ruby_utils (~> 0.122)
+    avm-eac_ruby_base1 (0.34.1)
+      avm (~> 0.92)
+      avm-eac_generic_base0 (~> 0.13)
+      eac_envs-http (~> 0.5, >= 0.5.1)
       eac_ruby_utils (~> 0.122)
     avm-eac_ubuntu_base0 (0.5.1)
       avm (~> 0.86, >= 0.86.2)
@@ -222,7 +218,7 @@ GEM
     json (2.7.2)
     language_server-protocol (3.17.0.3)
     minitar (0.9)
-    minitest (5.24.0)
+    minitest (5.24.1)
     multipart-post (2.4.1)
     net-ssh (4.2.0)
     os (1.1.4)
@@ -236,7 +232,7 @@ GEM
       tty-color (~> 0.5)
     public_suffix (5.1.1)
     racc (1.8.0)
-    rack (3.1.4)
+    rack (3.1.6)
     rainbow (3.1.1)
     rchardet (1.8.0)
     regexp_parser (2.9.2)
@@ -273,7 +269,7 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.26.1)
       rubocop (~> 1.61)
-    rubocop-rails (2.25.0)
+    rubocop-rails (2.25.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
@@ -311,7 +307,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm-eac_ruby_base1!
   eac_ruby_gem_support (~> 0.10)
   eac_tools!
 
