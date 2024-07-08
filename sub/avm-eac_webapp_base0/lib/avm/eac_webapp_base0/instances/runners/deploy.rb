@@ -14,6 +14,7 @@ module Avm
             arg_opt '-r', '--reference', 'Git reference to deploy.'
             arg_opt '-a', '--append-dirs', 'Append directories to deploy (List separated by ":").'
             bool_opt '-T', '--no-request-test', 'Do not test web interface after deploy.'
+            bool_opt '--no-remote-read', 'Do not attempt to read on remote repository.'
           end
 
           def deploy_class
@@ -34,7 +35,12 @@ module Avm
           def deploy_options
             { reference: parsed.reference,
               appended_directories: ::Avm::PathString.paths(parsed.append_dirs),
-              no_request_test: parsed.no_request_test? }
+              no_request_test: parsed.no_request_test?, remote_read: remote_read? }
+          end
+
+          # @return [Boolean]
+          def remote_read?
+            !parsed.no_remote_read?
           end
         end
       end
