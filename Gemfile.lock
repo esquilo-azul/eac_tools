@@ -43,6 +43,16 @@ PATH
       eac_ruby_utils (~> 0.121)
       htmlbeautifier (~> 1.4, >= 1.4.3)
 
+PATH
+  remote: sub/avm-files
+  specs:
+    avm-files (0.7.0)
+      avm (~> 0.84, >= 0.84.2)
+      eac_cli (~> 0.40)
+      eac_fs (~> 0.17)
+      eac_ruby_utils (~> 0.121)
+      eac_templates (~> 0.5, >= 0.5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,12 +138,6 @@ GEM
       avm (~> 0.86, >= 0.86.2)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
       eac_ruby_utils (~> 0.121)
-    avm-files (0.7.0)
-      avm (~> 0.84, >= 0.84.2)
-      eac_cli (~> 0.40)
-      eac_fs (~> 0.17)
-      eac_ruby_utils (~> 0.121)
-      eac_templates (~> 0.5, >= 0.5.1)
     avm-git (0.17.0)
       avm (~> 0.86, >= 0.86.1)
       avm-files (~> 0.7)
@@ -317,6 +321,7 @@ PLATFORMS
 DEPENDENCIES
   avm-eac_php_base0!
   avm-eac_webapp_base0!
+  avm-files!
   eac_ruby_gem_support (~> 0.10)
   eac_tools!
 
