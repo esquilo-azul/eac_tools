@@ -7,6 +7,7 @@ module Avm
         module Scm
           DEFAULT_REMOTE_NAME = 'origin'
           DEFAULT_REMOTE_READ = true
+          DEFAULT_REMOTE_WRITE = true
 
           def commit_reference_uncached
             git_fetch
@@ -69,6 +70,11 @@ module Avm
           # @return [Boolean]
           def remote_read?
             options.if_key(OPTION_REMOTE_READ, DEFAULT_REMOTE_READ).to_bool
+          end
+
+          # @return [Boolean]
+          def remote_write?
+            options.if_key(OPTION_REMOTE_WRITE, DEFAULT_REMOTE_WRITE).to_bool
           end
 
           # @return [Avm::Scms::Base]

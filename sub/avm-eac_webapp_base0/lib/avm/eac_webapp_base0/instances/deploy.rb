@@ -21,7 +21,7 @@ module Avm
         include ::Avm::Entries::Jobs::Base
 
         lists.add_symbol :option, :appended_directories, :no_request_test, :reference,
-                         :remote_read
+                         :remote_read, :remote_write
 
         def option_list
           ::Avm::EacWebappBase0::Instances::Deploy.lists.option
@@ -48,6 +48,8 @@ module Avm
         end
 
         def assert_instance_branch
+          return unless remote_write?
+
           infom 'Setting instance branch...'
           git.command('push', git_remote_name, "#{commit_reference}:refs/heads/#{instance.id}",
                       '-f').execute!
