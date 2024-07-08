@@ -14,6 +14,7 @@ module Avm
             arg_opt '-r', '--reference', 'Git reference to deploy.'
             arg_opt '-a', '--append-dirs', 'Append directories to deploy (List separated by ":").'
             bool_opt '-T', '--no-request-test', 'Do not test web interface after deploy.'
+            bool_opt '--no-remote', 'Shortcut to "--no-remote-read --no-remote-write"'
             bool_opt '--no-remote-read', 'Do not attempt to read on remote repository.'
             bool_opt '--no-remote-write', 'Do not attempt to write on remote repository.'
           end
@@ -42,12 +43,12 @@ module Avm
 
           # @return [Boolean]
           def remote_read?
-            !parsed.no_remote_read?
+            !(parsed.no_remote_read? || parsed.no_remote?)
           end
 
           # @return [Boolean]
           def remote_write?
-            !parsed.no_remote_write?
+            !(parsed.no_remote_write? || parsed.no_remote?)
           end
         end
       end
