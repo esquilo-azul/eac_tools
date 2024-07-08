@@ -8,12 +8,7 @@ module Avm
   module Files
     module Appendable
       class TemplatizedDirectory < ::Avm::Files::Appendable::ResourceBase
-        attr_reader :source_path
-
-        def initialize(appender, source_path)
-          super(appender)
-          @source_path = source_path
-        end
+        common_constructor :appender, :source_path, super_args: -> { [appender] }
 
         def write_on(target_dir)
           raise 'Variables source not set' if appender.variables_source.blank?
