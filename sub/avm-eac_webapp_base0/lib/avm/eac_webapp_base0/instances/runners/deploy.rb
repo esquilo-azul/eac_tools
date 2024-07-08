@@ -15,6 +15,7 @@ module Avm
             arg_opt '-a', '--append-dirs', 'Append directories to deploy (List separated by ":").'
             bool_opt '-T', '--no-request-test', 'Do not test web interface after deploy.'
             bool_opt '--no-remote-read', 'Do not attempt to read on remote repository.'
+            bool_opt '--no-remote-write', 'Do not attempt to write on remote repository.'
           end
 
           def deploy_class
@@ -35,12 +36,18 @@ module Avm
           def deploy_options
             { reference: parsed.reference,
               appended_directories: ::Avm::PathString.paths(parsed.append_dirs),
-              no_request_test: parsed.no_request_test?, remote_read: remote_read? }
+              no_request_test: parsed.no_request_test?, remote_read: remote_read?,
+              remote_write: remote_write? }
           end
 
           # @return [Boolean]
           def remote_read?
             !parsed.no_remote_read?
+          end
+
+          # @return [Boolean]
+          def remote_write?
+            !parsed.no_remote_write?
           end
         end
       end
