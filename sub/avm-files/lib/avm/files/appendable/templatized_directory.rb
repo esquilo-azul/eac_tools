@@ -10,13 +10,15 @@ module Avm
       class TemplatizedDirectory < ::Avm::Files::Appendable::ResourceBase
         common_constructor :appender, :source_path, super_args: -> { [appender] }
 
+        # @return [EacTemplates::Variables::Directory]
+        def applier_from_path
+          ::EacTemplates::Variables::Directory.new(source_path)
+        end
+
         def write_on(target_dir)
           raise 'Variables source not set' if appender.variables_source.blank?
 
-          ::EacTemplates::Variables::Directory.new(source_path).apply(
-            appender.variables_source,
-            target_dir
-          )
+          applier_from_path.apply(appender.variables_source, target_dir)
         end
 
         # @return [Enumerable<Symbol>]
