@@ -12,6 +12,8 @@ module Avm
 
         # @return [EacTemplates::Variables::Directory]
         def applier_from_path
+          raise "\"#{source_path}\" is not a directory" unless ::File.directory?(source_path)
+
           ::EacTemplates::Variables::Directory.new(source_path)
         end
 
