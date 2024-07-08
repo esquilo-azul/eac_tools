@@ -6,6 +6,7 @@ module Avm
       class Deploy
         module Scm
           DEFAULT_REMOTE_NAME = 'origin'
+          DEFAULT_REMOTE_READ = true
 
           def commit_reference_uncached
             git_fetch
@@ -16,6 +17,8 @@ module Avm
           end
 
           def git_fetch_uncached
+            return unless remote_read?
+
             infom "Fetching remote \"#{git_remote_name}\" from \"#{git_repository_path}\"..."
             git.remote(git_remote_name).fetch
           end
@@ -33,6 +36,8 @@ module Avm
           end
 
           def git_remote_hashs_uncached
+            return {} unless remote_read?
+
             git.remote(git_remote_name).ls.hashes
           end
 
@@ -59,6 +64,11 @@ module Avm
 
           def master_branch
             remote_branch('master')
+          end
+
+          # @return [Boolean]
+          def remote_read?
+            options.if_key(OPTION_REMOTE_READ, DEFAULT_REMOTE_READ).to_bool
           end
 
           # @return [Avm::Scms::Base]

@@ -20,7 +20,8 @@ module Avm
 
         include ::Avm::Entries::Jobs::Base
 
-        lists.add_symbol :option, :appended_directories, :no_request_test, :reference
+        lists.add_symbol :option, :appended_directories, :no_request_test, :reference,
+                         :remote_read
 
         def option_list
           ::Avm::EacWebappBase0::Instances::Deploy.lists.option
