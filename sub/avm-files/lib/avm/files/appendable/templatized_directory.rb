@@ -23,6 +23,11 @@ module Avm
             target_dir
           )
         end
+
+        # @return [Enumerable<Symbol>]
+        def to_s_attributes
+          [:source_path]
+        end
       end
     end
   end

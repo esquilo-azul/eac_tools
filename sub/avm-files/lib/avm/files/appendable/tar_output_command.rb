@@ -20,6 +20,11 @@ module Avm
             ::EacRubyUtils::Envs.local.command('tar', '-xf', '-', '-C', target_dir)
           ).execute!
         end
+
+        # @return [Enumerable<Symbol>]
+        def to_s_attributes
+          [:command]
+        end
       end
     end
   end

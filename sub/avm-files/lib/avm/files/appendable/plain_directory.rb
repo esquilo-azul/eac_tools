@@ -19,6 +19,11 @@ module Avm
 
           ::FileUtils.cp_r("#{source_path}/.", target_dir.to_path)
         end
+
+        # @return [Enumerable<Symbol>]
+        def to_s_attributes
+          [:source_path]
+        end
       end
     end
   end

@@ -18,6 +18,13 @@ module Avm
         def write_on(target_dir)
           target_dir.join(target_path).write(content)
         end
+
+        protected
+
+        # @return [Enumerable<Symbol>]
+        def to_s_attributes
+          %i[target_path content]
+        end
       end
     end
   end
