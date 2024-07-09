@@ -12,7 +12,7 @@ module Avm
 
         def file_apply(file)
           ::Avm::EacPhpBase0::Executables.php_cs_fixer.command.append(['fix', file]).system!
-          super(file)
+          super
         end
       end
     end
