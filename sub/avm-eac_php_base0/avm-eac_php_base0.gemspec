@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.7'
 
   s.add_dependency 'avm-eac_generic_base0', '~> 0.13'
-  s.add_dependency 'avm-eac_webapp_base0', '~> 0.18', '>= 0.18.3'
+  s.add_dependency 'avm-eac_webapp_base0', '~> 0.20'
   s.add_dependency 'eac_ruby_utils', '~> 0.121'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.10'
