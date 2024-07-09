@@ -53,6 +53,13 @@ PATH
       eac_ruby_utils (~> 0.121)
       eac_templates (~> 0.5, >= 0.5.1)
 
+PATH
+  remote: sub/eac_templates
+  specs:
+    eac_templates (0.7.0)
+      eac_config (~> 0.14, >= 0.14.2)
+      eac_ruby_utils (~> 0.122)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -203,9 +210,6 @@ GEM
       bundler
       filesize (~> 0.2)
       net-ssh (~> 4.2)
-    eac_templates (0.7.0)
-      eac_config (~> 0.14, >= 0.14.2)
-      eac_ruby_utils (~> 0.122)
     faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -323,6 +327,7 @@ DEPENDENCIES
   avm-eac_webapp_base0!
   avm-files!
   eac_ruby_gem_support (~> 0.10)
+  eac_templates!
   eac_tools!
 
 BUNDLED WITH
