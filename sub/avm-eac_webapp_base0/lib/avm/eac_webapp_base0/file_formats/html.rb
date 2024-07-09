@@ -17,7 +17,7 @@ module Avm
             beautify path, input, output
           end
           ::FileUtils.mv(temppath, path)
-          super(path)
+          super
         end
 
         private

@@ -14,7 +14,7 @@ module Avm
           ::Avm::EacWebappBase0::Executables.js_beautify.command.append(
             ['--indent-size=2', '--end-with-newline', '--replace', *files]
           ).system!
-          super(files)
+          super
         end
       end
     end

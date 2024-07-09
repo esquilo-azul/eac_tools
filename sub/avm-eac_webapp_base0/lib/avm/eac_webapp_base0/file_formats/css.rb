@@ -14,7 +14,7 @@ module Avm
 
         def file_apply(file)
           ::Avm::EacWebappBase0::FileFormats::Css::FileApply.new(file).perform
-          super(file)
+          super
         end
       end
     end

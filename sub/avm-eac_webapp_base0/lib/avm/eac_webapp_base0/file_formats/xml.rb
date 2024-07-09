@@ -12,7 +12,7 @@ module Avm
 
         def internal_apply(files)
           format_command(files).system!
-          super(files)
+          super
         end
 
         def format_command(files)
