@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Put here the authors']
   s.summary     = 'Put here de description.'
 
-  s.files = Dir['{lib,template}/**/*']
+  s.files = Dir['{lib,template}/**/{*,.*}']
   s.required_ruby_version = '>= 2.7'
 
   s.add_dependency 'avm', '~> 0.94'
