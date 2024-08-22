@@ -40,7 +40,7 @@ PATH
   specs:
     avm-git (0.17.0)
       avm (~> 0.94)
-      avm-files (~> 0.7)
+      avm-files (~> 0.8)
       eac_git (~> 0.16)
       eac_ruby_utils (~> 0.121)
       git (~> 1.19, >= 1.19.1)
