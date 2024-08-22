@@ -50,7 +50,7 @@ PATH
   specs:
     avm-tools (0.161.0)
       avm (~> 0.94)
-      clipboard (~> 1.3, >= 1.3.6)
+      clipboard (~> 1.4, >= 1.4.1)
       eac_ruby_base0 (~> 0.19)
 
 PATH
