@@ -53,19 +53,6 @@ PATH
       clipboard (~> 1.4, >= 1.4.1)
       eac_ruby_base0 (~> 0.19)
 
-PATH
-  remote: sub/avm
-  specs:
-    avm (0.94.0)
-      eac_cli (~> 0.42)
-      eac_config (~> 0.14, >= 0.14.2)
-      eac_docker (~> 0.7)
-      eac_fs (~> 0.18)
-      eac_ruby_utils (~> 0.122)
-      eac_templates (~> 0.7, >= 0.7.1)
-      minitar (~> 0.9)
-      ruby-progressbar (~> 1.13)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,6 +66,15 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     asciidoctor (2.0.23)
     ast (2.4.2)
+    avm (0.94.0)
+      eac_cli (~> 0.42)
+      eac_config (~> 0.14, >= 0.14.2)
+      eac_docker (~> 0.7)
+      eac_fs (~> 0.18)
+      eac_ruby_utils (~> 0.122)
+      eac_templates (~> 0.7, >= 0.7.1)
+      minitar (~> 0.9)
+      ruby-progressbar (~> 1.13)
     avm-eac_asciidoctor_base0 (0.23.0)
       asciidoctor (~> 2.0, >= 2.0.22)
       avm-eac_webapp_base0 (~> 0.19)
@@ -323,7 +319,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  avm!
   avm-eac_webapp_base0!
   avm-git!
   avm-tools!
