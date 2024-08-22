@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/esquilo-azul/avm-eac_ruby_base1.git
+	branch = master
+	commit = 281872fef112512b2d48c3c7d5a5586b78221bc5
+	parent = 628dc8f931de7cd2b39ab413b69c3f2d8d50706b
+	method = merge
+	cmdver = 0.4.1
