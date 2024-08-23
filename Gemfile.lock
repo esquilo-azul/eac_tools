@@ -30,6 +30,7 @@ PATH
       avm (~> 0.94)
       avm-eac_generic_base0 (~> 0.13)
       eac_envs-http (~> 0.5, >= 0.5.1)
+      eac_ruby_gem_support (~> 0.10)
       eac_ruby_utils (~> 0.122)
 
 GEM
