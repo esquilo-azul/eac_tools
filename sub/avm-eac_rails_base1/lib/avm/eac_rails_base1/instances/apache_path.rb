@@ -13,7 +13,7 @@ module Avm
         # @return [String]
         def extra_content
           ::Avm::EacRailsBase1::Instances::ApachePath.template.child('extra_content.conf')
-            .apply(instance)
+            .apply(variables_source)
         end
       end
     end
