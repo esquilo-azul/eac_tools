@@ -2,5 +2,5 @@
 
 set -e
 
-source "$HOME/.rvm/scripts/rvm"
+source "/etc/profile"
 ( cd '%%install.path%%'; RAILS_ENV=production bundle exec tasks_scheduler "$@" )
