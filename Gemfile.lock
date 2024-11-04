@@ -21,7 +21,7 @@ PATH
       avm-eac_wordpress_base0 (~> 0.3, >= 0.3.2)
       avm-git (~> 0.18)
       avm-tools (~> 0.162)
-      eac_ruby_utils (~> 0.122)
+      eac_ruby_utils (~> 0.123)
 
 PATH
   remote: sub/avm-eac_asciidoctor_base0
