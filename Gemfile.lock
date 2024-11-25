@@ -23,6 +23,13 @@ PATH
       avm-tools (~> 0.162)
       eac_ruby_utils (~> 0.123)
 
+PATH
+  remote: sub/eac_config
+  specs:
+    eac_config (0.14.2)
+      addressable (~> 2.8, >= 2.8.6)
+      eac_ruby_utils (~> 0.121)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -150,9 +157,6 @@ GEM
       eac_config (~> 0.14, >= 0.14.2)
       eac_ruby_utils (~> 0.122)
       tty-table (~> 0.12)
-    eac_config (0.14.2)
-      addressable (~> 2.8, >= 2.8.6)
-      eac_ruby_utils (~> 0.121)
     eac_docker (0.7.0)
       eac_ruby_utils (~> 0.112)
       eac_templates (~> 0.3, >= 0.3.2)
@@ -306,6 +310,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  eac_config!
   eac_ruby_gem_support (~> 0.10)
   eac_tools!
 
