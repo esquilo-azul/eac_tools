@@ -28,7 +28,7 @@ PATH
   specs:
     eac_config (0.14.2)
       addressable (~> 2.8, >= 2.8.7)
-      eac_ruby_utils (~> 0.121)
+      eac_ruby_utils (~> 0.124)
 
 PATH
   remote: sub/eac_ruby_utils
