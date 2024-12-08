@@ -23,6 +23,11 @@ module Avm
           ::Avm::VersionNumber.new(version_file.read)
         end
 
+        # @param target_version [Avm::VersionNumber]
+        def version=(target_version)
+          version_file.write("#{target_version}\n")
+        end
+
         # @return [Pathname]
         def version_file
           path.join(VERSION_FILE_SUBPATH)
