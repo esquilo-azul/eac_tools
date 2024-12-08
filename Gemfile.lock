@@ -37,7 +37,7 @@ PATH
       eac_cli (~> 0.42)
       eac_config (~> 0.14, >= 0.14.3)
       eac_docker (~> 0.7)
-      eac_fs (~> 0.18)
+      eac_fs (~> 0.18, >= 0.18.1)
       eac_ruby_utils (~> 0.122)
       eac_templates (~> 0.7, >= 0.7.1)
       minitar (~> 0.9)
