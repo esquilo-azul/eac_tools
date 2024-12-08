@@ -35,7 +35,7 @@ PATH
   specs:
     avm (0.94.0)
       eac_cli (~> 0.42)
-      eac_config (~> 0.14, >= 0.14.2)
+      eac_config (~> 0.14, >= 0.14.3)
       eac_docker (~> 0.7)
       eac_fs (~> 0.18)
       eac_ruby_utils (~> 0.122)
