@@ -28,6 +28,11 @@ module Avm
           version_file.write("#{target_version}\n")
         end
 
+        # @param target_version [Avm::VersionNumber]
+        def version_bump_do_changes(target_version)
+          self.version = target_version
+        end
+
         # @return [Pathname]
         def version_file
           path.join(VERSION_FILE_SUBPATH)
