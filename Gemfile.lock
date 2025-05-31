@@ -52,6 +52,7 @@ PATH
   remote: sub/avm
   specs:
     avm (0.94.1)
+      clipboard (~> 1.4, >= 1.4.1)
       eac_cli (~> 0.42)
       eac_config (~> 0.14, >= 0.14.3)
       eac_docker (~> 0.7)
