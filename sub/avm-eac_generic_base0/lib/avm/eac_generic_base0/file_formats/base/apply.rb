@@ -3,7 +3,6 @@
 require 'avm/file_formats/base'
 require 'avm/file_formats/file_result'
 require 'avm/file_formats/utf8_assert'
-require 'eac_ruby_utils/core_ext'
 
 module Avm
   module EacGenericBase0

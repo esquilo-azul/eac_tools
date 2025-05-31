@@ -2,7 +2,6 @@
 
 require 'avm/file_formats/base'
 require 'eac_fs/file_info'
-require 'eac_ruby_utils/core_ext'
 
 module Avm
   module EacGenericBase0
