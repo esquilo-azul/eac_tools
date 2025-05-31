@@ -2,7 +2,7 @@
 
 module Avm
   module EacGenericBase0
-    class FileFormats
+    module FileFormats
       class Base < ::Avm::FileFormats::Base
         module FileResourceNameHelper
           def result_from_patterns(patterns, path, &block)

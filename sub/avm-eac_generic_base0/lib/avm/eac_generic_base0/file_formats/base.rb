@@ -4,7 +4,7 @@ require 'avm/file_formats/base'
 
 module Avm
   module EacGenericBase0
-    class FileFormats
+    module FileFormats
       class Base < ::Avm::FileFormats::Base
         require_sub __FILE__, include_modules: true, require_dependency: true
 

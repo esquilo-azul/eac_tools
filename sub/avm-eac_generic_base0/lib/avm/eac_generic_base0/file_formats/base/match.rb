@@ -5,7 +5,7 @@ require 'eac_fs/file_info'
 
 module Avm
   module EacGenericBase0
-    class FileFormats
+    module FileFormats
       class Base < ::Avm::FileFormats::Base
         class Match
           DEFAULT_TYPE = 'text'

@@ -6,7 +6,7 @@ require 'avm/file_formats/utf8_assert'
 
 module Avm
   module EacGenericBase0
-    class FileFormats
+    module FileFormats
       class Base < ::Avm::FileFormats::Base
         class Apply
           enable_method_class
