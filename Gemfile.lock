@@ -35,10 +35,6 @@ PATH
   specs:
     avm-files (0.8.1)
       avm (~> 0.93)
-      eac_cli (~> 0.42)
-      eac_fs (~> 0.18)
-      eac_ruby_utils (~> 0.122)
-      eac_templates (~> 0.7, >= 0.7.1)
 
 PATH
   remote: sub/avm-tools
