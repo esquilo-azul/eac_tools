@@ -42,7 +42,7 @@ PATH
     avm-tools (0.162.0)
       avm (~> 0.95)
       clipboard (~> 1.4, >= 1.4.1)
-      eac_ruby_base0 (~> 0.19)
+      eac_ruby_base0 (~> 0.19, >= 0.19.1)
 
 PATH
   remote: sub/avm
