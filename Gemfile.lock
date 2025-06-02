@@ -34,7 +34,7 @@ PATH
   remote: sub/avm-files
   specs:
     avm-files (0.8.1)
-      avm (~> 0.93)
+      avm (~> 0.95)
 
 PATH
   remote: sub/avm-tools
