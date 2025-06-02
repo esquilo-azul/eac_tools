@@ -4,7 +4,7 @@ PATH
     eac_tools (0.98.0)
       avm (~> 0.95)
       avm-eac_asciidoctor_base0 (~> 0.25)
-      avm-eac_generic_base0 (~> 0.14)
+      avm-eac_generic_base0 (~> 0.15)
       avm-eac_github_base0 (~> 0.3)
       avm-eac_gitlab_base0 (~> 0.4)
       avm-eac_latex_base0 (~> 0.3, >= 0.3.2)
