@@ -31,12 +31,6 @@ PATH
       eac_ruby_utils (~> 0.127)
 
 PATH
-  remote: sub/avm-files
-  specs:
-    avm-files (0.9.0)
-      avm (~> 0.95)
-
-PATH
   remote: sub/avm-tools
   specs:
     avm-tools (0.163.0)
@@ -144,6 +138,8 @@ GEM
       avm (~> 0.86, >= 0.86.2)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
       eac_ruby_utils (~> 0.121)
+    avm-files (0.9.0)
+      avm (~> 0.95)
     avm-git (0.19.0)
       avm (~> 0.94, >= 0.94.1)
       avm-files (~> 0.8, >= 0.8.1)
@@ -319,7 +315,6 @@ PLATFORMS
 DEPENDENCIES
   avm!
   avm-eac_generic_base0!
-  avm-files!
   avm-tools!
   eac_ruby_gem_support (~> 0.11, >= 0.11.1)
   eac_tools!
