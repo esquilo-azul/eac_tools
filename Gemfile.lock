@@ -44,7 +44,7 @@ PATH
     avm (0.95.0)
       clipboard (~> 1.4, >= 1.4.1)
       eac_cli (~> 0.43)
-      eac_config (~> 0.14, >= 0.14.3)
+      eac_config (~> 0.15)
       eac_docker (~> 0.7)
       eac_fs (~> 0.18, >= 0.18.1)
       eac_ruby_utils (~> 0.127)
