@@ -3,7 +3,7 @@
 require 'eac_ruby_utils'
 EacRubyUtils::RootModuleSetup.perform __FILE__
 
-require 'avm'
+require 'avm/tools'
 
 module EacTools
 end
