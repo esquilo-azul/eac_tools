@@ -80,6 +80,13 @@ PATH
       rubocop-rails (~> 2.31)
       rubocop-rspec (~> 3.6)
 
+PATH
+  remote: sub/eac_templates
+  specs:
+    eac_templates (0.8.0)
+      eac_config (~> 0.15)
+      eac_ruby_utils (~> 0.127)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -215,9 +222,6 @@ GEM
       filesize (~> 0.2)
       net-ssh (~> 4.2)
       zeitwerk (~> 2.6, >= 2.6.18)
-    eac_templates (0.8.0)
-      eac_config (~> 0.15)
-      eac_ruby_utils (~> 0.127)
     faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -331,6 +335,7 @@ DEPENDENCIES
   avm-tools!
   eac_ruby_base0!
   eac_ruby_gem_support!
+  eac_templates!
   eac_tools!
 
 BUNDLED WITH
