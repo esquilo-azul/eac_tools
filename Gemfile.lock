@@ -37,7 +37,7 @@ PATH
       avm (~> 0.95, >= 0.95.2)
       avm-eac_generic_base0 (~> 0.15)
       eac_envs-http (~> 0.6, >= 0.6.1)
-      eac_ruby_utils (~> 0.122)
+      eac_ruby_utils (~> 0.127)
 
 PATH
   remote: sub/avm-tools
