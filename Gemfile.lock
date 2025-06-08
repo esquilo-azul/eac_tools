@@ -61,6 +61,16 @@ PATH
       minitar (~> 0.12, >= 0.12.1)
       ruby-progressbar (~> 1.13)
 
+PATH
+  remote: sub/eac_ruby_gem_support
+  specs:
+    eac_ruby_gem_support (0.11.1)
+      eac_ruby_utils (~> 0.126)
+      rspec (~> 3.13)
+      rubocop (~> 1.75, >= 1.75.4)
+      rubocop-rails (~> 2.31)
+      rubocop-rspec (~> 3.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -194,12 +204,6 @@ GEM
       eac_cli (~> 0.38, >= 0.38.1)
       eac_fs (~> 0.18, >= 0.18.1)
       eac_ruby_utils (~> 0.126)
-    eac_ruby_gem_support (0.11.1)
-      eac_ruby_utils (~> 0.126)
-      rspec (~> 3.13)
-      rubocop (~> 1.75, >= 1.75.4)
-      rubocop-rails (~> 2.31)
-      rubocop-rspec (~> 3.6)
     eac_ruby_utils (0.127.0)
       activesupport (>= 4, < 7)
       addressable (~> 2.8, >= 2.8.7)
@@ -321,7 +325,7 @@ DEPENDENCIES
   avm-eac_generic_base0!
   avm-eac_ruby_base1!
   avm-tools!
-  eac_ruby_gem_support (~> 0.11, >= 0.11.1)
+  eac_ruby_gem_support!
   eac_tools!
 
 BUNDLED WITH
