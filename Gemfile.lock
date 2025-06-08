@@ -84,7 +84,7 @@ PATH
 PATH
   remote: sub/eac_templates
   specs:
-    eac_templates (0.8.0)
+    eac_templates (0.8.1)
       eac_config (~> 0.15)
       eac_ruby_utils (~> 0.127)
 
