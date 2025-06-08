@@ -62,6 +62,15 @@ PATH
       ruby-progressbar (~> 1.13)
 
 PATH
+  remote: sub/eac_ruby_base0
+  specs:
+    eac_ruby_base0 (0.19.1)
+      avm-eac_ruby_base1 (~> 0.33, >= 0.33.1)
+      eac_cli (~> 0.38, >= 0.38.1)
+      eac_fs (~> 0.18, >= 0.18.1)
+      eac_ruby_utils (~> 0.126)
+
+PATH
   remote: sub/eac_ruby_gem_support
   specs:
     eac_ruby_gem_support (0.11.1)
@@ -199,11 +208,6 @@ GEM
       eac_envs-http (~> 0.5)
       eac_fs (~> 0.16)
       eac_ruby_utils (~> 0.120)
-    eac_ruby_base0 (0.19.1)
-      avm-eac_ruby_base1 (~> 0.33, >= 0.33.1)
-      eac_cli (~> 0.38, >= 0.38.1)
-      eac_fs (~> 0.18, >= 0.18.1)
-      eac_ruby_utils (~> 0.126)
     eac_ruby_utils (0.127.0)
       activesupport (>= 4, < 7)
       addressable (~> 2.8, >= 2.8.7)
@@ -325,6 +329,7 @@ DEPENDENCIES
   avm-eac_generic_base0!
   avm-eac_ruby_base1!
   avm-tools!
+  eac_ruby_base0!
   eac_ruby_gem_support!
   eac_tools!
 
