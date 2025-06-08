@@ -41,3 +41,5 @@ Style/AsciiComments:
   Enabled: false
 Style/Documentation:
   Enabled: false
+Style/SafeNavigation: # Bug with rubocop's version 1.76.0
+  Enabled: false
