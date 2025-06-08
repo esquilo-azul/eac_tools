@@ -77,7 +77,7 @@ PATH
       eac_ruby_utils (~> 0.127)
       rspec (~> 3.13, >= 3.13.1)
       rubocop (~> 1.76)
-      rubocop-rails (~> 2.31)
+      rubocop-rails (~> 2.32)
       rubocop-rspec (~> 3.6)
 
 PATH
