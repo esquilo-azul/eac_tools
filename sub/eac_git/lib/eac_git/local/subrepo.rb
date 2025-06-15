@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/remote'
-require 'eac_ruby_utils'
-
 module EacGit
   class Local
     # A git-subrepo (https://github.com/ingydotnet/git-subrepo) in a [EacGit::Local].

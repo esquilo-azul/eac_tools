@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/remote'
-require 'eac_ruby_utils'
-
 module EacGit
   class Local
     module Log

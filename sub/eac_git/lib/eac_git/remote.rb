@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/executables'
-require 'eac_git/remote_like'
-require 'eac_ruby_utils'
-
 module EacGit
   # A Git remote repository referenced by URI.
   class Remote

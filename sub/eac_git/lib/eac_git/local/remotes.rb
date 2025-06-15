@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_git/local/remote'
-
 module EacGit
   class Local
     module Remotes

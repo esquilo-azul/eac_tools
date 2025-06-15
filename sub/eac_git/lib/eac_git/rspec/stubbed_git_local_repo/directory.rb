@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/rspec/stubbed_git_local_repo/fs_object'
 require 'fileutils'
 
 module EacGit

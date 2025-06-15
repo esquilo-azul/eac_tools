@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'parseconfig'
-
 module EacGit
   class Local
     class Subrepo

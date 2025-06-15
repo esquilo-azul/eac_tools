@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_git/executables'
-require 'eac_git/rspec/stubbed_git_local_repo'
-
 module EacGit
   module Rspec
     module Setup
