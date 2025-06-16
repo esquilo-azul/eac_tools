@@ -27,6 +27,11 @@ module EacGit
       def absolute_path
         path.expand_path(local_repo.root_path)
       end
+
+      # @return [Boolean]
+      def add?
+        (index == '?' && worktree == '?') || (index == 'A' && worktree == ' ')
+      end
     end
   end
 end
