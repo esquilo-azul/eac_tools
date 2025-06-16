@@ -32,6 +32,11 @@ module EacGit
       def add?
         (index == '?' && worktree == '?') || (index == 'A' && worktree == ' ')
       end
+
+      # @return [Boolean]
+      def delete?
+        [index, worktree].include?('D')
+      end
     end
   end
 end
