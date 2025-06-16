@@ -37,6 +37,11 @@ module EacGit
       def delete?
         [index, worktree].include?('D')
       end
+
+      # @return [Boolean]
+      def modify?
+        [index, worktree].include?('M')
+      end
     end
   end
 end
