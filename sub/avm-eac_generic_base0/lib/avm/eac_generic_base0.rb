@@ -7,3 +7,5 @@ module Avm
   module EacGenericBase0
   end
 end
+
+require 'avm'
