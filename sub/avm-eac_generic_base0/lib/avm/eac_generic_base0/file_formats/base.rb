@@ -6,7 +6,7 @@ module Avm
   module EacGenericBase0
     module FileFormats
       class Base < ::Avm::FileFormats::Base
-        require_sub __FILE__, include_modules: true, require_dependency: true
+        require_sub __FILE__, include_modules: true, require_mode: :kernel
 
         VALID_BASENAMES = %w[*.asm *.bat *.coffee *.java *.js *.rb *.s *.sql *.tex *.url *.yml
                              *.yaml].freeze
