@@ -10,7 +10,7 @@ module Avm
   module EacWebappBase0
     module Instances
       class Deploy
-        require_sub __FILE__, include_modules: true, require_dependency: true
+        require_sub __FILE__, include_modules: true, require_mode: :kernel
 
         DEFAULT_REFERENCE = 'HEAD'
 
