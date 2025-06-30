@@ -44,6 +44,13 @@ PATH
       eac_ruby_utils (~> 0.121)
       eac_templates (~> 0.5, >= 0.5.1)
 
+PATH
+  remote: sub/eac_docker
+  specs:
+    eac_docker (0.7.0)
+      eac_ruby_utils (~> 0.112)
+      eac_templates (~> 0.3, >= 0.3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,9 +177,6 @@ GEM
     eac_config (0.15.0)
       addressable (~> 2.8, >= 2.8.7)
       eac_ruby_utils (~> 0.127)
-    eac_docker (0.7.0)
-      eac_ruby_utils (~> 0.112)
-      eac_templates (~> 0.3, >= 0.3.2)
     eac_envs-http (0.7.0)
       eac_fs (~> 0.19)
       eac_ruby_utils (~> 0.128, >= 0.128.3)
@@ -336,6 +340,7 @@ PLATFORMS
 DEPENDENCIES
   avm-eac_redmine_base0!
   avm-eac_ubuntu_base0!
+  eac_docker!
   eac_ruby_gem_support (~> 0.12)
   eac_tools!
 
