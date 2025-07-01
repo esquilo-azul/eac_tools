@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/docker/runner'
-require 'avm/runners/base'
-require 'eac_ruby_utils/struct'
-
 module Avm
   module EacUbuntuBase0
     module Runners

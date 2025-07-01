@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_ubuntu_base0/apache'
-require 'avm/eac_ubuntu_base0/docker_image'
-require 'avm/instances/base'
-
 module Avm
   module EacUbuntuBase0
     module Instances

@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_docker/images/templatized'
-require 'eac_ruby_utils/core_ext'
-require 'eac_templates/core_ext'
-
 module Avm
   module EacUbuntuBase0
     module Rspec

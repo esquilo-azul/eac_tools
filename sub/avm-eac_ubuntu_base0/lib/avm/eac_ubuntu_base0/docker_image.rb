@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/docker/image'
-require 'eac_templates/sources/from_all_gems'
-require 'eac_ruby_utils/core_ext'
-
 module Avm
   module EacUbuntuBase0
     class DockerImage < ::Avm::Docker::Image

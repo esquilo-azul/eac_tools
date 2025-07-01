@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/runners/base'
-require 'avm/eac_ubuntu_base0/instances/base'
-require 'eac_ruby_utils/patches/module/require_sub'
-
 module Avm
   module EacUbuntuBase0
     module Runners
