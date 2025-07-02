@@ -3,7 +3,13 @@
 module Avm
   module EacUbuntuBase0
     class DockerImage < ::Avm::Docker::Image
+      BASE_IMAGE = 'ubuntu:20.04'
       USER_NAME = 'myuser'
+
+      # @return [String]
+      def base_image
+        BASE_IMAGE
+      end
 
       def stereotype_tag
         'eac_ubuntu_base0'
