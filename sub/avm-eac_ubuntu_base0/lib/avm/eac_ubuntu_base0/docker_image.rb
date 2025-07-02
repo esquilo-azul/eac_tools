@@ -3,7 +3,7 @@
 module Avm
   module EacUbuntuBase0
     class DockerImage < ::Avm::Docker::Image
-      BASE_IMAGE = 'ubuntu:20.04'
+      BASE_IMAGE = 'ubuntu:24.04'
       USER_NAME = 'myuser'
 
       # @return [String]
