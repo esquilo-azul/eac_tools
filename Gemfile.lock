@@ -49,7 +49,7 @@ PATH
   specs:
     eac_docker (0.7.0)
       eac_ruby_utils (~> 0.128, >= 0.128.2)
-      eac_templates (~> 0.3, >= 0.3.2)
+      eac_templates (~> 0.8, >= 0.8.1)
 
 GEM
   remote: https://rubygems.org/
