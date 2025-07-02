@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM '%%base_image%%'
 MAINTAINER Aleksandar Diklic "https://github.com/rastasheep"
 
 RUN apt-get update
@@ -11,7 +11,7 @@ RUN echo 'root:root' |chpasswd
 RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
-RUN mkdir /root/.ssh
+RUN mkdir -p /root/.ssh
 ADD id_rsa /root/.ssh/id_rsa
 ADD id_rsa.pub /root/.ssh/id_rsa.pub
 ADD id_rsa.pub /root/.ssh/authorized_keys

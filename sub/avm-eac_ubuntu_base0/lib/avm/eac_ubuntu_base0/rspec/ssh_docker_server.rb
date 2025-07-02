@@ -4,6 +4,10 @@ module Avm
   module EacUbuntuBase0
     module Rspec
       class SshDockerServer < ::EacDocker::Images::Templatized
+        def base_image
+          ::Avm::EacUbuntuBase0::DockerImage::BASE_IMAGE
+        end
+
         # @return [EacRubyUtils::Envs::SshEnv]
         def env
           raise '@env is blank' if @env.blank?
