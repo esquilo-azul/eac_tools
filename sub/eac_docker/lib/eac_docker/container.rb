@@ -9,6 +9,7 @@ module EacDocker
     immutable_accessor :env, type: :hash
     immutable_accessor :capability, :command_arg, :volume, type: :array
     attr_reader :id
+
     common_constructor :image
 
     def immutable_constructor_args

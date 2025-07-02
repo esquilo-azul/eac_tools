@@ -6,6 +6,7 @@ module EacDocker
   module Rspec
     class StubImage
       include ::ActiveSupport::Callbacks
+
       define_callbacks :on_container
       common_constructor :image
 
