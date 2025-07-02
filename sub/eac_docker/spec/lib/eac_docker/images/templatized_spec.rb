@@ -5,7 +5,7 @@ RSpec.describe(EacDocker::Images::Templatized, :docker) do
   let(:instance) { StubDockerImage.new }
 
   before do
-    EacTemplates::Searcher.default.included_paths << fixtures_dir
+    EacTemplates::Sources::Set.default.included_paths << fixtures_dir
     stub_const('StubDockerImage', Class.new(described_class))
   end
 
