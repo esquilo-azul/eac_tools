@@ -5,6 +5,7 @@ module EacGit
     class ChangedFile
       QUOTED_PATH_PATTERN = /\A"(.+)"\z/.freeze
       STATUS_LINE_PATTERN = /\A(.)(.)\s(.+)\z/.freeze
+      TO_HASH_ATTRIBUTES = %i[absolute_path index path worktree].freeze
 
       class << self
         def by_porcelain_v1_line(local_repo, line)
@@ -41,6 +42,11 @@ module EacGit
       # @return [Boolean]
       def modify?
         [index, worktree].include?('M')
+      end
+
+      # @return [Hash]
+      def to_h
+        compact_to_h(*TO_HASH_ATTRIBUTES)
       end
     end
   end
