@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-require 'eac_ruby_utils/envs'
-
 module EacDocker
   module Executables
     class << self

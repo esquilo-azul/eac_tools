@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/boolean'
-
 module EacDocker
   module Debug
     class << self

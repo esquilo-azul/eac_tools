@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_docker/executables'
-require 'eac_docker/images/base'
-require 'eac_ruby_utils/core_ext'
-
 module EacDocker
   module Images
     class Named < ::EacDocker::Images::Base
