@@ -74,7 +74,7 @@ module EacGit
 
     def merge_base(*commits)
       refs = commits.dup
-      while refs.count > 1
+      while refs.count > 1 # rubocop:disable Style/CollectionQuerying
         refs[1] = merge_base_pair(refs[0], refs[1])
         return nil if refs[1].blank?
 
