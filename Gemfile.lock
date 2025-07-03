@@ -27,7 +27,7 @@ PATH
   remote: sub/eac_git
   specs:
     eac_git (0.18.0)
-      eac_ruby_utils (~> 0.128)
+      eac_ruby_utils (~> 0.128, >= 0.128.3)
       parseconfig (~> 1.1, >= 1.1.2)
 
 GEM
