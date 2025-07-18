@@ -17,6 +17,10 @@ module Avm
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_BLANK = 'redmine_as_apache_base'
         INSTALLER_TARGET_TASK_WITH_WEB_PATH_PRESENT = 'redmine_as_apache_path'
         REDMINE_SOURCE_HOST_SUBPATH = 'redmine_source'
+        SSH_SERVER_INSTALL = <<~CODE
+          RUN sudo apt-get install -y openssh-server
+          EXPOSE 22/tcp
+        CODE
 
         delegate :database_internal, to: :instance
 
@@ -59,6 +63,12 @@ module Avm
 
         def skip_database
           ENV.fetch('SKIP_DATABASE', nil)
+        end
+
+        # Optionally install the SSH server.
+        # @return [String]
+        def ssh_server_install
+          ENV.fetch('SSH_SERVER', false).to_bool ? SSH_SERVER_INSTALL : ''
         end
 
         def start_path

@@ -21,7 +21,10 @@ RUN SKIP_DATABASE='%%skip_database%%' \
 %%apache_setup%%
 
 # Portas
-EXPOSE 80/tcp 443/tcp 22/tcp
+EXPOSE 80/tcp 443/tcp
+
+# Servidor SSH
+%%ssh_server_install%%
 
 # Execução
 USER root
