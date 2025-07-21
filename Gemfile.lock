@@ -30,7 +30,7 @@ PATH
       avm (~> 0.97)
       avm-files (~> 0.9)
       eac_git (~> 0.18, >= 0.18.1)
-      eac_ruby_utils (~> 0.128)
+      eac_ruby_utils (~> 0.128, >= 0.128.3)
       git (~> 1.19, >= 1.19.1)
 
 GEM
