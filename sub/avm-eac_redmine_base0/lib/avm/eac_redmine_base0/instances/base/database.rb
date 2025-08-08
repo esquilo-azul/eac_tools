@@ -15,7 +15,7 @@ module Avm
             uri_components_entries_values 'postgresql', %w[version]
           end
 
-          def database_internal
+          def database_internal # rubocop:disable Naming/PredicateMethod
             ::Avm::Instances::Base::AutoValues::Database::LOCAL_ADDRESSES
               .include?(entry(::Avm::Instances::EntryKeys::DATABASE_HOSTNAME).value)
           end
