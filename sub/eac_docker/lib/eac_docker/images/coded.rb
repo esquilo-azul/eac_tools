@@ -26,6 +26,7 @@ module EacDocker
           ::EacDocker::Executables.docker.command(*build_args.excluding('--quiet')).system!
         end
         ::EacDocker::Executables.docker.command(*build_args).execute!.strip
+          .then { |digest| tag.presence || digest }
       end
 
       def build_args
