@@ -31,6 +31,7 @@ USER root
 COPY start.sh '%%start_path%%'
 RUN /bin/chmod +x '%%start_path%%'
 RUN /bin/chown '%%redmine_user%%:%%redmine_user%%' '%%start_path%%'
+RUN chmod 755 '%%redmine_user_home%%'
 USER '%%redmine_user%%'
 WORKDIR '%%redmine_user_home%%'
 CMD '%%start_path%%'
