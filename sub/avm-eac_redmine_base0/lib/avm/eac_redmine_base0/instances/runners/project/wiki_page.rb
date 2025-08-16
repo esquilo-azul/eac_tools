@@ -20,8 +20,6 @@ module Avm
             def wiki_page_content
               wiki_page.read
             end
-
-            require_sub __FILE__
           end
         end
       end

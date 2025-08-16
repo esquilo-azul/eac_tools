@@ -17,8 +17,6 @@ module Avm
           def project_uncached
             runner_context.call(:instance).rest_api.root_entity.project(parsed.id_or_identifier)
           end
-
-          require_sub __FILE__
         end
       end
     end
