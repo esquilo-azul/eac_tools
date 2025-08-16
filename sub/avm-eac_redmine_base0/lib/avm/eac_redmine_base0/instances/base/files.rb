@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/instances/base'
-require 'avm/instances/data/files_unit'
-require 'eac_ruby_utils/core_ext'
-
 module Avm
   module EacRedmineBase0
     module Instances

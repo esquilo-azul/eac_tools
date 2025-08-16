@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/instances/deploy'
-require 'eac_ruby_utils/ruby'
-
 module Avm
   module EacRedmineBase0
     module Instances

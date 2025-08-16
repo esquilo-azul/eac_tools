@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_redmine_base0/sources/core_update'
-require 'avm/sources/base/configuration'
-require 'avm/sync'
-require 'eac_fs/cached_download'
-require 'eac_ruby_utils/core_ext'
-
 module Avm
   module EacRedmineBase0
     module Sources

@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base1/sources/base'
-require 'avm/eac_redmine_base0/sources/core_update'
-require 'eac_cli/core_ext'
-
 module Avm
   module EacRedmineBase0
     module Sources

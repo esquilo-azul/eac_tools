@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_redmine_base0/instances/rest_api/entity_base'
-require 'avm/eac_redmine_base0/instances/rest_api/wiki_page'
-require 'eac_rest/api'
-require 'eac_ruby_utils/core_ext'
-
 module Avm
   module EacRedmineBase0
     module Instances

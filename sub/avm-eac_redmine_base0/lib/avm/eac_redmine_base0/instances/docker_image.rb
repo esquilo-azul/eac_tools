@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-require 'avm/eac_redmine_base0/instances/deploy'
-require 'avm/eac_ubuntu_base0/instances/base'
-require 'avm/instances/docker_image'
-require 'eac_templates/core_ext'
-
 module Avm
   module EacRedmineBase0
     module Instances
