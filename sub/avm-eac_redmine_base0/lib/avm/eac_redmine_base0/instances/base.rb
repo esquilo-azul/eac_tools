@@ -6,7 +6,7 @@ module Avm
   module EacRedmineBase0
     module Instances
       class Base < ::Avm::EacRailsBase1::Instances::Base
-        require_sub __FILE__, include_modules: true, require_dependency: true
+        require_sub __FILE__, include_modules: true
         enable_simple_cache
 
         include ::Avm::EacRubyBase1::Instances::Mixin
