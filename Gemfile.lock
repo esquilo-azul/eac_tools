@@ -45,7 +45,6 @@ PATH
       eac_ruby_utils (~> 0.128, >= 0.128.3)
       eac_templates (~> 0.8, >= 0.8.1)
       minitar (~> 0.12, >= 0.12.1)
-      ruby-progressbar (~> 1.13)
 
 GEM
   remote: https://rubygems.org/
