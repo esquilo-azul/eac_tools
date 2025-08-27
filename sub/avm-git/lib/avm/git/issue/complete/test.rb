@@ -1,0 +1,34 @@
+# frozen_string_literal: true
+
+module Avm
+  module Git
+    module Issue
+      class Complete
+        module Test
+          def test_result
+            infom 'Running tests...'
+            test_performer.units.each do |single|
+              return ::Avm::Result.error(test_failed_result_message(single)) if single.failed?
+            end
+            ::Avm::Result.success('all passed')
+          end
+
+          private
+
+          def test_failed_result_message(single)
+            { 'Source' => single, 'STDOUT' => single.logs[:stdout],
+              'STDERR' => single.logs[:stderr] }.map { |k, v| "#{k}: #{v}" }.join(', ')
+          end
+
+          def test_performer
+            ::Avm::Sources::Tests::Builder
+              .new(::Avm::Registry.sources.detect(launcher_git))
+              .include_main(true)
+              .include_subs(true)
+              .performer
+          end
+        end
+      end
+    end
+  end
+end
