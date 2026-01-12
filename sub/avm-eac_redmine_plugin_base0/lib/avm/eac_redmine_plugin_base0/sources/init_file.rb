@@ -18,9 +18,9 @@ module Avm
 
         private
 
-        # @return Version found in line, nil otherwise.
+        # @return [Avm::VersionNumber] Version found in line, nil otherwise.
         def line_value(line)
-          VERSION_LINE_PATTERN.if_match(line.rstrip, false) { |m| ::Gem::Version.new(m[2]) }
+          VERSION_LINE_PATTERN.if_match(line.rstrip, false) { |m| ::Avm::VersionNumber.new(m[2]) }
         end
 
         def new_value_content(new_value)
