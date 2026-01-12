@@ -1,0 +1,26 @@
+# frozen_string_literal: true
+
+require1 'shellwords'
+
+module Avm
+  module EacRailsBase1
+    module Instances
+      module Runners
+        class Bundle
+          runner_with ::Avm::EacRailsBase1::RunnerWith::Bundle, :help do
+            desc 'Runs "bundle ...".'
+            pos_arg :'bundle-args', repeat: true, optional: true
+          end
+
+          def run
+            bundle_run
+          end
+
+          def bundle_args
+            parsed.bundle_args.reject { |arg| arg == '--' }
+          end
+        end
+      end
+    end
+  end
+end
