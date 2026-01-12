@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/rspec/default_setup'
+require 'avm/eac_redmine_plugin_base0'
 EacRubyUtils::Rspec.default_setup_create(File.expand_path('..', __dir__))

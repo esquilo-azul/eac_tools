@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
+require 'eac_ruby_utils'
+EacRubyUtils::RootModuleSetup.perform __FILE__
 
 module Avm
   module EacRedminePluginBase0
-    require_sub __FILE__
   end
 end
+
+require 'avm/eac_ruby_base1'
