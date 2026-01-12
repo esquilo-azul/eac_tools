@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require1 'shellwords'
+require 'shellwords'
 
 module Avm
   module EacRailsBase1
