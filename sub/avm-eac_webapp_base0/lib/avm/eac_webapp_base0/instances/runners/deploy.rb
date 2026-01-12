@@ -16,7 +16,7 @@ module Avm
           end
 
           def run
-            result = runner_context.call(:instance).deploy_instance(deploy_options).run
+            result = runner_context.call(:instance).deploy_instance(**deploy_options).run
             if result.error?
               fatal_error result.to_s
             else
