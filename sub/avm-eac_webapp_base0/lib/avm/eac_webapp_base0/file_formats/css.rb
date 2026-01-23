@@ -7,8 +7,6 @@ module Avm
   module EacWebappBase0
     module FileFormats
       class Css < ::Avm::EacGenericBase0::FileFormats::Base
-        require_sub __FILE__
-
         VALID_BASENAMES = %w[*.css *.scss].freeze
         VALID_TYPES = [].freeze
 
