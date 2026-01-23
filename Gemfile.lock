@@ -68,10 +68,10 @@ PATH
 PATH
   remote: sub/eac_cli
   specs:
-    eac_cli (0.44.2)
+    eac_cli (0.44.3)
       colorize (~> 0.8, >= 0.8.1)
       eac_config (~> 0.15)
-      eac_ruby_utils (~> 0.128, >= 0.128.4)
+      eac_ruby_utils (~> 0.128, >= 0.128.5)
       tty-table (~> 0.12)
 
 GEM
@@ -98,14 +98,14 @@ GEM
     asciidoctor (2.0.26)
     ast (2.4.3)
     attr_extras (7.1.0)
-    avm (0.98.1)
+    avm (0.98.2)
       clipboard (~> 1.4, >= 1.4.1)
-      eac_cli (~> 0.44, >= 0.44.1)
+      eac_cli (~> 0.44, >= 0.44.3)
       eac_config (~> 0.15)
       eac_docker (~> 0.8)
       eac_fs (~> 0.19, >= 0.19.1)
-      eac_ruby_utils (~> 0.128, >= 0.128.4)
-      eac_templates (~> 0.8, >= 0.8.1)
+      eac_ruby_utils (~> 0.128, >= 0.128.5)
+      eac_templates (~> 0.8, >= 0.8.3)
       minitar (~> 0.12, >= 0.12.1)
     avm-eac_asciidoctor_base0 (0.26.0)
       asciidoctor (~> 2.0, >= 2.0.23)
