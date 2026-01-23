@@ -13,7 +13,7 @@ module Avm
           common_constructor :file_format, :file
 
           # @return [Boolean]
-          def result
+          def result # rubocop:disable Naming/PredicateMethod
             result_by_filename? || result_by_type?
           end
 
@@ -33,7 +33,7 @@ module Avm
 
           # @return [String]
           def mime_type_sanitize(mime_type)
-            if mime_type.split('/').count > 1
+            if mime_type.split('/').many?
               mime_type
             else
               "#{DEFAULT_TYPE}/#{mime_type}"
