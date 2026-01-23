@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,template}/**/{*,.*}']
   s.required_ruby_version = '>= 2.7'
 
-  s.add_dependency 'avm', '~> 0.98', '>= 0.98.1'
+  s.add_dependency 'avm', '~> 0.98', '>= 0.98.2'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.1'
   s.add_dependency 'avm-eac_postgresql_base0', '~> 0.5', '>= 0.5.3'
   s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.6'
