@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/file_formats/base'
-require 'avm/file_formats/file_result'
-require 'avm/file_formats/utf8_assert'
-
 module Avm
   module EacGenericBase0
     module FileFormats
