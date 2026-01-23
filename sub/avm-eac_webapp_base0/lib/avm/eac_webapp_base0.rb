@@ -9,3 +9,4 @@ module Avm
 end
 
 require 'avm/eac_generic_base0'
+require 'avm/eac_postgresql_base0'
