@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-require 'avm/entries/jobs/base'
-require 'avm/eac_ubuntu_base0/apache'
-require 'eac_templates/core_ext'
-
 module Avm
   module EacWebappBase0
     module Instances

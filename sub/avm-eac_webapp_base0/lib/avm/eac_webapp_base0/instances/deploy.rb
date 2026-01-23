@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'active_support/callbacks'
-require 'avm/entries/jobs/base'
-require 'eac_ruby_utils/core_ext'
-require 'eac_templates/core_ext'
 require 'net/http'
 
 module Avm

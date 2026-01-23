@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_generic_base0/file_formats/base'
-require 'eac_ruby_utils/envs'
-
 module Avm
   module EacWebappBase0
     module FileFormats

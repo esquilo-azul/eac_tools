@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_generic_base0/file_formats/base'
-
 module Avm
   module EacWebappBase0
     module FileFormats

@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/instances/runner'
-require 'avm/path_string'
-require 'eac_cli/core_ext'
-
 module Avm
   module EacWebappBase0
     module Instances

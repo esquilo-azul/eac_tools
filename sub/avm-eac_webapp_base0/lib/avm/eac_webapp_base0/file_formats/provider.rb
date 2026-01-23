@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_webapp_base0/file_formats/css'
-require 'avm/eac_webapp_base0/file_formats/html'
-require 'avm/eac_webapp_base0/file_formats/javascript'
-require 'avm/eac_webapp_base0/file_formats/json'
-require 'avm/eac_webapp_base0/file_formats/xml'
-require 'eac_ruby_utils/core_ext'
-
 module Avm
   module EacWebappBase0
     module FileFormats

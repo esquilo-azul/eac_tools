@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_webapp_base0/instances/deploy_info'
-require 'avm/eac_webapp_base0/instances/base/deploy_info'
-
 module Avm
   module EacWebappBase0
     module Instances

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/path_string'
-
 module Avm
   module EacWebappBase0
     module Instances

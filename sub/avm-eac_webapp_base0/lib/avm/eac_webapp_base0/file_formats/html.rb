@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_generic_base0/file_formats/base'
 require 'htmlbeautifier'
 
 module Avm
