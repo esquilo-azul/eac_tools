@@ -4,8 +4,9 @@ module Avm
   module EacUbuntuBase0
     module Rspec
       class SshDockerServer < ::EacDocker::Images::Templatized
+        # @return [String]
         def base_image
-          ::Avm::EacUbuntuBase0::DockerImage::BASE_IMAGE
+          ::Avm::EacUbuntuBase0::MinimalDockerImage.new.provide.id
         end
 
         # @return [EacRubyUtils::Envs::SshEnv]
