@@ -1,0 +1,6 @@
+FROM %%base_image%%
+
+# Base system update
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update -y
+RUN apt-get dist-upgrade -y

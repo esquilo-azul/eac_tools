@@ -3,12 +3,11 @@
 module Avm
   module EacUbuntuBase0
     class DockerImage < ::Avm::Docker::Image
-      BASE_IMAGE = 'ubuntu:24.04'
       USER_NAME = 'myuser'
 
       # @return [String]
       def base_image
-        BASE_IMAGE
+        ::Avm::EacUbuntuBase0::MinimalDockerImage.new.provide.id
       end
 
       def stereotype_tag
