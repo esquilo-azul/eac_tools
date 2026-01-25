@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,template}/**/*']
   s.required_ruby_version = '>= 2.7'
 
-  s.add_dependency 'avm', '~> 0.97'
+  s.add_dependency 'avm', '~> 0.98', '>= 0.98.2'
   s.add_dependency 'eac_ruby_utils', '~> 0.128', '>= 0.128.3'
   s.add_dependency 'eac_templates', '~> 0.8', '>= 0.8.1'
 
