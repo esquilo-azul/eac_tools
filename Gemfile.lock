@@ -334,7 +334,7 @@ GEM
       attr_extras (>= 6.2.4)
       diff-lcs
       patience_diff
-    tago (0.6.0)
+    tago (0.7.0)
     tty-color (0.6.0)
     tty-screen (0.8.2)
     tty-table (0.12.0)
