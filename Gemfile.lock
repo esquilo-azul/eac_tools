@@ -24,6 +24,14 @@ PATH
       eac_ruby_utils (~> 0.128, >= 0.128.6)
 
 PATH
+  remote: sub/avm-tools
+  specs:
+    avm-tools (0.163.4)
+      avm (~> 0.98, >= 0.98.1)
+      clipboard (~> 1.4, >= 1.4.1)
+      eac_ruby_base0 (~> 0.19, >= 0.19.2)
+
+PATH
   remote: sub/avm
   specs:
     avm (0.98.2)
@@ -149,10 +157,6 @@ GEM
       eac_git (~> 0.18, >= 0.18.1)
       eac_ruby_utils (~> 0.128, >= 0.128.4)
       git (~> 1.19, >= 1.19.1)
-    avm-tools (0.163.4)
-      avm (~> 0.98, >= 0.98.1)
-      clipboard (~> 1.4, >= 1.4.1)
-      eac_ruby_base0 (~> 0.19, >= 0.19.2)
     clipboard (1.4.1)
     colorize (0.8.1)
     concurrent-ruby (1.3.6)
@@ -334,6 +338,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm!
+  avm-tools!
   eac_cli!
   eac_ruby_gem_support (~> 0.12)
   eac_tools!
