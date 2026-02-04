@@ -28,7 +28,7 @@ PATH
   specs:
     avm-eac_asciidoctor_base0 (0.26.0)
       asciidoctor (~> 2.0, >= 2.0.26)
-      avm-eac_webapp_base0 (~> 0.21, >= 0.21.1)
+      avm-eac_webapp_base0 (~> 0.21, >= 0.21.3)
       eac_fs (~> 0.19, >= 0.19.1)
       eac_ruby_utils (~> 0.128, >= 0.128.3)
       os (~> 1.1, >= 1.1.4)
