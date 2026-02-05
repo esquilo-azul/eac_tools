@@ -1,0 +1,45 @@
+plugins:
+  - rubocop-rails
+  - rubocop-rspec
+AllCops:
+  NewCops: enable
+  TargetRailsVersion: 6.1
+  TargetRubyVersion: 2.7
+  Exclude:
+    - 'sub/**/*'
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+Gemspec/RequireMFA:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - '**/*.gemspec'
+    - 'spec/**/*_spec.rb'
+Layout/LineLength:
+  Max: 100
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+Rails/DynamicFindBy:
+  Enabled: false
+Rails/Exit:
+  Enabled: false
+Rails/FindEach:
+  Enabled: false
+Rails/Output:
+  Enabled: false
+Rails/SkipsModelValidations:
+  Enabled: false
+Rails/TimeZone:
+  Enabled: false
+RSpec/IncludeExamples:
+  Enabled: false # TODO: fix error with source_target_fixtures and it_behaves_like
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+RSpec/NestedGroups:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/SafeNavigation: # Bug with rubocop's version 1.76.0
+  Enabled: false
