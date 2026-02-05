@@ -11,6 +11,11 @@ module Avm
 
         include ::Avm::EacRubyBase1::Instances::Mixin
 
+        # @return [String]
+        def auto_install_ruby_version
+          application.local_source.default_ruby_version.if_present(&:to_s) || super
+        end
+
         def docker_image_class
           ::Avm::EacRedmineBase0::Instances::DockerImage
         end
