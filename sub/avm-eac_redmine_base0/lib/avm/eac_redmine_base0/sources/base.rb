@@ -5,8 +5,20 @@ module Avm
     module Sources
       class Base < ::Avm::EacRailsBase1::Sources::Base
         DEFAULT_TEST_COMMANDS = {}.freeze
+        DEFAULT_RUBY_VERSION_PARSER = /ruby_version='([^']+)'/.to_parser { |m| m[1] }
+        INSTALLER_PLUGIN_DEFAULT_SETTINGS_PATH =
+          'plugins/redmine_installer/installer/default_settings.sh'
         REDMINE_LIB_SUBPATH = 'lib/redmine.rb'
         SUBS_INCLUDE_PATHS_DEFAULT = ['plugins/*'].freeze
+
+        # @return [Avm::VersionNumber]
+        def default_ruby_version
+          ::Avm::VersionNumber.new(
+            DEFAULT_RUBY_VERSION_PARSER.parse!(
+              path.join(INSTALLER_PLUGIN_DEFAULT_SETTINGS_PATH).read
+            )
+          )
+        end
 
         # Return a empty hash (No tests).
         #
