@@ -10,7 +10,7 @@ RSpec.describe EacRubyGemSupport::SourceTargetFixtures do
     it { expect(instance.source_target_files.count).to eq(3) }
 
     (1..3).each do |index|
-      basename = "stub#{index}"
+      basename = "stub#{index}" # rubocop:disable RSpec/LeakyLocalVariable
       let(basename) { instance.source_target_files.find { |stf| stf.basename == basename } }
 
       it { expect(send(basename)).to be_present }
