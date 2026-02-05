@@ -33,7 +33,7 @@ PATH
       avm-eac_ubuntu_base0 (~> 0.7)
       eac_fs (~> 0.20)
       eac_rest (~> 0.12)
-      eac_ruby_utils (~> 0.128, >= 0.128.3)
+      eac_ruby_utils (~> 0.128, >= 0.128.6)
 
 GEM
   remote: https://rubygems.org/
