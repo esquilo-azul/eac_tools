@@ -1,3 +1,5 @@
 /Gemfile.local
 /Gemfile.lock
 /system_stack_error
+/vendor/bundle
+/.bundle
