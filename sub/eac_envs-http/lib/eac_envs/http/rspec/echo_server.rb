@@ -62,8 +62,6 @@ module EacEnvs
         def port!
           port.presence || raise('Port unsetted')
         end
-
-        require_sub __FILE__
       end
     end
   end
