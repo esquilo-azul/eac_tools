@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'webrick'
-# require 'webrick/https'
 
 module EacEnvs
   module Http
