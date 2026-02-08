@@ -14,8 +14,8 @@ RSpec.describe EacEnvs::Http::Request::BodyFields do
         { 'field1' => ['value1'], 'field2' => %w[value2 value3] }
       ]
     ].each do |d|
-      source_body = d[0]
-      expected_result = d[1]
+      source_body = d[0] # rubocop:disable RSpec/LeakyLocalVariable
+      expected_result = d[1] # rubocop:disable RSpec/LeakyLocalVariable
       context "when source_body is #{source_body}" do
         let(:instance) { described_class.new(source_body) }
 
