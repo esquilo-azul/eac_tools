@@ -106,7 +106,7 @@ PATH
       rspec (~> 3.13, >= 3.13.2)
       rubocop (~> 1.84, >= 1.84.1)
       rubocop-rails (~> 2.34, >= 2.34.3)
-      rubocop-rspec (~> 3.6)
+      rubocop-rspec (~> 3.9)
       super_diff (~> 0.9)
 
 PATH

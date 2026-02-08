@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'rspec', '~> 3.13', '>= 3.13.2'
   s.add_dependency 'rubocop', '~> 1.84', '>= 1.84.1'
   s.add_dependency 'rubocop-rails', '~> 2.34', '>= 2.34.3'
-  s.add_dependency 'rubocop-rspec', '~> 3.6'
+  s.add_dependency 'rubocop-rspec', '~> 3.9'
   s.add_dependency 'super_diff', '~> 0.9'
 end
