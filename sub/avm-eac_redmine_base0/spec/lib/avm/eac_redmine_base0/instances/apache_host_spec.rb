@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_redmine_base0/instances/apache_host'
-require 'avm/eac_redmine_base0/instances/base'
-
 RSpec.describe Avm::EacRedmineBase0::Instances::ApacheHost do
   describe '#no_ssl_site_content' do
     let(:instance) { Avm::EacRedmineBase0::Instances::Base.by_id('stub-app_0') }

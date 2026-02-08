@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_redmine_base0/instances/base'
-
 RSpec.describe Avm::EacRedmineBase0::Instances::Base, '#gitolite' do
   include_examples 'entries_values', __FILE__, {
     'app_0' => {
