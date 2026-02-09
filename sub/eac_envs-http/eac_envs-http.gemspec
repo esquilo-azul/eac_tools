@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday-retry', '~> 2.3', '>= 2.3.2'
   s.add_dependency 'random-port', '~> 0.7', '>= 0.7.1'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12', '>= 0.12.1'
 end
