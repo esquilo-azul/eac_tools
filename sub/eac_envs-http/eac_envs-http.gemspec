@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday-gzip', '~> 0.1'
   s.add_dependency 'faraday-multipart', '~> 1.2'
   s.add_dependency 'faraday-retry', '~> 2.4'
-  s.add_dependency 'random-port', '~> 0.7', '>= 0.7.1'
+  s.add_dependency 'random-port', '~> 0.7', '>= 0.7.6'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12', '>= 0.12.1'
 end
