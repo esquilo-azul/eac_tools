@@ -63,7 +63,7 @@ RSpec.shared_examples 'source_target_fixtures' do |spec_file| # rubocop:disable 
   end
 
   def target_data(target_file)
-    YAML.load_file(target_file)
+    YAML.unsafe_load_file(target_file)
   end
 
   def target_content(data)
