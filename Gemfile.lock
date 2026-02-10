@@ -47,6 +47,18 @@ PATH
       eac_rest (~> 0.12)
       eac_ruby_utils (~> 0.128, >= 0.128.6)
 
+PATH
+  remote: sub/avm
+  specs:
+    avm (0.98.3)
+      eac_cli (~> 0.45)
+      eac_config (~> 0.15)
+      eac_docker (~> 0.8)
+      eac_fs (~> 0.20)
+      eac_ruby_utils (~> 0.128, >= 0.128.6)
+      eac_templates (~> 0.8, >= 0.8.3)
+      minitar (~> 0.12, >= 0.12.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -63,14 +75,6 @@ GEM
     asciidoctor (2.0.26)
     ast (2.4.3)
     attr_extras (7.1.0)
-    avm (0.98.3)
-      eac_cli (~> 0.45)
-      eac_config (~> 0.15)
-      eac_docker (~> 0.8)
-      eac_fs (~> 0.20)
-      eac_ruby_utils (~> 0.128, >= 0.128.6)
-      eac_templates (~> 0.8, >= 0.8.3)
-      minitar (~> 0.12, >= 0.12.1)
     avm-eac_asciidoctor_base0 (0.26.1)
       asciidoctor (~> 2.0, >= 2.0.26)
       avm-eac_webapp_base0 (~> 0.21, >= 0.21.3)
@@ -333,6 +337,7 @@ PLATFORMS
 
 DEPENDENCIES
   aranha-parsers!
+  avm!
   avm-eac_redmine_base0!
   eac_ruby_gem_support (~> 0.12)
   eac_tools!
