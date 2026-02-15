@@ -23,6 +23,15 @@ PATH
       avm-tools (~> 0.163, >= 0.163.6)
       eac_ruby_utils (~> 0.129)
 
+PATH
+  remote: sub/avm-git
+  specs:
+    avm-git (0.21.1)
+      avm (~> 0.98, >= 0.98.1)
+      eac_git (~> 0.18, >= 0.18.1)
+      eac_ruby_utils (~> 0.128, >= 0.128.4)
+      git (~> 1.19, >= 1.19.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,11 +139,6 @@ GEM
       avm (~> 0.86, >= 0.86.2)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
       eac_ruby_utils (~> 0.121)
-    avm-git (0.21.1)
-      avm (~> 0.98, >= 0.98.1)
-      eac_git (~> 0.18, >= 0.18.1)
-      eac_ruby_utils (~> 0.128, >= 0.128.4)
-      git (~> 1.19, >= 1.19.1)
     avm-tools (0.163.6)
       avm (~> 0.98, >= 0.98.4)
       eac_ruby_base0 (~> 0.19, >= 0.19.3)
@@ -324,6 +328,7 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
+  avm-git!
   eac_ruby_gem_support (~> 0.12, >= 0.12.1)
   eac_tools!
 
