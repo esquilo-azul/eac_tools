@@ -5,7 +5,6 @@ module Avm
     module Instances
       module Runners
         class Logs
-          require_sub __FILE__
           runner_with :help, :subcommands do
             desc 'Manipule multiple application\'s logs.'
             subcommands
