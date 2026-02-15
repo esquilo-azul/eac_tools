@@ -24,18 +24,6 @@ PATH
       eac_ruby_utils (~> 0.129)
 
 PATH
-  remote: sub/aranha-parsers
-  specs:
-    aranha-parsers (0.26.2)
-      activesupport (>= 4.0.0)
-      addressable (~> 2.8, >= 2.8.8)
-      aranha (~> 0.20)
-      eac_envs-http (~> 0.7, >= 0.7.1)
-      eac_ruby_utils (~> 0.129)
-      nokogiri (~> 1.19)
-      ofx-parser (~> 1.1)
-
-PATH
   remote: sub/avm-eac_redmine_base0
   specs:
     avm-eac_redmine_base0 (0.24.1)
@@ -134,6 +122,14 @@ GEM
       public_suffix (>= 2.0.2, < 8.0)
     aranha (0.20.0)
       eac_ruby_utils (~> 0.128)
+    aranha-parsers (0.26.2)
+      activesupport (>= 4.0.0)
+      addressable (~> 2.8, >= 2.8.8)
+      aranha (~> 0.20)
+      eac_envs-http (~> 0.7, >= 0.7.1)
+      eac_ruby_utils (~> 0.129)
+      nokogiri (~> 1.19)
+      ofx-parser (~> 1.1)
     asciidoctor (2.0.26)
     ast (2.4.3)
     attr_extras (7.1.0)
@@ -362,7 +358,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  aranha-parsers!
   avm!
   avm-eac_redmine_base0!
   avm-eac_ruby_base1!
