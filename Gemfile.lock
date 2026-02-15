@@ -24,20 +24,6 @@ PATH
       eac_ruby_utils (~> 0.129)
 
 PATH
-  remote: sub/eac_envs-http
-  specs:
-    eac_envs-http (0.7.1)
-      eac_fs (~> 0.20)
-      eac_ruby_utils (~> 0.129)
-      faraday (~> 2.14, >= 2.14.1)
-      faraday-follow_redirects (~> 0.5)
-      faraday-gzip (~> 0.1)
-      faraday-multipart (~> 1.2)
-      faraday-retry (~> 2.4)
-      random-port (~> 0.7, >= 0.7.6)
-      webrick
-
-PATH
   remote: sub/eac_ruby_base0
   specs:
     eac_ruby_base0 (0.19.3)
@@ -201,6 +187,16 @@ GEM
     eac_docker (0.8.0)
       eac_ruby_utils (~> 0.128, >= 0.128.2)
       eac_templates (~> 0.8, >= 0.8.1)
+    eac_envs-http (0.7.1)
+      eac_fs (~> 0.20)
+      eac_ruby_utils (~> 0.129)
+      faraday (~> 2.14, >= 2.14.1)
+      faraday-follow_redirects (~> 0.5)
+      faraday-gzip (~> 0.1)
+      faraday-multipart (~> 1.2)
+      faraday-retry (~> 2.4)
+      random-port (~> 0.7, >= 0.7.6)
+      webrick
     eac_fs (0.20.0)
       content-type (~> 0.0, >= 0.0.2)
       eac_ruby_utils (~> 0.128, >= 0.128.5)
@@ -342,7 +338,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  eac_envs-http!
   eac_ruby_base0!
   eac_ruby_gem_support (~> 0.12, >= 0.12.1, >= 0)!
   eac_ruby_utils!
