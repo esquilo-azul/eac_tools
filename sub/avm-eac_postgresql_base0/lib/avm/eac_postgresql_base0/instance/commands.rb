@@ -4,23 +4,14 @@ module Avm
   module EacPostgresqlBase0
     class Instance
       module Commands
-        DUMP_EXCLUDE_PATTERNS = ['(CREATE|COMMENT ON) EXTENSION',
-                                 'SET default_table_access_method'].freeze
-
         # @return [EacRubyUtils::Envs::Command]
         def dump_command
-          DUMP_EXCLUDE_PATTERNS
-            .inject(pg_dump_command) { |a, e| a.pipe(exclude_pattern_command(e)) }
+          pg_dump_command
         end
 
         # @return [EacRubyUtils::Envs::Command]
         def dump_gzip_command
-          dump_command.pipe(gzip_compress_command)
-        end
-
-        # @return [EacRubyUtils::Envs::Command]
-        def gzip_compress_command
-          env.command('gzip', '-9', '-c')
+          dump_command
         end
 
         # @return [EacRubyUtils::Envs::Command]
@@ -61,14 +52,9 @@ module Avm
         private
 
         # @return [EacRubyUtils::Envs::Command]
-        def exclude_pattern_command(pattern)
-          env.command('sed', '--regexp-extended', "s/(^|\\n)#{pattern}[^;]*;//gm")
-        end
-
-        # @return [EacRubyUtils::Envs::Command]
         def pg_dump_command
-          env.command('pg_dump', '--no-privileges', '--no-owner', *common_command_args)
-            .envvar('PGPASSWORD', password)
+          env.command('pg_dump', '--no-privileges', '--no-owner', '--format=custom',
+                      *common_command_args).envvar('PGPASSWORD', password)
         end
       end
     end
