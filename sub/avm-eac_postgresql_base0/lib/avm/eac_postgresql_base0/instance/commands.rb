@@ -15,13 +15,8 @@ module Avm
         end
 
         # @return [EacRubyUtils::Envs::Command]
-        def gzip_decompress_command
-          env.command('gzip', '-d')
-        end
-
-        # @return [EacRubyUtils::Envs::Command]
         def load_gzip_command
-          gzip_decompress_command.pipe(psql_command)
+          pg_restore_command
         end
 
         # @return [String]
@@ -53,6 +48,8 @@ module Avm
         # @param database [Boolean, String]
         # @return [String]
         def database_args(database)
+          return [database, name] if database.is_a?(String)
+
           [database ? name : MAINTENANCE_DATABASE]
         end
 
@@ -60,6 +57,12 @@ module Avm
         def pg_dump_command
           env.command('pg_dump', '--no-privileges', '--no-owner', '--format=custom',
                       *common_command_args).envvar('PGPASSWORD', password)
+        end
+
+        # @return [EacRubyUtils::Envs::Command]
+        def pg_restore_command
+          env.command('pg_restore', '--exit-on-error', '--no-owner', '--no-comments',
+                      *common_command_args('--dbname')).envvar('PGPASSWORD', password)
         end
       end
     end
