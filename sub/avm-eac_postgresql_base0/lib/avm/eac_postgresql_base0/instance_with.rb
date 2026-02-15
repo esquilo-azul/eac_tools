@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/instances/entry_keys'
-require 'avm/eac_postgresql_base0/instance'
-
 module Avm
   module EacPostgresqlBase0
     module InstanceWith
