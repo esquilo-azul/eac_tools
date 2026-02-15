@@ -10,7 +10,9 @@ Gem::Specification.new do |s|
   s.authors     = ['Put here the authors']
   s.summary     = 'Put here de description.'
 
-  s.files = Dir['{lib,sub}/**/*', 'Gemfile', 'Gemfile.lock']
+  s.files = Dir['{exe,lib,sub}/**/*', 'Gemfile', 'Gemfile.lock']
+  s.bindir = 'exe'
+  s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   s.required_ruby_version = '>= 2.7.0'
 
