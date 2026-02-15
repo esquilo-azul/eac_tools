@@ -45,11 +45,16 @@ module Avm
         end
 
         def common_command_args(database = true) # rubocop:disable Style/OptionalBooleanParameter
-          ['--host', host, '--username', user, '--port', port,
-           (database ? name : MAINTENANCE_DATABASE)]
+          ['--host', host, '--username', user, '--port', port] + database_args(database)
         end
 
         private
+
+        # @param database [Boolean, String]
+        # @return [String]
+        def database_args(database)
+          [database ? name : MAINTENANCE_DATABASE]
+        end
 
         # @return [EacRubyUtils::Envs::Command]
         def pg_dump_command
