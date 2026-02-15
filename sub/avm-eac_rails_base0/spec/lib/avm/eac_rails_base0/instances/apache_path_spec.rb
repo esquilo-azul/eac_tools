@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_rails_base0/instances/apache_path'
-require 'avm/eac_rails_base0/instances/base'
-
 RSpec.describe Avm::EacRailsBase0::Instances::ApachePath do
   describe '#no_ssl_site_content' do
     let(:instance) { Avm::EacRailsBase0::Instances::Base.by_id('stub-app_0') }
