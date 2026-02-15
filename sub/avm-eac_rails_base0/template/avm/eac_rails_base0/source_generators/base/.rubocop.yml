@@ -1,33 +1,13 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
+---
+inherit_gem:
+  eac_rails_gem_support: ".rubocop.yml"
 AllCops:
-  TargetRailsVersion: 5.2
-  TargetRubyVersion: 2.7
-
+  Exclude:
+  - sub/**/*
+  - public/uploads/**/*
+Gemspec/RequiredRubyVersion:
+  Exclude:
+  - engines/*/*.gemspec
 Metrics/BlockLength:
   Exclude:
-    - '**/*.gemspec'
-    - 'spec/**/*_spec.rb'
-
-Layout/LineLength:
-  Max: 100
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented_relative_to_receiver
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+  - db/schema.rb
