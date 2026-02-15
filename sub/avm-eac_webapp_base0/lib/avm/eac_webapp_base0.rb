@@ -8,5 +8,7 @@ module Avm
   end
 end
 
+require 'avm'
 require 'avm/eac_generic_base0'
 require 'avm/eac_postgresql_base0'
+require 'avm/eac_ubuntu_base0'
