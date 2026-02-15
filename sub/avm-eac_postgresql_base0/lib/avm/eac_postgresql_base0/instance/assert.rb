@@ -60,7 +60,7 @@ module Avm
 
         private
 
-        def root_boolean_query(sql_after_projection)
+        def root_boolean_query(sql_after_projection) # rubocop:disable Naming/PredicateMethod
           root_query("SELECT 1 #{sql_after_projection}") == '1'
         end
 
