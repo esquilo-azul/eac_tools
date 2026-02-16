@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/core_ext'
-require 'avm/eac_rails_base1/instances/deploy'
-require 'avm/instances/entry_keys'
-
 module Avm
   module EacRailsBase0
     module Instances
