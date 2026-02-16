@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_ruby_utils', '~> 0.128', '>= 0.128.6'
   s.add_dependency 'htmlbeautifier', '~> 1.4', '>= 1.4.3'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12', '>= 0.12.1'
 end
