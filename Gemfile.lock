@@ -44,7 +44,7 @@ PATH
       avm (~> 0.98, >= 0.98.4)
       avm-eac_ruby_base1 (~> 0.39)
       avm-eac_webapp_base0 (~> 0.21, >= 0.21.4)
-      eac_ruby_utils (~> 0.128, >= 0.128.6)
+      eac_ruby_utils (~> 0.129, >= 0.129.1)
 
 PATH
   remote: sub/avm-eac_webapp_base0
