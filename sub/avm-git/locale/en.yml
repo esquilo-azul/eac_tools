@@ -1,6 +1,0 @@
-en:
-  avm:
-    git:
-      scms:
-        git_subrepo:
-          update_version_scm_message: '**/.gitrepo: fix/update.'
