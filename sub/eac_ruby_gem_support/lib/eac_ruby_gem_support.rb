@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils'
-EacRubyUtils::RootModuleSetup.perform __FILE__
+EacRubyUtils::RootModuleSetup.perform __FILE__ do
+  ignore 'rspec/shared_examples/**/*'
+end
 
 require 'active_support/ordered_options' # Fix "super_diff" '0.18.0'.
 require 'super_diff'
