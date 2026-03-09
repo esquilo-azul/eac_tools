@@ -34,6 +34,17 @@ PATH
       eac_ruby_utils (~> 0.129, >= 0.129.1)
       htmlbeautifier (~> 1.4, >= 1.4.3)
 
+PATH
+  remote: sub/eac_ruby_gem_support
+  specs:
+    eac_ruby_gem_support (0.12.1)
+      eac_ruby_utils (~> 0.129)
+      rspec (~> 3.13, >= 3.13.2)
+      rubocop (~> 1.84, >= 1.84.1)
+      rubocop-rails (~> 2.34, >= 2.34.3)
+      rubocop-rspec (~> 3.9)
+      super_diff (~> 0.18)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,13 +200,6 @@ GEM
       eac_cli (~> 0.45)
       eac_fs (~> 0.20)
       eac_ruby_utils (~> 0.129)
-    eac_ruby_gem_support (0.12.1)
-      eac_ruby_utils (~> 0.129)
-      rspec (~> 3.13, >= 3.13.2)
-      rubocop (~> 1.84, >= 1.84.1)
-      rubocop-rails (~> 2.34, >= 2.34.3)
-      rubocop-rspec (~> 3.9)
-      super_diff (~> 0.18)
     eac_ruby_utils (0.130.0)
       activesupport (>= 4, < 7)
       addressable (~> 2.8, >= 2.8.8)
@@ -340,7 +344,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_webapp_base0!
-  eac_ruby_gem_support (~> 0.12, >= 0.12.1)
+  eac_ruby_gem_support (~> 0.12, >= 0.12.1, >= 0)!
   eac_tools!
 
 BUNDLED WITH
