@@ -37,7 +37,7 @@ PATH
 PATH
   remote: sub/eac_ruby_gem_support
   specs:
-    eac_ruby_gem_support (0.12.1)
+    eac_ruby_gem_support (0.12.2)
       eac_ruby_utils (~> 0.130)
       rspec (~> 3.13, >= 3.13.2)
       rubocop (~> 1.85, >= 1.85.1)
