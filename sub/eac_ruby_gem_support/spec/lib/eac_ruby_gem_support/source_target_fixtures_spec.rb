@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_gem_support/source_target_fixtures'
-
 RSpec.describe EacRubyGemSupport::SourceTargetFixtures do
   let(:fixtures_dir) { File.join(__dir__, 'source_target_fixtures_spec_files') }
   let(:instance) { described_class.new(fixtures_dir) }

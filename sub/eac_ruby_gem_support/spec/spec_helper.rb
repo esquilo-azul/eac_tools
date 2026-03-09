@@ -99,5 +99,6 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
 end
 
+require 'eac_ruby_utils'
 require 'eac_ruby_gem_support'
 EacRubyUtils::Rspec.default_setup_create(File.expand_path('..', __dir__))

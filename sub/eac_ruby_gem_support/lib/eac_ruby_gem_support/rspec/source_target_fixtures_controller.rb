@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_gem_support/source_target_fixtures'
-require 'eac_ruby_utils/core_ext'
-
 module EacRubyGemSupport
   module Rspec
     class SourceTargetFixturesController

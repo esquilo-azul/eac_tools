@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-
 RSpec.describe "RSpec.shared_examples('spec_paths')" do # rubocop:disable RSpec/DescribeClass
   include_context 'spec_paths', __FILE__
 

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-
 module EacRubyGemSupport
   # Lists pairs of source/target files in a directory.
   class SourceTargetFixtures

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_gem_support/rspec/shared_examples/spec_paths'
-require 'eac_ruby_gem_support/rspec/source_target_fixtures_controller'
-require 'eac_ruby_gem_support/source_target_fixtures'
 require 'yaml'
 
 RSpec.shared_examples 'source_target_fixtures' do |spec_file| # rubocop:disable Metrics/BlockLength
