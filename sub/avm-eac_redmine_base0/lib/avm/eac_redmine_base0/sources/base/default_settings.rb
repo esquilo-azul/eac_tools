@@ -13,13 +13,20 @@ module Avm
 
           # @return [Avm::VersionNumber]
           def default_ruby_version
-            ::Avm::VersionNumber.new(default_setting_value(DEFAULT_RUBY_VERSION_PARSER))
+            ::Avm::VersionNumber.new(default_setting_value('ruby_version'))
           end
 
-          # @param parser [EacRubyUtils::RegexpParser]
+          # @param key [String]
           # @return [String]
-          def default_setting_value(parser)
-            parser.parse!(path.join(INSTALLER_PLUGIN_DEFAULT_SETTINGS_PATH).read)
+          def default_setting_value(key)
+            default_setting_parser(key)
+              .parse!(path.join(INSTALLER_PLUGIN_DEFAULT_SETTINGS_PATH).read)
+          end
+
+          # @param key [String]
+          # @return [EacRubyUtils::RegexpParser]
+          def default_setting_parser(key)
+            /#{::Regexp.quote(key)}='([^']+)'/.to_parser { |m| m[1] }
           end
         end
       end
