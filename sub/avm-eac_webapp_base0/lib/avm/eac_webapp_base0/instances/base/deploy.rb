@@ -9,11 +9,7 @@ module Avm
 
           # @param options [Class<Avm::EacWebappBase0::Instances::Deploy>]
           def deploy_class
-            application.stereotype.namespace_module.then do |s|
-              s.const_get('Instances').const_get('Deploy')
-            rescue ::NameError
-              s.const_get('Deploy')
-            end
+            application.stereotype.namespace_module.const_get('Instances').const_get('Deploy')
           end
 
           # @param options [Hash]
