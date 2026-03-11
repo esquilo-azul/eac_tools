@@ -16,6 +16,11 @@ module Avm
           application.local_source.default_ruby_version.if_present(&:to_s) || super
         end
 
+        # @return [Integer]
+        def auto_install_passenger_start_timeout
+          application.local_source.default_passenger_start_timeout.in_seconds
+        end
+
         def docker_image_class
           ::Avm::EacRedmineBase0::Instances::DockerImage
         end

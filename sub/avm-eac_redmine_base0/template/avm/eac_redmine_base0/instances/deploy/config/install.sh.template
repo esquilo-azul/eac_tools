@@ -1,5 +1,6 @@
 # Ruby
 export ruby_version='%%INSTALL.RUBY.VERSION%%'
+export passenger_start_timeout='%%INSTALL.PASSENGER_START_TIMEOUT%%'
 
 # NodeJs
 export nodejs_version='%%INSTALL.NODEJS.VERSION%%'
