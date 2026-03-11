@@ -53,10 +53,7 @@ module Avm
 
         def request_test
           infom 'Requesting web interface...'
-          uri = URI(instance.read_entry('web.url'))
-          response = ::Net::HTTP.get_response(uri)
-          infov 'Response status', response.code
-          fatal_error "Request to #{uri} failed" unless response.code.to_i == 200
+          ::EacEnvs::Http::Request.new.url(instance.read_entry('web.url')).response.raise_unless_200
         end
 
         protected
