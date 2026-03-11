@@ -36,6 +36,8 @@ module Avm
             ::File.join(read_entry('install.path'))
           ).env_set(host_env)
         end
+
+        require_sub __FILE__, include_modules: :prepend
       end
     end
   end
