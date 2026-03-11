@@ -53,7 +53,8 @@ module Avm
 
         def request_test
           infom 'Requesting web interface...'
-          ::EacEnvs::Http::Request.new.url(instance.read_entry('web.url')).response.raise_unless_200
+          ::EacEnvs::Http::Request.new.url(instance.read_entry('web.url'))
+            .timeout(instance.install_request_test_timeout).response.raise_unless_200
         end
 
         protected
