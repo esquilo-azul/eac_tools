@@ -33,8 +33,9 @@ function postgresql_start() {
 }
 
 function request_http_interface() {
-  title 'Requesting web interface...'
-  wget 'http://localhost%%web.path%%' &> /dev/null
+  local TARGET_URL='http://localhost%%web.path%%'
+  title "Requesting web interface in ${TARGET_URL}..."
+  wget "${TARGET_URL}" &> /dev/null
 }
 
 function redmine_log() {
