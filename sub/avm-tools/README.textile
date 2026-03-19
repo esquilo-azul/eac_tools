@@ -1,0 +1,28 @@
+h1. AVM Tools
+
+h2. Instance's entries suffixes
+
+|_. Name |_. Description |_. Default value |
+| admin.email | Admin's e-mail address | @host_id->admin.email@ |
+| admin.name | Admin's name | @host_id->admin.name@ |
+| access | *@local@* or *@ssh@* | @self->ssh.url ? 'ssh' : 'local'@ |
+| data_fs_path | path to instance's data root directory | @host_id->data_fs_path + '/' + self->id@ |
+| database.id | ID of instance to fetch database parameters | @nil@ |
+| database.limit | Limit of open database connections | @database.id->database.limit or 5 |
+| database.system | *@postgres@* or *@mysql@* or *@oracle@* | @nil@ |
+| database.hostname | hostname of database server | @database.id->database.hostname or host_id->database.hostname or '127.0.0.1'@ |
+| database.name | name of database | @database.id->database.name or self->id@ |
+| database.password | password to login in database | @database.id->database.password or host_id->database.password@ |
+| database.port | port of database server | @database.system->default_port@ |
+| database.timeout | Database connection timeout (In miliseconds) | @database.id->database.timeout or 5000 |
+| database.username | username to login in database | @database.id->database.username or host_id->database.username@ |
+| fs_path | path to instance's installation  | @host_id->fs_path + '/' + self->id@ |
+| host_id | ID of instace to fetch host parameters | @nil@ |
+| ssh.url | SSH URL to access instance's host | @host_id->ssh.url or self->ssh.username + '@' self->ssh.hostname@ |
+| ssh.hostname | SSH hostname to access instance's host | @host_id->ssh.hostname@ |
+| ssh.port | SSH port to access instance's host | '22' |
+| ssh.username | SSH username to access instance's host | @host_id->ssh.username@ |
+| system.group | Group of user that runs instance | @host_id->system.groupname or self->system.username@ |
+| system.username | Name of user that runs instance | @host_id->system.username or self->ssh.username@ |
+| web.url | Root URL to web interface | @nil@ |
+| web.hostname | Hostname of web interface | @web.url->hostname@ |

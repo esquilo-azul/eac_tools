@@ -35,6 +35,13 @@ PATH
       htmlbeautifier (~> 1.4, >= 1.4.3)
 
 PATH
+  remote: sub/avm-tools
+  specs:
+    avm-tools (0.163.6)
+      avm (~> 0.98, >= 0.98.4)
+      eac_ruby_base0 (~> 0.19, >= 0.19.3)
+
+PATH
   remote: sub/avm
   specs:
     avm (0.98.4)
@@ -144,9 +151,6 @@ GEM
       eac_ruby_utils (~> 0.129, >= 0.129.1)
       filesize
       git (~> 1.19, >= 1.19.1)
-    avm-tools (0.163.6)
-      avm (~> 0.98, >= 0.98.4)
-      eac_ruby_base0 (~> 0.19, >= 0.19.3)
     bigdecimal (4.0.1)
     clipboard (2.0.0)
     colorize (0.8.1)
@@ -345,6 +349,7 @@ PLATFORMS
 DEPENDENCIES
   avm!
   avm-eac_webapp_base0!
+  avm-tools!
   eac_ruby_gem_support (~> 0.12, >= 0.12.2)
   eac_tools!
 
