@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'bundler/setup'
+begin
+  require 'bundler/setup'
+rescue Gem::LoadError, Bundler::GemfileNotFound, Bundler::GemNotFound
+  nil
+end
 require 'eac_tools'
 EacTools::Runner.run
