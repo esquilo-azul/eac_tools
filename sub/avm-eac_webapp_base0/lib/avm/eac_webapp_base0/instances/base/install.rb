@@ -15,7 +15,7 @@ module Avm
 
           # @return [Integer]
           def install_request_test_timeout_default_value
-            ::EacEnvs::Http::Request::FaradayConnection::DEFAULT_TIMEOUT.to_seconds
+            ::EacEnvs::Http::Request::FaradayConnection::DEFAULT_TIMEOUT.in_seconds
           end
         end
       end
