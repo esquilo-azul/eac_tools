@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_ruby_base0/source_generators/base'
-
 RSpec.describe Avm::EacRubyBase0::SourceGenerators::Base do
   include_examples 'avm_source_generated', __FILE__, 'EacRubyBase0', {
     'eac-ruby-base0-version' => '0.9.0',
