@@ -7,3 +7,5 @@ module Dashed
   module Mygem
   end
 end
+
+require 'eac_ruby_base0'

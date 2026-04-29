@@ -38,6 +38,11 @@ module Avm
         def gemspec_files_file_paths
           super + GEMSPEC_FILES_FILE_PATHS
         end
+
+        # @return [Enumerable<String>]
+        def root_module_requires
+          super + ['eac_ruby_base0']
+        end
       end
     end
   end

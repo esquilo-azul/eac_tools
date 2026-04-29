@@ -5,3 +5,5 @@ EacRubyUtils::RootModuleSetup.perform __FILE__
 
 module MygemUnderscore
 end
+
+require 'eac_ruby_base0'
