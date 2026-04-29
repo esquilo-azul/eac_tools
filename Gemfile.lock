@@ -27,10 +27,10 @@ PATH
   remote: sub/avm
   specs:
     avm (0.98.5)
-      eac_cli (~> 0.45)
+      eac_cli (~> 0.46)
       eac_config (~> 0.15)
       eac_docker (~> 0.8)
-      eac_fs (~> 0.20)
+      eac_fs (~> 0.20, >= 0.20.1)
       eac_ruby_utils (~> 0.130)
       eac_templates (~> 0.8, >= 0.8.3)
       minitar (~> 0.12, >= 0.12.1)
