@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_base0/runner'
-require 'dashed/mygem/application'
-
 module Dashed
   module Mygem
     class Runner

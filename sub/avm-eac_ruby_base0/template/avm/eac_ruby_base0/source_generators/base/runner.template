@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_base0/runner'
-require '%%application_require_path%%'
-
 %%ROOT_MODULE_OPEN%%
 %%ROOT_MODULE_INNER_IDENTATION%%class Runner
 %%ROOT_MODULE_INNER_IDENTATION%%  include ::EacRubyBase0::Runner

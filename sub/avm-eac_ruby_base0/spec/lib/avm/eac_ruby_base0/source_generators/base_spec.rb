@@ -25,6 +25,17 @@ RSpec.describe Avm::EacRubyBase0::SourceGenerators::Base do
 
   alias_method :fs_comparator_super, :fs_comparator
 
+  def avm_source(*args, **options, &block)
+    super.tap do |v|
+      if v.gem_name == 'dashed-mygem'
+        FileUtils.cp(
+          fixtures_directory.join('dashed-mygem/lib/dashed.rb'),
+          v.path.join('lib/dashed.rb')
+        )
+      end
+    end
+  end
+
   def fs_comparator
     fs_comparator_super.truncate_file('Gemfile.lock')
   end

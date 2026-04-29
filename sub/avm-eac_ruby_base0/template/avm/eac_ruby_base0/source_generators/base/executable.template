@@ -2,5 +2,5 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.unshift("#{__dir__}/../lib")
-require '%%runner_require_path%%'
+require '%%lib_path%%'
 %%runner_class%%.run(program_name: File.basename(__FILE__))

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_base0/application'
-
 module MygemUnderscore
   class << self
     def application

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_base0/runner'
-require 'mygem_underscore/application'
-
 module MygemUnderscore
   class Runner
     include ::EacRubyBase0::Runner

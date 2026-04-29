@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_base0/application'
-
 %%ROOT_MODULE_OPEN%%
 %%ROOT_MODULE_INNER_IDENTATION%%class << self
 %%ROOT_MODULE_INNER_IDENTATION%%  def application
