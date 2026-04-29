@@ -20,6 +20,7 @@ module Avm
           # @return [void]
           def generate_executable
             template.child('executable').apply_to_file(self, executable_target_path.assert_parent)
+            ::FileUtils.chmod('a+x', executable_target_path)
           end
         end
       end
