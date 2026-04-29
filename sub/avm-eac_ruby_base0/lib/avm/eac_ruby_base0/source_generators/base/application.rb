@@ -12,7 +12,7 @@ module Avm
 
           # @return [Pathname]
           def application_require_path
-            lib_path.to_pathname.join('application')
+            lib_path.to_pathname.join('self')
           end
 
           # @return [Pathname]

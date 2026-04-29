@@ -9,10 +9,7 @@ module Dashed
         desc 'Tools for dashed-mygem.'
       end
 
-      # @return [EacRubyBase0::Application]
-      def application
-        ::Dashed::Mygem.application
-      end
+      delegate :application, to: :'::Dashed::Mygem::Self'
 
       require_sub __FILE__
     end
