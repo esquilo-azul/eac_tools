@@ -12,7 +12,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/esquilo-azul/eac_ruby_gem_support'
   s.metadata    = { 'source_code_uri' => 'https://github.com/esquilo-azul/eac_ruby_gem_support' }
 
-  s.files = Dir['{lib}/**/*', '.rubocop.yml']
+  s.files = Dir.glob('{lib}/**/*', File::FNM_DOTMATCH)
+              .reject { |f| ['.', '..'].include?(File.basename(f)) } +
+            ['.rubocop.yml']
 
   s.required_ruby_version = '>= 2.7.0'
 
