@@ -4,7 +4,7 @@ plugins:
 AllCops:
   NewCops: enable
   TargetRailsVersion: 6.1
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.2
   Exclude:
     - 'sub/**/*'
 Gemspec/DevelopmentDependencies:
