@@ -25,7 +25,7 @@ RSpec.describe Avm::EacRubyBase0::SourceGenerators::Base do
 
   alias_method :fs_comparator_super, :fs_comparator
 
-  def avm_source(*args, **options, &block)
+  def avm_source(*args, **options, &)
     super.tap do |v|
       if v.gem_name == 'dashed-mygem'
         FileUtils.cp(
