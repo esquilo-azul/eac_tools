@@ -23,6 +23,17 @@ PATH
       avm-tools (~> 0.164)
       eac_ruby_utils (~> 0.130)
 
+PATH
+  remote: sub/eac_ruby_gem_support
+  specs:
+    eac_ruby_gem_support (0.12.2)
+      eac_ruby_utils (~> 0.130)
+      rspec (~> 3.13, >= 3.13.2)
+      rubocop (~> 1.85, >= 1.85.1)
+      rubocop-rails (~> 2.34, >= 2.34.3)
+      rubocop-rspec (~> 3.9)
+      super_diff (~> 0.18)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -184,13 +195,6 @@ GEM
       eac_cli (~> 0.45)
       eac_fs (~> 0.20)
       eac_ruby_utils (~> 0.129)
-    eac_ruby_gem_support (0.12.2)
-      eac_ruby_utils (~> 0.130)
-      rspec (~> 3.13, >= 3.13.2)
-      rubocop (~> 1.85, >= 1.85.1)
-      rubocop-rails (~> 2.34, >= 2.34.3)
-      rubocop-rspec (~> 3.9)
-      super_diff (~> 0.18)
     eac_ruby_utils (0.131.0)
       activesupport (>= 4, < 7)
       addressable (~> 2.9)
@@ -327,7 +331,7 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  eac_ruby_gem_support (~> 0.12, >= 0.12.2)
+  eac_ruby_gem_support (~> 0.12, >= 0.12.2, >= 0)!
   eac_tools!
 
 BUNDLED WITH

@@ -1,0 +1,7 @@
+[subrepo]
+  cmdver = 0.4.9
+  commit = bc10567b94cb5fe1383be6fe2a5eabb57d176f76
+  method = merge
+  parent = 03e782353cc1d13515c90c3b003c4f75ffd9fd6f
+  branch = master
+  remote = https://github.com/esquilo-azul/eac_ruby_gem_support.git
