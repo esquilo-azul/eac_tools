@@ -10,7 +10,9 @@ Gem::Specification.new do |s|
   s.authors     = ['Put here the authors']
   s.summary     = 'Put here de description.'
 
-  s.files = Dir['{exe,lib,sub}/**/*', 'Gemfile', 'Gemfile.lock', '*.gemspec']
+  s.files = Dir.glob('{exe,lib,sub}/**/*', File::FNM_DOTMATCH)
+              .reject { |f| ['.', '..'].include?(File.basename(f)) } +
+            ['Gemfile', 'Gemfile.lock', 'eac_tools.gemspec']
   s.bindir = 'exe'
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
