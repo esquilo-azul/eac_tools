@@ -17,7 +17,7 @@ module Avm
         # @param string [String]
         # @return [String]
         def string_apply(string)
-          ::JSON.pretty_generate(::JSON.parse(string))
+          super(::JSON.pretty_generate(::JSON.parse(string)))
         end
       end
     end
