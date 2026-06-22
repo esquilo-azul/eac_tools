@@ -1,0 +1,24 @@
+# frozen_string_literal: true
+
+module Avm
+  module EacWebappBase0
+    module Instances
+      class Base < ::Avm::Instances::Base
+        module Deploy
+          common_concern
+
+          # @param options [Class<Avm::EacWebappBase0::Instances::Deploy>]
+          def deploy_class
+            application.stereotype.namespace_module.const_get('Instances').const_get('Deploy')
+          end
+
+          # @param options [Hash]
+          # return [Avm::EacWebappBase0::Instances::Deploy]
+          def deploy_instance(**options)
+            deploy_class.new(self, options)
+          end
+        end
+      end
+    end
+  end
+end
