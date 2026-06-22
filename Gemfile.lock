@@ -27,11 +27,11 @@ PATH
   remote: sub/avm-eac_webapp_base0
   specs:
     avm-eac_webapp_base0 (0.22.1)
-      avm (~> 0.98, >= 0.98.5)
+      avm (~> 0.100)
       avm-eac_generic_base0 (~> 0.15, >= 0.15.2)
       avm-eac_postgresql_base0 (~> 0.6)
       avm-eac_ubuntu_base0 (~> 0.7)
-      eac_ruby_utils (~> 0.130)
+      eac_ruby_utils (~> 0.131)
       htmlbeautifier (~> 1.4, >= 1.4.3)
 
 GEM

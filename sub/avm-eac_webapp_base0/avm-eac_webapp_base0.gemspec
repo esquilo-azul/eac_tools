@@ -13,12 +13,12 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,template}/**/{*,.*}']
   s.required_ruby_version = '>= 3.2'
 
-  s.add_dependency 'avm', '~> 0.98', '>= 0.98.5'
+  s.add_dependency 'avm', '~> 0.100'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.2'
   s.add_dependency 'avm-eac_postgresql_base0', '~> 0.6'
   s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.7'
-  s.add_dependency 'eac_ruby_utils', '~> 0.130'
+  s.add_dependency 'eac_ruby_utils', '~> 0.131'
   s.add_dependency 'htmlbeautifier', '~> 1.4', '>= 1.4.3'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12', '>= 0.12.2'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.13'
 end
