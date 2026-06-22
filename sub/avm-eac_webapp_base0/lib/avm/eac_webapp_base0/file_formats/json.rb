@@ -7,15 +7,17 @@ module Avm
         VALID_BASENAMES = %w[*.json].freeze
         VALID_TYPES = [].freeze
 
-        def file_apply(file)
-          ::File.write(file, ::JSON.pretty_generate(::JSON.parse(::File.read(file))))
-        end
-
         def json_file?(file)
           ::JSON.parse(::File.read(file))
           true
         rescue JSON::ParserError
           false
+        end
+
+        # @param string [String]
+        # @return [String]
+        def string_apply(string)
+          ::JSON.pretty_generate(::JSON.parse(string))
         end
       end
     end
