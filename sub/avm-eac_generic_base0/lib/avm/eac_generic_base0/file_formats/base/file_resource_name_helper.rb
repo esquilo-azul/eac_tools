@@ -5,9 +5,9 @@ module Avm
     module FileFormats
       class Base < ::Avm::FileFormats::Base
         module FileResourceNameHelper
-          def result_from_patterns(patterns, path, &block)
+          def result_from_patterns(patterns, path, &)
             patterns.lazy.map { |pattern| pattern.to_parser.parse(path.to_path) }
-              .find(&:present?).if_present(&block)
+              .find(&:present?).if_present(&)
           end
 
           def result_from_superclass(path)
