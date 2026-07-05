@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2'
 
-  s.add_dependency 'avm', '~> 0.101'
+  s.add_dependency 'avm', '~> 0.102'
   s.add_dependency 'avm-eac_asciidoctor_base0', '~> 0.27'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.3'
   s.add_dependency 'avm-eac_github_base0', '~> 0.4', '>= 0.4.1'
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_redmine_base0', '~> 0.26'
   s.add_dependency 'avm-eac_redmine_plugin_base0', '~> 0.5'
   s.add_dependency 'avm-eac_ruby_base0', '~> 0.2', '>= 0.2.1'
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.41', '>= 0.41.1'
+  s.add_dependency 'avm-eac_ruby_base1', '~> 0.42'
   s.add_dependency 'avm-eac_webapp_base0', '~> 0.22', '>= 0.22.2'
   s.add_dependency 'avm-eac_wordpress_base0', '~> 0.3', '>= 0.3.2'
   s.add_dependency 'avm-git', '~> 0.21', '>= 0.21.2'
