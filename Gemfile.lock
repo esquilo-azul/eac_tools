@@ -27,9 +27,9 @@ PATH
   remote: sub/avm-eac_ruby_base1
   specs:
     avm-eac_ruby_base1 (0.41.1)
-      aranha-parsers (~> 0.27)
-      avm (~> 0.100)
-      avm-eac_generic_base0 (~> 0.15, >= 0.15.2)
+      aranha-parsers (~> 0.29)
+      avm (~> 0.101)
+      avm-eac_generic_base0 (~> 0.15, >= 0.15.3)
       eac_envs-http (~> 0.7, >= 0.7.1)
       eac_ruby_utils (~> 0.131)
 
