@@ -45,6 +45,14 @@ module EacRubyBase1
     def perform
       perform_block
       perform_zeitwerk
+      root_module
+    end
+
+    # @return [void]
+    def root_module
+      relative_root_module_file.each_filename.inject(DEFAULT_NAMESPACE) do |a, e|
+        a.const_get(e.camelize)
+      end
     end
 
     protected
