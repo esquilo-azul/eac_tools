@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils'
-EacRubyUtils::RootModuleSetup.perform __FILE__
-
-module EacRubyBase1
-end
+require 'eac_ruby_base1/root_module_setup'
+EacRubyBase1::RootModuleSetup.perform __FILE__
