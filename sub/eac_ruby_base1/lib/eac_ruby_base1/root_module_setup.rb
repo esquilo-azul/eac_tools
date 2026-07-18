@@ -6,7 +6,7 @@ require 'zeitwerk'
 
 module EacRubyBase1
   class RootModuleSetup
-    require_sub __FILE__, require_mode: :kernel
+    require_sub __FILE__, require_mode: :kernel, include_modules: true
 
     DEFAULT_NAMESPACE = ::Object
     LIB_DIRECTORY_BASENAME = 'lib'
@@ -46,6 +46,7 @@ module EacRubyBase1
       perform_block
       perform_zeitwerk
       root_module
+      perform_requires
     end
 
     # @return [void]
