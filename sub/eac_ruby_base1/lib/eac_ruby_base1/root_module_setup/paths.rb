@@ -25,10 +25,9 @@ module EacRubyBase1
         end
       end
 
-      # @return [String]
+      # @return [Pathname]
       def root_module_directory
-        ::File.expand_path(::File.basename(root_module_file, '.*'),
-                           ::File.dirname(root_module_file))
+        root_module_file.basename('.*').expand_path(root_module_file.dirname)
       end
 
       protected
