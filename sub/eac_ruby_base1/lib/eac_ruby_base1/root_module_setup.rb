@@ -47,6 +47,7 @@ module EacRubyBase1
       perform_zeitwerk
       root_module
       perform_requires
+      require_patches
     end
 
     # @return [void]
