@@ -3,6 +3,9 @@
 module EacRubyBase1
   class RootModuleSetup
     module Paths
+      # @!attribute [r] root_module_file
+      # @return [Pathname] Absolute path to the gem's module root file.
+
       attr_reader :root_module_file
 
       # @return [String]

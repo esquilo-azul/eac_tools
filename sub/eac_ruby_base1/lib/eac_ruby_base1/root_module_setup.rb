@@ -12,7 +12,7 @@ module EacRubyBase1
     LIB_DIRECTORY_BASENAME = 'lib'
 
     class << self
-      # @param root_module_file [String]
+      # @param root_module_file [Pathname]
       def perform(root_module_file, &)
         new(root_module_file, &).perform
       end
@@ -21,9 +21,9 @@ module EacRubyBase1
     attr_reader :block
     attr_writer :logging
 
-    # @param root_module_file [String]
+    # @param root_module_file [Pathname]
     def initialize(root_module_file, &block)
-      self.root_module_file = root_module_file
+      self.root_module_file = root_module_file.to_pathname
       self.block = block
     end
 
