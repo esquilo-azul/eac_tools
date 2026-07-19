@@ -18,7 +18,7 @@ module EacRubyBase1
       end
     end
 
-    attr_reader :block, :root_module_file
+    attr_reader :block
     attr_writer :logging
 
     # @param root_module_file [String]
@@ -67,32 +67,9 @@ module EacRubyBase1
       perform_zeitwerk
     end
 
-    # @return [String]
-    def relative_root_module_file
-      count = 0
-      current = ::File.basename(root_module_file, '.*')
-      dirname = ::File.dirname(root_module_file)
-      loop do
-        ibr if dirname == '/'
-
-        break current if ::File.basename(dirname) == LIB_DIRECTORY_BASENAME
-
-        current = ::File.join(::File.basename(dirname), current)
-        dirname = ::File.dirname(dirname)
-
-        count += 1
-      end
-    end
-
-    # @return [String]
-    def root_module_directory
-      ::File.expand_path(::File.basename(root_module_file, '.*'),
-                         ::File.dirname(root_module_file))
-    end
-
     protected
 
-    attr_writer :block, :root_module_file
+    attr_writer :block
 
     def perform_block
       instance_eval(&block) if block
