@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     eac_tools (0.117.0)
-      avm (~> 0.102)
+      avm (~> 0.102, >= 0.102.1)
       avm-eac_asciidoctor_base0 (~> 0.27)
       avm-eac_generic_base0 (~> 0.15, >= 0.15.3)
       avm-eac_github_base0 (~> 0.4, >= 0.4.1)
@@ -16,12 +16,12 @@ PATH
       avm-eac_redmine_base0 (~> 0.26)
       avm-eac_redmine_plugin_base0 (~> 0.5)
       avm-eac_ruby_base0 (~> 0.2, >= 0.2.1)
-      avm-eac_ruby_base1 (~> 0.42)
+      avm-eac_ruby_base1 (~> 0.42, >= 0.42.1)
       avm-eac_webapp_base0 (~> 0.22, >= 0.22.2)
       avm-eac_wordpress_base0 (~> 0.3, >= 0.3.2)
       avm-git (~> 0.21, >= 0.21.2)
       avm-tools (~> 0.164)
-      eac_ruby_utils (~> 0.131)
+      eac_ruby_utils (~> 0.131, >= 0.131.1)
 
 PATH
   remote: sub/avm-eac_ruby_base1
