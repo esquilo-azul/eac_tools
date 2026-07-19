@@ -8,18 +8,18 @@ module EacRubyBase1
 
       attr_reader :root_module_file
 
-      # @return [String]
+      # @return [Pathname]
       def relative_root_module_file
         count = 0
-        current = ::File.basename(root_module_file, '.*')
-        dirname = ::File.dirname(root_module_file)
+        current = root_module_file.basename('.*')
+        dirname = root_module_file.dirname
         loop do
-          ibr if dirname == '/'
+          ibr if dirname.root?
 
-          break current if ::File.basename(dirname) == LIB_DIRECTORY_BASENAME
+          break current if dirname.basename.to_path == LIB_DIRECTORY_BASENAME
 
-          current = ::File.join(::File.basename(dirname), current)
-          dirname = ::File.dirname(dirname)
+          current = dirname.basename.join(current)
+          dirname = dirname.dirname
 
           count += 1
         end

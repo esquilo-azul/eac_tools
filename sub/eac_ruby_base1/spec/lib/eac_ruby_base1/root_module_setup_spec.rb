@@ -16,7 +16,7 @@ RSpec.describe(EacRubyBase1::RootModuleSetup) do
     context "when gem is \"#{gem_name}\"" do
       let(:root_module_file_subpath) { values[0] }
       let(:namespace_name) { values[1] }
-      let(:relative_root_module_file) { values[2] }
+      let(:relative_root_module_file) { Pathname.new(values[2]) }
 
       let(:root_module_file) do
         Gem.loaded_specs[gem_name].full_gem_path.to_pathname
