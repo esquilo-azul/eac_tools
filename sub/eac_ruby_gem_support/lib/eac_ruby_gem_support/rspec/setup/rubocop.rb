@@ -5,7 +5,7 @@ require 'rubocop'
 
 module EacRubyGemSupport
   module Rspec
-    module Specs
+    module Setup
       module Rubocop
         def describe_rubocop # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
           this = self

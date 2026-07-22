@@ -6,7 +6,6 @@ module EacRubyGemSupport
   module Rspec
     module Setup
       extend ::ActiveSupport::Concern
-      include ::EacRubyGemSupport::Rspec::Specs::Rubocop
 
       SETUPS = %w[load_path example_persistence filesystem_helper shared_examples].freeze
 
@@ -46,6 +45,8 @@ module EacRubyGemSupport
         r.mkpath unless r.exist?
         r
       end
+
+      require_sub __FILE__, include_modules: true
     end
   end
 end
