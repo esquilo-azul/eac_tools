@@ -7,7 +7,7 @@ module EacRubyGemSupport
     module Setup
       extend ::ActiveSupport::Concern
 
-      SETUPS = %w[load_path example_persistence filesystem_helper shared_examples].freeze
+      SETUPS = %w[load_path example_persistence filesystem_helper shared_examples rubocop].freeze
 
       def self.extended(setup_obj)
         SETUPS.each { |s| setup_obj.send("setup_#{s}") }
