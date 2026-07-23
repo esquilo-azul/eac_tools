@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-EacRubyUtils::RootModuleSetup.perform __FILE__
-
-module Avm
-  module EacRubyBase0
-  end
+require 'eac_ruby_base1'
+EacRubyBase1::RootModuleSetup.perform __FILE__ do
+  require 'avm/eac_ruby_base1'
 end
-
-require 'avm/eac_ruby_base1'
