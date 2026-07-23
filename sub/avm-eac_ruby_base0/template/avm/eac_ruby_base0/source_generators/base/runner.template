@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+%%ROOT_MODULE_OPEN%%
+%%ROOT_MODULE_INNER_IDENTATION%%class Runner
+%%ROOT_MODULE_INNER_IDENTATION%%  include ::EacRubyBase0::Runner
+
+%%ROOT_MODULE_INNER_IDENTATION%%  runner_definition do
+%%ROOT_MODULE_INNER_IDENTATION%%    desc 'Tools for %%NAME%%.'
+%%ROOT_MODULE_INNER_IDENTATION%%  end
+
+%%ROOT_MODULE_INNER_IDENTATION%%  delegate :application, to: :'::%%ROOT_MODULE%%::Self'
+
+%%ROOT_MODULE_INNER_IDENTATION%%  require_sub __FILE__
+%%ROOT_MODULE_INNER_IDENTATION%%end
+%%ROOT_MODULE_CLOSE%%
