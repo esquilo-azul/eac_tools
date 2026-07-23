@@ -3,7 +3,7 @@
 RSpec.describe Avm::EacRubyBase0::SourceGenerators::Base do
   include_examples 'avm_source_generated', __FILE__, 'EacRubyBase0', {
     'eac-ruby-base0-version' => '0.9.0',
-    'eac-ruby-utils-version' => '0.122.0',
+    'eac-ruby-base1-version' => '0.1.1',
     'eac-ruby-gem-support-version' => '0.10.0',
     'gemfile-lock' => true,
     block_on_each_source:

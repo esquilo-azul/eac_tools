@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   s.add_dependency 'eac_ruby_base0', '~> 0.9'
-  s.add_dependency 'eac_ruby_utils', '~> 0.122'
+  s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
 
   s.add_development_dependency 'eac_ruby_gem_support', '~> 0.10'
 end

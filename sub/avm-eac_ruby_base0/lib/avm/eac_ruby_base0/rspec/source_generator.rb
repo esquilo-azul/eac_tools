@@ -7,8 +7,8 @@ module Avm
         APPLICATION_STEREOTYPE = 'EacRubyBase0'
         DEFAULT_VERSIONS = {
           'eac_ruby_base0' => '0.9.0',
-          'eac_ruby_gem_support' => '0.10.0',
-          'eac_ruby_utils' => '0.122.0'
+          'eac_ruby_base1' => '0.1.1',
+          'eac_ruby_gem_support' => '0.10.0'
         }.freeze
 
         # @return [Avm::EacRubyBase0::Sources::Base]
