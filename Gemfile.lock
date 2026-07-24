@@ -33,17 +33,6 @@ PATH
       eac_envs-http (~> 0.7, >= 0.7.1)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
-PATH
-  remote: sub/eac_ruby_gem_support
-  specs:
-    eac_ruby_gem_support (0.14.0)
-      eac_ruby_base1 (~> 0.1)
-      rspec (~> 3.13, >= 3.13.2)
-      rubocop (~> 1.88, >= 1.88.2)
-      rubocop-rails (~> 2.36)
-      rubocop-rspec (~> 3.10, >= 3.10.2)
-      super_diff (~> 0.19)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -211,6 +200,13 @@ GEM
       eac_ruby_utils (~> 0.129)
     eac_ruby_base1 (0.1.1)
       eac_ruby_utils (~> 0.131, >= 0.131.2)
+    eac_ruby_gem_support (0.14.0)
+      eac_ruby_base1 (~> 0.1)
+      rspec (~> 3.13, >= 3.13.2)
+      rubocop (~> 1.88, >= 1.88.2)
+      rubocop-rails (~> 2.36)
+      rubocop-rspec (~> 3.10, >= 3.10.2)
+      super_diff (~> 0.19)
     eac_ruby_utils (0.131.2)
       activesupport (>= 6.1.7.10)
       addressable (~> 2.9)
@@ -350,7 +346,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_ruby_base1!
-  eac_ruby_gem_support (~> 0.14, >= 0)!
+  eac_ruby_gem_support (~> 0.14)
   eac_tools!
 
 BUNDLED WITH
