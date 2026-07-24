@@ -37,8 +37,9 @@ module Avm
             ::Avm::Launcher::Context.current.publish_options = publish_options
           end
 
+          # @return [Hash]
           def publish_options
-            { new: parsed.new?, stereotype: parsed.stereotype?, confirm: run? }
+            { new: parsed.new?, stereotype: parsed.stereotype, confirm: run? }
           end
 
           def run?
