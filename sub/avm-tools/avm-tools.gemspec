@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.bindir = 'exe'
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
-  s.required_ruby_version = '>= 2.7.0'
+  s.required_ruby_version = '>= 3.2'
 
   s.add_dependency 'avm', '~> 0.102', '>= 0.102.2'
   s.add_dependency 'eac_ruby_base0', '~> 0.19', '>= 0.19.3'
