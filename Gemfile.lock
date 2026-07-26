@@ -55,7 +55,7 @@ PATH
       avm-eac_generic_base0 (~> 0.15, >= 0.15.3)
       avm-eac_postgresql_base0 (~> 0.6)
       avm-eac_ubuntu_base0 (~> 0.7, >= 0.7.1)
-      eac_ruby_utils (~> 0.131, >= 0.131.3)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
       htmlbeautifier (~> 1.4, >= 1.4.3)
 
 PATH
