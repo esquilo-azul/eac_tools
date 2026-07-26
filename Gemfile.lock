@@ -43,7 +43,7 @@ PATH
 PATH
   remote: sub/avm-eac_latex_base0
   specs:
-    avm-eac_latex_base0 (0.3.2)
+    avm-eac_latex_base0 (0.3.3)
       avm (~> 0.102, >= 0.102.3)
       avm-eac_webapp_base0 (~> 0.22, >= 0.22.3)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
