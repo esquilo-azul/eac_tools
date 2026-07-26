@@ -24,7 +24,7 @@ module Aranha
       end
     end
 
-    def process_next_address
+    def process_next_address # rubocop:disable Naming/PredicateMethod
       a = next_address
       if a
         process_address(a)
