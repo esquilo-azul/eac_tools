@@ -23,7 +23,7 @@ module Avm
         end
 
         def apache_setup
-          template.child(apache_setup_dockerfile).apply(self)
+          eac_template.child(apache_setup_dockerfile).apply(self)
         end
 
         # @return [String]
@@ -76,7 +76,7 @@ module Avm
         def write_in_provide_dir
           super
 
-          ::Avm::EacRedmineBase0::Instances::Deploy.template.child('config')
+          ::Avm::EacRedmineBase0::Instances::Deploy.eac_template.child('config')
             .child('install.sh')
             .apply_to_file(variables_source, provide_dir.join('install_settings.sh'))
         end
