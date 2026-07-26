@@ -36,7 +36,8 @@ module Avm
           def copy_commons_files
             target_dir = source_temp_dir.join('commons')
             target_dir.mkpath
-            ::Avm::EacLatexBase0::Sources::Build::Commons.instance.template.apply(self, target_dir)
+            ::Avm::EacLatexBase0::Sources::Build::Commons.instance.eac_template.apply(self,
+                                                                                      target_dir)
           end
         end
       end
