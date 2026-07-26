@@ -27,7 +27,7 @@ PATH
   remote: sub/aranha
   specs:
     aranha (0.20.0)
-      eac_ruby_utils (~> 0.131, >= 0.131.3)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
   remote: sub/avm-eac_ruby_base1
