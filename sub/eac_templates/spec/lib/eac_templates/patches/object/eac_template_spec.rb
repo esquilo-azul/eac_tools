@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Object, '#template' do
+RSpec.describe Object, '#eac_template' do
   let(:instance_class) do
     Class.new do
       def self.name
@@ -22,10 +22,10 @@ RSpec.describe Object, '#template' do
   include_examples 'spec_paths', __FILE__
 
   EacTemplates::InterfaceMethods::FILE.each do |method_name|
-    it { expect(instance.template).to respond_to(method_name) }
+    it { expect(instance.eac_template).to respond_to(method_name) }
   end
 
   it do
-    expect(instance.template.apply(the_var: 'friend')).to eq("Hello, friend!\n")
+    expect(instance.eac_template.apply(the_var: 'friend')).to eq("Hello, friend!\n")
   end
 end
