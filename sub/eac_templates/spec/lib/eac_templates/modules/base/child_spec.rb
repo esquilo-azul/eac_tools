@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/modules/base'
-require 'eac_templates/errors/not_found'
-require 'eac_templates/sources/set'
-
 RSpec.describe EacTemplates::Modules::Base, '#child' do
   include_context 'with modules resouces'
 

@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 require 'active_support/core_ext/object/blank'
-require 'eac_templates/sources/directory'
-require 'eac_templates/sources/file'
-require 'eac_templates/sources/internal_set'
-require 'eac_templates/errors/not_found'
 
 module EacTemplates
   module Sources

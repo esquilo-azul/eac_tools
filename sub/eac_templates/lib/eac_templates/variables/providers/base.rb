@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/variables/not_found_error'
-
 module EacTemplates
   module Variables
     module Providers

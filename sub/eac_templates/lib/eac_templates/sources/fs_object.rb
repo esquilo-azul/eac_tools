@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_templates/errors/not_found'
-
 module EacTemplates
   module Sources
     module FsObject

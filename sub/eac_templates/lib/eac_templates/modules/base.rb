@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_templates/interface_methods'
-require 'eac_templates/abstract/with_directory_file_methods'
-require 'eac_templates/modules/ancestor'
-require 'eac_templates/sources/set'
-require 'eac_templates/errors/type_mismatch'
-
 module EacTemplates
   module Modules
     class Base

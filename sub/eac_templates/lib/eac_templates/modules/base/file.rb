@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_templates/abstract/file'
-require 'eac_templates/interface_methods'
-require 'eac_templates/modules/base/fs_object'
-
 module EacTemplates
   module Modules
     class Base

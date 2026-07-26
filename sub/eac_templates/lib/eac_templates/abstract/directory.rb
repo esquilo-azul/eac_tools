@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_templates/interface_methods'
-require 'eac_templates/abstract/fs_object'
-require 'eac_templates/variables/directory'
-
 module EacTemplates
   module Abstract
     class Directory < ::EacTemplates::Abstract::FsObject

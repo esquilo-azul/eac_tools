@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/interface_methods'
-require 'eac_templates/sources/set'
-
 RSpec.describe EacTemplates::Sources::Set do
   let(:files_dir) { File.join(__dir__, 'set_spec_files') }
   let(:instance) do

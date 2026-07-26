@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_templates/abstract/directory'
-require 'eac_templates/interface_methods'
-require 'eac_templates/modules/ancestor/fs_object'
-
 module EacTemplates
   module Modules
     class Ancestor

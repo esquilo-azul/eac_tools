@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_config'
-require 'eac_templates/variables/providers/base'
-
 module EacTemplates
   module Variables
     module Providers

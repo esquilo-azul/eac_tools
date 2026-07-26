@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils'
-require 'eac_templates/sources/single'
-
 module EacTemplates
   module Sources
     class InternalSet < ::Set

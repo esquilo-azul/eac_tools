@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/errors/not_found'
-require 'eac_templates/abstract/directory'
-require 'eac_templates/variables/file'
-require 'eac_templates/variables/fs_object'
-
 module EacTemplates
   module Variables
     class Directory

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_config'
-require 'eac_templates/variables/file'
-
 RSpec.describe EacTemplates::Variables::Content do
   let(:files_dir) { File.join(__dir__, 'content_spec_files').to_pathname }
   let(:source_path) { files_dir.join('source.template') }

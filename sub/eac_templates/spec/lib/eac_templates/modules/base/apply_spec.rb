@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_fs/comparator'
-require 'eac_templates/modules/base'
-require 'eac_templates/errors/not_found'
-require 'eac_templates/sources/set'
-
 RSpec.describe EacTemplates::Modules::Base, '#apply' do
   include_context 'spec_paths', __FILE__
   include_context 'with modules resouces'

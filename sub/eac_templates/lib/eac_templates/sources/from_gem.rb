@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/sources/set'
-
 module EacTemplates
   module Sources
     class FromGem

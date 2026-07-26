@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/errors/not_found'
-
 module EacTemplates
   module Abstract
     module WithDirectoryFileMethods

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/variables/file'
-
 module EacTemplates
   module Variables
     class FsObject
