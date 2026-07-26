@@ -24,4 +24,8 @@ RSpec.describe Object, '#template' do
   EacTemplates::InterfaceMethods::FILE.each do |method_name|
     it { expect(instance.template).to respond_to(method_name) }
   end
+
+  it do
+    expect(instance.template.apply(the_var: 'friend')).to eq("Hello, friend!\n")
+  end
 end
