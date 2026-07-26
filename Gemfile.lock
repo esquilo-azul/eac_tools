@@ -24,12 +24,6 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
-  remote: sub/aranha
-  specs:
-    aranha (0.20.1)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-
-PATH
   remote: sub/avm-eac_asciidoctor_base0
   specs:
     avm-eac_asciidoctor_base0 (0.27.1)
@@ -156,6 +150,8 @@ GEM
       uri (>= 0.13.1)
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
+    aranha (0.20.1)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
     aranha-parsers (0.29.0)
       activesupport (>= 4.0.0)
       addressable (~> 2.9)
@@ -393,7 +389,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  aranha!
   avm!
   avm-eac_asciidoctor_base0!
   avm-eac_latex_base0!
