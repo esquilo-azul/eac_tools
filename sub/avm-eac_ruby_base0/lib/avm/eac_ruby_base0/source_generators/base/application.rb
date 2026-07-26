@@ -24,7 +24,8 @@ module Avm
 
           # @return [void]
           def generate_application
-            template.child('application').apply_to_file(self, application_target_path.assert_parent)
+            eac_template.child('application').apply_to_file(self,
+                                                            application_target_path.assert_parent)
           end
         end
       end
