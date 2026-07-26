@@ -50,7 +50,7 @@ PATH
 PATH
   remote: sub/avm-eac_webapp_base0
   specs:
-    avm-eac_webapp_base0 (0.22.2)
+    avm-eac_webapp_base0 (0.22.3)
       avm (~> 0.102, >= 0.102.3)
       avm-eac_generic_base0 (~> 0.15, >= 0.15.3)
       avm-eac_postgresql_base0 (~> 0.6)
