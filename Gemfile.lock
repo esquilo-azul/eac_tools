@@ -30,6 +30,17 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
+  remote: sub/avm-eac_asciidoctor_base0
+  specs:
+    avm-eac_asciidoctor_base0 (0.27.0)
+      asciidoctor (~> 2.0, >= 2.0.26)
+      avm-eac_webapp_base0 (~> 0.22, >= 0.22.1)
+      eac_fs (~> 0.20, >= 0.20.1)
+      eac_ruby_utils (~> 0.130)
+      os (~> 1.1, >= 1.1.4)
+      rouge (~> 3.30)
+
+PATH
   remote: sub/avm-eac_ruby_base1
   specs:
     avm-eac_ruby_base1 (0.43.2)
@@ -119,13 +130,6 @@ GEM
     asciidoctor (2.0.26)
     ast (2.4.3)
     attr_extras (7.1.0)
-    avm-eac_asciidoctor_base0 (0.27.0)
-      asciidoctor (~> 2.0, >= 2.0.26)
-      avm-eac_webapp_base0 (~> 0.22, >= 0.22.1)
-      eac_fs (~> 0.20, >= 0.20.1)
-      eac_ruby_utils (~> 0.130)
-      os (~> 1.1, >= 1.1.4)
-      rouge (~> 3.30)
     avm-eac_generic_base0 (0.15.3)
       avm (~> 0.100)
       eac_ruby_utils (~> 0.131)
@@ -375,6 +379,7 @@ PLATFORMS
 DEPENDENCIES
   aranha!
   avm!
+  avm-eac_asciidoctor_base0!
   avm-eac_ruby_base1!
   avm-eac_ubuntu_base0!
   avm-eac_webapp_base0!
