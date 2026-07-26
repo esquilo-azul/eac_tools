@@ -6,7 +6,7 @@ module Avm
       class SystemdUnit
         module Service
           def service_content
-            template.child('tasks_scheduler.service').apply(variables_source)
+            eac_template.child('tasks_scheduler.service').apply(variables_source)
           end
 
           def service_exec_lines
@@ -55,8 +55,8 @@ module Avm
             systemctl('start', unit_name)
           end
 
-          def systemctl(*args)
-            sudo_system!('systemctl', *args)
+          def systemctl(*)
+            sudo_system!('systemctl', *)
           end
 
           def write_service

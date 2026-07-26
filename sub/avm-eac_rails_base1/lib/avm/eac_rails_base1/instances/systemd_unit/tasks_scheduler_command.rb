@@ -6,7 +6,7 @@ module Avm
       class SystemdUnit
         module TasksSchedulerCommand
           def tasks_scheduler_command_content
-            template.child('tasks_scheduler_command.sh').apply(variables_source)
+            eac_template.child('tasks_scheduler_command.sh').apply(variables_source)
           end
 
           def tasks_scheduler_command_path
