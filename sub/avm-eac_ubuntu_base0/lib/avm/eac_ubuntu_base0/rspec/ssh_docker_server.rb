@@ -31,7 +31,7 @@ module Avm
         end
 
         def env_identity_file
-          template.child('id_rsa').path
+          eac_template.child('id_rsa').path
         end
 
         def env_identity_file_good_permissions
