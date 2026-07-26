@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-
 module Avm
   module EacLatexBase0
     module Sources
       class Build
         class File
-          require_sub __FILE__
           include ::Avm::EacLatexBase0::Sources::Build::File::BaseStereotype
 
           DEFAULT_STEREOTYPES = [::Avm::EacLatexBase0::Sources::Build::File::ChapterIndex,

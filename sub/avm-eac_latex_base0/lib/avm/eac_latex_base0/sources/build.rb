@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/executables'
-require 'avm/eac_latex_base0/executables'
-require 'eac_ruby_utils/core_ext'
-require 'eac_ruby_utils/fs/temp'
-require 'eac_ruby_utils/fs/clearable_directory'
-
 module Avm
   module EacLatexBase0
     module Sources

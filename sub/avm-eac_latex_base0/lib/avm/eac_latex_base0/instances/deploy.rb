@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_webapp_base0/instances/deploy'
-require 'avm/eac_latex_base0/sources/base'
-require 'avm/eac_latex_base0/sources/build'
-
 module Avm
   module EacLatexBase0
     module Instances

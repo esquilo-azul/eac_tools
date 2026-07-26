@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_templates/core_ext'
 require 'singleton'
 
 module Avm

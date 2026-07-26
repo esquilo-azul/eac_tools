@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'avm/eac_latex_base0/sources/build/commons'
-require 'avm/eac_latex_base0/sources/build/file'
-
 module Avm
   module EacLatexBase0
     module Sources
