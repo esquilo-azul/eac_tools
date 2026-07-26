@@ -32,7 +32,7 @@ module EacDocker
       end
 
       def write_in_provide_dir
-        template.apply(variables_source, provide_dir)
+        eac_template.apply(variables_source, provide_dir)
       end
 
       private
