@@ -8,8 +8,8 @@ module Avm
 
         DEFAULT_RAILS_ENVIRONMENT = 'production'
 
-        def bundle(*args)
-          the_gem.bundle(*args).chdir_root.envvar('RAILS_ENV', DEFAULT_RAILS_ENVIRONMENT)
+        def bundle(*)
+          the_gem.bundle(*).chdir_root.envvar('RAILS_ENV', DEFAULT_RAILS_ENVIRONMENT)
         end
 
         # @return [Avm::Instances::Data::Package]
@@ -27,8 +27,8 @@ module Avm
           super + [::Avm::EacRailsBase1::Instances::Processes::TasksScheduler.new(self)]
         end
 
-        def rake(*args)
-          bundle('exec', 'rake', *args)
+        def rake(*)
+          bundle('exec', 'rake', *)
         end
 
         def the_gem
