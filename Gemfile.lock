@@ -40,6 +40,14 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
+  remote: sub/avm-eac_ubuntu_base0
+  specs:
+    avm-eac_ubuntu_base0 (0.7.0)
+      avm (~> 0.98, >= 0.98.2)
+      eac_ruby_utils (~> 0.128, >= 0.128.6)
+      eac_templates (~> 0.8, >= 0.8.3)
+
+PATH
   remote: sub/avm-tools
   specs:
     avm-tools (0.164.1)
@@ -154,10 +162,6 @@ GEM
     avm-eac_ruby_base0 (0.3.0)
       avm-eac_ruby_base1 (~> 0.43)
       eac_ruby_utils (~> 0.131, >= 0.131.2)
-    avm-eac_ubuntu_base0 (0.7.0)
-      avm (~> 0.98, >= 0.98.2)
-      eac_ruby_utils (~> 0.128, >= 0.128.6)
-      eac_templates (~> 0.8, >= 0.8.3)
     avm-eac_webapp_base0 (0.22.2)
       avm (~> 0.100)
       avm-eac_generic_base0 (~> 0.15, >= 0.15.2)
@@ -368,6 +372,7 @@ DEPENDENCIES
   aranha!
   avm!
   avm-eac_ruby_base1!
+  avm-eac_ubuntu_base0!
   avm-tools!
   eac_docker!
   eac_ruby_gem_support (~> 0.14)
