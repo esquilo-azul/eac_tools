@@ -7,7 +7,7 @@ module EacTemplates
   module Variables
     class Content
       VARIABLE_DELIMITER = ::Regexp.quote('%%')
-      VARIABLE_PATTERN = /#{VARIABLE_DELIMITER}([a-z0-9._]*)#{VARIABLE_DELIMITER}/i.freeze
+      VARIABLE_PATTERN = /#{VARIABLE_DELIMITER}([a-z0-9._]*)#{VARIABLE_DELIMITER}/i
 
       class << self
         # @param path [Pathname]

@@ -12,7 +12,7 @@ module EacTemplates
         include ::EacTemplates::Modules::Ancestor::FsObject
 
         TEMPLATE_EXTNAME_PATTERN =
-          /#{::Regexp.quote(::EacTemplates::Variables::FsObject::TEMPLATE_EXTNAME)}\z/.freeze
+          /#{::Regexp.quote(::EacTemplates::Variables::FsObject::TEMPLATE_EXTNAME)}\z/
 
         class << self
           def parse_basename(basename)

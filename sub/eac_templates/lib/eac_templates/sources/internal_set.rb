@@ -20,7 +20,7 @@ module EacTemplates
 
       # @return [String]
       def to_s
-        "#{self.class.name}[#{map(&:to_s).join(', ')}]"
+        "#{self.class.name}[#{join(', ')}]"
       end
     end
   end
