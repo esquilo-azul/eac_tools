@@ -8,7 +8,7 @@ module Avm
         include ::Avm::Entries::Jobs::Base
 
         def content
-          ::Avm::EacWebappBase0::Instances::ApachePath.template.child('default.conf')
+          ::Avm::EacWebappBase0::Instances::ApachePath.eac_template.child('default.conf')
             .apply(variables_source)
         end
 

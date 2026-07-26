@@ -16,7 +16,7 @@ module Avm
 
         def no_ssl_site_content
           ::Avm::EacWebappBase0::Instances::ApacheHost
-            .template.child('no_ssl.conf')
+            .eac_template.child('no_ssl.conf')
             .apply(variables_source)
         end
 
