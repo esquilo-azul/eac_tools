@@ -9,6 +9,7 @@ module Avm
         class File
           require_sub __FILE__
           include ::Avm::EacLatexBase0::Sources::Build::File::BaseStereotype
+
           DEFAULT_STEREOTYPES = [::Avm::EacLatexBase0::Sources::Build::File::ChapterIndex,
                                  ::Avm::EacLatexBase0::Sources::Build::File::TexSource].freeze
 
