@@ -30,7 +30,7 @@ PATH
       clipboard (~> 2.0)
       colorize (~> 0.8, >= 0.8.1)
       eac_config (~> 0.15)
-      eac_ruby_utils (~> 0.131)
+      eac_ruby_utils (~> 0.131, >= 0.131.4)
       tty-table (~> 0.12)
 
 PATH
