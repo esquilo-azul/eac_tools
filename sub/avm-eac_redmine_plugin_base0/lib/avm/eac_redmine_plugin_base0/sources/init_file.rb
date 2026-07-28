@@ -6,7 +6,7 @@ module Avm
       class InitFile
         common_constructor :path
 
-        VERSION_LINE_PATTERN = /\A(\s*)version\s*['"]([^'"]+)['"](\s*)\z/.freeze
+        VERSION_LINE_PATTERN = /\A(\s*)version\s*['"]([^'"]+)['"](\s*)\z/
 
         def version
           path.read.each_line.lazy.map { |line| line_value(line) }.find { |v| v }
