@@ -10,7 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ['Eduardo H. Bogoni']
   s.summary     = 'E.A.C.\'s AVM base for Redmine plugins.'
 
-  s.files = Dir['{lib}/**/*']
+  s.files = Dir.glob('{lib}/**/*', File::FNM_DOTMATCH)
+              .reject { |f| ['.', '..'].include?(File.basename(f)) }
   s.required_ruby_version = '>= 3.2'
 
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.43', '>= 0.43.3'
