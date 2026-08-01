@@ -30,7 +30,7 @@ PATH
       avm-eac_ruby_base1 (~> 0.43, >= 0.43.2)
       eac_cli (~> 0.47, >= 0.47.1)
       eac_fs (~> 0.20, >= 0.20.2)
-      eac_ruby_utils (~> 0.131, >= 0.131.4)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 GEM
   remote: https://rubygems.org/
