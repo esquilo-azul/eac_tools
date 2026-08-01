@@ -8,20 +8,11 @@ module Avm
 
         VERSION_LINE_PATTERN = /\A(\s*)version\s*['"]([^'"]+)['"](\s*)\z/
 
-        def version
-          path.read.each_line.lazy.map { |line| line_value(line) }.find { |v| v }
-        end
-
         def version=(new_value)
           path.write(new_value_content(new_value))
         end
 
         private
-
-        # @return [Avm::VersionNumber] Version found in line, nil otherwise.
-        def line_value(line)
-          VERSION_LINE_PATTERN.if_match(line.rstrip, false) { |m| ::Avm::VersionNumber.new(m[2]) }
-        end
 
         def new_value_content(new_value)
           path.read.each_line
@@ -35,6 +26,8 @@ module Avm
 
           "#{m[1]}version '#{new_value}'"
         end
+
+        require_sub __FILE__, require_mode: :kernel
       end
     end
   end
