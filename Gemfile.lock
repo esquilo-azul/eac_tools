@@ -27,10 +27,10 @@ PATH
   remote: sub/eac_ruby_base0
   specs:
     eac_ruby_base0 (0.19.3)
-      avm-eac_ruby_base1 (~> 0.39)
-      eac_cli (~> 0.45)
-      eac_fs (~> 0.20)
-      eac_ruby_utils (~> 0.129)
+      avm-eac_ruby_base1 (~> 0.43, >= 0.43.2)
+      eac_cli (~> 0.47, >= 0.47.1)
+      eac_fs (~> 0.20, >= 0.20.2)
+      eac_ruby_utils (~> 0.131, >= 0.131.4)
 
 GEM
   remote: https://rubygems.org/
