@@ -3,10 +3,10 @@
 module EacRubyBase0
   module Runner
     module Prepend
-      SYSTEM_STACK_ERROR_FILE = 'system_stack_error'
+      ERROR_EXIT_CODE = 113
 
       def run
-        on_rescue_stack_overflow do
+        on_rescue_errors do
           if parsed.version?
             show_version
           else
@@ -19,13 +19,14 @@ module EacRubyBase0
         on_context { super }
       end
 
-      private
+      protected
 
-      def on_rescue_stack_overflow
+      # @return [void]
+      def on_rescue_errors
         yield
-      rescue ::SystemStackError => e
-        SYSTEM_STACK_ERROR_FILE.to_pathname.write(e.backtrace.map { |v| "#{v}\n" }.join)
-        raise e
+      rescue Exception => e # rubocop:disable Lint/RescueException
+        ::EacRubyBase0::ErrorPresenter.new(e).show
+        exit ERROR_EXIT_CODE
       end
     end
   end
