@@ -10,7 +10,7 @@ module Avm
 
           # @return [Avm::VersionNumber, nil] Version found in line, nil otherwise.
           def result
-            init_file.path.read.each_line.lazy.map { |line| line_value(line) }.find { |v| v }
+            init_file.find_on_line { |line| line_value(line) }
           end
 
           protected

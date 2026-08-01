@@ -13,6 +13,12 @@ module Avm
           version_set(new_value)
         end
 
+        # @param &line_evaluator [Proc]
+        # @return [Object]
+        def find_on_line(&)
+          path.read.each_line.lazy.map(&).find(&:present?)
+        end
+
         require_sub __FILE__, require_mode: :kernel
       end
     end
