@@ -8,6 +8,8 @@ module Avm
 
         DEFAULT_GEMFILE_PATH = 'SelfGemfile'
 
+        delegate :plugin_id, to: :init_file
+
         # @return [String]
         def default_gemfile_path
           DEFAULT_GEMFILE_PATH
