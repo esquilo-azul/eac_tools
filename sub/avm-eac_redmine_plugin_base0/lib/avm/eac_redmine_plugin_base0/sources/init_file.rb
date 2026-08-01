@@ -8,23 +8,9 @@ module Avm
 
         VERSION_LINE_PATTERN = /\A(\s*)version\s*['"]([^'"]+)['"](\s*)\z/
 
+        # @param new_value [String]
         def version=(new_value)
-          path.write(new_value_content(new_value))
-        end
-
-        private
-
-        def new_value_content(new_value)
-          path.read.each_line
-            .map { |line| new_value_line(line, new_value) }
-            .join
-        end
-
-        def new_value_line(line, new_value)
-          m = VERSION_LINE_PATTERN.match(line)
-          return line unless m
-
-          "#{m[1]}version '#{new_value}'"
+          version_set(new_value)
         end
 
         require_sub __FILE__, require_mode: :kernel
