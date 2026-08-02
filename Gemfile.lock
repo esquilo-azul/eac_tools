@@ -23,15 +23,6 @@ PATH
       avm-tools (~> 0.164, >= 0.164.1)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
-PATH
-  remote: sub/eac_ruby_base0
-  specs:
-    eac_ruby_base0 (0.20.0)
-      avm-eac_ruby_base1 (~> 0.43, >= 0.43.2)
-      eac_cli (~> 0.47, >= 0.47.1)
-      eac_fs (~> 0.20, >= 0.20.2)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -198,6 +189,11 @@ GEM
       eac_envs-http (~> 0.7, >= 0.7.1)
       eac_fs (~> 0.20, >= 0.20.1)
       eac_ruby_utils (~> 0.130)
+    eac_ruby_base0 (0.20.0)
+      avm-eac_ruby_base1 (~> 0.43, >= 0.43.2)
+      eac_cli (~> 0.47, >= 0.47.1)
+      eac_fs (~> 0.20, >= 0.20.2)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
     eac_ruby_base1 (0.1.1)
       eac_ruby_utils (~> 0.131, >= 0.131.2)
     eac_ruby_gem_support (0.14.0)
@@ -345,7 +341,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  eac_ruby_base0!
   eac_ruby_gem_support (~> 0.14)
   eac_tools!
 
