@@ -3,7 +3,7 @@ plugins:
   - rubocop-rspec
 AllCops:
   NewCops: enable
-  TargetRailsVersion: 6.1
+  TargetRailsVersion: 7.2
   TargetRubyVersion: 3.2
   Exclude:
     - 'sub/**/*'
