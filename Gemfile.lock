@@ -24,13 +24,6 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
-  remote: sub/avm-eac_redmine_plugin_base0
-  specs:
-    avm-eac_redmine_plugin_base0 (0.6.0)
-      avm-eac_ruby_base1 (~> 0.43, >= 0.43.3)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-
-PATH
   remote: sub/avm-eac_ruby_base1
   specs:
     avm-eac_ruby_base1 (0.43.3)
@@ -125,6 +118,9 @@ GEM
       avm-eac_ubuntu_base0 (~> 0.7, >= 0.7.1)
       eac_fs (~> 0.20, >= 0.20.2)
       eac_rest (~> 0.13)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
+    avm-eac_redmine_plugin_base0 (0.6.0)
+      avm-eac_ruby_base1 (~> 0.43, >= 0.43.3)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
     avm-eac_ruby_base0 (0.3.1)
       avm-eac_ruby_base1 (~> 0.43, >= 0.43.2)
@@ -349,7 +345,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  avm-eac_redmine_plugin_base0!
   avm-eac_ruby_base1!
   eac_ruby_gem_support (~> 0.14)
   eac_tools!
