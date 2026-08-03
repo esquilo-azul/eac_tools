@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
               .reject { |f| ['.', '..'].include?(File.basename(f)) } +
             ['.rubocop.yml']
 
-  s.required_ruby_version = '>= 3.2'
+  s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
   s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
   s.add_dependency 'rspec', '~> 3.13', '>= 3.13.2'
