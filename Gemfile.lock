@@ -16,7 +16,7 @@ PATH
       avm-eac_redmine_base0 (~> 0.26, >= 0.26.1)
       avm-eac_redmine_plugin_base0 (~> 0.6)
       avm-eac_ruby_base0 (~> 0.3, >= 0.3.1)
-      avm-eac_ruby_base1 (~> 0.43, >= 0.43.3)
+      avm-eac_ruby_base1 (~> 0.44)
       avm-eac_webapp_base0 (~> 0.22, >= 0.22.3)
       avm-eac_wordpress_base0 (~> 0.3, >= 0.3.2)
       avm-git (~> 0.21, >= 0.21.2)
@@ -356,7 +356,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_ruby_base1!
-  eac_ruby_gem_support (~> 0.14, >= 0)!
+  eac_ruby_gem_support (~> 0.15, >= 0)!
   eac_ruby_utils!
   eac_tools!
 

@@ -32,12 +32,12 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_redmine_base0', '~> 0.26', '>= 0.26.1'
   s.add_dependency 'avm-eac_redmine_plugin_base0', '~> 0.6'
   s.add_dependency 'avm-eac_ruby_base0', '~> 0.3', '>= 0.3.1'
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.43', '>= 0.43.3'
+  s.add_dependency 'avm-eac_ruby_base1', '~> 0.44'
   s.add_dependency 'avm-eac_webapp_base0', '~> 0.22', '>= 0.22.3'
   s.add_dependency 'avm-eac_wordpress_base0', '~> 0.3', '>= 0.3.2'
   s.add_dependency 'avm-git', '~> 0.21', '>= 0.21.2'
   s.add_dependency 'avm-tools', '~> 0.164', '>= 0.164.1'
   s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.14'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.15'
 end
