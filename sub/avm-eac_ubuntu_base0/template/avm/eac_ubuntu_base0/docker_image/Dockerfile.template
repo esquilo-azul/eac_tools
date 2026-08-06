@@ -16,6 +16,9 @@ RUN /bin/chown %%user_name%%:%%user_name%% %%user_home%% -R
 RUN apt-get install -y sudo
 RUN /bin/echo "%%user_name%% ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/%%user_name%%_all_nopasswd && chmod 0440 /etc/sudoers.d/%%user_name%%_all_nopasswd
 
+# Other
+RUN apt-get install -y file
+
 # Container
 USER %%user_name%%
 WORKDIR %%user_home%%
