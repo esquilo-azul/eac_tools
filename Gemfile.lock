@@ -24,6 +24,13 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
+  remote: sub/eac_docker
+  specs:
+    eac_docker (0.8.1)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
+      eac_templates (~> 0.9)
+
+PATH
   remote: sub/eac_ruby_utils
   specs:
     eac_ruby_utils (0.134.0)
@@ -176,9 +183,6 @@ GEM
     eac_config (0.15.0)
       addressable (~> 2.8, >= 2.8.7)
       eac_ruby_utils (~> 0.127)
-    eac_docker (0.8.1)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-      eac_templates (~> 0.9)
     eac_envs-http (0.7.2)
       eac_fs (~> 0.20, >= 0.20.2)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
@@ -347,6 +351,7 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
+  eac_docker!
   eac_ruby_gem_support (~> 0.15)
   eac_ruby_utils!
   eac_tools!
