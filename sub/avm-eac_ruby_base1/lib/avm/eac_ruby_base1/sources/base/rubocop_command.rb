@@ -9,6 +9,7 @@ module Avm
           immutable_accessor :ignore_parent_exclusion, :autocorrect, :autocorrect_all,
                              type: :boolean
           immutable_accessor :file, type: :array
+          immutable_accessor :format, type: :common
           common_constructor :source
           delegate :execute, :execute!, :system, :system!, to: :bundle_command
 
@@ -32,6 +33,7 @@ module Avm
                   .autocorrect_safe(autocorrect?)
                   .autocorrect_unsafe(autocorrect_all?)
                   .files(files)
+                  .format(format)
                   .gemfile(source.gemfile_path)
                   .ignore_parent_exclusion(ignore_parent_exclusion)
             r = r.config(source.rubocop_config_path) if source.rubocop_config_path.file?
