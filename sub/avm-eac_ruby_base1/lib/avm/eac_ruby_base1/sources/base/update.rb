@@ -13,7 +13,8 @@ module Avm
           # @param changes [Enumerable<Avm::Sources::Change>]
           def update_self_changes_after_subs
             super + [
-              ::Avm::EacRubyBase1::Sources::Update::Changes::UpdateRequirements.new(self)
+              ::Avm::EacRubyBase1::Sources::Update::Changes::UpdateRequirements.new(self),
+              ::Avm::EacRubyBase1::Sources::Update::Changes::RubocopFormat.new(self)
             ]
           end
 

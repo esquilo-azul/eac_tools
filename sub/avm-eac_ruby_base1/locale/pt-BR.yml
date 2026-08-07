@@ -15,5 +15,7 @@ pt-BR:
           changes:
             bundle_update:
               commit_message: '%{gemfile_lock_path}: "bundle update".'
+            rubocop_format:
+              commit_message: '**/*.rb: format with "rubocop".'
             update_requirements:
               commit_message: 'Gemspec#dependencies[*]: atualiza requisitos.'
