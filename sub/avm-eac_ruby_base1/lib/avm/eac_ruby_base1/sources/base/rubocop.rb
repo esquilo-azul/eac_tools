@@ -16,6 +16,11 @@ module Avm
           def rubocop_config_path
             path.join(RUBOCOP_CONFIG_SUBPATH)
           end
+
+          # @return [Avm::EacRubyBase1::Sources::Base::RubocopCommand]
+          def rubocop_root_command
+            rubocop_command.ignore_parent_exclusion(true).file(path)
+          end
         end
       end
     end
