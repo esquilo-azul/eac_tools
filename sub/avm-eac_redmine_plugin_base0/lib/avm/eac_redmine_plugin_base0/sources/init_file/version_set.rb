@@ -30,7 +30,7 @@ module Avm
             m = Avm::EacRedminePluginBase0::Sources::InitFile::VERSION_LINE_PATTERN.match(line)
             return line unless m
 
-            "#{m[1]}version '#{new_value}'"
+            "#{m[1]}version '#{new_value}'\n"
           end
         end
       end
