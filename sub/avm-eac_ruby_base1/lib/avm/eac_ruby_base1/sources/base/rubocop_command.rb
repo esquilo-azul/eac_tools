@@ -20,48 +20,27 @@ module Avm
           # @return [Gemspec::Version]
           def version
             @version ||= ::Gem::Version.new(
-              source.bundle('exec', 'rubocop', '--version').execute!
+              rubocop_command.extra_arg('--version').build.execute!
             )
           end
 
           private
 
-          # @return [String]
-          def autocorrect_option
-            '--auto-correct'
+          # @return [EacRubyUtils::Ruby::Command]
+          def bundle_command # rubocop:disable Metrics/AbcSize
+            r = rubocop_command
+                  .autocorrect_safe(autocorrect?)
+                  .autocorrect_unsafe(autocorrect_all?)
+                  .files(files)
+                  .gemfile(source.gemfile_path)
+                  .ignore_parent_exclusion(ignore_parent_exclusion)
+            r = r.config(source.rubocop_config_path) if source.rubocop_config_path.file?
+            r.build
           end
 
-          # @return [String]
-          def autocorrect_all_option
-            version < '1.30' ? '--auto-correct-all' : '--autocorrect-all'
-          end
-
-          # @return [String]
-          def ignore_parent_exclusion_option
-            '--ignore-parent-exclusion'
-          end
-
-          # @return [Avm::EacRubyBase1::Sources::Base::BundleCommand]
-          def bundle_command
-            source.bundle(*bundle_command_args)
-          end
-
-          # @return [Array<String>]
-          def bundle_command_args
-            %w[exec rubocop] + rubocop_command_args
-          end
-
-          # @return [Array<String>]
-          def rubocop_command_args
-            r = []
-            r += ['--config', source.rubocop_config_path] if source.rubocop_config_path.file?
-            r << ignore_parent_exclusion_option if ignore_parent_exclusion?
-            if autocorrect_all?
-              r << autocorrect_all_option
-            elsif autocorrect?
-              r << autocorrect_option
-            end
-            r + files
+          # @return [Avm::EacRubyBase1::Rubocop::Command]
+          def rubocop_command
+            ::Avm::EacRubyBase1::Rubocop::Command.new.gemfile(source.gemfile_path)
           end
         end
       end
