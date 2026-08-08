@@ -18,7 +18,7 @@ module Avm
           # @param new_value [String]
           # @return [String]
           def new_value_content(new_value)
-            path.read.each_line
+            init_file.path.read.each_line
               .map { |line| new_value_line(line, new_value) }
               .join
           end
