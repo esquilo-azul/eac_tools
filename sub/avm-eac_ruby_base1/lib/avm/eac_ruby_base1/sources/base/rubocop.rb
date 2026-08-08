@@ -17,6 +17,12 @@ module Avm
             path.join(RUBOCOP_CONFIG_SUBPATH)
           end
 
+          # @return [Avm::EacRubyBase1::Rubocop::OffenseSet]
+          def rubocop_offenses
+            ::Avm::EacRubyBase1::Rubocop::OffenseSet
+              .from_json(rubocop_root_command.format('json').execute.fetch(:stdout))
+          end
+
           # @return [Avm::EacRubyBase1::Sources::Base::RubocopCommand]
           def rubocop_root_command
             rubocop_command.ignore_parent_exclusion(true).file(path)
