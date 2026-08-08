@@ -10,7 +10,8 @@ module Avm
         VALID_TYPES = ['x-ruby'].freeze
 
         def internal_apply(files)
-          ::Avm::EacRubyBase1::Rubocop.new('.', ['-a', '--ignore-parent-exclusion'] + files).run
+          ::Avm::EacRubyBase1::Rubocop::Runner.new('.',
+                                                   ['-a', '--ignore-parent-exclusion'] + files).run
           super
         end
       end

@@ -12,7 +12,7 @@ module Avm
           end
 
           def run
-            ::Avm::EacRubyBase1::Rubocop.new(path, parsed.rubocop_args).run
+            ::Avm::EacRubyBase1::Rubocop::Runner.new(path, parsed.rubocop_args).run
           end
 
           private
