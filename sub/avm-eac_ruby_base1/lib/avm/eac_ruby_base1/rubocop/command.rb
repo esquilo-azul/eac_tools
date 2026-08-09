@@ -8,7 +8,7 @@ module Avm
         immutable_accessor :autocorrect_safe, :autocorrect_unsafe, :ignore_parent_exclusion,
                            :old_options, type: :boolean
         immutable_accessor :file, type: :array
-        immutable_accessor :config, :gemfile, type: :common
+        immutable_accessor :config, :format, :gemfile, type: :common
 
         # @return [String]
         def autocorrect_safe_option
@@ -51,6 +51,11 @@ module Avm
         # @return [Array<String>]
         def files_to_args
           files
+        end
+
+        # @return [Array<String>]
+        def format_to_args
+          format.if_present([]) { |v| ['--format', v] }
         end
 
         # @return [String]
