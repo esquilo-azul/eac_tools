@@ -34,17 +34,6 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
-  remote: sub/eac_ruby_gem_support
-  specs:
-    eac_ruby_gem_support (0.15.0)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-      rspec (~> 3.13, >= 3.13.2)
-      rubocop (~> 1.88, >= 1.88.2)
-      rubocop-rails (~> 2.36)
-      rubocop-rspec (~> 3.10, >= 3.10.2)
-      super_diff (~> 0.19)
-
-PATH
   remote: sub/eac_ruby_utils
   specs:
     eac_ruby_utils (0.132.0)
@@ -223,6 +212,13 @@ GEM
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
     eac_ruby_base1 (0.1.1)
       eac_ruby_utils (~> 0.131, >= 0.131.2)
+    eac_ruby_gem_support (0.15.0)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
+      rspec (~> 3.13, >= 3.13.2)
+      rubocop (~> 1.88, >= 1.88.2)
+      rubocop-rails (~> 2.36)
+      rubocop-rspec (~> 3.10, >= 3.10.2)
+      super_diff (~> 0.19)
     eac_templates (0.9.0)
       eac_config (~> 0.15)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
@@ -356,7 +352,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_ruby_base1!
-  eac_ruby_gem_support (~> 0.15, >= 0)!
+  eac_ruby_gem_support (~> 0.15)
   eac_ruby_utils!
   eac_tools!
 
