@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
-  s.add_dependency 'avm', '~> 0.102', '>= 0.102.3'
+  s.add_dependency 'avm', '~> 0.102', '>= 0.102.4'
   s.add_dependency 'avm-eac_asciidoctor_base0', '~> 0.27', '>= 0.27.1'
   s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.3'
   s.add_dependency 'avm-eac_github_base0', '~> 0.4', '>= 0.4.1'
@@ -30,9 +30,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'avm-eac_rails_base0', '~> 0.11', '>= 0.11.2'
   s.add_dependency 'avm-eac_rails_base1', '~> 0.12', '>= 0.12.1'
   s.add_dependency 'avm-eac_redmine_base0', '~> 0.26', '>= 0.26.1'
-  s.add_dependency 'avm-eac_redmine_plugin_base0', '~> 0.6'
+  s.add_dependency 'avm-eac_redmine_plugin_base0', '~> 0.6', '>= 0.6.1'
   s.add_dependency 'avm-eac_ruby_base0', '~> 0.3', '>= 0.3.1'
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.44'
+  s.add_dependency 'avm-eac_ruby_base1', '~> 0.45'
   s.add_dependency 'avm-eac_webapp_base0', '~> 0.22', '>= 0.22.3'
   s.add_dependency 'avm-eac_wordpress_base0', '~> 0.3', '>= 0.3.2'
   s.add_dependency 'avm-git', '~> 0.21', '>= 0.21.2'
