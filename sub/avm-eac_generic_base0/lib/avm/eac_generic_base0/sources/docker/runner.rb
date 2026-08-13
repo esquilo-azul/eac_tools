@@ -18,7 +18,7 @@ module Avm
 
           def run
             start_banner
-            docker_container.run_command.system!
+            run_container
           end
 
           def start_banner
@@ -69,6 +69,14 @@ module Avm
           # @return [EacDocker::Images::Base]
           def docker_image
             raise_abstract_method __method__
+          end
+
+          # Create and run a new container.
+          #
+          # @return [void]
+          def run_container
+            infom "Creating container \"#{container_name}\"..."
+            docker_container.run_command.system!
           end
         end
       end
