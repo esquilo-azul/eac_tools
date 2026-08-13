@@ -14,17 +14,21 @@ module Avm
             desc 'Run a Docker container with source mapped.'
             arg_opt '-c', '--command-arg', 'Arguments for [COMMAND] [ARG...].', optional: true,
                                                                                 repeat: true
+            bool_opt '-n', '--new', 'Force the creation of a new container.'
           end
 
+          # @return [void]
           def run
             start_banner
-            run_container
+            new_container? ? run_container : start_container
           end
 
+          # @return [void]
           def start_banner
             infov 'Image', docker_image
             infov 'Container name', container_name
             infov 'Container exist?', container_exist?
+            infov 'New container?', new_container?
             infov 'Command', ::Shellwords.join(command_args)
           end
 
@@ -71,12 +75,30 @@ module Avm
             raise_abstract_method __method__
           end
 
+          # @return [Boolean]
+          def new_container?
+            parsed.new? || !container_exist?
+          end
+
           # Create and run a new container.
           #
           # @return [void]
           def run_container
+            if container_exist?
+              infom "Remove existing container \"#{container_name}\"..."
+              docker_container.remove.execute!
+            end
+
             infom "Creating container \"#{container_name}\"..."
             docker_container.run_command.system!
+          end
+
+          # Start the existing container associated with the source.
+          #
+          # @return [void]
+          def start_container
+            infom "Starting existing container \"#{container_name}\"..."
+            docker_container.start_command.system!
           end
         end
       end
