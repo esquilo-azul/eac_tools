@@ -6,7 +6,6 @@ module EacDocker
     immutable_accessor :interactive, :temporary, :tty, type: :boolean
     immutable_accessor :env, type: :hash
     immutable_accessor :capability, :command_arg, :volume, type: :array
-    attr_reader :id
 
     common_constructor :image
 
@@ -45,10 +44,6 @@ module EacDocker
       ::EacDocker::Executables.docker.command('stop', id).execute!
     end
 
-    private
-
-    attr_writer :id
-
-    require_sub __FILE__, require_mode: :kernel
+    require_sub __FILE__, require_mode: :kernel, include_modules: true
   end
 end
