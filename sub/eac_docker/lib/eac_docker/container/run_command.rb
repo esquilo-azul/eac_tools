@@ -5,8 +5,8 @@ module EacDocker
     class RunCommand
       acts_as_instance_method
       common_constructor :container, :extra_args, default: [[]]
-      delegate :capabilities, :command_args, :envs, :image, :interactive?, :temporary?, :tty?,
-               :volumes, to: :container
+      delegate :capabilities, :command_args, :envs, :image, :interactive?, :name, :temporary?,
+               :tty?, :volumes, to: :container
 
       # @return [EacRubyUtils::Envs::Command]
       def result
@@ -15,7 +15,7 @@ module EacDocker
 
       # @return [Array<String>]
       def all_args
-        %w[boolean capabilities envs volumes]
+        %w[boolean capabilities envs name volumes]
           .inject([]) { |a, e| a + send("#{e}_args") } +
           extra_args + [image.provide.id] + command_args
       end
@@ -37,6 +37,11 @@ module EacDocker
       # @return [Array<String>]
       def envs_args
         envs.flat_map { |name, value| ['--env', "#{name}=#{value}"] }
+      end
+
+      # @return [Array<String>]
+      def name_args
+        name.if_present([]) { |v| ['--name', v] }
       end
 
       # @return [Array<String>]
