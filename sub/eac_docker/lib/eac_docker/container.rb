@@ -40,6 +40,13 @@ module EacDocker
       immutable_volume(right_part.if_present(left_part) { |v| "#{left_part}:#{v}" })
     end
 
+    # Force removal of the container identified by {#id}, if present, or {#name}.
+    #
+    # @return [String] output of the "docker rm" command.
+    def remove_command
+      ::EacDocker::Executables.docker.command('rm', '--force', identifier)
+    end
+
     def stop
       ::EacDocker::Executables.docker.command('stop', id).execute!
     end
