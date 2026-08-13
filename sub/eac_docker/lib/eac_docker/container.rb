@@ -41,16 +41,6 @@ module EacDocker
       immutable_volume(right_part.if_present(left_part) { |v| "#{left_part}:#{v}" })
     end
 
-    def run_command(extra_args = [])
-      ::EacDocker::Executables.docker.command('run', *run_command_args(extra_args))
-    end
-
-    def run_command_args(extra_args = [])
-      %w[boolean capabilities envs volumes]
-        .inject([]) { |a, e| a + send("run_command_#{e}_args") } +
-        extra_args + [image.provide.id] + command_args
-    end
-
     def stop
       ::EacDocker::Executables.docker.command('stop', id).execute!
     end
@@ -59,24 +49,6 @@ module EacDocker
 
     attr_writer :id
 
-    def run_command_boolean_args
-      r = []
-      r << '--interactive' if interactive?
-      r << '--tty' if tty?
-      r << '--rm' if temporary?
-      r
-    end
-
-    def run_command_capabilities_args
-      capabilities.flat_map { |capability| ['--cap-add', capability] }
-    end
-
-    def run_command_volumes_args
-      volumes.flat_map { |volume| ['--volume', volume] }
-    end
-
-    def run_command_envs_args
-      envs.flat_map { |name, value| ['--env', "#{name}=#{value}"] }
-    end
+    require_sub __FILE__, require_mode: :kernel
   end
 end
