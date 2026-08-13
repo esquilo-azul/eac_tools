@@ -24,6 +24,7 @@ module Avm
           def start_banner
             infov 'Image', docker_image
             infov 'Container name', container_name
+            infov 'Container exist?', container_exist?
             infov 'Command', ::Shellwords.join(command_args)
           end
 
@@ -37,6 +38,11 @@ module Avm
             else
               default_command_args
             end
+          end
+
+          # @return [Boolean]
+          memoize def container_exist?
+            docker_container.exist?
           end
 
           # Name that identifies the container associated with the source, so it can be
