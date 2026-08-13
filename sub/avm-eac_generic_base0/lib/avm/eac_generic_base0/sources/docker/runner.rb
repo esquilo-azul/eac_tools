@@ -23,6 +23,7 @@ module Avm
 
           def start_banner
             infov 'Image', docker_image
+            infov 'Container name', container_name
             infov 'Command', ::Shellwords.join(command_args)
           end
 
@@ -38,6 +39,17 @@ module Avm
             end
           end
 
+          # Name that identifies the container associated with the source, so it can be
+          # found and reused on the next run.
+          #
+          # @return [String]
+          def container_name
+            [
+              self.class.name.parameterize,
+              runner_context.call(:subject).path.to_s.parameterize
+            ].join('_')
+          end
+
           def default_command_args
             bash_command_args
           end
@@ -45,7 +57,7 @@ module Avm
           def docker_container
             docker_image.container
               .volume(runner_context.call(:subject).path, CONTAINER_SOURCE_PATH)
-              .interactive(true).tty(true).command_args(command_args)
+              .interactive(true).tty(true).command_args(command_args).name(container_name)
           end
 
           # @return [EacDocker::Images::Base]
