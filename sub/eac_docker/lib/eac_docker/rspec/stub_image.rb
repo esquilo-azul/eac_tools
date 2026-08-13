@@ -18,13 +18,13 @@ module EacDocker
         internal_container
       end
 
-      def on_container(&block)
+      def on_container(&)
         raise 'A container was already created' if internal_container.present?
 
         build_container.on_detached do |container|
           self.internal_container = container
           begin
-            run_callbacks(:on_container, &block)
+            run_callbacks(:on_container, &)
           ensure
             self.internal_container = nil
           end
