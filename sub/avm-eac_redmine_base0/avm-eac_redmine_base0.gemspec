@@ -14,13 +14,13 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2'
 
-  s.add_dependency 'avm', '~> 0.102', '>= 0.102.3'
-  s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.3'
+  s.add_dependency 'avm', '~> 0.102', '>= 0.102.4'
+  s.add_dependency 'avm-eac_generic_base0', '~> 0.16'
   s.add_dependency 'avm-eac_rails_base1', '~> 0.12', '>= 0.12.1'
-  s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.7', '>= 0.7.1'
-  s.add_dependency 'eac_fs', '~> 0.20', '>= 0.20.2'
+  s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.7', '>= 0.7.2'
+  s.add_dependency 'eac_fs', '~> 0.20', '>= 0.20.3'
   s.add_dependency 'eac_rest', '~> 0.13'
   s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.14'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.15'
 end
