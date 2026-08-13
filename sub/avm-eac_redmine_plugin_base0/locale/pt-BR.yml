@@ -1,7 +1,0 @@
-pt-BR:
-avm:
-    eac_redmine_plugin_base0:
-      sources:
-        update_changes:
-          plugins_requirements:
-            commit_message: '%{dependencies_file}: atualiza requisitos.'
