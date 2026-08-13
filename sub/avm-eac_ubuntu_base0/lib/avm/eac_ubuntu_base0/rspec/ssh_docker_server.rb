@@ -16,9 +16,9 @@ module Avm
           @env
         end
 
-        def on_run(&block)
+        def on_run(&)
           on_container do
-            on_env(&block)
+            on_env(&)
           end
         end
 
