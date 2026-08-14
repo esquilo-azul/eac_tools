@@ -29,8 +29,7 @@ module EacDocker
     end
 
     def on_detached
-      command = ::EacDocker::Executables.docker.command(*(%w[run --detach] + run_command_args))
-      self.id = command.execute!.strip
+      self.id = run_command(%w[--detach]).execute!.strip
       begin
         yield(self)
       ensure
