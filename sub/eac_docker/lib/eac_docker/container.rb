@@ -42,14 +42,14 @@ module EacDocker
       immutable_volume(right_part.if_present(left_part) { |v| "#{left_part}:#{v}" })
     end
 
-    def run_command
-      ::EacDocker::Executables.docker.command('run', *run_command_args)
+    def run_command(extra_args = [])
+      ::EacDocker::Executables.docker.command('run', *run_command_args(extra_args))
     end
 
-    def run_command_args
+    def run_command_args(extra_args = [])
       %w[boolean capabilities envs volumes]
         .inject([]) { |a, e| a + send("run_command_#{e}_args") } +
-        [image.provide.id] + command_args
+        extra_args + [image.provide.id] + command_args
     end
 
     def stop
