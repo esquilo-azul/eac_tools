@@ -5,12 +5,18 @@ module EacDocker
     class Named < ::EacDocker::Images::Base
       common_constructor :source_tag
 
+      # @return [Boolean]
+      def exist?
+        ::EacDocker::Executables.docker.command('image', 'inspect', source_tag).execute
+          .fetch(:exit_code).zero?
+      end
+
       def id
         source_tag
       end
 
       def provide
-        provide_command.execute!
+        provide_command.execute! unless exist?
         self
       end
 
