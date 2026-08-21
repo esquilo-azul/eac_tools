@@ -86,7 +86,7 @@ module Avm
           def run_container
             if container_exist?
               infom "Remove existing container \"#{container_name}\"..."
-              docker_container.remove.execute!
+              docker_container.remove_command.execute!
             end
 
             infom "Creating container \"#{container_name}\"..."
