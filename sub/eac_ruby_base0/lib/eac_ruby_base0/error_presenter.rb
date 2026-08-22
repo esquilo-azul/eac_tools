@@ -2,8 +2,14 @@
 
 module EacRubyBase0
   class ErrorPresenter
+    enable_memoized
     enable_speaker
     common_constructor :the_error
+
+    # @return [EacRubyBase0::ErrorPresenter, nil]
+    memoize def cause
+      the_error.cause.if_present { |v| self.class.new(v) }
+    end
 
     # @return [String]
     def full_backtrace_message
@@ -12,8 +18,8 @@ module EacRubyBase0
 
     # @return [String]
     def full_message
-      self_full_message + the_error.cause.if_present('') do |e|
-        "#{'-' * 16}\n#{self.class.new(e).full_message}"
+      self_full_message + cause.if_present('') do |e|
+        "#{'-' * 16}\n#{e.full_message}"
       end
     end
 
