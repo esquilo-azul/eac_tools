@@ -1,6 +1,0 @@
-FROM %%base_image%%
-
-# Base system update
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -y --option APT::Update::Error-Mode=any
-RUN apt-get dist-upgrade -y
