@@ -5,7 +5,7 @@ module Avm
     module Sources
       module Update
         module Changes
-          class BundleUpdate < ::Avm::Sources::Change
+          class GemfileLock < ::Avm::Sources::Change
             # @return [String]
             def commit_message
               i18n_translate(

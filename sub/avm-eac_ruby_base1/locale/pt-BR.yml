@@ -13,9 +13,9 @@ pt-BR:
           update_version_no_scm_message: "Gem \"%{application_id}\" (Local): atualiza para '%{version}'."
         update:
           changes:
-            bundle_update:
-              commit_message: '%{gemfile_lock_path}: "bundle update".'
             dependencies_requirements:
               commit_message: 'Gemspec#dependencies[*]: atualiza requisitos.'
+            gemfile_lock:
+              commit_message: '%{gemfile_lock_path}: "bundle update".'
             rubocop_format:
               commit_message: '**/*.rb: format with "rubocop".'
