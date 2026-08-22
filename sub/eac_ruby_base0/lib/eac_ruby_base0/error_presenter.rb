@@ -47,8 +47,10 @@ module EacRubyBase0
     end
 
     # @return [void]
-    def show_message
-      error message
+    def show_message(caused_by = false) # rubocop:disable Style/OptionalBooleanParameter
+      prefix = caused_by ? 'Caused by: ' : ''
+      error [prefix, message].join
+      cause.if_present { |v| v.show_message(true) }
     end
 
     # @return [void]
