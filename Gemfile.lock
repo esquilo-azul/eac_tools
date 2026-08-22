@@ -31,18 +31,6 @@ PATH
       eac_ruby_utils (~> 0.134)
 
 PATH
-  remote: sub/avm-eac_redmine_base0
-  specs:
-    avm-eac_redmine_base0 (0.27.0)
-      avm (~> 0.102, >= 0.102.4)
-      avm-eac_generic_base0 (~> 0.16)
-      avm-eac_rails_base1 (~> 0.12, >= 0.12.1)
-      avm-eac_ubuntu_base0 (~> 0.7, >= 0.7.2)
-      eac_fs (~> 0.20, >= 0.20.3)
-      eac_rest (~> 0.13)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-
-PATH
   remote: sub/avm-eac_ubuntu_base0
   specs:
     avm-eac_ubuntu_base0 (0.7.2)
@@ -99,7 +87,7 @@ GEM
     asciidoctor (2.0.26)
     ast (2.4.3)
     attr_extras (7.1.0)
-    avm (0.102.4)
+    avm (0.103.0)
       eac_cli (~> 0.47, >= 0.47.1)
       eac_config (~> 0.15)
       eac_docker (~> 0.8, >= 0.8.1)
@@ -143,6 +131,14 @@ GEM
       avm (~> 0.102, >= 0.102.3)
       avm-eac_ruby_base1 (~> 0.43, >= 0.43.2)
       avm-eac_webapp_base0 (~> 0.22, >= 0.22.3)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
+    avm-eac_redmine_base0 (0.27.1)
+      avm (~> 0.102, >= 0.102.4)
+      avm-eac_generic_base0 (~> 0.16)
+      avm-eac_rails_base1 (~> 0.12, >= 0.12.1)
+      avm-eac_ubuntu_base0 (~> 0.7, >= 0.7.2)
+      eac_fs (~> 0.20, >= 0.20.3)
+      eac_rest (~> 0.13)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
     avm-eac_redmine_plugin_base0 (0.6.1)
       avm-eac_ruby_base1 (~> 0.45)
@@ -364,7 +360,6 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_generic_base0!
-  avm-eac_redmine_base0!
   avm-eac_ubuntu_base0!
   eac_docker!
   eac_ruby_gem_support (~> 0.15)
