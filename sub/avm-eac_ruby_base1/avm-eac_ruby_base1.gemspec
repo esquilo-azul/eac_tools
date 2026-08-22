@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
   s.add_dependency 'aranha-parsers', '~> 0.29'
-  s.add_dependency 'avm', '~> 0.102', '>= 0.102.4'
-  s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.3'
+  s.add_dependency 'avm', '~> 0.103'
+  s.add_dependency 'avm-eac_generic_base0', '~> 0.16'
   s.add_dependency 'eac_envs-http', '~> 0.7', '>= 0.7.2'
   s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
 
