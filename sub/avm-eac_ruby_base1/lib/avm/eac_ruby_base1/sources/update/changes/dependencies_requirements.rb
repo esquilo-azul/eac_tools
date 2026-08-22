@@ -5,7 +5,7 @@ module Avm
     module Sources
       module Update
         module Changes
-          class UpdateRequirements < ::Avm::Sources::Change
+          class DependenciesRequirements < ::Avm::Sources::Change
             enable_memoized
 
             # @return [void]
