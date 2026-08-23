@@ -33,7 +33,7 @@ module EacConfig
     def persist_data(new_data)
       path.parent.mkpath
       ::EacRubyUtils::Yaml.dump_file(path, new_data)
-      reset_cache(:data)
+      unmemoize(:data)
     end
 
     def url
