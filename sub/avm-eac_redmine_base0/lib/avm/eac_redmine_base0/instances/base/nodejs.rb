@@ -5,7 +5,7 @@ module Avm
     module Instances
       class Base < ::Avm::EacRailsBase1::Instances::Base
         module Nodejs
-          DEFAULT_NODEJS_VERSION = '19.8.1'
+          DEFAULT_NODEJS_VERSION = '26.6.0'
           NODEJS_VERSION_KEY = 'nodejs.version'
 
           # @return [String]
