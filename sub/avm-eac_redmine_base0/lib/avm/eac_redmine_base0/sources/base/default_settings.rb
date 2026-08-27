@@ -11,6 +11,11 @@ module Avm
           INSTALLER_PLUGIN_DEFAULT_SETTINGS_PATH =
             'plugins/redmine_installer/installer/default_settings.sh'
 
+          # @return [Avm::VersionNumber]
+          def default_nodejs_version
+            ::Avm::VersionNumber.new(default_setting_value('nodejs_version'))
+          end
+
           # @return [ActiveSupport::Duration]
           def default_passenger_start_timeout
             default_setting_value('passenger_start_timeout').to_i.seconds
