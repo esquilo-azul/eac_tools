@@ -7,7 +7,7 @@ module Avm
     module Instances
       class Base < ::Avm::EacRailsBase1::Instances::Base
         require_sub __FILE__, include_modules: true
-        enable_simple_cache
+        enable_memoized
 
         include ::Avm::EacRubyBase1::Instances::Mixin
 
@@ -52,7 +52,7 @@ module Avm
         private
 
         # @return [Avm::EacRedmineBase0::Instances::RestApi]
-        def rest_api_uncached
+        memoize def rest_api
           url = root_url
           url.query_values = { key: admin_api_key }
           ::Avm::EacRedmineBase0::Instances::RestApi.new(url)

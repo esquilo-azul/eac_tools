@@ -12,7 +12,7 @@ module Avm
 
           private
 
-          def project_uncached
+          memoize def project
             runner_context.call(:instance).rest_api.root_entity.project(parsed.id_or_identifier)
           end
         end

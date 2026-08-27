@@ -4,7 +4,7 @@ module Avm
   module EacRedmineBase0
     module Instances
       class DockerImage < ::Avm::Instances::DockerImage
-        enable_simple_cache
+        enable_memoized
 
         APACHE_HOST_DOCKERFILE_SUBPATH = 'apache_host_dockerfile'
         APACHE_PATH_DOCKERFILE_SUBPATH = 'apache_path_dockerfile'
@@ -89,7 +89,7 @@ module Avm
           r
         end
 
-        def git_repo_uncached
+        memoize def git_repo
           ::EacGit::Local.new(instance.source_instance.install_path)
         end
 
@@ -97,7 +97,7 @@ module Avm
           git_repo.rev_parse('HEAD')
         end
 
-        def redmine_source_path_uncached
+        memoize def redmine_source_path
           r = provide_dir.join(REDMINE_SOURCE_HOST_SUBPATH)
           ::FileUtils.rm_rf(r.to_path)
           r.mkpath

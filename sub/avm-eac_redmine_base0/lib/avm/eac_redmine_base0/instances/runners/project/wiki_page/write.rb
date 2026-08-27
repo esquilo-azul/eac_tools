@@ -51,12 +51,12 @@ module Avm
               private
 
               # @return [String]
-              def current_content_uncached
+              memoize def current_content
                 runner_context.call(:wiki_page_content)
               end
 
               # @return [String]
-              def new_content_uncached
+              memoize def new_content
                 input_content
               end
             end

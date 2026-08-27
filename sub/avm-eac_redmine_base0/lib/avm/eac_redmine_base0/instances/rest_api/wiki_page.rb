@@ -5,7 +5,7 @@ module Avm
     module Instances
       class RestApi < ::EacRest::Api
         class WikiPage < ::Avm::EacRedmineBase0::Instances::RestApi::EntityBase
-          enable_simple_cache
+          enable_memoized
 
           DATA_ROOT = 'wiki_page'
 

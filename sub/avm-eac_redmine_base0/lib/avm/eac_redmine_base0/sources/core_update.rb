@@ -5,7 +5,7 @@ module Avm
     module Sources
       class CoreUpdate
         enable_speaker
-        enable_simple_cache
+        enable_memoized
         common_constructor :source, :version, :url
 
         GITIGNORE_ADD = %w[/public/assets/**/* /config/credentials.* /config/credentials/*
@@ -74,7 +74,7 @@ module Avm
           i18n_translate(__method__, version: version, __locale: source.locale)
         end
 
-        def git_repo_uncached
+        memoize def git_repo
           ::EacGit::Local.new(target_path)
         end
 
@@ -84,7 +84,7 @@ module Avm
         end
 
         # @return [EacFs::CachedDownload]
-        def source_package_uncached
+        memoize def source_package
           ::EacFs::CachedDownload.new(url, fs_cache)
         end
 
@@ -97,7 +97,7 @@ module Avm
           end
         end
 
-        def source_path_uncached
+        memoize def source_path
           ::Pathname.new(tempdir.to_path)
         end
 
@@ -116,7 +116,7 @@ module Avm
           TARGET_KEEP.any? { |target_keep| tpath.fnmatch?(target_keep) }
         end
 
-        def target_path_uncached
+        memoize def target_path
           source.path
         end
       end
