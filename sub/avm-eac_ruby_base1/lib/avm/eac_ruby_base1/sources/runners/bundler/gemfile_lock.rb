@@ -52,8 +52,9 @@ module Avm
               bundle_run('update')
             end
 
+            # @return [Pathname]
             def gemfile_lock
-              'Gemfile.lock'
+              source.gemfile_lock_path
             end
 
             def bundle_run(*)
