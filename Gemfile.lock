@@ -33,6 +33,13 @@ PATH
       eac_envs-http (~> 0.7, >= 0.7.2)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
+PATH
+  remote: sub/eac_git
+  specs:
+    eac_git (0.20.0)
+      eac_ruby_utils (~> 0.131)
+      parseconfig (~> 1.1, >= 1.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -188,9 +195,6 @@ GEM
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
       filesize (~> 0.2)
       ruby-filemagic (~> 0.7, >= 0.7.3)
-    eac_git (0.20.0)
-      eac_ruby_utils (~> 0.131)
-      parseconfig (~> 1.1, >= 1.1.2)
     eac_rest (0.13.0)
       eac_envs-http (~> 0.7, >= 0.7.1)
       eac_fs (~> 0.20, >= 0.20.1)
@@ -350,6 +354,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_ruby_base1!
+  eac_git!
   eac_ruby_gem_support (~> 0.15)
   eac_tools!
 
