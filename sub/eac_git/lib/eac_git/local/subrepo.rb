@@ -18,7 +18,7 @@ module EacGit
                       *subrepo_subcommand_args)
       end
 
-      delegate(*::EacGit::Local::Subrepo::Config::MAPPING.keys, to: :config)
+      delegate(*::EacGit::Subrepo::Configuration::MAPPING.keys, to: :config)
 
       def write_config
         config_absolute_path.write(config.to_content)
@@ -27,7 +27,7 @@ module EacGit
       private
 
       def config_uncached
-        ::EacGit::Local::Subrepo::Config.from_file(config_absolute_path)
+        ::EacGit::Subrepo::Configuration.from_file(config_absolute_path)
       end
 
       def config_absolute_path_uncached
