@@ -24,13 +24,6 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
 
 PATH
-  remote: sub/avm-eac_generic_base0
-  specs:
-    avm-eac_generic_base0 (0.16.1)
-      avm (~> 0.103)
-      eac_ruby_utils (~> 0.134)
-
-PATH
   remote: sub/avm-eac_ruby_base1
   specs:
     avm-eac_ruby_base1 (0.45.1)
@@ -112,6 +105,9 @@ GEM
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
       os (~> 1.1, >= 1.1.4)
       rouge (~> 3.30)
+    avm-eac_generic_base0 (0.16.1)
+      avm (~> 0.103)
+      eac_ruby_utils (~> 0.134)
     avm-eac_github_base0 (0.4.1)
       avm (~> 0.98, >= 0.98.5)
       avm-git (~> 0.21, >= 0.21.2)
@@ -365,7 +361,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  avm-eac_generic_base0!
   avm-eac_ruby_base1!
   eac_cli!
   eac_config!
