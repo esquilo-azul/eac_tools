@@ -9,12 +9,12 @@ module Avm
         common_constructor :source, :version, :url
 
         GITIGNORE_ADD = %w[/public/assets/**/* /config/credentials.* /config/credentials/*
-                           /config/install.sh /config/master.key /log/**/*].freeze
-        GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /public/themes/*].freeze
+                           /config/install.sh /config/*.key /log/**/*].freeze
+        GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /themes/* !/themes/README].freeze
         TARGET_KEEP = ::Avm::Sources::Base::Configuration::CONFIGURATION_FILENAMES
                         .map { |b| "/#{b}" } + %w[/Gemfile.lock /plugins/*/**
-                                                  /public/themes/*/**].freeze
-        TARGET_REMOVE = %w[alternate classic].map { |t| "/public/themes/#{t}/**" }
+                                                  /themes/*/**].freeze
+        TARGET_REMOVE = ['/themes/README'].freeze
 
         def run
           ::EacRubyUtils::Fs::Temp.on_directory do |dir|
