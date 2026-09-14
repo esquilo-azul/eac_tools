@@ -7,8 +7,16 @@ module EacGit
       require_sub __FILE__
       enable_memoized
 
+      class << self
+        # @param subpath [Pathname, String]
+        # @return [String]
+        def sanitize_subpath(subpath)
+          subpath.to_pathname.to_path.gsub(%r{/+$}, '').to_pathname
+        end
+      end
+
       common_constructor :local, :subpath do
-        self.subpath = subpath.to_pathname
+        self.subpath = self.class.sanitize_subpath(subpath)
         local.raise_error "Config file \"#{config_absolute_path}\" not found" unless
           config_absolute_path.file?
       end
