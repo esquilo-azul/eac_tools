@@ -4,7 +4,7 @@ module EacGit
   class Local
     class Commit
       class ChangedFile
-        enable_simple_cache
+        enable_memoized
 
         attr_reader :commit, :diff_tree
 
@@ -22,11 +22,11 @@ module EacGit
           "#{path}|#{status}"
         end
 
-        def src_size_uncached
+        memoize def src_size
           size(src_sha1)
         end
 
-        def dst_size_uncached
+        memoize def dst_size
           size(dst_sha1)
         end
 

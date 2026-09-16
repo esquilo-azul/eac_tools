@@ -4,7 +4,7 @@ module EacGit
   class Local
     class Commit
       require_sub __FILE__, include_modules: true
-      enable_simple_cache
+      enable_memoized
       include ::Comparable
 
       FIELDS = {
@@ -31,13 +31,13 @@ module EacGit
         define_method(field) { format(format) }
       end
 
-      def changed_files_uncached
+      memoize def changed_files
         diff_tree_execute.each_line.map do |line|
           ::EacGit::Local::Commit::ChangedFile.new(self, line)
         end
       end
 
-      def changed_files_size_uncached
+      memoize def changed_files_size
         changed_files.inject(0) { |a, e| a + e.dst_size }
       end
 

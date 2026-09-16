@@ -3,21 +3,19 @@
 module EacGit
   module Executables
     class << self
-      include ::EacRubyUtils::SimpleCache
+      enable_memoized
 
       def env
         ::EacRubyUtils::Envs.local
       end
 
-      private
-
-      def git_uncached
+      memoize def git
         r = env.executable('git', '--version')
         r.extend(GitCommandExtensions)
         r
       end
 
-      def tar_uncached
+      memoize def tar
         env.executable('tar', '--version')
       end
 
