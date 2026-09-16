@@ -5,7 +5,6 @@ module EacGit
     class Remote
       NO_SUCH_REMOTE_CODE = 512
 
-      enable_simple_cache
       include ::EacGit::RemoteLike
 
       common_constructor :local, :name
