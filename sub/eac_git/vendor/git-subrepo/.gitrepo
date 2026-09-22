@@ -1,7 +1,0 @@
-[subrepo]
-  cmdver = 0.4.9
-  commit = a15c74247acfca764711e5589e77d79472fcaab4
-  method = merge
-  parent = 84ec4ccc74f3d3542195d2204c4d7f6b52c86832
-  branch = master
-  remote = https://github.com/esquilo-azul/git-subrepo.git
