@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
-  s.add_dependency 'avm', '~> 0.102', '>= 0.102.4'
-  s.add_dependency 'avm-eac_generic_base0', '~> 0.16'
+  s.add_dependency 'avm', '~> 0.103'
+  s.add_dependency 'avm-eac_generic_base0', '~> 0.16', '>= 0.16.1'
   s.add_dependency 'avm-eac_rails_base1', '~> 0.12', '>= 0.12.1'
   s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.7', '>= 0.7.2'
   s.add_dependency 'eac_fs', '~> 0.20', '>= 0.20.3'
