@@ -1,5 +1,0 @@
----
-app:
-  avm_type: Application
-mylib:
-  avm_type: Application
