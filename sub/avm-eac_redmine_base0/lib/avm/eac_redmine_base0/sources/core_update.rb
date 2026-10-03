@@ -13,7 +13,7 @@ module Avm
         GITIGNORE_DEL = %w[/Gemfile.lock /plugins/* /themes/* !/themes/README].freeze
         TARGET_KEEP = ::Avm::Sources::Base::Configuration::CONFIGURATION_FILENAMES
                         .map { |b| "/#{b}" } + %w[/Gemfile.lock /plugins/*/**
-                                                  /themes/*/**].freeze
+                                                  /themes/*/** /sub/*/**].freeze
         TARGET_REMOVE = ['/themes/README'].freeze
 
         def run
