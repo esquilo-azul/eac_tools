@@ -17,8 +17,7 @@ module Avm
         TARGET_REMOVE = ['/themes/README'].freeze
 
         def run
-          ::EacRubyUtils::Fs::Temp.on_directory do |dir|
-            @tempdir = dir
+          on_temp_dir do
             assert_source_package
             extract_package_to_tempdir
             sync_content
@@ -41,8 +40,6 @@ module Avm
         end
 
         private
-
-        attr_reader :tempdir
 
         def change_git_ignore
           file = target_path.join('.gitignore')
@@ -119,6 +116,8 @@ module Avm
         memoize def target_path
           source.path
         end
+
+        require_sub __FILE__, include_modules: true
       end
     end
   end
