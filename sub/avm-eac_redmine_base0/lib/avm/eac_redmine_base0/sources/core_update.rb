@@ -28,13 +28,6 @@ module Avm
           success 'Done!'
         end
 
-        def assert_source_package
-          infom 'Asserting source package...'
-          source_package.assert
-          infov 'Package cache path', source_package.path
-          infov 'Package size', source_package.path.size
-        end
-
         def fs_object_id
           [source.path, version].join('_').variableize
         end
@@ -60,11 +53,6 @@ module Avm
         def sync_content
           ::Avm::Sync.new(source_path, target_path)
             .add_exclude('/*').add_includes(*target_files_to_remove).move_mode(true).run
-        end
-
-        # @return [EacFs::CachedDownload]
-        memoize def source_package
-          ::EacFs::CachedDownload.new(url, fs_cache)
         end
 
         def validate_empty_dir
