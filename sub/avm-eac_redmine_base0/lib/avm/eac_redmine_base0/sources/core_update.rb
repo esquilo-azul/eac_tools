@@ -57,24 +57,6 @@ module Avm
           ).execute!
         end
 
-        def git_commit
-          if git_repo.dirty?
-            infom 'Git commiting...'
-            git_repo.command('add', '--', target_path).execute!
-            git_repo.command('commit', '-m', git_commit_message, '--', target_path).execute!
-          else
-            infom 'Nothing to commit'
-          end
-        end
-
-        def git_commit_message
-          i18n_translate(__method__, version: version, __locale: source.locale)
-        end
-
-        memoize def git_repo
-          ::EacGit::Local.new(target_path)
-        end
-
         def sync_content
           ::Avm::Sync.new(source_path, target_path)
             .add_exclude('/*').add_includes(*target_files_to_remove).move_mode(true).run
