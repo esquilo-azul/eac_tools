@@ -23,6 +23,7 @@ module Avm
             sync_content
             change_git_ignore
             validate_empty_dir
+            bundle_changes
           end
           git_commit
           success 'Done!'
