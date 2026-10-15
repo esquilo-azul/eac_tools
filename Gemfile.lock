@@ -35,6 +35,17 @@ PATH
       rouge (~> 3.30)
 
 PATH
+  remote: sub/avm-eac_webapp_base0
+  specs:
+    avm-eac_webapp_base0 (0.22.3)
+      avm (~> 0.102, >= 0.102.3)
+      avm-eac_generic_base0 (~> 0.15, >= 0.15.3)
+      avm-eac_postgresql_base0 (~> 0.6)
+      avm-eac_ubuntu_base0 (~> 0.7, >= 0.7.1)
+      eac_ruby_base1 (~> 0.1, >= 0.1.1)
+      htmlbeautifier (~> 1.4, >= 1.4.3)
+
+PATH
   remote: sub/eac_ruby_utils
   specs:
     eac_ruby_utils (0.136.0)
@@ -142,13 +153,6 @@ GEM
       avm (~> 0.102, >= 0.102.4)
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
       eac_templates (~> 0.9)
-    avm-eac_webapp_base0 (0.22.3)
-      avm (~> 0.102, >= 0.102.3)
-      avm-eac_generic_base0 (~> 0.15, >= 0.15.3)
-      avm-eac_postgresql_base0 (~> 0.6)
-      avm-eac_ubuntu_base0 (~> 0.7, >= 0.7.1)
-      eac_ruby_base1 (~> 0.1, >= 0.1.1)
-      htmlbeautifier (~> 1.4, >= 1.4.3)
     avm-eac_wordpress_base0 (0.3.2)
       avm (~> 0.86, >= 0.86.2)
       avm-eac_webapp_base0 (~> 0.18, >= 0.18.4)
@@ -359,6 +363,7 @@ PLATFORMS
 
 DEPENDENCIES
   avm-eac_asciidoctor_base0!
+  avm-eac_webapp_base0!
   eac_ruby_gem_support (~> 0.15)
   eac_ruby_utils!
   eac_tools!
