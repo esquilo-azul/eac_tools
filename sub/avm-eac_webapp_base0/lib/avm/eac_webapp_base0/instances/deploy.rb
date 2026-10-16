@@ -39,7 +39,7 @@ module Avm
         end
 
         def setup_files_units
-          instance.data_package.units.values.map(&:installation_files_data).select(&:present?)
+          instance.data_package.units.values.map(&:installation_files_data).select(&:present?) # rubocop:disable Rails/CompactBlank
             .each { |unit_install| setup_files_unit(unit_install.key, unit_install.subpath) }
         end
 
