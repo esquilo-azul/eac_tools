@@ -5,6 +5,8 @@ module Avm
     module Instances
       class Deploy
         module Build
+          enable_memoized
+
           private
 
           attr_accessor :build_dir, :source_dir
@@ -42,6 +44,11 @@ module Avm
 
           def remove_source_dir
             source_dir&.remove
+          end
+
+          # @return [Avm::Sources::Base]
+          memoize def source
+            instance.application.local_source.class.new(source_dir)
           end
 
           def build_content
