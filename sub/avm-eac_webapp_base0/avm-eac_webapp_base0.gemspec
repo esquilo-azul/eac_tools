@@ -13,12 +13,13 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,template}/**/{*,.*}']
   s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
-  s.add_dependency 'avm', '~> 0.102', '>= 0.102.3'
-  s.add_dependency 'avm-eac_generic_base0', '~> 0.15', '>= 0.15.3'
+  s.add_dependency 'avm', '~> 0.103'
+  s.add_dependency 'avm-eac_generic_base0', '~> 0.16', '>= 0.16.1'
   s.add_dependency 'avm-eac_postgresql_base0', '~> 0.6'
-  s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.7', '>= 0.7.1'
-  s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
+  s.add_dependency 'avm-eac_ubuntu_base0', '~> 0.7', '>= 0.7.2'
+  s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.2'
+  s.add_dependency 'eac_ruby_utils', '~> 0.136'
   s.add_dependency 'htmlbeautifier', '~> 1.4', '>= 1.4.3'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.14'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.15'
 end
