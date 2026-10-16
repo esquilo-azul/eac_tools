@@ -11,8 +11,9 @@ module Avm
         DEFAULT_REFERENCE = 'HEAD'
 
         REQUEST_TEST_JOB = 'request_test'
-        JOBS = (%w[create_build_dir build_content append_instance_content write_on_target
-                   setup_files_units assert_instance_branch] + [REQUEST_TEST_JOB]).freeze
+        JOBS = (%w[create_build_dir create_source_dir build_content append_instance_content
+                   write_on_target setup_files_units assert_instance_branch] +
+                [REQUEST_TEST_JOB]).freeze
 
         include ::Avm::Entries::Jobs::Base
 
@@ -27,6 +28,7 @@ module Avm
           super
         ensure
           remove_build_dir
+          remove_source_dir
         end
 
         def start_banner

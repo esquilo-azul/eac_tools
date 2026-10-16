@@ -7,7 +7,7 @@ module Avm
         module Build
           private
 
-          attr_accessor :build_dir
+          attr_accessor :build_dir, :source_dir
 
           def append_instance_content
             ::Avm::Files::Appender
@@ -27,16 +27,25 @@ module Avm
             self.build_dir = ::EacRubyUtils::Fs::Temp.directory
           end
 
+          def create_source_dir
+            self.source_dir = ::EacRubyUtils::Fs::Temp.directory
+            infom 'Writing Git source code...'
+            scm.commit(commit_reference).deploy_to_env_path(
+              build_dir_env,
+              source_dir
+            ).variables_source_set(variables_source).run
+          end
+
           def remove_build_dir
             build_dir&.remove
           end
 
+          def remove_source_dir
+            source_dir&.remove
+          end
+
           def build_content
-            infom 'Writing Git source code...'
-            scm.commit(commit_reference).deploy_to_env_path(
-              build_dir_env,
-              build_dir
-            ).variables_source_set(variables_source).run
+            ::FileUtils.copy_entry(source_dir.to_path, build_dir.to_path)
           end
         end
       end
