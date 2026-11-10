@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Put here de description.'
 
   s.files = Dir['{lib,template}/**/*']
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = '>= 2.7' # rubocop:disable Gemspec/RequiredRubyVersion
 
   s.add_dependency 'avm-eac_rails_base1', '~> 0.11', '>= 0.11.2'
   s.add_dependency 'eac_ruby_utils', '~> 0.129', '>= 0.129.1'
