@@ -13,7 +13,7 @@ module Avm
 
           # @return [Boolean]
           def result # rubocop:disable Naming/PredicateMethod
-            by_gemfile_lock? || by_gemfile?
+            by_gemfile_lock? || by_gemfile? || by_gemspec?
           end
 
           # @return [Boolean]
@@ -26,6 +26,12 @@ module Avm
             source.gemfile_lock_gem_version(EAC_RAILS_BASE0_GEMNAME).present?
           rescue ::Bundler::LockfileError
             false
+          end
+
+          # @return [Boolean]
+          def by_gemspec?
+            source.gemspec_path.present? &&
+              source.gemspec.dependencies.any? { |d| d.name == EAC_RAILS_BASE0_GEMNAME }
           end
         end
       end
