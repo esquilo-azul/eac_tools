@@ -18,6 +18,8 @@ module Avm
           # @return [Boolean]
           def by_gemfile_lock?
             source.gemfile_lock_gem_version(EAC_RAILS_BASE0_GEMNAME).present?
+          rescue ::Bundler::LockfileError
+            false
           end
         end
       end
