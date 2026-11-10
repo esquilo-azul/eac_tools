@@ -24,17 +24,6 @@ PATH
       eac_ruby_base1 (~> 0.1, >= 0.1.2)
 
 PATH
-  remote: sub/avm-eac_asciidoctor_base0
-  specs:
-    avm-eac_asciidoctor_base0 (0.29.0)
-      asciidoctor (~> 2.0, >= 2.0.26)
-      avm-eac_webapp_base0 (~> 0.23)
-      eac_fs (~> 0.20, >= 0.20.3)
-      eac_ruby_base1 (~> 0.1, >= 0.1.2)
-      os (~> 1.1, >= 1.1.4)
-      rouge (~> 3.30)
-
-PATH
   remote: sub/avm-eac_webapp_base0
   specs:
     avm-eac_webapp_base0 (0.23.0)
@@ -97,6 +86,13 @@ GEM
       eac_ruby_base1 (~> 0.1, >= 0.1.1)
       eac_templates (~> 0.9)
       minitar (~> 0.12, >= 0.12.1)
+    avm-eac_asciidoctor_base0 (0.29.0)
+      asciidoctor (~> 2.0, >= 2.0.26)
+      avm-eac_webapp_base0 (~> 0.23)
+      eac_fs (~> 0.20, >= 0.20.3)
+      eac_ruby_base1 (~> 0.1, >= 0.1.2)
+      os (~> 1.1, >= 1.1.4)
+      rouge (~> 3.30)
     avm-eac_generic_base0 (0.16.1)
       avm (~> 0.103)
       eac_ruby_utils (~> 0.134)
@@ -363,7 +359,6 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  avm-eac_asciidoctor_base0!
   avm-eac_webapp_base0!
   eac_ruby_gem_support (~> 0.15)
   eac_ruby_utils!
