@@ -9,10 +9,16 @@ module Avm
           common_constructor :source
 
           EAC_RAILS_BASE0_GEMNAME = 'eac_rails_base0'
+          GEMFILE_GEM_PATTERN = /^\s*gem\s+['"]#{EAC_RAILS_BASE0_GEMNAME}['"]/
 
           # @return [Boolean]
           def result # rubocop:disable Naming/PredicateMethod
-            by_gemfile_lock?
+            by_gemfile_lock? || by_gemfile?
+          end
+
+          # @return [Boolean]
+          def by_gemfile?
+            source.gemfile_path.exist? && GEMFILE_GEM_PATTERN.match?(source.gemfile_path.read)
           end
 
           # @return [Boolean]
