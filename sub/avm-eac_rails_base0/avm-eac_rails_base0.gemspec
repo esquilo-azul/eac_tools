@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.files = Dir['{lib,template}/**/*']
   s.required_ruby_version = '>= 2.7' # rubocop:disable Gemspec/RequiredRubyVersion
 
-  s.add_dependency 'avm-eac_rails_base1', '~> 0.11', '>= 0.11.2'
-  s.add_dependency 'eac_ruby_utils', '~> 0.129', '>= 0.129.1'
+  s.add_dependency 'avm-eac_rails_base1', '~> 0.12', '>= 0.12.1'
+  s.add_dependency 'eac_ruby_utils', '~> 0.136'
 
-  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.12', '>= 0.12.1'
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.15'
 end
